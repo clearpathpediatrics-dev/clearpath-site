@@ -17,6 +17,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { LANDING_PAGES } from "./landing-pages.data.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -204,6 +205,7 @@ ${post.html}
   </div>
 </main>
 ${FOOTER_HTML}
+<script src="/assets/analytics.js" defer></script>
 </body>
 </html>`;
 }
@@ -275,6 +277,7 @@ ${HEADER_HTML}
   </div>
 </main>
 ${FOOTER_HTML}
+<script src="/assets/analytics.js" defer></script>
 </body>
 </html>`;
 }
@@ -284,6 +287,7 @@ function renderSitemap(posts) {
   const staticUrls = [
     { loc: `${SITE}/`, pri: "1.0", freq: "weekly", mod: today },
     { loc: `${SITE}/blog`, pri: "0.8", freq: "daily", mod: today },
+    ...LANDING_PAGES.map(p => ({ loc: `${SITE}/${p.slug}`, pri: "0.8", freq: "monthly", mod: today })),
     { loc: `${SITE}/privacy-policy`, pri: "0.3", freq: "yearly", mod: today },
     { loc: `${SITE}/terms-of-use`, pri: "0.3", freq: "yearly", mod: today },
   ];

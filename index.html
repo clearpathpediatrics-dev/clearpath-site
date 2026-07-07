@@ -318,6 +318,10 @@ header.scrolled .brand img{height:56px}
 .hero-app{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:38px;
   font-size:.9rem;color:rgba(255,255,255,.7)}
 .hero-app img{height:46px}
+.hero-quiz{margin-top:22px;font-size:.96rem;text-align:center}
+.hero-quiz a{color:rgba(255,255,255,.82);border-bottom:1px dashed rgba(227,164,88,.55);padding-bottom:2px;transition:color .2s}
+.hero-quiz a b{color:var(--gold);font-weight:600}
+.hero-quiz a:hover{color:#fff}.hero-quiz a:hover b{color:#fff}
 .hero-stats{display:flex;justify-content:center;align-items:stretch;max-width:560px;margin:36px auto 0}
 .hero-stats .stat{flex:1;max-width:175px;padding:6px 18px;text-align:center;position:relative;
   display:flex;flex-direction:column;gap:5px}
@@ -673,7 +677,7 @@ header.scrolled .brand img{height:56px}
    FOOTER
    ============================================================ */
 footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:64px 0 30px}
-.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:42px;
+.foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:40px;padding-bottom:42px;
   border-bottom:1px solid rgba(255,255,255,.1)}
 .foot-brand img{height:80px;margin-bottom:18px;width:auto}
 .foot-brand p{font-size:.92rem;max-width:320px;color:rgba(255,255,255,.6)}
@@ -1051,6 +1055,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:64px 0 30px
         <img src="assets/app-store-badge.svg" alt="Download on the App Store" />
       </a>
     </div>
+    <p class="hero-quiz"><a href="/is-clearpath-right-for-us/">Not sure we're the right fit? <b>Take the free 60-second check →</b></a></p>
     <div class="hero-stats">
       <div class="stat"><div class="top">1,500+</div><div class="lab">Families Served</div></div>
       <div class="stat"><div class="top stars">★★★★★</div><div class="lab">5.0 App Store Rating</div></div>
@@ -1468,10 +1473,20 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:64px 0 30px
         <h5>Get Started</h5>
         <ul>
           <li><a href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener">Book a Free Consultation</a></li>
+          <li><a href="/is-clearpath-right-for-us/">Take the 60-Second Check</a></li>
           <li><a href="https://apps.apple.com/app/id6762391088" target="_blank" rel="noopener">Get the App</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="tel:+19494165447">(949) 416-5447</a></li>
           <li><a href="mailto:admin@clearpathpediatrics.com">admin@clearpathpediatrics.com</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Care Guides</h5>
+        <ul>
+          <li><a href="/complex-medical-needs-care-navigation">Complex Medical Needs</a></li>
+          <li><a href="/post-nicu-discharge-support">Post-NICU Support</a></li>
+          <li><a href="/autism-care-coordination">Autism Care Coordination</a></li>
+          <li><a href="/pediatric-care-navigation-phoenix">Care Navigation in Phoenix</a></li>
         </ul>
       </div>
     </div>
@@ -1710,5 +1725,6 @@ function cpHasSubscribed(){
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&modal.classList.contains('open')) closeLegal(); });
 })();
 </script>
+<script src="/assets/analytics.js" defer></script>
 </body>
 </html>
