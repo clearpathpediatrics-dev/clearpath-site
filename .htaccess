@@ -1,0 +1,34 @@
+# Apache / GoDaddy cPanel config for ClearPath Pediatrics
+# Use this ONLY if hosting on GoDaddy Web Hosting (cPanel) or another Apache server.
+# (On Netlify/Cloudflare Pages, use the _redirects file instead.)
+
+# Force HTTPS + non-www (canonical host)
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://clearpathpediatrics.com%{REQUEST_URI} [R=301,L]
+
+# --- 301 redirects: old multi-page URLs -> new one-page sections (preserves SEO) ---
+Redirect 301 /about                     /#about
+Redirect 301 /what-we-do                /#what-we-do
+Redirect 301 /who-we-support            /#who-we-support
+Redirect 301 /how-it-works-1            /#how-it-works
+Redirect 301 /how-it-works              /#how-it-works
+Redirect 301 /services-and-memberships  /#services
+Redirect 301 /services                  /#services
+Redirect 301 /faqs                      /#faqs
+Redirect 301 /contact                   /#contact
+Redirect 301 /get-the-app               /#app
+# /privacy-policy and /terms-of-use are real standalone pages — no redirect.
+
+# --- Friendly 404 fallback (optional) ---
+ErrorDocument 404 /index.html
+
+# --- Caching for static assets ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

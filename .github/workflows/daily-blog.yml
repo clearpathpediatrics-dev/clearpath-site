@@ -1,0 +1,47 @@
+name: Daily blog post
+
+# Publishes one new ClearPath Pediatrics blog post every morning.
+# 15:00 UTC = 8:00 AM in Phoenix (Arizona is UTC-7 year-round, no DST).
+on:
+  schedule:
+    - cron: "0 15 * * *"
+  workflow_dispatch:        # lets you trigger a run manually from the Actions tab (great for testing)
+
+permissions:
+  contents: write           # allows the action to commit the new post back to the repo
+
+concurrency:
+  group: daily-blog
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Anthropic SDK
+        run: npm install --no-save @anthropic-ai/sdk@^0.70.0
+
+      - name: Generate today's post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-blog-post.mjs
+
+      - name: Commit & push
+        run: |
+          git config user.name  "ClearPath Blog Bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add blog/ sitemap.xml
+            git commit -m "blog: new post ($(date -u +%Y-%m-%d))"
+            git push
+          else
+            echo "No changes to commit."
+          fi

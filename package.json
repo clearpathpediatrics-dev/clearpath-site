@@ -1,0 +1,24 @@
+{
+  "name": "clearpath-pediatrics-site",
+  "version": "1.1.0",
+  "description": "ClearPath Pediatrics — one-page marketing site (static) with an auto-published daily blog. RN-led pediatric care navigation for families of medically complex children.",
+  "private": true,
+  "homepage": "https://clearpathpediatrics.com",
+  "author": "ClearPath Pediatrics, LLC",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "python3 -m http.server 8910",
+    "serve": "python3 -m http.server 8910",
+    "generate:blog": "node scripts/generate-blog-post.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  },
+  "keywords": [
+    "clearpath-pediatrics",
+    "pediatric-care-navigation",
+    "static-site",
+    "landing-page",
+    "blog"
+  ]
+}

@@ -1,0 +1,27 @@
+# Netlify configuration — ClearPath Pediatrics
+# Static site (no build step). Redirects live in the _redirects file.
+
+[build]
+  publish = "."
+  command = ""
+
+# Long-cache fingerprint-free static assets (images, badge)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Always revalidate HTML so updates show immediately
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Baseline security headers (no CSP — would block Klaviyo/Calendly/Fonts)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), camera=(), microphone=()"

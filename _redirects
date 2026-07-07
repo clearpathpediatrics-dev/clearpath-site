@@ -1,0 +1,16 @@
+# Netlify / Cloudflare Pages redirect map
+# Preserves SEO from the old multi-page GoDaddy site by 301-redirecting
+# every indexed URL to the matching section on the new one-page site.
+
+/about                      /#about              301
+/what-we-do                 /#what-we-do         301
+/who-we-support             /#who-we-support     301
+/how-it-works-1             /#how-it-works       301
+/how-it-works               /#how-it-works       301
+/services-and-memberships   /#services           301
+/services                   /#services           301
+/faqs                       /#faqs               301
+/faq                        /#faqs               301
+/contact                    /#contact            301
+/get-the-app                /#app                301
+# /privacy-policy and /terms-of-use are real standalone pages — no redirect.
