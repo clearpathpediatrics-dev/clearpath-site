@@ -4,7 +4,12 @@ name: Daily blog post
 # 15:00 UTC = 8:00 AM in Phoenix (Arizona is UTC-7 year-round, no DST).
 on:
   schedule:
-    - cron: "0 15 * * *"
+    # Multiple daily triggers as fallbacks — GitHub's scheduled runs are best-effort
+    # and can be dropped/delayed. The generator only posts once per day (it skips if
+    # today already has a post), so at most ONE post publishes per day.
+    - cron: "0 15 * * *"    # 8:00 AM Phoenix (primary)
+    - cron: "0 18 * * *"    # 11:00 AM Phoenix (fallback)
+    - cron: "0 21 * * *"    # 2:00 PM Phoenix (fallback)
   workflow_dispatch:        # lets you trigger a run manually from the Actions tab (great for testing)
 
 permissions:

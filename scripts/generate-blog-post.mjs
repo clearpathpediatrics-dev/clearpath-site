@@ -375,6 +375,14 @@ async function main() {
   const posts = readPosts();
   const recentTitles = posts.slice(0, 12).map(p => p.title);
 
+  // Idempotent per day: if today already has a post, exit cleanly. This lets us
+  // schedule several daily triggers as fallbacks — the first one that actually
+  // runs publishes the post; any later ones for the same day simply skip.
+  if (!DRYRUN && posts.some(p => p.iso === iso)) {
+    console.log(`[blog] a post already exists for ${iso} — skipping (no duplicate).`);
+    return;
+  }
+
   console.log(`[blog] ${prettyDate} (${weekday}) — topic: ${topic} — model: ${DRYRUN ? "DRY-RUN (no API call)" : MODEL}`);
 
   let data;
