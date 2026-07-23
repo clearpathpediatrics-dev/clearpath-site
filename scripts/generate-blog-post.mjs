@@ -206,6 +206,7 @@ ${post.html}
 </main>
 ${FOOTER_HTML}
 <script src="/assets/analytics.js" defer></script>
+<script src="/assets/email-popup.js" defer></script>
 </body>
 </html>`;
 }
@@ -278,6 +279,7 @@ ${HEADER_HTML}
 </main>
 ${FOOTER_HTML}
 <script src="/assets/analytics.js" defer></script>
+<script src="/assets/email-popup.js" defer></script>
 </body>
 </html>`;
 }

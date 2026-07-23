@@ -181,6 +181,7 @@ el('rEmailBtn').addEventListener('click', async ()=>{
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ el('rErr').textContent = 'Please enter a valid email.'; return; }
   el('rEmailBtn').disabled = true; el('rEmailBtn').textContent = 'Sending…';
   await subscribe(email, 'Assessment');
+  try{ localStorage.setItem('cp_subscribed', JSON.stringify({email:email, at:new Date().toISOString()})); }catch(e){}
   if(window.cpTrack) window.cpTrack('assessment_lead', {});
   el('capture').innerHTML = '<p style="color:var(--green);font-weight:600;margin:10px 0 4px">✓ Sent! Check your inbox — and here\'s the fastest next step:</p>';
 });

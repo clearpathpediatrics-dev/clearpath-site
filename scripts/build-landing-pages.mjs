@@ -155,6 +155,7 @@ ${HEADER}
 </div></section>
 ${FOOTER}
 <script src="/assets/analytics.js" defer></script>
+<script src="/assets/email-popup.js" defer></script>
 </body>
 </html>`;
 }
