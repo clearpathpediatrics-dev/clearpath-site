@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Your kit is ready — ClearPath Pediatrics</title>
+<link rel="icon" type="image/png" href="/assets/clearpath-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0b2240;--navy2:#16335f;--navy-deep:#081a30;--gold:#e3a458;--gold2:#d6913e;
+        --gold-soft:#edba82;--green:#3f9d6d;--cream:#faf7f2;--ink:#1d2b3a;--muted:#4a5a6b;--line:#e7ded2}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--navy);line-height:1.16}
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+  a{color:var(--gold2)}
+
+  header{background:radial-gradient(900px 400px at 80% -10%,rgba(227,164,88,.18),transparent 60%),linear-gradient(168deg,var(--navy),var(--navy-deep));color:#fff;padding:26px 0 54px;text-align:center}
+  header img{height:46px;width:auto;margin:0 auto 30px;display:block}
+  .tick{width:64px;height:64px;border-radius:50%;background:rgba(63,157,109,.2);color:#7fd3a6;display:grid;place-items:center;font-size:2rem;font-weight:700;margin:0 auto 18px}
+  header h1{color:#fff;font-size:clamp(1.7rem,4.6vw,2.5rem)}
+  header h1 em{font-style:italic;color:var(--gold-soft)}
+  header p{color:#d8e3ec;margin-top:12px;font-size:1.02rem}
+
+  main{padding:36px 0 60px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin-bottom:16px;box-shadow:0 6px 20px -16px rgba(11,34,64,.5)}
+  .card h2{font-size:1.24rem;margin-bottom:6px}
+  .card p{color:var(--muted);margin-bottom:10px}
+
+  .item{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+        border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:12px;background:#fff}
+  .item h3{font-size:1.06rem}
+  .item small{display:block;color:var(--muted);font-size:.86rem;margin-top:2px;font-family:'Inter',sans-serif}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.95rem;padding:12px 24px;border-radius:999px;
+       border:none;cursor:pointer;text-decoration:none;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;
+       box-shadow:0 10px 24px -10px rgba(214,145,62,.6);font-family:inherit}
+  .btn:hover{transform:translateY(-1px);text-decoration:none}
+  .btn.ghost{background:none;color:var(--navy);border:1.5px solid var(--line);box-shadow:none}
+  .btn.ghost:hover{border-color:var(--gold);background:rgba(227,164,88,.06)}
+
+  .state{text-align:center;padding:26px 0;color:var(--muted)}
+  .spinner{width:34px;height:34px;border:3px solid var(--line);border-top-color:var(--gold2);border-radius:50%;margin:0 auto 14px;animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .err{background:rgba(180,71,47,.08);border:1px solid rgba(180,71,47,.3);border-radius:14px;padding:20px 22px;text-align:left}
+  .err h2{color:#8f3a26;font-size:1.15rem;margin-bottom:8px}
+  .err p{color:var(--ink);font-size:.95rem}
+
+  .notice{background:rgba(214,145,62,.1);border:1px solid rgba(214,145,62,.34);border-radius:12px;padding:14px 18px;font-size:.9rem;margin-top:14px}
+  .notice strong{color:var(--gold2)}
+  .tips{list-style:none}
+  .tips li{display:flex;gap:10px;padding:7px 0;font-size:.96rem;color:var(--ink)}
+  .tips li::before{content:"✓";color:var(--green);font-weight:800;flex:none}
+
+  footer{background:var(--navy-deep);color:#8fa6b6;text-align:center;padding:30px 0;font-size:.84rem}
+  footer a{color:#b7c6d2}
+  footer .tagline{font-family:'Playfair Display',serif;font-style:italic;color:#c7d5df;margin-bottom:8px}
+  @media(max-width:560px){.item{flex-direction:column;align-items:flex-start}.item .btn{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="/"><img src="/assets/clearpath-logo-white.png" alt="ClearPath Pediatrics"></a>
+    <div class="tick">✓</div>
+    <h1>You're in. <em>Let's get you organized.</em></h1>
+    <p>Thank you for trusting us with this. Your kit is below — open it any time.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div id="state" class="state">
+      <div class="spinner"></div>
+      <p>Confirming your purchase…</p>
+    </div>
+
+    <div id="content" style="display:none">
+      <div class="card">
+        <h2>Your kit</h2>
+        <p>Open it in this browser — your entries save to your own device as you type. Bookmark this page so you can come back to it.</p>
+        <div id="items"></div>
+        <div class="notice"><strong>Important:</strong> bookmark or save this page's link. It's how you get back in. We've also emailed it to you.</div>
+      </div>
+
+      <div class="card">
+        <h2>How to get the most out of it</h2>
+        <ul class="tips">
+          <li>Start with <strong>Section ①</strong> and fill in your child's details once — everything else fills itself in.</li>
+          <li>Print the <strong>question list</strong> before your next appointment and bring it on paper.</li>
+          <li>Ask your provider for the <strong>signed emergency action plan</strong> if you don't have one yet. That document is the priority.</li>
+          <li>Send the <strong>school letter</strong> this week, with the action plan attached.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Questions, or need a hand?</h2>
+        <p>Email <a href="mailto:admin@clearpathpediatrics.com">admin@clearpathpediatrics.com</a> — a real person reads it. If the kit isn't helpful, tell us within 14 days and we'll refund you in full, no forms.</p>
+        <p style="margin-top:14px">Want an RN to walk your family's situation with you personally?</p>
+        <a href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener" class="btn ghost">Book a free 30-minute call →</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="tagline">Clarity for families. Confidence between visits.</div>
+    ClearPath Pediatrics · <a href="/">clearpathpediatrics.com</a><br>
+    Educational and organizational tools only. Not medical advice, diagnosis, or treatment.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var KLAVIYO_PUBLIC_KEY = "Vzcuue";
+  var KLAVIYO_LIST_ID    = "Wa437x";
+
+  var params  = new URLSearchParams(location.search);
+  var session = params.get("session_id");
+  var stateEl = document.getElementById("state");
+  var content = document.getElementById("content");
+
+  function fail(title, msg){
+    stateEl.innerHTML = '<div class="err"><h2>' + title + '</h2><p>' + msg +
+      ' If you were charged, email <a href="mailto:admin@clearpathpediatrics.com">admin@clearpathpediatrics.com</a>' +
+      ' and we\'ll get your kit to you right away — please include the email you used at checkout.</p></div>';
+  }
+
+  if (!session) {
+    fail("We couldn't find your order",
+         "This page needs the confirmation link Stripe sent you after checkout. Please open it from your receipt email.");
+    return;
+  }
+
+  // Add the buyer to the Welcome List (the back-end email play).
+  function subscribe(email){
+    if (!email) return;
+    try {
+      fetch("https://a.klaviyo.com/client/subscriptions/?company_id=" + encodeURIComponent(KLAVIYO_PUBLIC_KEY), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "revision": "2024-10-15" },
+        body: JSON.stringify({ data: { type: "subscription", attributes: {
+          custom_source: "Food Allergy Kit Buyer",
+          profile: { data: { type: "profile", attributes: { email: email } } }
+        }, relationships: { list: { data: { type: "list", id: KLAVIYO_LIST_ID } } } } })
+      });
+      // Suppress the site-wide email popup for buyers — they're already on the list.
+      localStorage.setItem("cp_subscribed", JSON.stringify({ email: email, at: new Date().toISOString() }));
+    } catch(e){}
+  }
+
+  fetch("/.netlify/functions/kit?session_id=" + encodeURIComponent(session))
+    .then(function(r){ return r.json().then(function(d){ return { status: r.status, data: d }; }); })
+    .then(function(res){
+      var d = res.data;
+      if (!d.ok) {
+        if (d.error === "not_paid")        return fail("This order isn't showing as paid yet", "Stripe hasn't confirmed the payment. Give it a minute and refresh this page.");
+        if (d.error === "not_configured")  return fail("Delivery isn't switched on yet", "The site is missing its Stripe key.");
+        return fail("We couldn't verify this order", "Something went wrong on our side.");
+      }
+
+      // Render purchased items
+      var html = d.items.map(function(it){
+        return '<div class="item"><div><h3>' + it.title + '</h3><small>Opens in your browser · saves to this device</small></div>' +
+               '<a class="btn" target="_blank" rel="noopener" href="/.netlify/functions/kit?session_id=' +
+               encodeURIComponent(session) + '&open=' + encodeURIComponent(it.key) + '">Open →</a></div>';
+      }).join("");
+      document.getElementById("items").innerHTML = html;
+
+      stateEl.style.display = "none";
+      content.style.display = "block";
+
+      subscribe(d.email);
+
+      // Real Purchase event for ad optimization (fires once per session id).
+      try {
+        var seen = "cp_purchase_" + session;
+        if (!localStorage.getItem(seen)) {
+          localStorage.setItem(seen, "1");
+          if (window.cpTrack) window.cpTrack("Purchase", {
+            value: d.amountTotal ? (d.amountTotal / 100) : null,
+            currency: (d.currency || "usd").toUpperCase(),
+            items: d.items.map(function(i){ return i.key; }).join(",")
+          });
+        }
+      } catch(e){}
+    })
+    .catch(function(){
+      fail("We couldn't reach our server", "This is almost certainly temporary — please refresh.");
+    });
+})();
+</script>
+<script src="/assets/analytics.js" defer></script>
+</body>
+</html>

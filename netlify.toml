@@ -5,6 +5,24 @@
   publish = "."
   command = ""
 
+# Serverless functions (Stripe purchase verification + gated kit delivery).
+# included_files bundles the paid product files INTO the function so it can
+# read them — they are never served as public static assets (see the forced
+# 404 redirect below).
+[functions]
+  directory = "netlify/functions"
+  included_files = ["private/**"]
+  node_bundler = "esbuild"
+
+# HARD BLOCK: the paid product lives in /private. Never serve it directly.
+# force = true is REQUIRED — without it a matching static file wins over the
+# redirect and the paid kit would be downloadable for free.
+[[redirects]]
+  from = "/private/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
 # Long-cache fingerprint-free static assets (images, badge)
 [[headers]]
   for = "/assets/*"

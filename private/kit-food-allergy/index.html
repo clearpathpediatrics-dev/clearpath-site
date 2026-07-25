@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>The Food Allergy Starter Kit — ClearPath Pediatrics</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b2240;--navy2:#16335f;--navy-deep:#081a30;
+    --gold:#e3a458;--gold2:#d6913e;--green:#3f9d6d;
+    --cream:#faf7f2;--cream-warm:#f4ede0;--ink:#1d2b3a;--muted:#4a5a6b;--line:#e7ded2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:var(--navy);line-height:1.2}
+  .wrap{max-width:900px;margin:0 auto;padding:0 22px}
+
+  /* header */
+  header{background:linear-gradient(168deg,var(--navy),var(--navy-deep));color:#fff;padding:26px 0}
+  header img{height:44px;width:auto;display:block;margin-bottom:16px}
+  header h1{color:#fff;font-size:clamp(1.6rem,4vw,2.2rem)}
+  header p{color:#d8e3ec;margin-top:8px;font-size:.98rem}
+
+  /* tabs */
+  nav.tabs{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(11,34,64,.05)}
+  nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;padding:0 22px}
+  nav.tabs button{
+    flex:none;background:none;border:none;cursor:pointer;font-family:inherit;font-size:.86rem;font-weight:600;
+    color:var(--muted);padding:15px 13px;border-bottom:3px solid transparent;white-space:nowrap;transition:color .15s
+  }
+  nav.tabs button:hover{color:var(--navy)}
+  nav.tabs button.active{color:var(--navy);border-bottom-color:var(--gold)}
+
+  main{padding:34px 0 70px}
+  .panel{display:none}
+  .panel.active{display:block}
+  .panel > h2{font-size:clamp(1.5rem,3.4vw,2rem);margin-bottom:6px}
+  .panel > .sub{color:var(--muted);margin-bottom:24px;font-size:1rem}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin-bottom:20px;box-shadow:0 6px 20px -16px rgba(11,34,64,.5)}
+  .card h3{font-size:1.2rem;margin-bottom:10px}
+  .card h4{font-size:1.02rem;font-family:'Inter',sans-serif;font-weight:700;color:var(--navy);margin:18px 0 6px}
+  .card p{color:var(--muted);margin-bottom:12px}
+  .card p strong{color:var(--ink)}
+  .card ul,.card ol{margin:0 0 14px 22px;color:var(--muted)}
+  .card li{margin-bottom:7px}
+
+  /* form fields */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+  .field label{font-size:.8rem;font-weight:700;color:var(--navy);letter-spacing:.02em}
+  .field input,.field textarea,.field select{
+    font-family:inherit;font-size:.97rem;color:var(--ink);padding:11px 13px;
+    border:1.5px solid var(--line);border-radius:10px;background:#fff;width:100%
+  }
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(227,164,88,.2)}
+  .field textarea{min-height:80px;resize:vertical}
+  .field .hint{font-size:.78rem;color:var(--muted)}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-weight:700;font-size:.94rem;
+    padding:12px 22px;border-radius:999px;border:none;cursor:pointer;text-decoration:none;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;box-shadow:0 8px 20px -8px rgba(214,145,62,.6)
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn.ghost{background:none;color:var(--navy);border:1.5px solid var(--line);box-shadow:none}
+  .btn.ghost:hover{border-color:var(--gold);background:rgba(227,164,88,.06)}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+
+  .saved{font-size:.85rem;color:var(--green);font-weight:600;opacity:0;transition:opacity .3s}
+  .saved.show{opacity:1}
+
+  /* checklist */
+  .check{list-style:none;margin-left:0}
+  .check li{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--line);color:var(--ink)}
+  .check li:last-child{border-bottom:none}
+  .check input[type=checkbox]{flex:none;width:19px;height:19px;margin-top:3px;accent-color:var(--gold2);cursor:pointer}
+  .check label{cursor:pointer;font-size:.98rem}
+  .check .why{display:block;color:var(--muted);font-size:.86rem;margin-top:2px}
+
+  /* log table */
+  table.log{width:100%;border-collapse:collapse;margin-top:6px;font-size:.92rem}
+  table.log th,table.log td{text-align:left;padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.log thead th{background:var(--navy);color:#fff;font-family:'Playfair Display',serif;font-weight:700;font-size:.9rem}
+  table.log tbody tr:nth-child(even){background:var(--cream)}
+  table.log .del{background:none;border:none;color:#b4472f;cursor:pointer;font-weight:700;font-size:1rem}
+  .empty{color:var(--muted);font-style:italic;padding:16px 0;font-size:.94rem}
+
+  /* letter output */
+  .letter{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;
+    padding:22px 24px;white-space:pre-wrap;font-size:.95rem;color:var(--ink);line-height:1.7;margin-top:6px
+  }
+
+  /* notices */
+  .notice{background:rgba(214,145,62,.1);border:1px solid rgba(214,145,62,.34);border-radius:12px;padding:14px 18px;font-size:.9rem;color:var(--ink);margin:16px 0}
+  .notice strong{color:var(--gold2)}
+  .notice.green{background:rgba(63,157,109,.1);border-color:rgba(63,157,109,.32)}
+  .notice.green strong{color:#1f7d5b}
+
+  .plan-callout{background:var(--navy);color:#fff;border-radius:14px;padding:20px 24px;margin:16px 0}
+  .plan-callout h4{color:#fff;font-family:'Playfair Display',serif;font-size:1.06rem;margin-bottom:6px}
+  .plan-callout p{color:#d8e3ec;font-size:.92rem;margin:0}
+
+  footer{background:var(--navy-deep);color:#8fa6b6;text-align:center;padding:30px 0;font-size:.84rem}
+  footer .tagline{font-family:'Playfair Display',serif;font-style:italic;color:#c7d5df;font-size:.98rem;margin-bottom:8px}
+
+  @media(max-width:680px){.grid2{grid-template-columns:1fr}.card{padding:22px 20px}}
+
+  /* ---------- PRINT: only the active panel ---------- */
+  @media print{
+    body{background:#fff}
+    header,nav.tabs,footer,.btnrow,.no-print,.saved{display:none!important}
+    main{padding:0}
+    .wrap{max-width:100%;padding:0}
+    .card{box-shadow:none;border:1px solid #ccc;break-inside:avoid;page-break-inside:avoid}
+    .panel{display:none!important}
+    .panel.active{display:block!important}
+    .print-head{display:block!important;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--navy)}
+    a[href]:after{content:""}
+  }
+  .print-head{display:none}
+  .print-head h3{font-size:1.2rem}
+  .print-head p{font-size:.85rem;color:#555;margin-top:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgNDgiPjx0ZXh0IHg9IjAiIHk9IjIyIiBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9IjcwMCI+Q2xlYXJQYXRoPC90ZXh0Pjx0ZXh0IHg9IjAiIHk9IjQwIiBmaWxsPSIjZTNhNDU4IiBmb250LWZhbWlseT0iSW50ZXIsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGV0dGVyLXNwYWNpbmc9IjMiPlBFRElBVFJJQ1M8L3RleHQ+PC9zdmc+" alt="ClearPath Pediatrics">
+    <h1>The Food Allergy Starter Kit</h1>
+    <p>Fill in your child's details once — every list, log, and letter below fills itself in.</p>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="wrap" id="tabbar">
+    <button class="active" data-tab="start">① Start here</button>
+    <button data-tab="basics">② The basics</button>
+    <button data-tab="questions">③ Questions to ask</button>
+    <button data-tab="log">④ Reaction log</button>
+    <button data-tab="document">⑤ What to write down</button>
+    <button data-tab="school">⑥ School &amp; daycare</button>
+    <button data-tab="specialist">⑦ Specialist prep</button>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+<!-- ============ 1. START / PROFILE ============ -->
+<section class="panel active" id="start">
+  <h2>Start here: fill this in once</h2>
+  <p class="sub">Everything you type here flows into every other tool in this kit. It stays on this device — it is never uploaded to us and never sold.</p>
+
+  <div class="card">
+    <h3>Your child</h3>
+    <div class="grid2">
+      <div class="field"><label for="childName">Child's full name</label><input id="childName" data-save placeholder="e.g. Maya Rivera"></div>
+      <div class="field"><label for="childPref">Name they go by</label><input id="childPref" data-save placeholder="e.g. Maya"></div>
+      <div class="field"><label for="childDob">Date of birth</label><input id="childDob" type="date" data-save></div>
+      <div class="field"><label for="childGrade">Grade / classroom (if applicable)</label><input id="childGrade" data-save placeholder="e.g. 1st grade, Room 4"></div>
+    </div>
+    <div class="field">
+      <label for="allergens">Diagnosed food allergen(s) — exactly as your provider wrote them</label>
+      <input id="allergens" data-save placeholder="e.g. peanut, tree nut (cashew)">
+      <span class="hint">Copy the wording from your paperwork. Don't add or remove anything a provider didn't list.</span>
+    </div>
+    <div class="field">
+      <label for="dxDate">Date of diagnosis</label><input id="dxDate" type="date" data-save>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Your child's care team</h3>
+    <div class="grid2">
+      <div class="field"><label for="pcpName">Pediatrician / primary provider</label><input id="pcpName" data-save placeholder="Dr. ..."></div>
+      <div class="field"><label for="pcpPhone">Their office phone</label><input id="pcpPhone" data-save placeholder="(___) ___-____"></div>
+      <div class="field"><label for="allergistName">Allergist / specialist (if you have one)</label><input id="allergistName" data-save placeholder="Dr. ..."></div>
+      <div class="field"><label for="allergistPhone">Their office phone</label><input id="allergistPhone" data-save placeholder="(___) ___-____"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Emergency contacts</h3>
+    <div class="grid2">
+      <div class="field"><label for="parent1">Parent / guardian 1</label><input id="parent1" data-save></div>
+      <div class="field"><label for="parent1Phone">Phone</label><input id="parent1Phone" data-save></div>
+      <div class="field"><label for="parent2">Parent / guardian 2</label><input id="parent2" data-save></div>
+      <div class="field"><label for="parent2Phone">Phone</label><input id="parent2Phone" data-save></div>
+    </div>
+  </div>
+
+  <div class="plan-callout">
+    <h4>One thing this kit does not do</h4>
+    <p>It does not tell you what to do during a reaction. That comes from your child's provider — usually on a written emergency action plan. Ask for one if you don't have it yet, keep it with you, and follow it exactly. If your child is having a severe reaction, call 911.</p>
+  </div>
+
+  <div class="btnrow">
+    <button class="btn" id="saveBtn">Save my details</button>
+    <span class="saved" id="savedMsg">✓ Saved to this device</span>
+  </div>
+</section>
+
+<!-- ============ 2. BASICS ============ -->
+<section class="panel" id="basics">
+  <div class="print-head"><h3>Food allergy basics — plain language</h3><p>ClearPath Pediatrics · educational only</p></div>
+  <h2>The basics, in plain language</h2>
+  <p class="sub">What the words on your paperwork mean — so the next conversation makes more sense.</p>
+
+  <div class="card">
+    <h3>What a food allergy is</h3>
+    <p>A food allergy is when the body's immune system reacts to a specific food as though it were harmful. That's different from a food <em>intolerance</em>, which involves digestion rather than the immune system. Both matter, but they're managed differently — and only your provider can say which one your child has.</p>
+    <h4>Words you'll see on your paperwork</h4>
+    <ul>
+      <li><strong>Allergen</strong> — the specific food that triggers your child's reaction.</li>
+      <li><strong>Reaction</strong> — the set of symptoms that happen after exposure.</li>
+      <li><strong>Anaphylaxis</strong> — a severe, whole-body reaction that is a medical emergency. Your provider will tell you what signs to watch for and what to do.</li>
+      <li><strong>Emergency action plan</strong> — a written, provider-signed page that says exactly what to do and when. This is the single most important document you will carry.</li>
+      <li><strong>Cross-contact</strong> — when a safe food picks up traces of the allergen from shared surfaces, utensils, or fryers.</li>
+      <li><strong>"May contain" / "processed in a facility with"</strong> — voluntary manufacturer labels. Ask your provider how strictly your family should treat them; guidance differs by child.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>What usually changes at home</h3>
+    <p>Most families find the first few weeks come down to four habits:</p>
+    <ol>
+      <li><strong>Reading every label, every time.</strong> Recipes change without warning, even on products you've bought for years.</li>
+      <li><strong>Separating preparation.</strong> Many families designate utensils, a cutting board, or a shelf to reduce cross-contact.</li>
+      <li><strong>Telling everyone who feeds your child.</strong> Section ⑥ has ready-to-send letters for this.</li>
+      <li><strong>Keeping the emergency plan and any prescribed medication where you can reach them.</strong> Your provider will tell you what to carry and where.</li>
+    </ol>
+    <div class="notice"><strong>Note:</strong> How strict to be — about labels, restaurants, or shared spaces — is a medical decision that depends on your child. Bring those questions to your provider. Section ③ helps you ask them well.</div>
+  </div>
+
+  <div class="btnrow no-print"><button class="btn ghost" onclick="window.print()">🖨 Print this section</button></div>
+</section>
+
+<!-- ============ 3. QUESTIONS ============ -->
+<section class="panel" id="questions">
+  <div class="print-head"><h3>Questions to ask — <span data-fill="childPref">my child</span></h3><p>ClearPath Pediatrics · bring this to your appointment</p></div>
+  <h2>Your "questions to ask" script</h2>
+  <p class="sub">Check the ones that matter most to you, then print. Appointments are short — walking in with a written list is the difference between leaving with answers and leaving with new worries.</p>
+
+  <div class="card">
+    <h3>Ask first — the essentials</h3>
+    <ul class="check" data-check="q-core">
+      <li><input type="checkbox" id="q1"><label for="q1">Can I have <strong><span data-fill="childPref">my child</span>'s</strong> emergency action plan in writing, signed by you?<span class="why">This is the document school, daycare, and family will all ask for.</span></label></li>
+      <li><input type="checkbox" id="q2"><label for="q2">Exactly which foods should we avoid, and how should I word that for other caregivers?<span class="why">Get the precise wording so everyone tells the same story.</span></label></li>
+      <li><input type="checkbox" id="q3"><label for="q3">What signs mean "call the office," and what signs mean "call 911"?<span class="why">Write the answer down verbatim — don't rely on memory.</span></label></li>
+      <li><input type="checkbox" id="q4"><label for="q4">What medication, if any, should we have on hand, and where should it go?<span class="why">Ask them to show you, not just tell you.</span></label></li>
+      <li><input type="checkbox" id="q5"><label for="q5">How should we handle "may contain" labels for <span data-fill="childPref">my child</span> specifically?</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Daily life</h3>
+    <ul class="check" data-check="q-life">
+      <li><input type="checkbox" id="q6"><label for="q6">What do we do about restaurants, birthday parties, and school lunch?</label></li>
+      <li><input type="checkbox" id="q7"><label for="q7">Do siblings or the rest of the household need to avoid this food too?</label></li>
+      <li><input type="checkbox" id="q8"><label for="q8">Is there anything <span data-fill="childPref">my child</span> should avoid touching, not just eating?</label></li>
+      <li><input type="checkbox" id="q9"><label for="q9">What should I tell coaches, grandparents, and babysitters?</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Next steps &amp; follow-up</h3>
+    <ul class="check" data-check="q-next">
+      <li><input type="checkbox" id="q10"><label for="q10">Do we need to see an allergist? How do I get that referral started?</label></li>
+      <li><input type="checkbox" id="q11"><label for="q11">Will there be testing? What kind, and what will it tell us?</label></li>
+      <li><input type="checkbox" id="q12"><label for="q12">When should we come back, and what should I track between now and then?</label></li>
+      <li><input type="checkbox" id="q13"><label for="q13">Could this change as <span data-fill="childPref">my child</span> gets older?</label></li>
+      <li><input type="checkbox" id="q14"><label for="q14">What's the best way to reach you with a question that isn't urgent?</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>My own questions</h3>
+    <div class="field"><label for="myQuestions">Anything else you want to remember to ask</label><textarea id="myQuestions" data-save placeholder="Type your questions here — they'll print with the list."></textarea></div>
+  </div>
+
+  <div class="btnrow no-print"><button class="btn ghost" onclick="window.print()">🖨 Print my question list</button></div>
+</section>
+
+<!-- ============ 4. REACTION LOG ============ -->
+<section class="panel" id="log">
+  <div class="print-head"><h3>Reaction &amp; symptom log — <span data-fill="childName">my child</span></h3><p>ClearPath Pediatrics · a record for your provider</p></div>
+  <h2>Reaction &amp; symptom log</h2>
+  <p class="sub">Write down what you saw, when, and after what. Patterns are hard to see in memory and easy to see on paper — this is the record your provider can actually use.</p>
+
+  <div class="notice"><strong>This is a record, not a decision tool.</strong> Logging something is never a substitute for contacting your provider. If you're worried in the moment, follow your emergency action plan.</div>
+
+  <div class="card">
+    <h3>Add an entry</h3>
+    <div class="grid2">
+      <div class="field"><label for="lgDate">Date &amp; time</label><input id="lgDate" type="datetime-local"></div>
+      <div class="field"><label for="lgFood">What they ate / were exposed to</label><input id="lgFood" placeholder="e.g. store-bought granola bar"></div>
+    </div>
+    <div class="field"><label for="lgSymptoms">What you saw</label><textarea id="lgSymptoms" placeholder="Describe only what you observed — e.g. 'hives on both cheeks, rubbing at mouth, started about 10 minutes after eating.'"></textarea></div>
+    <div class="grid2">
+      <div class="field"><label for="lgOnset">How long after exposure</label><input id="lgOnset" placeholder="e.g. 10 minutes"></div>
+      <div class="field"><label for="lgAction">What you did / who you contacted</label><input id="lgAction" placeholder="e.g. followed action plan, called office"></div>
+    </div>
+    <div class="btnrow"><button class="btn" id="addLog">Add to log</button></div>
+  </div>
+
+  <div class="card">
+    <h3>Log history</h3>
+    <div id="logWrap"><p class="empty">No entries yet. Anything you add is saved on this device.</p></div>
+    <div class="btnrow no-print"><button class="btn ghost" onclick="window.print()">🖨 Print the log</button></div>
+  </div>
+</section>
+
+<!-- ============ 5. WHAT TO DOCUMENT ============ -->
+<section class="panel" id="document">
+  <div class="print-head"><h3>What to write down &amp; what to bring to the office</h3><p>ClearPath Pediatrics · organizing guide</p></div>
+  <h2>What to write down — and what to bring to the office</h2>
+  <p class="sub">This helps you organize and communicate clearly. It does not tell you whether something is serious — that judgment belongs to your child's provider and their emergency action plan.</p>
+
+  <div class="plan-callout">
+    <h4>Read this first</h4>
+    <p>Your provider's emergency action plan is the authority on when to call the office, when to go in, and when to call 911. Keep it visible and follow it. If you don't have one in writing, that's question #1 in Section ③. In an emergency, call 911 — don't stop to document anything.</p>
+  </div>
+
+  <div class="card">
+    <h3>Details worth capturing every time</h3>
+    <p>When you contact the office, these are the details they'll almost always ask for. Having them ready turns a scattered phone call into a useful one.</p>
+    <ul class="check" data-check="d-capture">
+      <li><input type="checkbox" id="d1"><label for="d1">The exact time it started, and the time you noticed it</label></li>
+      <li><input type="checkbox" id="d2"><label for="d2">What your child ate or touched, and how long before symptoms</label></li>
+      <li><input type="checkbox" id="d3"><label for="d3">The product name, brand, and ingredient label if there was one<span class="why">Photograph the label — it's faster and more accurate than copying it.</span></label></li>
+      <li><input type="checkbox" id="d4"><label for="d4">What you observed, in plain description rather than conclusions<span class="why">"Hives on both cheeks" is more useful than "an allergic reaction."</span></label></li>
+      <li><input type="checkbox" id="d5"><label for="d5">Whether it changed, stayed the same, or resolved — and over how long</label></li>
+      <li><input type="checkbox" id="d6"><label for="d6">Anything you gave or did, and the time you did it</label></li>
+      <li><input type="checkbox" id="d7"><label for="d7">Who else was there and what they saw</label></li>
+      <li><input type="checkbox" id="d8"><label for="d8">A photo, if there was something visible and it was safe to take one</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Before you pick up the phone</h3>
+    <p>Have these in front of you so the call is short and productive:</p>
+    <ul>
+      <li>Your child's full name and date of birth</li>
+      <li>The allergen(s) as your provider worded them</li>
+      <li>Your Section ④ log entry for what just happened</li>
+      <li>The name of the pharmacy you use</li>
+      <li>The one question you most need answered before you hang up</li>
+    </ul>
+    <div class="field"><label for="callNotes">Notes from the call</label><textarea id="callNotes" data-save placeholder="Who you spoke with, what they said, and what you were told to do next."></textarea></div>
+  </div>
+
+  <div class="btnrow no-print"><button class="btn ghost" onclick="window.print()">🖨 Print this guide</button></div>
+</section>
+
+<!-- ============ 6. SCHOOL & DAYCARE ============ -->
+<section class="panel" id="school">
+  <div class="print-head"><h3>School &amp; caregiver notification</h3><p>ClearPath Pediatrics</p></div>
+  <h2>School &amp; daycare templates</h2>
+  <p class="sub">Auto-filled from Section ①. Read every letter before you send it, and attach your provider's emergency action plan — that plan, not this letter, is the medical instruction.</p>
+
+  <div class="card">
+    <h3>Who are you writing to?</h3>
+    <div class="grid2">
+      <div class="field"><label for="schoolName">School / daycare / program name</label><input id="schoolName" data-save placeholder="e.g. Desert Bloom Elementary"></div>
+      <div class="field"><label for="recipient">Recipient name &amp; role</label><input id="recipient" data-save placeholder="e.g. Ms. Alvarez, Room 4 teacher"></div>
+    </div>
+    <div class="btnrow"><button class="btn" id="genLetters">Generate my letters</button></div>
+  </div>
+
+  <div class="card">
+    <h3>① Letter to school or daycare</h3>
+    <div class="letter" id="letterSchool">Fill in Section ① and click "Generate my letters."</div>
+    <div class="btnrow no-print"><button class="btn ghost" data-copy="letterSchool">📋 Copy</button></div>
+  </div>
+
+  <div class="card">
+    <h3>② Short note for family, sitters &amp; coaches</h3>
+    <div class="letter" id="letterCaregiver">Fill in Section ① and click "Generate my letters."</div>
+    <div class="btnrow no-print"><button class="btn ghost" data-copy="letterCaregiver">📋 Copy</button></div>
+  </div>
+
+  <div class="card">
+    <h3>③ One-page info sheet (print &amp; post)</h3>
+    <div class="letter" id="letterSheet">Fill in Section ① and click "Generate my letters."</div>
+    <div class="btnrow no-print">
+      <button class="btn ghost" data-copy="letterSheet">📋 Copy</button>
+      <button class="btn ghost" onclick="window.print()">🖨 Print</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. SPECIALIST PREP ============ -->
+<section class="panel" id="specialist">
+  <div class="print-head"><h3>Specialist visit prep — <span data-fill="childName">my child</span></h3><p>ClearPath Pediatrics</p></div>
+  <h2>Specialist-visit prep sheet</h2>
+  <p class="sub">Allergist appointments are hard to get and easy to waste. Check these off the night before so the visit is spent on answers, not on hunting for information you already had.</p>
+
+  <div class="card">
+    <h3>Bring with you</h3>
+    <ul class="check" data-check="s-bring">
+      <li><input type="checkbox" id="s1"><label for="s1">Insurance card and photo ID</label></li>
+      <li><input type="checkbox" id="s2"><label for="s2">The referral, if one was required<span class="why">Confirm the office received it — don't assume.</span></label></li>
+      <li><input type="checkbox" id="s3"><label for="s3">Your child's emergency action plan</label></li>
+      <li><input type="checkbox" id="s4"><label for="s4">Your printed reaction log from Section ④<span class="why">This is often the most valuable thing you bring.</span></label></li>
+      <li><input type="checkbox" id="s5"><label for="s5">A current list of all medications and supplements, with doses as prescribed</label></li>
+      <li><input type="checkbox" id="s6"><label for="s6">Photos of labels or visible symptoms you saved</label></li>
+      <li><input type="checkbox" id="s7"><label for="s7">Any prior test results or records from another office</label></li>
+      <li><input type="checkbox" id="s8"><label for="s8">Your printed question list from Section ③</label></li>
+      <li><input type="checkbox" id="s9"><label for="s9">A snack you know is safe, plus something to keep your child occupied</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Call the office ahead of time and confirm</h3>
+    <ul class="check" data-check="s-confirm">
+      <li><input type="checkbox" id="s10"><label for="s10">They have the referral and any records they requested</label></li>
+      <li><input type="checkbox" id="s11"><label for="s11">Whether anything should be paused before testing — ask, don't assume<span class="why">Some testing has preparation instructions. Only the office can tell you.</span></label></li>
+      <li><input type="checkbox" id="s12"><label for="s12">How long to plan for, and whether testing may happen the same day</label></li>
+      <li><input type="checkbox" id="s13"><label for="s13">What it will cost and what your insurance covers</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Before you leave the room</h3>
+    <p>Ask these three questions at the end of every specialist visit:</p>
+    <ol>
+      <li><strong>What did we learn today, in one sentence?</strong></li>
+      <li><strong>What changes for us starting tonight?</strong></li>
+      <li><strong>What's the next step, and who makes it happen?</strong></li>
+    </ol>
+    <div class="field"><label for="visitNotes">What I was told</label><textarea id="visitNotes" data-save placeholder="Write it down before you get to the parking lot."></textarea></div>
+  </div>
+
+  <div class="btnrow no-print"><button class="btn ghost" onclick="window.print()">🖨 Print my prep sheet</button></div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="tagline">Clarity for families. Confidence between visits.</div>
+    ClearPath Pediatrics · clearpathpediatrics.com<br>
+    Educational and organizational tools only. Not medical advice, diagnosis, or treatment.<br>
+    Your entries stay on this device. In an emergency, call 911.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var KEY = "cp_fak_v1";
+  var state = { fields:{}, checks:{}, log:[] };
+  try { var raw = localStorage.getItem(KEY); if (raw) state = Object.assign(state, JSON.parse(raw)); } catch(e){}
+
+  function persist(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+  var esc = function(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); };
+  function val(id, fallback){ var v = (state.fields[id]||"").trim(); return v || (fallback||""); }
+
+  /* ---- tabs ---- */
+  var tabBtns = document.querySelectorAll('#tabbar button');
+  tabBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      tabBtns.forEach(function(x){ x.classList.remove('active'); });
+      document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+      b.classList.add('active');
+      document.getElementById(b.getAttribute('data-tab')).classList.add('active');
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+
+  /* ---- saved fields ---- */
+  var fields = document.querySelectorAll('[data-save]');
+  fields.forEach(function(el){
+    if (state.fields[el.id] != null) el.value = state.fields[el.id];
+    el.addEventListener('input', function(){ state.fields[el.id] = el.value; persist(); refreshFills(); });
+  });
+
+  /* ---- checkboxes ---- */
+  document.querySelectorAll('.check input[type=checkbox]').forEach(function(cb){
+    if (state.checks[cb.id]) cb.checked = true;
+    cb.addEventListener('change', function(){ state.checks[cb.id] = cb.checked; persist(); });
+  });
+
+  /* ---- live name substitution ---- */
+  function refreshFills(){
+    var pref = val('childPref') || val('childName') || 'my child';
+    var full = val('childName') || pref;
+    document.querySelectorAll('[data-fill="childPref"]').forEach(function(n){ n.textContent = pref; });
+    document.querySelectorAll('[data-fill="childName"]').forEach(function(n){ n.textContent = full; });
+  }
+
+  /* ---- save button ---- */
+  document.getElementById('saveBtn').addEventListener('click', function(){
+    persist(); refreshFills(); buildLetters();
+    var m = document.getElementById('savedMsg');
+    m.classList.add('show'); setTimeout(function(){ m.classList.remove('show'); }, 2200);
+  });
+
+  /* ---- reaction log ---- */
+  function prettyDate(v){
+    if(!v) return "—";
+    var d = new Date(v);
+    if (isNaN(d)) return esc(v);
+    return d.toLocaleString(undefined,{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
+  }
+  function renderLog(){
+    var wrap = document.getElementById('logWrap');
+    if (!state.log.length){ wrap.innerHTML = '<p class="empty">No entries yet. Anything you add is saved on this device.</p>'; return; }
+    var rows = state.log.map(function(e, i){
+      return '<tr><td>'+prettyDate(e.date)+'</td><td>'+esc(e.food)+'</td><td>'+esc(e.symptoms)+'</td><td>'+esc(e.onset)+'</td><td>'+esc(e.action)+'</td><td class="no-print"><button class="del" data-del="'+i+'" title="Delete entry">✕</button></td></tr>';
+    }).join('');
+    wrap.innerHTML = '<table class="log"><thead><tr><th>When</th><th>Exposure</th><th>What you saw</th><th>Onset</th><th>What you did</th><th class="no-print"></th></tr></thead><tbody>'+rows+'</tbody></table>';
+    wrap.querySelectorAll('[data-del]').forEach(function(b){
+      b.addEventListener('click', function(){
+        state.log.splice(parseInt(b.getAttribute('data-del'),10),1); persist(); renderLog();
+      });
+    });
+  }
+  document.getElementById('addLog').addEventListener('click', function(){
+    var e = {
+      date: document.getElementById('lgDate').value,
+      food: document.getElementById('lgFood').value,
+      symptoms: document.getElementById('lgSymptoms').value,
+      onset: document.getElementById('lgOnset').value,
+      action: document.getElementById('lgAction').value
+    };
+    if (!e.date && !e.food && !e.symptoms){ alert("Add at least a date or what you observed."); return; }
+    state.log.unshift(e); persist(); renderLog();
+    ['lgFood','lgSymptoms','lgOnset','lgAction'].forEach(function(id){ document.getElementById(id).value = ""; });
+  });
+
+  /* ---- letters ---- */
+  function buildLetters(){
+    var pref  = val('childPref') || val('childName') || '[child’s name]';
+    var full  = val('childName') || '[child’s full name]';
+    var alg   = val('allergens') || '[allergen(s) as your provider wrote them]';
+    var dob   = val('childDob') ? new Date(val('childDob')+'T00:00:00').toLocaleDateString(undefined,{month:'long',day:'numeric',year:'numeric'}) : '[date of birth]';
+    var grade = val('childGrade') || '[grade / classroom]';
+    var school= val('schoolName') || '[school or program name]';
+    var rec   = val('recipient') || 'To whom it may concern';
+    var p1    = val('parent1') || '[parent/guardian]';
+    var p1p   = val('parent1Phone') || '[phone]';
+    var p2    = val('parent2'), p2p = val('parent2Phone');
+    var pcp   = val('pcpName') || '[provider]';
+    var pcpP  = val('pcpPhone') || '[office phone]';
+    var today = new Date().toLocaleDateString(undefined,{month:'long',day:'numeric',year:'numeric'});
+
+    document.getElementById('letterSchool').textContent =
+      today + "\n\n" + rec + "\n" + school + "\n\n" +
+      "Dear " + rec + ",\n\n" +
+      "I'm writing to let you know that my child, " + full + " (date of birth " + dob + ", " + grade + "), has been diagnosed with a food allergy to " + alg + ".\n\n" +
+      "I've attached the emergency action plan signed by " + pcp + ", which explains exactly what to do and when. Please treat that document as the instruction — it comes from our provider, not from me. I'd be grateful if you would keep a copy where staff can reach it quickly and make sure anyone who supervises " + pref + " knows where it is.\n\n" +
+      "A few things that would help us:\n" +
+      "  • Please let me know how food is handled in the classroom, at snack time, and during celebrations.\n" +
+      "  • Please contact me before " + pref + " is offered any food I haven't approved.\n" +
+      "  • Please tell me about any exposure or symptom you notice, even if it seems minor, on the same day it happens.\n" +
+      "  • Please let me know what forms you need from us and what your policy requires.\n\n" +
+      "I'm happy to come in, talk by phone, or fill out whatever paperwork helps. Thank you for looking after " + pref + ".\n\n" +
+      "With appreciation,\n" + p1 + "\n" + p1p +
+      (p2 ? "\n" + p2 + (p2p ? " · " + p2p : "") : "") +
+      "\n\nProvider: " + pcp + " · " + pcpP;
+
+    document.getElementById('letterCaregiver').textContent =
+      "Hi — a quick but important note about " + pref + ".\n\n" +
+      pref + " has been diagnosed with a food allergy to " + alg + ". That means no food or drink containing it, and please check with me first before giving " + pref + " anything I haven't sent along — labels change, and \"a little\" isn't safe.\n\n" +
+      "I'm attaching the emergency action plan from our provider. Please read it and keep it with you when " + pref + " is in your care. It says exactly what to watch for and what to do — please follow it rather than guessing, and call me right away if anything comes up.\n\n" +
+      "If you ever think something serious is happening, call 911 first, then call me.\n\n" +
+      "Reach me at: " + p1 + " · " + p1p +
+      (p2 ? "\nBackup: " + p2 + (p2p ? " · " + p2p : "") : "") +
+      "\n\nThank you for helping us keep " + pref + " safe.";
+
+    document.getElementById('letterSheet').textContent =
+      "FOOD ALLERGY — IMPORTANT INFORMATION\n" +
+      "════════════════════════════════════\n\n" +
+      "CHILD:            " + full + "\n" +
+      "GOES BY:          " + pref + "\n" +
+      "DATE OF BIRTH:    " + dob + "\n" +
+      "CLASSROOM/GRADE:  " + grade + "\n\n" +
+      "ALLERGIC TO:      " + alg.toUpperCase() + "\n\n" +
+      "────────────────────────────────────\n" +
+      "IN AN EMERGENCY\n" +
+      "Follow the signed emergency action plan posted with this sheet.\n" +
+      "If you believe this is a severe reaction, call 911 first.\n" +
+      "────────────────────────────────────\n\n" +
+      "CONTACT FIRST:    " + p1 + " · " + p1p + "\n" +
+      (p2 ? "THEN:             " + p2 + (p2p ? " · " + p2p : "") + "\n" : "") +
+      "PROVIDER:         " + pcp + " · " + pcpP + "\n\n" +
+      "PLEASE:\n" +
+      "  • Do not offer " + pref + " food that a parent hasn't approved.\n" +
+      "  • Check labels every time, even on familiar products.\n" +
+      "  • Report any exposure or symptom to a parent the same day.\n" +
+      "  • Keep the emergency action plan where you can reach it fast.\n\n" +
+      "This sheet is for organizing information. The signed emergency\n" +
+      "action plan from the child's provider is the medical instruction.";
+  }
+
+  document.getElementById('genLetters').addEventListener('click', buildLetters);
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var el = document.getElementById(b.getAttribute('data-copy'));
+      navigator.clipboard.writeText(el.textContent).then(function(){
+        var t = b.textContent; b.textContent = "✓ Copied"; setTimeout(function(){ b.textContent = t; }, 1600);
+      });
+    });
+  });
+
+  refreshFills(); renderLog(); buildLetters();
+})();
+</script>
+</body>
+</html>
