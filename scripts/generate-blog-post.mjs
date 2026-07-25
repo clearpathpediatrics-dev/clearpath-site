@@ -18,6 +18,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { LANDING_PAGES } from "./landing-pages.data.mjs";
+import { buildGuidePages, GUIDE_SLUG, COMPARE_SLUG } from "./build-guide.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -100,6 +101,7 @@ const HEADER_HTML = `
     <nav class="lp-nav">
       <a href="/">Home</a>
       <a href="/blog/">Blog</a>
+      <a href="/pediatric-care-navigation-guide">Guide</a>
       <a href="/#services">Services</a>
       <a href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener" class="cta">Book a Free Call</a>
     </nav>
@@ -111,7 +113,7 @@ const FOOTER_HTML = `
   <div class="wrap">
     <span>Copyright © 2025 ClearPath Pediatrics, LLC. — All Rights Reserved.</span>
     <nav>
-      <a href="/">Home</a><a href="/blog/">Blog</a>
+      <a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a>
       <a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a>
       <a href="/#contact">Contact</a>
     </nav>
@@ -201,6 +203,7 @@ ${post.html}
       <p>ClearPath's RN care navigators help families of medically complex children stay organized and confident. Start with a free 30-minute call.</p>
       <a href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener">Book a Free Consultation →</a>
     </div>
+    <p style="margin-top:22px;color:var(--soft);font-size:.95rem">This article is part of our <a href="/pediatric-care-navigation-guide"><strong>complete guide to pediatric care navigation</strong></a> — browse every how-to guide in one place.</p>
     <a href="/blog/" class="backlink">← Back to all articles</a>
   </div>
 </main>
@@ -270,6 +273,7 @@ ${HEADER_HTML}
     <span class="eyebrow">The ClearPath Blog</span>
     <h1>Clarity for families, one article at a time.</h1>
     <p>RN-written guidance on navigating complex pediatric care — organizing appointments, understanding insurance, preparing for visits, and supporting your child's journey.</p>
+    <p style="margin-top:14px"><a href="/pediatric-care-navigation-guide" style="color:#fff;font-weight:600;border-bottom:1px solid var(--gold)">New here? Start with our complete Pediatric Care Navigation Guide →</a></p>
   </div>
 </section>
 <main class="list">
@@ -289,6 +293,8 @@ function renderSitemap(posts) {
   const staticUrls = [
     { loc: `${SITE}/`, pri: "1.0", freq: "weekly", mod: today },
     { loc: `${SITE}/blog`, pri: "0.8", freq: "daily", mod: today },
+    { loc: `${SITE}/${GUIDE_SLUG}`, pri: "0.9", freq: "weekly", mod: today },
+    { loc: `${SITE}/${COMPARE_SLUG}`, pri: "0.7", freq: "monthly", mod: today },
     ...LANDING_PAGES.map(p => ({ loc: `${SITE}/${p.slug}`, pri: "0.8", freq: "monthly", mod: today })),
     { loc: `${SITE}/privacy-policy`, pri: "0.3", freq: "yearly", mod: today },
     { loc: `${SITE}/terms-of-use`, pri: "0.3", freq: "yearly", mod: today },
@@ -449,9 +455,10 @@ async function main() {
   const updated = [manifestEntry, ...posts];
   fs.writeFileSync(POSTS_JSON, JSON.stringify(updated, null, 2) + "\n");
 
-  // Rebuild index + sitemap
+  // Rebuild index + sitemap + pillar guide (so the new post is linked everywhere)
   fs.writeFileSync(path.join(BLOG_DIR, "index.html"), renderIndex(updated));
   fs.writeFileSync(SITEMAP, renderSitemap(updated));
+  buildGuidePages(updated);
 
   console.log(`[blog] ✓ published: /blog/${post.slug}  ("${post.title}")`);
   console.log(`[blog] ✓ ${updated.length} total posts · sitemap + index updated`);

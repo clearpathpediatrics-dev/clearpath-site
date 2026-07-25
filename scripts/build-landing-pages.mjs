@@ -72,14 +72,14 @@ a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
 const HEADER = `
 <header class="lp-header"><div class="wrap">
   <a href="/" class="lp-brand" aria-label="ClearPath Pediatrics home"><img src="/assets/clearpath-logo-white.png" alt="ClearPath Pediatrics" /></a>
-  <nav class="lp-nav"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/#services">Services</a>
+  <nav class="lp-nav"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a><a href="/#services">Services</a>
     <a href="${CAL}" target="_blank" rel="noopener" class="cta">Book a Free Call</a></nav>
 </div></header>`;
 
 const FOOTER = `
 <footer class="lp-footer"><div class="wrap">
   <span>Copyright © 2025 ClearPath Pediatrics, LLC. — All Rights Reserved.</span>
-  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/#contact">Contact</a></nav>
+  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/#contact">Contact</a></nav>
 </div></footer>`;
 
 function renderPage(p) {
@@ -174,6 +174,8 @@ function buildSitemap(posts) {
   const urls = [
     { loc: `${SITE}/`, pri: "1.0", freq: "weekly", mod: today },
     { loc: `${SITE}/blog`, pri: "0.8", freq: "daily", mod: today },
+    { loc: `${SITE}/pediatric-care-navigation-guide`, pri: "0.9", freq: "weekly", mod: today },
+    { loc: `${SITE}/care-navigator-vs-case-manager`, pri: "0.7", freq: "monthly", mod: today },
     ...LANDING_PAGES.map(p => ({ loc: `${SITE}/${p.slug}`, pri: "0.8", freq: "monthly", mod: today })),
     { loc: `${SITE}/privacy-policy`, pri: "0.3", freq: "yearly", mod: today },
     { loc: `${SITE}/terms-of-use`, pri: "0.3", freq: "yearly", mod: today },
