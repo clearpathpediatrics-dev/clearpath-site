@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="https://clearpathpediatrics.com/assets/clearpath-logo.png">
+<link rel="apple-touch-icon" href="https://clearpathpediatrics.com/assets/clearpath-logo.png">
 <title>The Food Allergy Starter Kit — ClearPath Pediatrics</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -22,6 +24,14 @@
   header img{height:44px;width:auto;display:block;margin-bottom:16px}
   header h1{color:#fff;font-size:clamp(1.6rem,4vw,2.2rem)}
   header p{color:#d8e3ec;margin-top:8px;font-size:.98rem}
+  .keepbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:20px;
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px 18px}
+  .keepbar .kb-text{flex:1;min-width:220px;color:#d8e3ec;font-size:.88rem;line-height:1.5}
+  .keepbar .kb-text b{color:#fff;display:block;font-size:.96rem;margin-bottom:2px}
+  .keepbar button{flex:none;font-family:inherit;font-weight:700;font-size:.92rem;padding:11px 22px;border-radius:999px;
+    border:none;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;
+    box-shadow:0 8px 20px -8px rgba(214,145,62,.6)}
+  .keepbar button:hover{transform:translateY(-1px)}
 
   /* tabs */
   nav.tabs{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(11,34,64,.05)}
@@ -134,6 +144,13 @@
     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgNDgiPjx0ZXh0IHg9IjAiIHk9IjIyIiBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9IjcwMCI+Q2xlYXJQYXRoPC90ZXh0Pjx0ZXh0IHg9IjAiIHk9IjQwIiBmaWxsPSIjZTNhNDU4IiBmb250LWZhbWlseT0iSW50ZXIsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGV0dGVyLXNwYWNpbmc9IjMiPlBFRElBVFJJQ1M8L3RleHQ+PC9zdmc+" alt="ClearPath Pediatrics">
     <h1>The Food Allergy Starter Kit</h1>
     <p>Fill in your child's details once — every list, log, and letter below fills itself in.</p>
+    <div class="keepbar no-print">
+      <div class="kb-text">
+        <b>Save your own copy</b>
+        Downloads the whole kit as one file — with anything you've already filled in. Works offline, forever, no internet needed.
+      </div>
+      <button type="button" id="downloadKit">⬇ Download &amp; keep</button>
+    </div>
   </div>
 </header>
 
@@ -608,6 +625,36 @@
         var t = b.textContent; b.textContent = "✓ Copied"; setTimeout(function(){ b.textContent = t; }, 1600);
       });
     });
+  });
+
+  /* ---- download a self-contained copy, carrying the parent's data with it ----
+     We clone the live document and inject a tiny bootstrap script into <head>
+     that re-seeds localStorage. Head scripts run before the body script reads
+     storage, so the downloaded file opens with everything already filled in. */
+  document.getElementById("downloadKit").addEventListener("click", function(){
+    var btn = this;
+    try {
+      var clone = document.documentElement.cloneNode(true);
+      var prior = clone.querySelector("#cpBootstrap");
+      if (prior) prior.remove();
+      var boot = document.createElement("script");
+      boot.id = "cpBootstrap";
+      boot.textContent = 'try{localStorage.setItem(' + JSON.stringify(KEY) + ',' + JSON.stringify(JSON.stringify(state)) + ');}catch(e){}';
+      clone.querySelector("head").appendChild(boot);
+
+      var blob = new Blob(["<!DOCTYPE html>\n" + clone.outerHTML], { type: "text/html;charset=utf-8" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = "ClearPath-Food-Allergy-Starter-Kit.html";
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
+
+      var t = btn.textContent; btn.textContent = "✓ Saved to your device";
+      setTimeout(function(){ btn.textContent = t; }, 2400);
+    } catch(e){
+      alert("Your browser blocked the download. You can also use File → Save Page As, or Print → Save as PDF.");
+    }
   });
 
   refreshFills(); renderLog(); buildLetters();
