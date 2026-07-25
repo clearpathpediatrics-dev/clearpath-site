@@ -84,7 +84,7 @@
         <h2>Your kit</h2>
         <p>Open it in this browser — your entries save to your own device as you type. Bookmark this page so you can come back to it.</p>
         <div id="items"></div>
-        <div class="notice"><strong>Important:</strong> bookmark or save this page's link. It's how you get back in. We've also emailed it to you.</div>
+        <div class="notice"><strong>Bookmark this page now.</strong> This link is how you get back into your kit — save it before you close the tab. Lost it? Email <a href="mailto:admin@clearpathpediatrics.com">admin@clearpathpediatrics.com</a> with the address you used at checkout and we'll send it straight back to you.</div>
       </div>
 
       <div class="card">
@@ -139,15 +139,25 @@
   }
 
   // Add the buyer to the Welcome List (the back-end email play).
-  function subscribe(email){
+  // We also store their personal access link as a profile property, so a Klaviyo
+  // flow can email it to them automatically — use {{ person.kit_access_url }}.
+  function subscribe(email, items){
     if (!email) return;
+    var accessUrl = location.origin + "/kit-access?session_id=" + encodeURIComponent(session);
     try {
       fetch("https://a.klaviyo.com/client/subscriptions/?company_id=" + encodeURIComponent(KLAVIYO_PUBLIC_KEY), {
         method: "POST",
         headers: { "Content-Type": "application/json", "revision": "2024-10-15" },
         body: JSON.stringify({ data: { type: "subscription", attributes: {
           custom_source: "Food Allergy Kit Buyer",
-          profile: { data: { type: "profile", attributes: { email: email } } }
+          profile: { data: { type: "profile", attributes: {
+            email: email,
+            properties: {
+              kit_access_url: accessUrl,
+              kit_purchased: (items || []).map(function(i){ return i.title; }).join(", "),
+              kit_purchased_at: new Date().toISOString()
+            }
+          } } }
         }, relationships: { list: { data: { type: "list", id: KLAVIYO_LIST_ID } } } } })
       });
       // Suppress the site-wide email popup for buyers — they're already on the list.
@@ -176,7 +186,7 @@
       stateEl.style.display = "none";
       content.style.display = "block";
 
-      subscribe(d.email);
+      subscribe(d.email, d.items);
 
       // Real Purchase event for ad optimization (fires once per session id).
       try {
