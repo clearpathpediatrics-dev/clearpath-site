@@ -14,11 +14,10 @@
  * Required env var (set in Netlify UI → Site config → Environment variables):
  *   STRIPE_SECRET_KEY   — your Stripe SECRET key (sk_live_... / sk_test_...)
  *
- * Optional env vars — set these to match on exact Stripe price IDs instead of
- * product-name text (more robust; recommended once your prices exist):
- *   STRIPE_PRICE_KIT     — price id for the $29 Food Allergy Starter Kit
- *   STRIPE_PRICE_BUMP    — price id for the $19 ER & Urgent Care Go-Bag
- *   STRIPE_PRICE_BUNDLE  — price id for the $79 bundle (grants everything)
+ * Price IDs are hardcoded below (they are identifiers, not secrets) so no extra
+ * env vars are needed. Each can still be overridden by an env var of the same
+ * name if a price is ever replaced:
+ *   STRIPE_PRICE_KIT / STRIPE_PRICE_BUMP / STRIPE_PRICE_BUNDLE
  */
 
 import fs from "node:fs";
@@ -27,6 +26,13 @@ import path from "node:path";
 const FILES = {
   kit:   { rel: "private/kit-food-allergy/index.html", title: "The Food Allergy Starter Kit" },
   gobag: { rel: "private/kit-er-go-bag/index.html",    title: "ER & Urgent Care Go-Bag Checklist" },
+};
+
+// Live ClearPath Stripe price IDs (identifiers, not secrets).
+const PRICE_IDS = {
+  kit:    process.env.STRIPE_PRICE_KIT    || "price_1TwwtfAzFFIaEbIaRkautIts",
+  bump:   process.env.STRIPE_PRICE_BUMP   || "price_1Twww1AzFFIaEbIae5AOy4H2",
+  bundle: process.env.STRIPE_PRICE_BUNDLE || "", // no bundle product yet
 };
 
 const json = (status, body) => new Response(JSON.stringify(body), {
@@ -51,9 +57,9 @@ function entitlementsFor(session) {
   const items = session?.line_items?.data || [];
   const owns = new Set();
 
-  const PRICE_KIT    = process.env.STRIPE_PRICE_KIT;
-  const PRICE_BUMP   = process.env.STRIPE_PRICE_BUMP;
-  const PRICE_BUNDLE = process.env.STRIPE_PRICE_BUNDLE;
+  const PRICE_KIT    = PRICE_IDS.kit;
+  const PRICE_BUMP   = PRICE_IDS.bump;
+  const PRICE_BUNDLE = PRICE_IDS.bundle;
 
   for (const li of items) {
     const priceId = li?.price?.id || "";

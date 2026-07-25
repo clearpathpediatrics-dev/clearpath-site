@@ -172,20 +172,16 @@
     background:#fff;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;
     box-shadow:0 10px 26px -18px rgba(214,145,62,.5);
   }
-  .bump .chk{
-    flex:none;width:26px;height:26px;border-radius:7px;border:2px solid var(--gold2);
-    background:rgba(227,164,88,.1);display:grid;place-items:center;cursor:pointer;margin-top:2px;
+  .bump .bumpmark{
+    flex:none;width:26px;height:26px;border-radius:7px;background:var(--gold2);
+    display:grid;place-items:center;margin-top:2px;
   }
-  .bump .chk.on{background:var(--gold2)}
-  .bump .chk svg{width:15px;height:15px;color:#fff;opacity:0;transition:opacity .12s}
-  .bump .chk.on svg{opacity:1}
+  .bump .bumpmark svg{width:15px;height:15px;color:#fff}
   .bump h4{font-family:'Inter',sans-serif;color:var(--navy);font-size:1.02rem;font-weight:800}
   .bump h4 em{font-style:normal;color:var(--gold2)}
   .bump p{font-size:.92rem;color:var(--muted);margin-top:3px}
-
-  /* bundle line */
-  .bundle-line{max-width:560px;margin:20px auto 0;text-align:center;font-size:.95rem;color:var(--muted)}
-  .bundle-line a{color:var(--navy);font-weight:800;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
+  .bumptag{display:inline-block;margin-top:9px;font-size:.72rem;font-weight:800;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--gold2);background:rgba(227,164,88,.14);padding:5px 12px;border-radius:100px}
 
   /* ---------- COMPLIANCE REASSURE ---------- */
   .reassure{background:var(--cream-warm)}
@@ -243,7 +239,7 @@
     <div class="microtrust">
       <span>✦ Built by an RN-led team</span>
       <span>✦ Instant download</span>
-      <span>✦ Encrypted &amp; parent-owned</span>
+      <span>✦ Private &amp; parent-owned</span>
     </div>
   </div>
 </header>
@@ -275,7 +271,7 @@
   <div class="wrap">
     <span class="eyebrow">Why trust this</span>
     <h2>Made by parents, guided by pediatric nursing.</h2>
-    <p>ClearPath was built by a team led by a pediatric registered nurse — people who sat on both sides of the exam table. This kit isn't medical advice and it won't diagnose or treat anything. It does the <strong>organizing, preparing, and translating</strong> that busy offices don't have time for, so the care your child already gets works better. Your information stays <strong>encrypted and parent-owned</strong> — always yours, never sold.</p>
+    <p>ClearPath was built by a team led by a pediatric registered nurse — people who sat on both sides of the exam table. This kit isn't medical advice and it won't diagnose or treat anything. It does the <strong>organizing, preparing, and translating</strong> that busy offices don't have time for, so the care your child already gets works better. Anything you enter stays <strong>on your own device</strong> — never uploaded to us, never sold.</p>
   </div>
 </section>
 
@@ -373,19 +369,17 @@
       </div>
     </div>
 
-    <!-- ORDER BUMP -->
+    <!-- ORDER BUMP — offered as an optional add-on on Stripe's checkout page -->
     <div class="bump">
-      <div class="chk" id="bumpChk" role="checkbox" aria-checked="false" tabindex="0" aria-label="Add the ER & Urgent Care Go-Bag Checklist for nineteen dollars">
+      <div class="bumpmark" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
       </div>
       <div>
-        <h4>Yes — add the <em>ER &amp; Urgent Care Go-Bag Checklist</em> (+$19)</h4>
-        <p>The one-page, grab-and-go list of exactly what to bring and what to tell the front desk when a reaction sends you out the door fast. Most parents add this. When you need it, you need it in seconds.</p>
+        <h4>Add the <em>ER &amp; Urgent Care Go-Bag Checklist</em> — just $19 more</h4>
+        <p>The one-page, grab-and-go list of exactly what to bring and what to tell the front desk when a reaction sends you out the door fast. When you need it, you need it in seconds.</p>
+        <span class="bumptag">One tap to add it on the next page</span>
       </div>
     </div>
-
-    <!-- BUNDLE -->
-    <p class="bundle-line">More than one thing on your plate? <a href="#" data-checkout="bundle">Get the full New-Diagnosis Library — all kits for $79 →</a></p>
   </div>
 </section>
 
@@ -397,7 +391,7 @@
       <ul>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><b>It's an organizing &amp; preparation tool</b> — education and structure to help you make the most of the care your child already has.</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><b>It is not medical advice</b> and does not diagnose, treat, or replace your child's doctor. Always follow your provider's guidance.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><b>Your information stays encrypted and parent-owned.</b> It's yours. We never sell it.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><b>Your information stays on your own device.</b> The kit saves your entries locally in your browser — nothing is uploaded to us, and nothing is ever sold.</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><b>The Emergency Summary in our app is always free</b> — kit or no kit. This just makes the rest easier.</span></li>
       </ul>
     </div>
@@ -449,7 +443,7 @@
     <div class="microtrust">
       <span>✦ Instant download</span>
       <span>✦ 14-day refund</span>
-      <span>✦ Encrypted &amp; parent-owned</span>
+      <span>✦ Private &amp; parent-owned</span>
     </div>
   </div>
 </section>
@@ -465,50 +459,21 @@
 
 <script>
   /* =====================================================================
-     CHECKOUT WIRING — paste your real checkout URLs below.
-     Recommended: Gumroad (digital products + order-bump support) or Stripe.
-     Leave a value as "" until you have it — the button will stay inert
-     (no dead redirect) and log a reminder to the console.
+     CHECKOUT — live Stripe payment link.
+     The $19 ER Go-Bag is configured in Stripe as an optional "Add to your
+     order" item on this same link, so there is only ONE URL: the buyer adds
+     the bump on Stripe's page with one tap. Do not try to pre-select it from
+     here — Stripe payment links can't accept that from a query string.
      ===================================================================== */
-  var CHECKOUT_URLS = {
-    kit:     "",   // TODO: Starter Kit only — $29
-    kitBump: "",   // TODO: Starter Kit + ER Go-Bag bump — $48
-    bundle:  ""    // TODO: Full New-Diagnosis Library — $79
-  };
+  var CHECKOUT_URL = "https://buy.stripe.com/6oUfZg1Cle2icwI4OG8og05";
 
-  // Order bump toggle (in-memory only)
-  var chk = document.getElementById('bumpChk');
-  var bumpOn = false;
-  function toggleBump(){
-    bumpOn = !bumpOn;
-    chk.classList.toggle('on', bumpOn);
-    chk.setAttribute('aria-checked', bumpOn ? 'true' : 'false');
-  }
-  chk.addEventListener('click', toggleBump);
-  chk.addEventListener('keydown', function(e){
-    if(e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); toggleBump(); }
-  });
-
-  // Checkout buttons
   document.querySelectorAll('[data-checkout]').forEach(function(btn){
     btn.addEventListener('click', function(e){
       e.preventDefault();
-      var product = btn.getAttribute('data-checkout');
-      var withBump = (product === 'starter-kit' && bumpOn);
-      var url = product === 'bundle' ? CHECKOUT_URLS.bundle
-              : withBump            ? CHECKOUT_URLS.kitBump
-                                    : CHECKOUT_URLS.kit;
-
-      // Fire ad-optimization signal (Meta Pixel / GA4 via analytics.js).
-      // NOTE: this is InitiateCheckout. The true "Purchase" event should fire
-      // on your checkout provider's success/thank-you page.
-      if (window.cpTrack) window.cpTrack('InitiateCheckout', { product: product, bump: withBump, value: (product==='bundle'?79:(withBump?48:29)), currency: 'USD' });
-
-      if (url) {
-        window.location.href = url;
-      } else {
-        console.log('[checkout] not wired yet →', product, 'bump:', withBump, '(add URL in CHECKOUT_URLS)');
-      }
+      // Ad-optimization signal. The real Purchase event fires on /kit-access
+      // once Stripe confirms the payment server-side.
+      if (window.cpTrack) window.cpTrack('InitiateCheckout', { product: 'starter-kit', value: 29, currency: 'USD' });
+      window.location.href = CHECKOUT_URL;
     });
   });
 </script>
