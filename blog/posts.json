@@ -1,5 +1,22 @@
 [
   {
+    "slug": "pediatric-referral-tracking-system",
+    "title": "How to Build a Pediatric Referral Tracking System for Multiple Specialists",
+    "excerpt": "When your child sees several specialists, referrals can get lost between offices. Here's a simple, parent-friendly way to track every pediatric referral from request to appointment.",
+    "metaDescription": "Learn how to build a pediatric referral tracking system to organize specialist referrals, authorizations, and appointments so nothing slips through the cracks.",
+    "tags": [
+      "pediatric referral tracking",
+      "specialist referrals",
+      "care navigation",
+      "pediatric appointments",
+      "insurance authorization"
+    ],
+    "topic": "Care Navigation Tips",
+    "iso": "2026-08-07",
+    "prettyDate": "August 7, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "track-pediatric-developmental-milestones",
     "title": "How to Track Your Child's Pediatric Developmental Milestones: A Parent's Organizing Guide",
     "excerpt": "A warm, practical guide to organizing your child's developmental milestones so you can walk into every well-child visit prepared and confident.",
