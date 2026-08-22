@@ -35,18 +35,18 @@ const head = ({ slug, title, desc, keywords, howto }) => `<!DOCTYPE html>
 <meta name="description" content="${desc}">
 <meta name="keywords" content="${keywords.join(", ")}">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="${SITE}/tools/${slug}/">
+<link rel="canonical" href="${SITE}/tools/${slug}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${desc}">
-<meta property="og:url" content="${SITE}/tools/${slug}/">
+<meta property="og:url" content="${SITE}/tools/${slug}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/tools.css">
 <script type="application/ld+json">${JSON.stringify({
   "@context": "https://schema.org", "@type": "WebApplication",
-  name: howto.name, url: `${SITE}/tools/${slug}/`,
+  name: howto.name, url: `${SITE}/tools/${slug}`,
   applicationCategory: "HealthApplication", operatingSystem: "Any",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   description: desc,
@@ -521,7 +521,7 @@ const index = () => head({
     steps: ["Choose the tool that matches what you are dealing with", "Fill it in", "Print or copy what it produces"],
     faq: [{ q: "Are these really free?", a: "Yes. No signup, no card, no email required." },
           { q: "Is my information private?", a: "Completely. Every tool runs in your browser and nothing is transmitted to us." }] },
-}).replace("/tools//", "/tools/") + `
+}).replace("/tools/\"", "/tools\"").replace("/tools/`", "/tools`") + `
 <section class="hero">
   <span class="pill">Free · Private · No signup</span>
   <h1>Free tools for families managing complex care</h1>

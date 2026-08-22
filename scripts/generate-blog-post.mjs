@@ -379,6 +379,21 @@ ${FOOTER_HTML}
 </html>`;
 }
 
+
+/**
+ * Real last-modified date for a static page, from the file on disk.
+ * Previously every static URL claimed today's date on every bot run, which
+ * teaches Google to ignore the field entirely.
+ */
+function fileMod(urlPath, fallback) {
+  const rel = urlPath.replace(`${SITE}/`, "").replace(/\/$/, "");
+  for (const c of [path.join(ROOT, rel, "index.html"), path.join(ROOT, `${rel}.html`),
+                   path.join(ROOT, rel || "index.html")]) {
+    try { return fs.statSync(c).mtime.toISOString().slice(0, 10); } catch {}
+  }
+  return fallback;
+}
+
 function renderSitemap(posts) {
   const today = phoenixParts().iso;
   const staticUrls = [
@@ -391,6 +406,8 @@ function renderSitemap(posts) {
     // on every run, so anything omitted here is silently deleted from the
     // sitemap the next time the bot publishes.
     { loc: `${SITE}/free-care-roadmap`, pri: "0.95", freq: "monthly", mod: today },
+    { loc: `${SITE}/is-clearpath-right-for-us`, pri: "0.7", freq: "monthly", mod: today },
+    { loc: `${SITE}/food-allergy-starter-kit`, pri: "0.7", freq: "monthly", mod: today },
     { loc: `${SITE}/tools`, pri: "0.9", freq: "monthly", mod: today },
     { loc: `${SITE}/tools/insurance-appeal-letter`, pri: "0.9", freq: "monthly", mod: today },
     { loc: `${SITE}/tools/iep-meeting-prep`, pri: "0.9", freq: "monthly", mod: today },
@@ -399,7 +416,7 @@ function renderSitemap(posts) {
     { loc: `${SITE}/terms-of-use`, pri: "0.3", freq: "yearly", mod: today },
   ];
   const postUrls = posts.map(p => ({ loc: `${SITE}/blog/${p.slug}`, pri: "0.6", freq: "monthly", mod: p.iso }));
-  const rows = [...staticUrls, ...postUrls].map(u =>
+  const rows = [...staticUrls.map(u => ({ ...u, mod: fileMod(u.loc, u.mod) })), ...postUrls].map(u =>
     `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${u.mod}</lastmod>\n    <changefreq>${u.freq}</changefreq>\n    <priority>${u.pri}</priority>\n  </url>`
   ).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows}\n</urlset>\n`;
