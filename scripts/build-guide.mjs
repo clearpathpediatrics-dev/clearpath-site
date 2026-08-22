@@ -60,8 +60,6 @@ a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
 .lp-nav a:hover{color:#fff;text-decoration:none}
 .lp-nav .cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;padding:9px 18px;border-radius:999px}
 .eyebrow{font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-.crumbs{font-size:.8rem;color:var(--soft);padding:14px 0 0}
-.crumbs a{color:var(--soft)}.crumbs a:hover{color:var(--gold2)}
 .hero{background:radial-gradient(900px 420px at 82% -10%,rgba(227,164,88,.15),transparent 60%),linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:60px 0 54px}
 .hero .eyebrow{display:inline-block;margin-bottom:12px}
 .hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.1rem,4.6vw,3.1rem);line-height:1.12;margin-bottom:16px;max-width:860px}
@@ -162,12 +160,6 @@ const foot = `${FOOTER}
 </body>
 </html>`;
 
-function breadcrumb(items) {
-  return {
-    "@context": "https://schema.org", "@type": "BreadcrumbList",
-    itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, item: it.url })),
-  };
-}
 
 // ---------------------------------------------------------------- PILLAR PAGE
 function renderGuide(posts) {
@@ -198,7 +190,6 @@ function renderGuide(posts) {
       about: { "@type": "Organization", name: "ClearPath Pediatrics" },
       publisher: { "@type": "Organization", name: "ClearPath Pediatrics", logo: { "@type": "ImageObject", url: `${SITE}/assets/clearpath-logo.png` } },
     },
-    breadcrumb([{ name: "Home", url: `${SITE}/` }, { name: "Pediatric Care Navigation Guide", url }]),
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
     {
       "@context": "https://schema.org", "@type": "ItemList",
@@ -221,7 +212,6 @@ function renderGuide(posts) {
     </div>`).join("");
 
   return head(title, desc, url, keywords, jsonld) + `
-<nav class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> › <span>Pediatric Care Navigation Guide</span></nav>
 <section class="hero"><div class="wrap">
   <span class="eyebrow">The complete parent's guide</span>
   <h1>Pediatric Care Navigation: A Complete Guide for Parents</h1>
@@ -299,7 +289,6 @@ function renderCompare() {
 
   const jsonld = [
     { "@context": "https://schema.org", "@type": "Article", headline: "Care Navigator vs. Case Manager vs. Patient Advocate", description: desc, mainEntityOfPage: url, author: { "@type": "Organization", name: "ClearPath Pediatrics" }, publisher: { "@type": "Organization", name: "ClearPath Pediatrics", logo: { "@type": "ImageObject", url: `${SITE}/assets/clearpath-logo.png` } }, image: `${SITE}/assets/clearpath-logo.png` },
-    breadcrumb([{ name: "Home", url: `${SITE}/` }, { name: "Pediatric Care Navigation Guide", url: `${SITE}/${GUIDE_SLUG}` }, { name: "Care Navigator vs. Case Manager", url }]),
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
   ];
 
@@ -312,7 +301,6 @@ function renderCompare() {
   ];
 
   return head(title, desc, url, keywords, jsonld) + `
-<nav class="crumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/${GUIDE_SLUG}">Care Navigation Guide</a> › <span>Navigator vs. Case Manager</span></nav>
 <section class="hero"><div class="wrap">
   <span class="eyebrow">Understanding your options</span>
   <h1>Care Navigator vs. Case Manager vs. Patient Advocate</h1>

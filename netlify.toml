@@ -11,7 +11,7 @@
 # 404 redirect below).
 [functions]
   directory = "netlify/functions"
-  included_files = ["private/**"]
+  included_files = ["private/**", "netlify/lib/**", "assets/logo-white-420.png"]
   node_bundler = "esbuild"
 
 # HARD BLOCK: the paid product lives in /private. Never serve it directly.
@@ -43,3 +43,12 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), camera=(), microphone=()"
+
+# ---- Lead funnel -------------------------------------------------------------
+# submission-created-background fires on every care-roadmap submission: triage,
+# build the personalised Starter Plan PDF, email it, alert, enroll in nurture.
+# nurture runs daily on a schedule. Both need RESEND_API_KEY.
+[[headers]]
+  for = "/.netlify/functions/unsubscribe"
+  [headers.values]
+    X-Robots-Tag = "noindex"
