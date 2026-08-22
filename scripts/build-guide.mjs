@@ -105,6 +105,15 @@ table.cmp tr:last-child td,table.cmp tr:last-child th{border-bottom:none}
 .cta-band h2{color:#fff;margin-bottom:10px}
 .cta-band p{color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 6px}
 .bg-cream{background:var(--cream)}.bg-paper{background:var(--paper)}
+.guide-tools{padding:44px 0;background:#faf7f2;border-top:1px solid #e8dfd2}
+.guide-tools h2{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;color:var(--navy);margin-bottom:8px}
+.guide-tools>.wrap>p{color:var(--soft);margin-bottom:22px;max-width:62ch}
+.gt-grid{display:grid;gap:14px}
+@media(min-width:760px){.gt-grid{grid-template-columns:1fr 1fr 1fr}}
+.gt-grid a{background:#fff;border:1px solid #e8dfd2;border-radius:16px;padding:20px 22px;text-decoration:none;display:block}
+.gt-grid a:hover{border-color:var(--gold)}
+.gt-grid strong{display:block;color:var(--navy);font-size:1.02rem;margin-bottom:5px}
+.gt-grid span{color:var(--soft);font-size:.92rem;line-height:1.55}
 .lp-footer{background:var(--navy);color:rgba(255,255,255,.6);padding:34px 0;margin-top:10px;font-size:.85rem}
 .lp-footer .wrap{max-width:1180px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
 .lp-footer a{color:rgba(255,255,255,.7)}.lp-footer a:hover{color:var(--gold)}
@@ -115,14 +124,24 @@ table.cmp tr:last-child td,table.cmp tr:last-child th{border-bottom:none}
 const HEADER = `
 <header class="lp-header"><div class="wrap">
   <a href="/" class="lp-brand" aria-label="ClearPath Pediatrics home"><img src="/assets/clearpath-logo-white.png" alt="ClearPath Pediatrics" /></a>
-  <nav class="lp-nav"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/${GUIDE_SLUG}">Guide</a><a href="/#services">Services</a>
+  <nav class="lp-nav"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/${GUIDE_SLUG}">Guide</a><a href="/tools/">Free Tools</a><a href="/#services">Services</a>
     <a href="${CAL}" target="_blank" rel="noopener" class="cta">Book a Free Call</a></nav>
 </div></header>`;
 
 const FOOTER = `
+
+<section class="guide-tools"><div class="wrap">
+  <h2>Free tools that do the work for you</h2>
+  <p>Reading is useful; finishing the task is better. These run entirely in your browser — nothing you type is ever sent to us.</p>
+  <div class="gt-grid">
+    <a href="/tools/insurance-appeal-letter/"><strong>Insurance appeal letter builder</strong><span>Build a complete appeal against a denied claim, and find out the date it must be sent by.</span></a>
+    <a href="/tools/iep-meeting-prep/"><strong>IEP meeting prep pack</strong><span>A parent input statement, your questions, and a pre-meeting checklist. Printable.</span></a>
+    <a href="/tools/medication-schedule/"><strong>Medication schedule builder</strong><span>A daily schedule plus a one-page medication list for the care binder.</span></a>
+  </div>
+</div></section>
 <footer class="lp-footer"><div class="wrap">
   <span>Copyright © 2025 ClearPath Pediatrics, LLC. — All Rights Reserved.</span>
-  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/${GUIDE_SLUG}">Guide</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/#contact">Contact</a></nav>
+  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/${GUIDE_SLUG}">Guide</a><a href="/tools/">Free Tools</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/#contact">Contact</a></nav>
 </div></footer>`;
 
 function head(title, desc, url, keywords, jsonld) {

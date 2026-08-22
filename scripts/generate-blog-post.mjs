@@ -92,12 +92,87 @@ a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
 .lp-nav a:hover{color:#fff;text-decoration:none}
 .lp-nav .cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;padding:9px 18px;border-radius:999px}
 .eyebrow{font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2)}
+.tool-callout{background:#faf7f2;border:1px solid #e8dfd2;border-left:4px solid var(--gold);
+  border-radius:0 16px 16px 0;padding:22px 26px;margin:30px 0}
+.tool-callout .k{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  color:#8a6524;font-weight:700;margin-bottom:8px}
+.tool-callout h3{font-family:'Playfair Display',Georgia,serif;font-size:1.25rem;margin:0 0 8px;color:var(--navy)}
+.tool-callout h3 a{color:var(--navy);text-decoration:none}
+.tool-callout p{margin:0 0 15px;color:var(--soft);font-size:.97rem;line-height:1.6}
+.tool-callout .tc-btn{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#fff;font-weight:700;font-size:.95rem;padding:11px 22px;border-radius:999px;text-decoration:none}
+.blog-tools-strip{margin:26px auto 0}
+.bts{background:#faf7f2;border:1px solid #e8dfd2;border-left:4px solid var(--gold);border-radius:0 16px 16px 0;
+  padding:20px 24px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.bts .k{display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#8a6524;font-weight:700;margin-bottom:6px}
+.bts strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;color:var(--navy);margin-bottom:4px}
+.bts p{margin:0;color:var(--soft);font-size:.94rem;max-width:60ch}
+.bts a{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;font-weight:700;font-size:.94rem;
+  padding:12px 24px;border-radius:999px;text-decoration:none;white-space:nowrap}
 .lp-footer{background:var(--navy);color:rgba(255,255,255,.6);padding:34px 0;margin-top:56px;font-size:.85rem}
 .lp-footer .wrap{max-width:1180px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
 .lp-footer a{color:rgba(255,255,255,.7)}.lp-footer a:hover{color:var(--gold)}
 .lp-footer nav{display:flex;gap:18px;flex-wrap:wrap}
 @media(max-width:640px){.lp-footer .wrap{flex-direction:column;text-align:center}.lp-nav{gap:14px}}
 `;
+
+
+/* --------------------------------------------------------------- free tools
+ * A tool link inside a relevant article is the highest-intent placement on the
+ * site: someone reading how to appeal a denial wants to *do* it, not read more.
+ * It is also the internal-linking signal that tells Google these pages matter.
+ * Keyed off clusterKey, with a keyword fallback for the 48 posts written before
+ * clusters existed.
+ */
+const TOOLS = {
+  appeal: { href: "/tools/insurance-appeal-letter/", name: "Insurance appeal letter builder",
+    line: "Build a complete, properly formatted appeal against the exact reason you were given — and find out the date it has to be sent by." },
+  iep: { href: "/tools/iep-meeting-prep/", name: "IEP meeting prep pack",
+    line: "Produce a parent input statement, your question list and a pre-meeting checklist. Printable, and part of the record if you send it ahead." },
+  meds: { href: "/tools/medication-schedule/", name: "Medication schedule builder",
+    line: "Turn a scattered medication list into a daily schedule and a one-page summary for the care binder." },
+  hub: { href: "/tools/", name: "Free tools for families managing complex care",
+    line: "An appeal letter builder, an IEP meeting prep pack and a medication schedule builder. All free, and nothing you type ever leaves your browser." },
+};
+
+const TOOL_BY_CLUSTER = {
+  "denials-auth": "appeal", "billing-eob": "appeal",
+  "school-iep": "iep",
+  "organising": "meds", "discharge": "meds", "home-dme": "meds",
+};
+
+/** Which tool belongs in this post. Falls back to title keywords. */
+function toolFor(post) {
+  const byCluster = TOOL_BY_CLUSTER[post.clusterKey];
+  if (byCluster) return TOOLS[byCluster];
+  const t = `${post.title} ${post.topic || ""} ${(post.tags || []).join(" ")}`.toLowerCase();
+  if (/(deny|denial|denied|appeal|authoriz|authoris|prior auth|insurance|coverage|eob|claim|bill|deductible)/.test(t)) return TOOLS.appeal;
+  if (/(iep|504|school|teacher|classroom|special ed)/.test(t)) return TOOLS.iep;
+  if (/(medication|prescription|pharmacy|dose|dosing|med list|discharge|binder|nursing schedule)/.test(t)) return TOOLS.meds;
+  // Organising, roster and paperwork pieces all end in the same place: a
+  // one-page summary for the care binder, which is what that tool produces.
+  if (/(organi[sz]|paperwork|roster|records|care binder)/.test(t)) return TOOLS.meds;
+  // Everything else still earns an internal link into the tools hub — never a
+  // mismatched offer, but never a dead end either.
+  return TOOLS.hub;
+}
+
+const toolCallout = (tool) => !tool ? "" : `
+    <aside class="tool-callout">
+      <span class="k">Free tool · nothing leaves your browser</span>
+      <h3><a href="${tool.href}">${tool.name}</a></h3>
+      <p>${tool.line}</p>
+      <a class="tc-btn" href="${tool.href}">Open the free tool →</a>
+    </aside>`;
+
+/** Insert the callout after roughly the third paragraph, not at the very top. */
+function injectTool(html, tool) {
+  if (!tool) return html;
+  const parts = html.split("</p>");
+  if (parts.length < 5) return html + toolCallout(tool);
+  const at = Math.min(3, parts.length - 2);
+  return parts.slice(0, at).join("</p>") + "</p>" + toolCallout(tool) + parts.slice(at).join("</p>");
+}
 
 const HEADER_HTML = `
 <header class="lp-header">
@@ -107,6 +182,7 @@ const HEADER_HTML = `
       <a href="/">Home</a>
       <a href="/blog/">Blog</a>
       <a href="/pediatric-care-navigation-guide">Guide</a>
+      <a href="/tools/">Free Tools</a>
       <a href="/#services">Services</a>
       <a href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener" class="cta">Book a Free Call</a>
     </nav>
@@ -119,7 +195,7 @@ const FOOTER_HTML = `
     <span>Copyright © 2025 ClearPath Pediatrics, LLC. — All Rights Reserved.</span>
     <nav>
       <a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a>
-      <a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a>
+      <a href="/tools/">Free Tools</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
@@ -200,7 +276,7 @@ ${HEADER_HTML}
     <p class="meta">${esc(post.prettyDate)}${post.readMinutes ? ` · ${post.readMinutes} min read` : ""} · ClearPath Pediatrics</p>
     <div class="tags">${(post.tags || []).map(t => `<span>${esc(t)}</span>`).join("")}</div>
     <div class="body">
-${post.html}
+${injectTool(post.html, toolFor(post))}
     </div>
     ${DISCLAIMER_HTML}
     <div class="cta-band">
@@ -282,6 +358,16 @@ ${HEADER_HTML}
   </div>
 </section>
 <main class="list">
+<div class="wrap blog-tools-strip">
+  <div class="bts">
+    <div>
+      <span class="k">Free · nothing leaves your browser</span>
+      <strong>Tools, not just reading</strong>
+      <p>An appeal letter builder, an IEP prep pack and a medication schedule builder — built by our RNs.</p>
+    </div>
+    <a href="/tools/">Open the free tools →</a>
+  </div>
+</div>
   <div class="wrap-wide">
     ${posts.length ? `<div class="grid">${cards}\n    </div>` : `<p class="empty">New articles are on the way — check back soon, or <a href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener">book a free call</a> in the meantime.</p>`}
   </div>
@@ -301,6 +387,14 @@ function renderSitemap(posts) {
     { loc: `${SITE}/${GUIDE_SLUG}`, pri: "0.9", freq: "weekly", mod: today },
     { loc: `${SITE}/${COMPARE_SLUG}`, pri: "0.7", freq: "monthly", mod: today },
     ...LANDING_PAGES.map(p => ({ loc: `${SITE}/${p.slug}`, pri: "0.8", freq: "monthly", mod: today })),
+    // The funnel and the tools live here too. This function rewrites sitemap.xml
+    // on every run, so anything omitted here is silently deleted from the
+    // sitemap the next time the bot publishes.
+    { loc: `${SITE}/free-care-roadmap`, pri: "0.95", freq: "monthly", mod: today },
+    { loc: `${SITE}/tools`, pri: "0.9", freq: "monthly", mod: today },
+    { loc: `${SITE}/tools/insurance-appeal-letter`, pri: "0.9", freq: "monthly", mod: today },
+    { loc: `${SITE}/tools/iep-meeting-prep`, pri: "0.9", freq: "monthly", mod: today },
+    { loc: `${SITE}/tools/medication-schedule`, pri: "0.9", freq: "monthly", mod: today },
     { loc: `${SITE}/privacy-policy`, pri: "0.3", freq: "yearly", mod: today },
     { loc: `${SITE}/terms-of-use`, pri: "0.3", freq: "yearly", mod: today },
   ];
@@ -382,8 +476,37 @@ const SAMPLE_POST = {
   ],
 };
 
+
+/**
+ * Re-render every existing post from its stored body HTML so changes to the
+ * shared chrome (nav, footer, tool callouts) reach posts published before the
+ * change. Body is recovered from the rendered file, since posts.json predates
+ * an `html` field. Any previously injected callout is stripped first so
+ * repeated runs cannot stack them.
+ *   CLEARPATH_REHYDRATE=1 node scripts/generate-blog-post.mjs
+ */
+function rehydrateAll() {
+  const posts = readPosts();
+  let done = 0, skipped = 0;
+  for (const post of posts) {
+    const file = path.join(BLOG_DIR, post.slug, "index.html");
+    let existing;
+    try { existing = fs.readFileSync(file, "utf8"); } catch { skipped++; continue; }
+    const m = existing.match(/<div class="body">\n([\s\S]*?)\n    <\/div>/);
+    if (!m) { skipped++; continue; }
+    const body = m[1].replace(/\s*<aside class="tool-callout">[\s\S]*?<\/aside>/g, "");
+    fs.writeFileSync(file, renderPost({ ...post, html: body }));
+    done++;
+  }
+  fs.writeFileSync(path.join(BLOG_DIR, "index.html"), renderIndex(posts));
+  fs.writeFileSync(SITEMAP, renderSitemap(posts));
+  buildGuidePages(posts);
+  console.log(`[blog] rehydrated ${done} posts (${skipped} skipped) · index + sitemap + guide rebuilt`);
+}
+
 // ---- Main --------------------------------------------------------------------
 async function main() {
+  if (process.env.CLEARPATH_REHYDRATE === "1") return rehydrateAll();
   const DRYRUN = process.env.CLEARPATH_BLOG_DRYRUN === "1";
   const { weekday, prettyDate, iso } = phoenixParts();
   let posts = readPosts();

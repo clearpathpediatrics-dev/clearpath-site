@@ -72,14 +72,15 @@ a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
 const HEADER = `
 <header class="lp-header"><div class="wrap">
   <a href="/" class="lp-brand" aria-label="ClearPath Pediatrics home"><img src="/assets/clearpath-logo-white.png" alt="ClearPath Pediatrics" /></a>
-  <nav class="lp-nav"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a><a href="/#services">Services</a>
+  <nav class="lp-nav"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a>
+      <a href="/tools/">Free Tools</a><a href="/#services">Services</a>
     <a href="${CAL}" target="_blank" rel="noopener" class="cta">Book a Free Call</a></nav>
 </div></header>`;
 
 const FOOTER = `
 <footer class="lp-footer"><div class="wrap">
   <span>Copyright © 2025 ClearPath Pediatrics, LLC. — All Rights Reserved.</span>
-  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/#contact">Contact</a></nav>
+  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a><a href="/tools/">Free Tools</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/#contact">Contact</a></nav>
 </div></footer>`;
 
 function renderPage(p) {
