@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Pediatric Medication Schedule Builder | ClearPath Pediatrics</title>
+<meta name="description" content="Turn your child's medication list into a printable daily schedule and a one-page summary for the care binder. Free, private, nothing leaves your browser.">
+<meta name="keywords" content="pediatric medication schedule, child medication chart printable, medication list template, medication schedule builder, care binder medication list">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://clearpathpediatrics.com/tools/medication-schedule/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Pediatric Medication Schedule Builder | ClearPath Pediatrics">
+<meta property="og:description" content="Turn your child's medication list into a printable daily schedule and a one-page summary for the care binder. Free, private, nothing leaves your browser.">
+<meta property="og:url" content="https://clearpathpediatrics.com/tools/medication-schedule/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/tools.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"How to build a pediatric medication schedule","url":"https://clearpathpediatrics.com/tools/medication-schedule/","applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Turn your child's medication list into a printable daily schedule and a one-page summary for the care binder. Free, private, nothing leaves your browser.","publisher":{"@type":"Organization","name":"ClearPath Pediatrics","url":"https://clearpathpediatrics.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to build a pediatric medication schedule","description":"Turn your child's medication list into a printable daily schedule and a one-page summary for the care binder. Free, private, nothing leaves your browser.","totalTime":"PT8M","step":[{"@type":"HowToStep","position":1,"name":"Add each medication exactly as prescribed"},{"@type":"HowToStep","position":2,"name":"Enter the times of day it is given"},{"@type":"HowToStep","position":3,"name":"Generate the daily schedule and one-page list"},{"@type":"HowToStep","position":4,"name":"Print one for the fridge and one for the care binder"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does this tell me what to give my child?","acceptedAnswer":{"@type":"Answer","text":"No, and it never will. It formats what your child's prescriber has already ordered. Every dose and timing comes from you."}},{"@type":"Question","name":"Is my child's medication list sent anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Everything runs in your browser and nothing is transmitted."}},{"@type":"Question","name":"Why print two copies?","acceptedAnswer":{"@type":"Answer","text":"One on the fridge for whoever is with your child, one in the care binder for appointments and the ER."}},{"@type":"Question","name":"How often should this be updated?","acceptedAnswer":{"@type":"Answer","text":"Any time a prescriber changes something, and worth a full check against the chart twice a year — lists drift as teams add and stop things without seeing each other's changes."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a href="/" aria-label="ClearPath Pediatrics home"><img src="/assets/logo-420.png" alt="ClearPath Pediatrics" width="90" height="60"></a>
+  <a class="ph" href="tel:+19494165447">(949) 416-5447</a>
+</div></header>
+<main class="wrap">
+<section class="hero">
+  <span class="pill">Free · Private · No signup</span>
+  <h1>Medication schedule builder</h1>
+  <p class="lede">Turn a scattered medication list into one printable daily schedule and a one-page summary for the care binder — the page you hand someone at 2am instead of reciting from memory.</p>
+  <div class="privacy">🔒 Everything stays in your browser. Nothing is sent to us.</div>
+</section>
+
+<div class="card" style="background:#fdf3e7;border-color:#f0dcc0">
+  <p style="font-size:15px;color:#7a5418;margin:0">
+    <strong>This tool formats, it does not advise.</strong> Enter exactly what your child's prescriber has ordered.
+    ClearPath does not review, verify, or change anything you type, and nothing here is medical advice.
+    Always confirm doses and timings with your prescriber or pharmacist.</p>
+</div>
+
+<div class="card">
+  <h2>Your child</h2>
+  <div class="grid g3">
+    <div><label class="f" for="cn">Child's name</label><input id="cn" placeholder="Sam Smith"></div>
+    <div><label class="f" for="dob">Date of birth</label><input id="dob" type="date"></div>
+    <div><label class="f" for="wt">Weight <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input id="wt" placeholder="e.g. 14 kg"></div>
+    <div><label class="f" for="alg">Allergies</label><input id="alg" placeholder="e.g. penicillin — or None known"></div>
+    <div><label class="f" for="ph">Pharmacy</label><input id="ph" placeholder="Name and phone"></div>
+    <div><label class="f" for="doc">Prescriber to call</label><input id="doc" placeholder="Dr. Chen — (555) 555-5555"></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Medications</h2>
+  <p class="sub">Add each one exactly as it appears on the label or in the plan.</p>
+  <div id="list"></div>
+  <button class="btn ghost" id="add" style="font-size:15px;padding:11px 22px">+ Add a medication</button>
+  <div class="row">
+    <button class="btn" id="go">Build my schedule</button>
+    <button class="btn ghost" id="print" style="display:none">Print</button>
+  </div>
+</div>
+
+<div id="out" class="out" style="display:none"></div>
+
+<div class="card">
+  <h2>Common questions</h2>
+  <p style="margin-bottom:14px"><strong style="color:var(--navy)">Does this tell me what to give my child?</strong><br><span style="color:var(--muted);font-size:15px">No. It formats what your prescriber has already ordered. Every dose and time comes from you, and we never review or change it.</span></p><p style="margin-bottom:14px"><strong style="color:var(--navy)">Is my child's medication list stored anywhere?</strong><br><span style="color:var(--muted);font-size:15px">No. It runs entirely in your browser and nothing is transmitted.</span></p><p style="margin-bottom:14px"><strong style="color:var(--navy)">Why print two copies?</strong><br><span style="color:var(--muted);font-size:15px">One for the fridge, one for the care binder. The binder copy is what an ER or a new specialist needs.</span></p><p style="margin-bottom:14px"><strong style="color:var(--navy)">How often should I update it?</strong><br><span style="color:var(--muted);font-size:15px">Whenever a prescriber changes something, plus a full check against the chart twice a year. Lists drift when several teams prescribe.</span></p>
+</div>
+
+<div class="cta">
+  <h2>Want an RN to go through this with you?</h2>
+  <p>Answer six questions and we'll send a personalized care navigation plan for your child — free, in your inbox in minutes, no call required.</p>
+  <a class="btn gold" href="/free-care-roadmap/">Get my child's free plan →</a>
+</div>
+<div class="more"><a href="/blog/organize-pediatric-medication-list/">Guide: organising a medication list →</a><a href="/blog/pediatric-care-binder-complex-child/">Guide: building a care binder →</a><a href="/complex-medical-needs-care-navigation/">Complex medical needs support →</a></div>
+<p class="legal">
+  ClearPath Pediatrics provides care navigation and health education only — not medical advice, diagnosis, or treatment.<br>
+  This tool formats information you already have. It does not review, verify, or advise on your child's care. For emergencies, call 911.<br>
+  <a href="/privacy-policy/">Privacy</a> · <a href="/terms-of-use/">Terms</a>
+</p>
+</main>
+<footer><div class="wrap">ClearPath Pediatrics, LLC · Phoenix, AZ &amp; nationwide · <a href="tel:+19494165447">(949) 416-5447</a></div></footer>
+<script src="/assets/roadmap-cta.js" defer></script>
+</body>
+</html>
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)}, v=function(i){return ($(i).value||"").trim()};
+  var list=$("list"), n=0;
+  function row(){
+    n++; var d=document.createElement("div"); d.className="med"; d.dataset.i=n;
+    d.innerHTML='<div class="grid g2">'+
+      '<div><label class="f">Medication</label><input class="m-name" placeholder="e.g. Baclofen"></div>'+
+      '<div><label class="f">Dose</label><input class="m-dose" placeholder="e.g. 5 mg"></div>'+
+      '<div><label class="f">Times of day</label><input class="m-times" placeholder="e.g. 8am, 2pm, 8pm">'+
+        '<p class="hint">Comma separated — these become the schedule rows.</p></div>'+
+      '<div><label class="f">Route / notes</label><input class="m-note" placeholder="e.g. via G-tube, with food"></div>'+
+      '<div><label class="f">Prescriber</label><input class="m-doc" placeholder="Dr. Chen"></div>'+
+      '<div><label class="f">Purpose <span style="font-weight:400;color:var(--muted)">(as told to you)</span></label><input class="m-for" placeholder="e.g. muscle tone"></div>'+
+      '</div><button type="button" class="del">Remove</button>';
+    d.querySelector(".del").addEventListener("click",function(){d.remove()});
+    list.appendChild(d);
+  }
+  $("add").addEventListener("click",row); row(); row();
+
+  function norm(t){ // "8am" -> minutes, for sorting
+    var m=String(t).trim().toLowerCase().match(/^(\d{1,2})(?::(\d{2}))?\s*(am|pm)?$/);
+    if(!m) return 9999; var h=parseInt(m[1],10), mi=parseInt(m[2]||"0",10);
+    if(m[3]==="pm"&&h<12)h+=12; if(m[3]==="am"&&h===12)h=0; return h*60+mi;
+  }
+  $("go").addEventListener("click",function(){
+    var meds=[].slice.call(document.querySelectorAll(".med")).map(function(d){
+      var g=function(c){return (d.querySelector(c).value||"").trim()};
+      return {name:g(".m-name"),dose:g(".m-dose"),times:g(".m-times"),note:g(".m-note"),doc:g(".m-doc"),fr:g(".m-for")};
+    }).filter(function(m){return m.name});
+    if(!meds.length){ alert("Add at least one medication first."); return; }
+
+    var slots={};
+    meds.forEach(function(m){
+      (m.times?m.times.split(","):["(time not set)"]).forEach(function(t){
+        t=t.trim()||"(time not set)"; (slots[t]=slots[t]||[]).push(m);
+      });
+    });
+    var keys=Object.keys(slots).sort(function(a,b){return norm(a)-norm(b)});
+    var esc=function(s){return String(s).replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})};
+
+    var h='<h3>'+esc(v("cn")||"Child")+" — daily medication schedule</h3>";
+    h+='<p style="font-size:13.5px;color:#5c6b7f;margin-bottom:4px">'+
+       (v("dob")?"DOB "+esc(v("dob"))+"  ·  ":"")+(v("wt")?"Weight "+esc(v("wt"))+"  ·  ":"")+
+       "Allergies: "+esc(v("alg")||"not recorded")+"</p>";
+    h+='<p style="font-size:13.5px;color:#5c6b7f;margin-bottom:16px">'+
+       (v("doc")?"Prescriber: "+esc(v("doc"))+"  ·  ":"")+(v("ph")?"Pharmacy: "+esc(v("ph")):"")+"</p>";
+    h+='<table class="sched"><thead><tr><th>Time</th><th>Give</th></tr></thead><tbody>';
+    keys.forEach(function(k){
+      h+='<tr><td class="t">'+esc(k)+"</td><td>"+slots[k].map(function(m){
+        return "<strong>"+esc(m.name)+"</strong> "+esc(m.dose)+(m.note?" — "+esc(m.note):"");
+      }).join("<br>")+"</td></tr>";
+    });
+    h+="</tbody></table>";
+    h+='<h3 style="margin-top:26px">Full medication list</h3><table class="sched"><thead><tr>'+
+       "<th>Medication</th><th>Dose</th><th>When</th><th>For</th><th>Prescriber</th></tr></thead><tbody>";
+    meds.forEach(function(m){
+      h+="<tr><td><strong>"+esc(m.name)+"</strong>"+(m.note?'<br><span style="color:#5c6b7f;font-size:12.5px">'+esc(m.note)+"</span>":"")+
+         "</td><td>"+esc(m.dose)+"</td><td>"+esc(m.times)+"</td><td>"+esc(m.fr)+"</td><td>"+esc(m.doc)+"</td></tr>";
+    });
+    h+="</tbody></table>";
+    h+='<p style="font-size:12px;color:#5c6b7f;margin-top:18px">Prepared '+new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})+
+       ". Confirm all doses and timings with your prescriber or pharmacist. ClearPath Pediatrics does not review or verify this list.</p>";
+    $("out").innerHTML=h; $("out").style.display="block"; $("out").classList.add("print-show");
+    $("out").style.whiteSpace="normal";
+    $("print").style.display="";
+    $("out").scrollIntoView({behavior:"smooth",block:"start"});
+  });
+  $("print").addEventListener("click",function(){window.print()});
+})();
+</script>

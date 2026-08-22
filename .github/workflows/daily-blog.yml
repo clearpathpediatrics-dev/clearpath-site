@@ -37,6 +37,7 @@ jobs:
       - name: Generate today's post
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLEARPATH_POSTS_PER_RUN: "3"
         run: node scripts/generate-blog-post.mjs
 
       - name: Commit & push

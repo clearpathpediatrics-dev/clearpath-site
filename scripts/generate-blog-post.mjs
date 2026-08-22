@@ -25,8 +25,13 @@ const ROOT = path.resolve(__dirname, "..");
 const BLOG_DIR = path.join(ROOT, "blog");
 const POSTS_JSON = path.join(BLOG_DIR, "posts.json");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
+import { pickAngles } from "./topics.pediatric.mjs";
+
 const SITE = "https://clearpathpediatrics.com";
 const MODEL = process.env.CLEARPATH_BLOG_MODEL || "claude-opus-4-8";
+// Cadence. Raised from 1/day: the ceiling on organic growth here is published
+// surface area on winnable administrative queries, not post quality.
+const POSTS_PER_RUN = Number(process.env.CLEARPATH_POSTS_PER_RUN || 3);
 
 // ---- Topic rotation (America/Phoenix weekday) --------------------------------
 const TOPIC_BY_DAY = {
@@ -307,7 +312,7 @@ function renderSitemap(posts) {
 }
 
 // ---- Prompt -------------------------------------------------------------------
-function buildSystemPrompt(topic, recentTitles) {
+function buildSystemPrompt(topic, recentTitles, angle) {
   return `You are the content writer for ClearPath Pediatrics — a private, fee-for-service pediatric care NAVIGATION and education company in Phoenix, Arizona. RN care navigators help parents navigate specialists, referrals, insurance, and complex pediatric health. Website: clearpathpediatrics.com. Contact: admin@clearpathpediatrics.com, (949) 416-5447.
 
 CRITICAL BOUNDARIES (never violate):
@@ -318,7 +323,9 @@ CRITICAL BOUNDARIES (never violate):
 
 VOICE: warm, clear, reassuring — written for stressed parents. Never cold or clinical. Second person ("you"). No fearmongering.
 
-TODAY'S TOPIC CATEGORY: "${topic}". Choose a specific, useful, SEO-searchable angle within it.
+TODAY'S TOPIC CATEGORY: "${topic}".
+WRITE ABOUT EXACTLY THIS: "${angle}"
+Treat that as the search query a parent typed. Answer it directly, completely and practically. Do not broaden it.
 
 AVOID repeating these recent titles/angles: ${recentTitles.length ? recentTitles.map(t => `"${t}"`).join(", ") : "(none yet)"}.
 
@@ -379,19 +386,26 @@ const SAMPLE_POST = {
 async function main() {
   const DRYRUN = process.env.CLEARPATH_BLOG_DRYRUN === "1";
   const { weekday, prettyDate, iso } = phoenixParts();
-  const topic = TOPIC_BY_DAY[weekday] || "Care Navigation Tips";
-  const posts = readPosts();
-  const recentTitles = posts.slice(0, 12).map(p => p.title);
+  let posts = readPosts();
 
-  // Idempotent per day: if today already has a post, exit cleanly. This lets us
-  // schedule several daily triggers as fallbacks — the first one that actually
-  // runs publishes the post; any later ones for the same day simply skip.
-  if (!DRYRUN && posts.some(p => p.iso === iso)) {
-    console.log(`[blog] a post already exists for ${iso} — skipping (no duplicate).`);
+  // Idempotent per day AND resumable: publish only the shortfall for today, so
+  // the fallback cron triggers top up a partial run instead of duplicating or
+  // skipping it entirely.
+  const todayCount = posts.filter(p => p.iso === iso).length;
+  const need = DRYRUN ? 1 : Math.max(0, POSTS_PER_RUN - todayCount);
+  if (need === 0) {
+    console.log(`[blog] ${iso} already has ${todayCount}/${POSTS_PER_RUN} posts — nothing to do.`);
     return;
   }
 
-  console.log(`[blog] ${prettyDate} (${weekday}) — topic: ${topic} — model: ${DRYRUN ? "DRY-RUN (no API call)" : MODEL}`);
+  const plan = pickAngles(iso, POSTS_PER_RUN, posts.slice(0, 24).map(p => p.title))
+    .slice(todayCount, todayCount + need);
+  console.log(`[blog] ${prettyDate} — ${todayCount}/${POSTS_PER_RUN} done, writing ${plan.length} more`);
+
+  for (const { cluster, angle } of plan) {
+  const topic = cluster.name;
+  const recentTitles = posts.slice(0, 24).map(p => p.title);
+  console.log(`[blog]   → ${cluster.key}: "${angle}"`);
 
   let data;
   if (DRYRUN) {
@@ -406,8 +420,8 @@ async function main() {
     const resp = await client.messages.create({
       model: MODEL,
       max_tokens: 4000,
-      system: buildSystemPrompt(topic, recentTitles),
-      messages: [{ role: "user", content: `Write today's ClearPath Pediatrics blog post for the "${topic}" category. Return only the JSON object.` }],
+      system: buildSystemPrompt(topic, recentTitles, angle),
+      messages: [{ role: "user", content: `Write the ClearPath Pediatrics blog post answering: "${angle}". Category: "${topic}". Return only the JSON object.` }],
     });
     const raw = resp.content.filter(b => b.type === "text").map(b => b.text).join("").trim();
     const jsonText = raw.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/i, "").trim();
@@ -433,7 +447,7 @@ async function main() {
     tags: Array.isArray(data.tags) ? data.tags.slice(0, 5).map(String) : [],
     html: sanitizeBodyHtml(String(data.html || "")),
     faq: Array.isArray(data.faq) ? data.faq.filter(f => f && f.q && f.a).slice(0, 3) : [],
-    topic, iso, prettyDate,
+    topic, clusterKey: cluster.key, iso, prettyDate,
   };
 
   if (!post.title || post.html.length < 400) {
@@ -450,18 +464,19 @@ async function main() {
   const manifestEntry = {
     slug: post.slug, title: post.title, excerpt: post.excerpt || post.metaDescription,
     metaDescription: post.metaDescription, tags: post.tags, topic: post.topic,
+    clusterKey: post.clusterKey,
     iso: post.iso, prettyDate: post.prettyDate, readMinutes: post.readMinutes,
   };
-  const updated = [manifestEntry, ...posts];
-  fs.writeFileSync(POSTS_JSON, JSON.stringify(updated, null, 2) + "\n");
+  posts = [manifestEntry, ...posts];
+  fs.writeFileSync(POSTS_JSON, JSON.stringify(posts, null, 2) + "\n");
+  console.log(`[blog]   ✓ /blog/${post.slug}  ("${post.title}")`);
+  }
 
-  // Rebuild index + sitemap + pillar guide (so the new post is linked everywhere)
-  fs.writeFileSync(path.join(BLOG_DIR, "index.html"), renderIndex(updated));
-  fs.writeFileSync(SITEMAP, renderSitemap(updated));
-  buildGuidePages(updated);
-
-  console.log(`[blog] ✓ published: /blog/${post.slug}  ("${post.title}")`);
-  console.log(`[blog] ✓ ${updated.length} total posts · sitemap + index updated`);
+  // Rebuild index + sitemap + pillar guide once, after the batch.
+  fs.writeFileSync(path.join(BLOG_DIR, "index.html"), renderIndex(posts));
+  fs.writeFileSync(SITEMAP, renderSitemap(posts));
+  buildGuidePages(posts);
+  console.log(`[blog] ✓ ${posts.length} total posts · index + sitemap + guide rebuilt`);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
