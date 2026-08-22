@@ -247,10 +247,11 @@ header.scrolled{box-shadow:0 8px 30px rgba(8,26,48,.45);padding:8px 0}
 .brand{display:flex;align-items:center;gap:12px}
 .brand img{height:66px;width:auto;transition:height .35s var(--ease)}
 header.scrolled .brand img{height:56px}
-.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none}
 .nav-links a{
-  font-size:.86rem;font-weight:500;color:rgba(255,255,255,.82);
-  padding:8px 12px;border-radius:8px;position:relative;transition:color .2s;
+  font-size:.8rem;font-weight:500;color:rgba(255,255,255,.82);
+  padding:8px 7px;border-radius:8px;position:relative;transition:color .2s;
+  white-space:nowrap;
 }
 .nav-links a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;
   background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
@@ -711,7 +712,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:64px 0 30px
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media(max-width:1024px){
+@media(max-width:1129px){
   .nav-links{display:none}
   .hamburger{display:flex}
   .nav-cta .btn{display:none}
@@ -1030,6 +1031,7 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:64px 0 30px
   <a href="#services">Services &amp; Memberships</a>
   <a href="#faqs">FAQs</a>
   <a href="/blog/">Blog</a>
+  <a href="/tools/">Free Tools</a>
   <a href="#contact">Contact</a>
   <a href="https://apps.apple.com/app/id6762391088" target="_blank" rel="noopener">Get the App</a>
   <a href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Free Call →</a>
