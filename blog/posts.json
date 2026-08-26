@@ -1,5 +1,59 @@
 [
   {
+    "slug": "pediatric-peer-to-peer-review-how-to-ask",
+    "title": "What a Pediatric Peer-to-Peer Review Is and How to Ask for One",
+    "excerpt": "A denial on your child's prior authorization doesn't have to be the end of the conversation. Here's what a peer-to-peer review is and how to help your provider request one.",
+    "metaDescription": "Learn what a pediatric peer-to-peer review is and how to request one after a prior authorization denial, so you can organize the process with less stress.",
+    "tags": [
+      "pediatric peer-to-peer review",
+      "prior authorization denial",
+      "pediatric appeals",
+      "insurance denial",
+      "care navigation"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-08-26",
+    "prettyDate": "August 26, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "request-virtual-pediatric-second-opinion",
+    "title": "How to Request a Virtual Pediatric Second Opinion: A Parent's Step-by-Step Guide",
+    "excerpt": "A calm, practical walkthrough for parents on how to request a virtual pediatric second opinion — what to gather, who to ask, and how to prepare for the visit.",
+    "metaDescription": "Learn how to request a virtual pediatric second opinion step by step, from gathering records to booking the visit, so you can prepare with less stress and more clari",
+    "tags": [
+      "virtual pediatric second opinion",
+      "pediatric specialist referral",
+      "telehealth second opinion",
+      "pediatric care navigation",
+      "requesting a second opinion"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-08-26",
+    "prettyDate": "August 26, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-second-opinion-worth-the-wait",
+    "title": "When a Pediatric Second Opinion Is Worth the Wait (and When It's Not)",
+    "excerpt": "A second opinion can bring clarity — but waiting for one isn't always the right call. Here's how to weigh the timing so you can make a confident, organized decision for your child.",
+    "metaDescription": "Wondering if a pediatric second opinion is worth the wait? Learn when to pursue one, when to move forward, and how to organize the decision with less stress.",
+    "tags": [
+      "pediatric second opinion",
+      "specialist referrals",
+      "pediatric care navigation",
+      "parent decision guide",
+      "second opinion timing"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-08-26",
+    "prettyDate": "August 26, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "compare-conflicting-pediatric-specialist-opinions",
     "title": "How to Compare Two Conflicting Pediatric Specialist Opinions for Your Child",
     "excerpt": "When two pediatric specialists disagree, it's easy to feel stuck. Here's a calm, organized way to lay both opinions side by side so you can talk it through with your care team.",
