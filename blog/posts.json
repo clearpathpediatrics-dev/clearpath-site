@@ -1,5 +1,59 @@
 [
   {
+    "slug": "pediatric-therapy-authorization-runs-out-mid-treatment",
+    "title": "What to Do When Your Child's Pediatric Therapy Authorization Runs Out Mid-Treatment",
+    "excerpt": "If your child's therapy authorization expires before treatment is finished, here's a calm, step-by-step way to organize the renewal and reduce gaps in care.",
+    "metaDescription": "When a pediatric therapy authorization runs out mid-treatment, use this parent's action plan to organize renewals, avoid gaps, and keep your child's care on track.",
+    "tags": [
+      "pediatric therapy authorization",
+      "prior authorization renewal",
+      "pediatric therapy coverage",
+      "authorization expiration",
+      "pediatric care navigation"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-08-27",
+    "prettyDate": "August 27, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "track-pediatric-prior-authorization-expiry-dates",
+    "title": "How to Track Pediatric Prior Authorization Expiry Dates So Your Child's Coverage Never Lapses",
+    "excerpt": "A practical, parent-friendly system for tracking when your child's prior authorizations expire — so renewals happen early and coverage never quietly runs out.",
+    "metaDescription": "Learn how to track pediatric prior authorization expiry dates with a simple system so your child's coverage never lapses and renewals happen on time.",
+    "tags": [
+      "pediatric prior authorization",
+      "prior authorization expiry",
+      "pediatric coverage renewal",
+      "insurance authorization tracking",
+      "pediatric care navigation"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-08-27",
+    "prettyDate": "August 27, 2026",
+    "readMinutes": 4
+  },
+  {
+    "slug": "internal-vs-external-appeal-pediatric-claim",
+    "title": "Internal vs External Appeal for a Pediatric Claim: A Parent's Guide to the Difference",
+    "excerpt": "When your child's claim is denied, you may have two levels of appeal: internal and external. Here's what makes them different and how to keep your paperwork organized through both.",
+    "metaDescription": "Confused about internal vs external appeal for a pediatric claim? Learn how each step works, when to use them, and how to stay organized through a denial.",
+    "tags": [
+      "pediatric claim appeal",
+      "internal vs external appeal",
+      "insurance denial appeal",
+      "pediatric prior authorization",
+      "parent appeal guide"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-08-27",
+    "prettyDate": "August 27, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "pediatric-peer-to-peer-review-how-to-ask",
     "title": "What a Pediatric Peer-to-Peer Review Is and How to Ask for One",
     "excerpt": "A denial on your child's prior authorization doesn't have to be the end of the conversation. Here's what a peer-to-peer review is and how to help your provider request one.",
