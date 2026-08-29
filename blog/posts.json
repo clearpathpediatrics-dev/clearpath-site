@@ -1,5 +1,59 @@
 [
   {
+    "slug": "ask-pediatric-developmental-referral-well-child-visit",
+    "title": "How to Ask for a Pediatric Developmental Referral at a Well-Child Visit",
+    "excerpt": "Wondering how to bring up a developmental referral at your child's next checkup? Here's how to prepare, what to say, and what to ask so you leave the visit feeling heard.",
+    "metaDescription": "Learn how to ask for a pediatric developmental referral at your child's well-child visit with clear language, notes, and questions to feel prepared and heard.",
+    "tags": [
+      "pediatric developmental referral",
+      "well-child visit",
+      "developmental screening",
+      "pediatric care navigation",
+      "parent checkup prep"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-08-29",
+    "prettyDate": "August 29, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "check-pediatric-provider-in-network-before-visit",
+    "title": "How to Check if a Pediatric Provider Is In-Network Before the Visit: A Parent's Step-by-Step Guide",
+    "excerpt": "A calm, practical walkthrough for confirming whether your child's pediatric provider is in-network before the appointment — so you can plan ahead and avoid surprise bills.",
+    "metaDescription": "Learn how to check whether a pediatric provider is in-network before your child's visit with this step-by-step parent guide to avoid surprise costs.",
+    "tags": [
+      "pediatric in-network provider",
+      "pediatric insurance verification",
+      "pediatric provider network check",
+      "pediatric care costs",
+      "insurance before visit"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-08-29",
+    "prettyDate": "August 29, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-balance-billing-when-not-allowed",
+    "title": "What Is Balance Billing on a Pediatric Bill — and When It's Not Allowed",
+    "excerpt": "Balance billing can turn up as a surprise charge on your child's medical bill. Here's what it means, when the law says it isn't allowed, and how to organize your paperwork before you pay.",
+    "metaDescription": "Learn what balance billing means on your child's pediatric bill, when balance billing is not allowed, and how to spot a surprise charge you may not owe.",
+    "tags": [
+      "pediatric balance billing",
+      "surprise medical bills",
+      "No Surprises Act",
+      "pediatric medical bills",
+      "out-of-network charges"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-08-29",
+    "prettyDate": "August 29, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "request-financial-assistance-childrens-hospital",
     "title": "How to Request Financial Assistance From a Children's Hospital: A Pediatric Billing Guide for Parents",
     "excerpt": "A calm, practical walkthrough of how to find, request, and organize financial assistance from a children's hospital — so a big pediatric bill feels a little more manageable.",
