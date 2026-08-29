@@ -1,5 +1,59 @@
 [
   {
+    "slug": "request-financial-assistance-childrens-hospital",
+    "title": "How to Request Financial Assistance From a Children's Hospital: A Pediatric Billing Guide for Parents",
+    "excerpt": "A calm, practical walkthrough of how to find, request, and organize financial assistance from a children's hospital — so a big pediatric bill feels a little more manageable.",
+    "metaDescription": "Learn how to request financial assistance from a children's hospital for pediatric care, step by step, so you can organize paperwork and lower stress with confidence",
+    "tags": [
+      "pediatric financial assistance",
+      "children's hospital billing",
+      "pediatric medical bills",
+      "hospital charity care",
+      "pediatric care navigation"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-08-28",
+    "prettyDate": "August 28, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "request-itemized-pediatric-hospital-bill",
+    "title": "How to Ask a Children's Hospital for an Itemized Pediatric Bill: A Parent's Step-by-Step Guide",
+    "excerpt": "A summary hospital bill rarely tells the whole story. Here's exactly how to request an itemized pediatric bill and what to look for once it arrives.",
+    "metaDescription": "Learn how to request an itemized pediatric hospital bill step by step, what to say, and what to check so you can understand every charge with confidence.",
+    "tags": [
+      "itemized pediatric bill",
+      "children's hospital billing",
+      "pediatric medical bills",
+      "hospital bill request",
+      "pediatric care costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-08-28",
+    "prettyDate": "August 28, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "appeal-denied-pediatric-feeding-therapy",
+    "title": "How to Appeal a Denied Pediatric Feeding Therapy Request: A Parent's Step-by-Step Guide",
+    "excerpt": "A denial for your child's feeding therapy isn't the end of the road. Here's how to read the denial, gather the right paperwork, and file a clear, organized appeal.",
+    "metaDescription": "Learn how to appeal a denied pediatric feeding therapy request with a clear, organized, step-by-step process that helps parents feel prepared and confident.",
+    "tags": [
+      "pediatric feeding therapy appeal",
+      "denied prior authorization",
+      "pediatric insurance denial",
+      "feeding therapy coverage",
+      "pediatric care navigation"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-08-28",
+    "prettyDate": "August 28, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "pediatric-therapy-authorization-runs-out-mid-treatment",
     "title": "What to Do When Your Child's Pediatric Therapy Authorization Runs Out Mid-Treatment",
     "excerpt": "If your child's therapy authorization expires before treatment is finished, here's a calm, step-by-step way to organize the renewal and reduce gaps in care.",
