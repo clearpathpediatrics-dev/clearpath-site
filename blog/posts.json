@@ -1,5 +1,59 @@
 [
   {
+    "slug": "first-week-home-from-nicu",
+    "title": "What to Expect in the First Week Home From the NICU: A Pediatric Parent's Guide",
+    "excerpt": "The first week home from the NICU can feel wonderful and overwhelming at once. Here's how to organize those early days so you feel steadier and more prepared.",
+    "metaDescription": "Wondering what the first week home from the NICU is really like? This pediatric guide helps you organize feeds, appointments, and questions so you feel prepared.",
+    "tags": [
+      "pediatric NICU discharge",
+      "coming home from NICU",
+      "NICU parent guide",
+      "pediatric care navigation",
+      "premature baby home care"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-08-31",
+    "prettyDate": "August 31, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-warning-signs-page-after-hospital-discharge",
+    "title": "How to Build a Pediatric Warning-Signs Page After a Hospital Discharge",
+    "excerpt": "A one-page warning-signs sheet turns your discharge instructions into something every caregiver can follow at a glance. Here's how to organize one after your child comes home.",
+    "metaDescription": "Learn how to build a clear pediatric warning-signs page after a hospital stay so every caregiver knows what to watch for, who to call, and when to act.",
+    "tags": [
+      "pediatric discharge",
+      "warning signs page",
+      "coming home from hospital",
+      "caregiver organization",
+      "pediatric care navigation"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-08-31",
+    "prettyDate": "August 31, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-discharge-medications-not-ready-pharmacy",
+    "title": "Pediatric Discharge Medications Not Ready at the Pharmacy? A Parent's Action Plan",
+    "excerpt": "You're finally heading home after a hospital stay, but the pharmacy says your child's discharge medications aren't ready. Here's a calm, practical way to sort it out.",
+    "metaDescription": "When your child's pediatric discharge medications aren't ready at the pharmacy, use this calm, step-by-step parent's action plan to sort it out fast.",
+    "tags": [
+      "pediatric discharge medications",
+      "hospital discharge planning",
+      "pediatric pharmacy delays",
+      "coming home from hospital",
+      "pediatric care navigation"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-08-31",
+    "prettyDate": "August 31, 2026",
+    "readMinutes": 4
+  },
+  {
     "slug": "questions-to-ask-4-year-pediatric-well-child-check",
     "title": "What Questions to Ask at Your Child's 4-Year Pediatric Well-Child Check",
     "excerpt": "The 4-year well-child visit covers a lot in a short time. Here are the practical questions to bring so you leave feeling clear and confident.",
