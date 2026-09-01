@@ -1,5 +1,59 @@
 [
   {
+    "slug": "request-pediatric-homebound-instruction-medically-fragile-child",
+    "title": "How to Request Pediatric Homebound Instruction for a Medically Fragile Child: A Parent's Step-by-Step Guide",
+    "excerpt": "If your child can't attend school for medical reasons, homebound instruction keeps their education going. Here's how to request it, step by step.",
+    "metaDescription": "Learn how to request pediatric homebound instruction for a medically fragile child, from paperwork to timelines, so your child keeps learning at home.",
+    "tags": [
+      "pediatric homebound instruction",
+      "medically fragile child school",
+      "IEP and 504 plans",
+      "homebound teaching request",
+      "pediatric school navigation"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-09-01",
+    "prettyDate": "September 1, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "child-misses-school-pediatric-medical-reasons",
+    "title": "What to Do When Your Child Misses School for Pediatric Medical Reasons: A Parent's Guide",
+    "excerpt": "When a health issue keeps your child home from school, a few organized steps can protect their attendance record and keep learning on track. Here's how to navigate medical absences with confidence.",
+    "metaDescription": "Learn what to do when your child misses school for pediatric medical reasons: how to document absences, notify the school, and stay organized without falling behind.",
+    "tags": [
+      "pediatric medical absences",
+      "excused school absences",
+      "504 plan",
+      "IEP",
+      "school medical documentation"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-09-01",
+    "prettyDate": "September 1, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-equipment-delivered-before-discharge",
+    "title": "How to Get Pediatric Medical Equipment Delivered Before Discharge Day: A Parent's Guide",
+    "excerpt": "A practical, step-by-step guide to organizing durable medical equipment and supply deliveries before your child leaves the hospital—so home is ready when they arrive.",
+    "metaDescription": "Learn how to get pediatric medical equipment and supplies delivered before discharge day so your child comes home to a fully prepared house—no last-minute scrambling",
+    "tags": [
+      "pediatric durable medical equipment",
+      "hospital discharge planning",
+      "DME delivery",
+      "pediatric home care supplies",
+      "discharge preparation"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-09-01",
+    "prettyDate": "September 1, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "first-week-home-from-nicu",
     "title": "What to Expect in the First Week Home From the NICU: A Pediatric Parent's Guide",
     "excerpt": "The first week home from the NICU can feel wonderful and overwhelming at once. Here's how to organize those early days so you feel steadier and more prepared.",
