@@ -1,5 +1,59 @@
 [
   {
+    "slug": "organise-pediatric-referral-paperwork",
+    "title": "How to Organise Pediatric Referral Paperwork: A Parent's Step-by-Step System",
+    "excerpt": "A calm, practical system for gathering, sorting, and tracking your child's referral paperwork so nothing slips through the cracks between providers.",
+    "metaDescription": "Learn how to organise pediatric referral paperwork step by step so nothing gets lost between your child's providers and every appointment starts prepared.",
+    "tags": [
+      "pediatric referral paperwork",
+      "medical organisation for parents",
+      "pediatric referrals",
+      "managing specialist referrals",
+      "pediatric care navigation"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-09-02",
+    "prettyDate": "September 2, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-medical-timeline-long-history",
+    "title": "How to Keep a Pediatric Medical Timeline for a Child With a Long Health History",
+    "excerpt": "A step-by-step, parent-friendly guide to building a clear medical timeline for a child with a long and complicated health history.",
+    "metaDescription": "Learn how to build and maintain a pediatric medical timeline for a child with a long health history so you can organize records, prep visits, and stay ready.",
+    "tags": [
+      "pediatric medical timeline",
+      "medical records organization",
+      "medically complex child",
+      "pediatric care navigation",
+      "health history tracking"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-09-02",
+    "prettyDate": "September 2, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-medical-accommodations-school-plan",
+    "title": "How to Get Pediatric Medical Accommodations Written Into a School Plan: A Parent's Step-by-Step Guide",
+    "excerpt": "A clear, practical walkthrough for parents who want their child's medical needs formally documented in a 504 or IEP — from gathering paperwork to writing accommodations in specific, usable language.",
+    "metaDescription": "Learn how to get pediatric medical accommodations written into your child's 504 or IEP school plan with clear, practical steps to organize documentation and communic",
+    "tags": [
+      "pediatric medical accommodations",
+      "504 plan",
+      "IEP",
+      "school health plan",
+      "pediatric school navigation"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-09-02",
+    "prettyDate": "September 2, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "request-pediatric-homebound-instruction-medically-fragile-child",
     "title": "How to Request Pediatric Homebound Instruction for a Medically Fragile Child: A Parent's Step-by-Step Guide",
     "excerpt": "If your child can't attend school for medical reasons, homebound instruction keeps their education going. Here's how to request it, step by step.",
