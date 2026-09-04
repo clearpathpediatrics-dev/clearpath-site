@@ -1,5 +1,59 @@
 [
   {
+    "slug": "why-pediatric-referral-stalls-how-to-find-where",
+    "title": "Why a Pediatric Specialist Referral Stalls — and How to Find Out Where It's Stuck",
+    "excerpt": "Waiting weeks for a specialist appointment that never gets scheduled? Here's how to figure out exactly where your child's pediatric referral is stuck — and who to ask next.",
+    "metaDescription": "Learn why a pediatric specialist referral stalls and how to trace exactly where it's stuck, so you can get your child's appointment moving faster.",
+    "tags": [
+      "pediatric specialist referral",
+      "referral stalled",
+      "pediatric care navigation",
+      "specialist appointment",
+      "prior authorization"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-09-04",
+    "prettyDate": "September 4, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-specialty-referral-process-step-by-step",
+    "title": "The Pediatric Specialty Referral Process, Step by Step: A Parent's Guide",
+    "excerpt": "Wondering what actually happens after your pediatrician says your child needs a specialist? Here's the referral process explained step by step, so nothing catches you off guard.",
+    "metaDescription": "Understand the pediatric specialty referral process step by step, from the first request to your child's specialist visit, so you can stay organized and prepared.",
+    "tags": [
+      "pediatric specialty referral",
+      "pediatric referral process",
+      "specialist referral for kids",
+      "pediatric care navigation",
+      "pediatric referral steps"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-09-04",
+    "prettyDate": "September 4, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-dme-supplier-stops-responding",
+    "title": "What to Do When a Pediatric DME Supplier Stops Responding: A Parent's Action Guide",
+    "excerpt": "Calls unanswered and no delivery in sight? Here's a calm, practical plan for what to do when your child's DME supplier stops responding — and how to keep supplies moving.",
+    "metaDescription": "When your pediatric DME supplier goes silent, use this step-by-step parent guide to follow up, escalate, and keep your child's medical supplies on track.",
+    "tags": [
+      "pediatric DME supplier",
+      "durable medical equipment",
+      "medical supply delivery",
+      "pediatric home nursing",
+      "DME escalation"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-09-04",
+    "prettyDate": "September 4, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "reorder-pediatric-medical-supplies-without-gaps",
     "title": "How to Order and Reorder Pediatric Medical Supplies Without Gaps: A Parent's System",
     "excerpt": "Running out of feeding bags, syringes, or trach supplies is stressful and avoidable. Here's a simple, repeatable system to keep your child's pediatric supplies stocked without last-minute scrambles.",
