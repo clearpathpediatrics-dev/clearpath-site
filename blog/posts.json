@@ -1,5 +1,59 @@
 [
   {
+    "slug": "no-surprises-act-pediatric-care",
+    "title": "What the No Surprises Act Means for Your Child's Pediatric Care and Bills",
+    "excerpt": "A plain-language guide to how the No Surprises Act protects families from unexpected out-of-network bills — and how to recognize those protections on your child's statements.",
+    "metaDescription": "Learn what the No Surprises Act means for your child's pediatric care, when it protects you from surprise bills, and how to spot the protections on your EOBs.",
+    "tags": [
+      "No Surprises Act",
+      "pediatric medical bills",
+      "surprise billing",
+      "pediatric EOB",
+      "out-of-network charges"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-09-08",
+    "prettyDate": "September 8, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "spot-pediatric-billing-error-before-you-pay",
+    "title": "How to Spot a Pediatric Billing Error Before You Pay: A Parent's Guide",
+    "excerpt": "Medical bills for your child can be confusing and easy to overpay. Here's a simple, parent-friendly way to catch common pediatric billing errors before you write the check.",
+    "metaDescription": "Learn how to spot a pediatric billing error before you pay. A calm, step-by-step guide to reviewing medical bills and EOBs so you never overpay by mistake.",
+    "tags": [
+      "pediatric billing error",
+      "pediatric medical bills",
+      "EOB review",
+      "medical billing errors",
+      "pediatric care costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-09-08",
+    "prettyDate": "September 8, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-medical-bill-payment-plan-guide",
+    "title": "How to Set Up a Payment Plan for Pediatric Medical Bills: A Parent's Step-by-Step Guide",
+    "excerpt": "A calm, practical walkthrough of how to request and set up a payment plan for your child's medical bills — including what to ask, what to confirm in writing, and how to keep it all organized.",
+    "metaDescription": "Learn how to set up a payment plan for pediatric medical bills, what to ask the billing office, and how to stay organized so a big balance feels manageable.",
+    "tags": [
+      "pediatric medical bills",
+      "payment plan",
+      "medical billing",
+      "healthcare costs",
+      "parent finance guide"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-09-08",
+    "prettyDate": "September 8, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "two-pediatric-providers-billed-same-visit",
     "title": "Two Pediatric Providers Billed for the Same Visit? A Parent's Guide to Sorting Out Duplicate Charges",
     "excerpt": "When two providers bill for the same pediatric visit, it can look like a mistake — or it can be perfectly normal. Here's how to tell the difference and organize your next steps.",
