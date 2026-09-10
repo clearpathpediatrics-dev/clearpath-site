@@ -1,5 +1,59 @@
 [
   {
+    "slug": "confirm-pediatrician-received-discharge-summary",
+    "title": "How to Make Sure Your Pediatrician Received the Discharge Summary After a Hospital Stay",
+    "excerpt": "Just because the hospital says they'll send the discharge summary doesn't mean your pediatrician has it. Here's how to confirm it arrived — and what to do if it didn't.",
+    "metaDescription": "Learn how to confirm your child's pediatrician received the hospital discharge summary, with a parent's step-by-step plan to close the gap and keep care on track.",
+    "tags": [
+      "pediatric discharge summary",
+      "hospital discharge",
+      "pediatric care coordination",
+      "coming home after hospital",
+      "parent health navigation"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-09-10",
+    "prettyDate": "September 10, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "document-pediatric-concern-taken-seriously",
+    "title": "How to Document a Pediatric Concern So It's Taken Seriously at Your Child's Well-Child Visit",
+    "excerpt": "Worried your concern about your child might get brushed aside? Here's how to write it down clearly and specifically so your pediatric team can act on it.",
+    "metaDescription": "Learn how to document a pediatric concern clearly so it's taken seriously. A parent's practical guide to recording symptoms, patterns, and questions before a visit.",
+    "tags": [
+      "pediatric concern documentation",
+      "well-child visit prep",
+      "parent advocacy",
+      "developmental checks",
+      "pediatric appointment notes"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-09-10",
+    "prettyDate": "September 10, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "what-pediatric-developmental-screening-tests",
+    "title": "What a Pediatric Developmental Screening Actually Tests: A Parent's Plain-Language Guide",
+    "excerpt": "A calm, plain-language breakdown of what a pediatric developmental screening looks at, how the questions work, and how to walk in feeling prepared instead of anxious.",
+    "metaDescription": "Wondering what a pediatric developmental screening actually tests? Learn the five areas it checks, how it works, and how to prepare — so you feel ready and calm.",
+    "tags": [
+      "pediatric developmental screening",
+      "well-child visits",
+      "developmental milestones",
+      "child development check",
+      "pediatric care navigation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-09-10",
+    "prettyDate": "September 10, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "keep-pediatric-well-child-visits-on-schedule",
     "title": "How to Keep Pediatric Well-Child Visits on Schedule During a Complex Year",
     "excerpt": "When life gets complicated, well-child visits are easy to lose track of. Here's a practical, low-stress system to keep your child's checkups on schedule all year.",
