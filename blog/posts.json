@@ -1,5 +1,59 @@
 [
   {
+    "slug": "questions-to-ask-pediatric-discharge-planner",
+    "title": "Questions to Ask the Pediatric Discharge Planner Before Your Child Comes Home",
+    "excerpt": "A hospital discharge can happen fast. Here are the practical questions to ask your pediatric discharge planner so you leave organized and clear on what comes next.",
+    "metaDescription": "The essential questions to ask your pediatric discharge planner before leaving the hospital, so you go home organized, prepared, and confident about next steps.",
+    "tags": [
+      "pediatric discharge planning",
+      "hospital discharge questions",
+      "pediatric care navigation",
+      "coming home from hospital",
+      "parent discharge checklist"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-09-11",
+    "prettyDate": "September 11, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "organize-pediatric-home-nursing-schedules-2",
+    "title": "How to Organize Pediatric Home Nursing Schedules Without Losing Your Mind",
+    "excerpt": "Coming home with home nursing hours can feel overwhelming. Here's a calm, practical system for organizing shifts, communication, and coverage gaps.",
+    "metaDescription": "Learn how to organize pediatric home nursing schedules after hospital discharge with simple systems that reduce chaos and help you stay calm and in control.",
+    "tags": [
+      "pediatric home nursing",
+      "hospital discharge",
+      "home nursing schedule",
+      "parent caregiver support",
+      "pediatric care coordination"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-09-11",
+    "prettyDate": "September 11, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-readmission-prepare-conversation",
+    "title": "What a Pediatric Readmission Means and How to Prepare for the Conversation",
+    "excerpt": "If your child has gone back to the hospital, the word \"readmission\" can feel heavy. Here's what it means in plain language and how to prepare for the conversation with the care team.",
+    "metaDescription": "Learn what a pediatric hospital readmission means and how to prepare for the conversation with your child's care team so you walk in organized and confident.",
+    "tags": [
+      "pediatric readmission",
+      "hospital discharge",
+      "coming home",
+      "pediatric care navigation",
+      "parent hospital guide"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-09-11",
+    "prettyDate": "September 11, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "confirm-pediatrician-received-discharge-summary",
     "title": "How to Make Sure Your Pediatrician Received the Discharge Summary After a Hospital Stay",
     "excerpt": "Just because the hospital says they'll send the discharge summary doesn't mean your pediatrician has it. Here's how to confirm it arrived — and what to do if it didn't.",
