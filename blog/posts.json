@@ -1,5 +1,59 @@
 [
   {
+    "slug": "hand-over-pediatric-care-changing-pediatricians",
+    "title": "How to Hand Over Pediatric Care When You Change Pediatricians: A Parent's Step-by-Step Guide",
+    "excerpt": "Switching pediatricians doesn't have to mean starting from scratch. Here's how to transfer records, referrals, and your child's full history so their care stays seamless.",
+    "metaDescription": "Changing pediatricians? Learn how to hand over your child's pediatric records, referrals, and history smoothly so nothing falls through the cracks.",
+    "tags": [
+      "pediatric care transfer",
+      "changing pediatricians",
+      "pediatric medical records",
+      "care team coordination",
+      "pediatric care navigation"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-09-14",
+    "prettyDate": "September 14, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-care-plan-complex-needs-checklist",
+    "title": "What a Pediatric Care Plan Should Contain for a Child With Complex Needs",
+    "excerpt": "A clear, parent-friendly breakdown of what belongs in your child's care plan — so every provider, caregiver, and family member is working from the same page.",
+    "metaDescription": "Learn what a pediatric care plan should contain for a child with complex needs, with a practical checklist to keep your whole care team aligned and organized.",
+    "tags": [
+      "pediatric care plan",
+      "child with complex needs",
+      "care team coordination",
+      "pediatric care navigation",
+      "special needs planning"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-09-14",
+    "prettyDate": "September 14, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-care-team-same-medication-list",
+    "title": "How to Keep Every Pediatric Care Team Working From the Same Medication List",
+    "excerpt": "When your child sees multiple providers, medication lists can drift out of sync fast. Here's how to build one shared, current list every team can rely on.",
+    "metaDescription": "Learn how to keep every pediatric care team using one accurate medication list, so specialists, your pediatrician, and pharmacy all stay in sync.",
+    "tags": [
+      "pediatric medication list",
+      "pediatric care coordination",
+      "medication reconciliation",
+      "complex care parenting",
+      "pediatric care team"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-09-14",
+    "prettyDate": "September 14, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "pediatric-medical-summary-babysitter-respite-carer",
     "title": "How to Prepare a Pediatric Medical Summary for a Babysitter or Respite Carer",
     "excerpt": "A simple, one-page medical summary can help any babysitter or respite carer step in confidently. Here's exactly what to include and how to organize it.",
