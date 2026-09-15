@@ -1,5 +1,59 @@
 [
   {
+    "slug": "document-pediatric-equipment-need-insurance-request",
+    "title": "How to Document Pediatric Equipment Need for an Insurance Request: A Parent's Guide",
+    "excerpt": "A clear, practical guide to gathering and organizing the paperwork that shows your child's equipment need for an insurance request — so nothing slips through the cracks.",
+    "metaDescription": "Learn how to document pediatric equipment need for an insurance request, from provider letters to photos and denial appeals, so your submission is complete.",
+    "tags": [
+      "pediatric DME insurance request",
+      "documenting equipment need",
+      "pediatric durable medical equipment",
+      "insurance prior authorization",
+      "letter of medical necessity"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-09-15",
+    "prettyDate": "September 15, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "replace-pediatric-wheelchair-stander-as-child-grows",
+    "title": "How to Get a Pediatric Wheelchair or Stander Replaced as Your Child Grows",
+    "excerpt": "A calm, practical roadmap for replacing your child's outgrown wheelchair or stander — what to gather, when to start, and who to loop in so you're never caught short.",
+    "metaDescription": "Learn how to get a pediatric wheelchair or stander replaced as your child grows, including documentation, timing, and insurance steps to stay ahead of outgrown equip",
+    "tags": [
+      "pediatric wheelchair replacement",
+      "pediatric stander",
+      "durable medical equipment",
+      "DME insurance",
+      "growing child mobility equipment"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-09-15",
+    "prettyDate": "September 15, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "switching-pediatricians-care-handover-timeline",
+    "title": "Switching Pediatricians? A Parent's Timeline for a Smooth Care Handover",
+    "excerpt": "Changing pediatricians can feel overwhelming, especially with a busy or complex child. Here's a calm, step-by-step timeline for handing over care without losing anything important.",
+    "metaDescription": "Changing pediatricians? Follow this practical timeline to transfer records, refills, and referrals smoothly so nothing about your child's care falls through the crac",
+    "tags": [
+      "pediatric care coordination",
+      "changing pediatricians",
+      "pediatric records transfer",
+      "pediatric care handover",
+      "parent health navigation"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-09-15",
+    "prettyDate": "September 15, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "hand-over-pediatric-care-changing-pediatricians",
     "title": "How to Hand Over Pediatric Care When You Change Pediatricians: A Parent's Step-by-Step Guide",
     "excerpt": "Switching pediatricians doesn't have to mean starting from scratch. Here's how to transfer records, referrals, and your child's full history so their care stays seamless.",
