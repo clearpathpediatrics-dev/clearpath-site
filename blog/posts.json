@@ -1,5 +1,59 @@
 [
   {
+    "slug": "who-runs-pediatric-health-care-plan-at-school",
+    "title": "Who Is Responsible for Your Child's Pediatric Health Care Plan at School Each Day?",
+    "excerpt": "When your child has a health plan at school, it helps to know exactly who carries it out each day. Here's a plain-language guide to the roles and who to contact.",
+    "metaDescription": "Wondering who at school runs your child's pediatric health care plan day to day? Learn the key roles so you know exactly who to call and what to expect.",
+    "tags": [
+      "pediatric health care plan",
+      "school nurse responsibilities",
+      "504 plan",
+      "IEP health plan",
+      "school health navigation"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-09-16",
+    "prettyDate": "September 16, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "bring-pediatric-medical-input-school-meeting",
+    "title": "How to Bring Your Pediatric Medical Team's Input Into a School Meeting: A Parent's Guide",
+    "excerpt": "Walking into a school meeting with your child's medical information organized can make all the difference. Here's how to gather, translate, and present what your pediatric team has said.",
+    "metaDescription": "Learn how to bring your pediatric medical team's input into an IEP or 504 school meeting so your child's health needs are clearly understood and organized.",
+    "tags": [
+      "pediatric medical input",
+      "IEP meeting prep",
+      "504 plan",
+      "school meeting",
+      "pediatric care navigation"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-09-16",
+    "prettyDate": "September 16, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-secondary-insurance-alongside-primary",
+    "title": "How Pediatric Secondary Insurance Works Alongside Primary Coverage: A Parent's Guide",
+    "excerpt": "If your child has two insurance plans, understanding how primary and secondary coverage work together can save you confusion, stress, and money. Here's a plain-language guide.",
+    "metaDescription": "Learn how pediatric secondary insurance works with primary coverage, how claims get coordinated, and how to read the EOBs so your child's bills add up.",
+    "tags": [
+      "pediatric secondary insurance",
+      "coordination of benefits",
+      "pediatric medical bills",
+      "primary and secondary coverage",
+      "children's insurance EOB"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-09-16",
+    "prettyDate": "September 16, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "document-pediatric-equipment-need-insurance-request",
     "title": "How to Document Pediatric Equipment Need for an Insurance Request: A Parent's Guide",
     "excerpt": "A clear, practical guide to gathering and organizing the paperwork that shows your child's equipment need for an insurance request — so nothing slips through the cracks.",
