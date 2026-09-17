@@ -1,5 +1,59 @@
 [
   {
+    "slug": "store-pediatric-medical-documents-both-parents",
+    "title": "How to Store Pediatric Medical Documents So Both Parents Can Reach Them",
+    "excerpt": "A practical, parent-tested system for storing your child's medical documents so both parents can find what they need, when they need it — no frantic searching.",
+    "metaDescription": "Learn how to store your child's pediatric medical documents so both parents can reach them anytime, keeping your family organized, calm, and always prepared.",
+    "tags": [
+      "pediatric medical documents",
+      "medical paperwork organization",
+      "shared parent records",
+      "pediatric care navigation",
+      "family document storage"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-09-17",
+    "prettyDate": "September 17, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "organize-pediatric-dme-supply-paperwork",
+    "title": "How to Organize Pediatric DME and Supply Paperwork: A Parent's System",
+    "excerpt": "Durable medical equipment and supply paperwork pile up fast. Here's a calm, practical system to keep authorizations, reorders, and delivery records organized and easy to find.",
+    "metaDescription": "Learn how to organize pediatric DME and supply paperwork with a simple, parent-tested system so reorders, authorizations, and appeals never slip through the cracks.",
+    "tags": [
+      "pediatric DME paperwork",
+      "medical supply organization",
+      "durable medical equipment",
+      "pediatric care navigation",
+      "insurance authorization records"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-09-17",
+    "prettyDate": "September 17, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-iep-not-being-followed",
+    "title": "What to Do If Your Child's Pediatric IEP Is Not Being Followed",
+    "excerpt": "When the services in your child's IEP aren't actually happening, it can feel overwhelming. Here's how to document what's missing and push for accountability, step by step.",
+    "metaDescription": "If your child's pediatric IEP is not being followed, here are the practical, organized steps you can take to document concerns and get accountability at school.",
+    "tags": [
+      "pediatric IEP",
+      "IEP not being followed",
+      "special education rights",
+      "IEP accountability",
+      "school health navigation"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-09-17",
+    "prettyDate": "September 17, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "who-runs-pediatric-health-care-plan-at-school",
     "title": "Who Is Responsible for Your Child's Pediatric Health Care Plan at School Each Day?",
     "excerpt": "When your child has a health plan at school, it helps to know exactly who carries it out each day. Here's a plain-language guide to the roles and who to contact.",
