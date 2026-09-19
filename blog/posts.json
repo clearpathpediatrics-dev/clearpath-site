@@ -1,5 +1,59 @@
 [
   {
+    "slug": "prepare-home-before-pediatric-equipment-delivery",
+    "title": "How to Prepare Your Home Before Pediatric Medical Equipment Is Delivered",
+    "excerpt": "A practical, room-by-room checklist to get your home ready before your child's pediatric medical equipment arrives — so delivery day feels calm, not chaotic.",
+    "metaDescription": "Learn how to prepare your home before pediatric DME and medical equipment is delivered, from clearing space to power and access, so delivery day goes smoothly.",
+    "tags": [
+      "pediatric DME",
+      "home medical equipment",
+      "pediatric home nursing",
+      "equipment delivery prep",
+      "pediatric care navigation"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-09-19",
+    "prettyDate": "September 19, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-dme-arrives-broken-or-wrong",
+    "title": "What to Do When Pediatric DME Arrives Broken or Wrong: A Parent's Step-by-Step Guide",
+    "excerpt": "When your child's medical equipment shows up damaged or isn't what was ordered, a calm, organized response gets it fixed faster. Here's exactly what to do.",
+    "metaDescription": "Pediatric equipment arrived broken or wrong? Learn the exact steps to document, report, and replace faulty DME quickly so your child isn't left without it.",
+    "tags": [
+      "pediatric DME",
+      "broken medical equipment",
+      "durable medical equipment replacement",
+      "pediatric home supplies",
+      "DME supplier"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-09-19",
+    "prettyDate": "September 19, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-handover-document-new-provider",
+    "title": "How to Prepare a Pediatric Handover Document for a New Provider",
+    "excerpt": "Meeting a new provider? A clear handover document helps them understand your child fast. Here's exactly what to include and how to organize it.",
+    "metaDescription": "Learn how to prepare a pediatric handover document for a new provider so your child's next appointment starts organized, complete, and stress-free.",
+    "tags": [
+      "pediatric handover document",
+      "care team coordination",
+      "new pediatric provider",
+      "pediatric medical summary",
+      "parent care navigation"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-09-19",
+    "prettyDate": "September 19, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "pediatric-test-result-never-came-back",
     "title": "What to Do When a Pediatric Test Result Never Comes Back: A Parent's Follow-Up Guide",
     "excerpt": "Waiting on a lab or imaging result that never arrived? Here's a calm, step-by-step way to follow up and make sure your child's result doesn't get lost in the shuffle.",
