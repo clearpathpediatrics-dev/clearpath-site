@@ -1,5 +1,59 @@
 [
   {
+    "slug": "read-pediatric-prior-authorization-denial-letter",
+    "title": "How to Read a Pediatric Prior Authorization Denial Letter: A Parent's Guide",
+    "excerpt": "A pediatric prior authorization denial letter can feel confusing and scary. Here's how to find the parts that matter and understand what each one means for your next steps.",
+    "metaDescription": "Learn how to read a pediatric prior authorization denial letter, find the key sections, and understand your next steps so you feel prepared, not overwhelmed.",
+    "tags": [
+      "pediatric prior authorization denial",
+      "insurance denial letter",
+      "pediatric appeals",
+      "prior authorization",
+      "parent insurance guide"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-09-21",
+    "prettyDate": "September 21, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "waiting-for-pediatric-therapy-insurance-approval",
+    "title": "What to Do While Waiting for Pediatric Therapy Insurance Approval",
+    "excerpt": "The gap between a recommended therapy and an approved one can feel endless. Here are practical, non-medical steps to stay organized and keep things moving while you wait.",
+    "metaDescription": "Waiting on pediatric therapy insurance approval? Learn practical steps to stay organized, track your prior authorization, and keep momentum during the wait.",
+    "tags": [
+      "pediatric prior authorization",
+      "pediatric therapy insurance approval",
+      "prior authorization waiting",
+      "pediatric care navigation",
+      "insurance appeals"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-09-21",
+    "prettyDate": "September 21, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-second-opinion-vs-transferring-care",
+    "title": "Pediatric Second Opinion vs. Transferring Care: What the Difference Means Practically",
+    "excerpt": "A second opinion and transferring care sound similar but work very differently in practice. Here's how to tell them apart and prepare for each.",
+    "metaDescription": "Understand the practical difference between a pediatric second opinion and transferring care so you can organize records, referrals, and next steps with confidence.",
+    "tags": [
+      "pediatric second opinion",
+      "transferring pediatric care",
+      "specialist referrals",
+      "pediatric care navigation",
+      "pediatric records"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-09-21",
+    "prettyDate": "September 21, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "ask-pediatrician-second-opinion-without-offending",
     "title": "How to Ask Your Pediatrician for a Second Opinion Without Offending Them",
     "excerpt": "Wanting a second opinion doesn't mean you distrust your pediatrician. Here's how to ask with confidence and keep the relationship strong.",
