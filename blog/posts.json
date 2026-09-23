@@ -1,5 +1,59 @@
 [
   {
+    "slug": "pediatric-deductible-out-of-pocket-maximum-explained",
+    "title": "How a Pediatric Deductible and Out-of-Pocket Maximum Actually Work: A Parent's Guide",
+    "excerpt": "Confused by your child's deductible and out-of-pocket maximum? Here's a plain-language walk-through of how each one works, how they interact, and how to track them.",
+    "metaDescription": "Learn how a pediatric deductible and out-of-pocket maximum actually work, how they interact, and how to track your child's spending toward each one.",
+    "tags": [
+      "pediatric deductible",
+      "out-of-pocket maximum",
+      "pediatric insurance costs",
+      "understanding pediatric bills",
+      "family health plan"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-09-23",
+    "prettyDate": "September 23, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-eob-bill-dont-match-which-to-trust",
+    "title": "Why Your Pediatric EOB and the Bill Don't Match (And Which One to Trust)",
+    "excerpt": "Your insurer's EOB says one number, the doctor's bill says another. Here's why that happens with pediatric care — and how to know which one to trust before you pay.",
+    "metaDescription": "Confused why your pediatric EOB and provider bill show different amounts? Learn why they don't match, which to trust first, and how to sort it out with confidence.",
+    "tags": [
+      "pediatric EOB",
+      "medical bill vs EOB",
+      "pediatric billing",
+      "explanation of benefits",
+      "pediatric care costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-09-23",
+    "prettyDate": "September 23, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "read-pediatric-eob-statement-line-by-line",
+    "title": "How to Read a Pediatric EOB Statement as a Parent, Line by Line",
+    "excerpt": "That confusing Explanation of Benefits in your mailbox isn't a bill—but it holds the key to understanding what your child's care actually costs. Here's how to read it line by line.",
+    "metaDescription": "Learn how to read a pediatric EOB statement line by line as a parent, so you can decode charges, understand what you owe, and catch billing errors with confidence.",
+    "tags": [
+      "pediatric EOB",
+      "explanation of benefits",
+      "pediatric medical bills",
+      "parent insurance guide",
+      "understanding care costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-09-23",
+    "prettyDate": "September 23, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "how-long-pediatric-insurance-appeal-takes",
     "title": "How Long a Pediatric Insurance Appeal Takes: A Parent's Timeline",
     "excerpt": "Appeal timelines can feel like a black box when your child is waiting for care. Here's a clear look at how long each stage of a pediatric insurance appeal usually takes and how to track it.",
