@@ -1,5 +1,59 @@
 [
   {
+    "slug": "what-to-do-surprise-pediatric-bill",
+    "title": "What to Do When You Get a Surprise Pediatric Bill: A Parent's Step-by-Step Guide",
+    "excerpt": "A surprise bill for your child's care can be stressful, but it doesn't mean you owe that amount. Here's a calm, step-by-step way to review, question, and organize it.",
+    "metaDescription": "Got a surprise pediatric bill? Learn the exact steps to review, question, and organize it so you can respond calmly and avoid overpaying your child's care.",
+    "tags": [
+      "surprise pediatric bill",
+      "pediatric medical bills",
+      "unexpected medical charges",
+      "pediatric billing help",
+      "understanding medical bills"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-09-24",
+    "prettyDate": "September 24, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-eob-vs-bill-mismatch",
+    "title": "Pediatric EOB vs. Bill Mismatch: Why the Numbers Differ and Which to Trust",
+    "excerpt": "Your pediatric EOB says one amount and the bill says another. Here's why that happens, which document to trust, and how to sort it out with confidence.",
+    "metaDescription": "Confused why your pediatric EOB and medical bill don't match? Learn why the numbers differ, which one to trust, and how to check before you pay a cent.",
+    "tags": [
+      "pediatric EOB vs bill",
+      "pediatric medical bill",
+      "explanation of benefits",
+      "pediatric billing errors",
+      "parent billing guide"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-09-24",
+    "prettyDate": "September 24, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "read-pediatric-eob-line-by-line-parent-guide",
+    "title": "How to Read a Pediatric EOB Line by Line: A Parent's Field Guide to Every Column",
+    "excerpt": "An Explanation of Benefits can look like a bill written in a foreign language. Here's how to walk through each line of your child's pediatric EOB with confidence.",
+    "metaDescription": "Learn how to read a pediatric EOB line by line as a parent. Decode every column, code, and dollar amount so you understand what your child's care really costs.",
+    "tags": [
+      "pediatric EOB",
+      "explanation of benefits",
+      "pediatric medical bills",
+      "understanding insurance statements",
+      "pediatric care costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-09-24",
+    "prettyDate": "September 24, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "pediatric-deductible-out-of-pocket-maximum-explained",
     "title": "How a Pediatric Deductible and Out-of-Pocket Maximum Actually Work: A Parent's Guide",
     "excerpt": "Confused by your child's deductible and out-of-pocket maximum? Here's a plain-language walk-through of how each one works, how they interact, and how to track them.",
