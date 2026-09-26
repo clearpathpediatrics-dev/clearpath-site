@@ -1,5 +1,59 @@
 [
   {
+    "slug": "pediatric-hospital-discharge-questions-to-ask",
+    "title": "What to Ask Before Your Child Is Discharged From the Hospital: A Pediatric Discharge Checklist for Parents",
+    "excerpt": "Discharge day moves fast. Here are the clear, practical questions to ask before your child leaves the hospital so you go home organized and ready.",
+    "metaDescription": "A parent's pediatric hospital discharge checklist of exactly what to ask before your child comes home, so you leave prepared, organized, and confident.",
+    "tags": [
+      "pediatric hospital discharge",
+      "discharge checklist",
+      "coming home from hospital",
+      "pediatric care navigation",
+      "parent hospital questions"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-09-26",
+    "prettyDate": "September 26, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "disagree-pediatric-developmental-screening-result",
+    "title": "What to Do If You Disagree With a Pediatric Developmental Screening Result",
+    "excerpt": "If a developmental screening result doesn't match what you see at home, you're not stuck. Here are calm, practical steps to ask questions and organize next steps.",
+    "metaDescription": "Disagree with your child's pediatric developmental screening result? Learn practical, calm steps to ask questions, organize your notes, and move forward with confide",
+    "tags": [
+      "pediatric developmental screening",
+      "developmental checks",
+      "well-child visit",
+      "parent advocacy",
+      "pediatric care navigation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-09-26",
+    "prettyDate": "September 26, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "track-pediatric-developmental-milestones-between-visits-2",
+    "title": "How to Track Pediatric Developmental Milestones Between Well-Child Visits",
+    "excerpt": "A warm, practical guide to organizing and observing your child's development between well-child checks—so you walk into every appointment prepared and confident.",
+    "metaDescription": "Learn how to track pediatric developmental milestones between appointments with simple tools, notes, and checklists so your next well-child visit goes smoothly.",
+    "tags": [
+      "pediatric developmental milestones",
+      "well-child visits",
+      "milestone tracking",
+      "child development",
+      "parent preparation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-09-26",
+    "prettyDate": "September 26, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "what-to-bring-well-child-visit-specialists",
     "title": "What to Bring to a Pediatric Well-Child Visit When Your Child Sees Specialists",
     "excerpt": "When your child sees multiple specialists, the well-child visit is where it all comes together. Here's a practical checklist of what to bring so nothing falls through the cracks.",
