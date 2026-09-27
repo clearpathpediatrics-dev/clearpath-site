@@ -1,5 +1,59 @@
 [
   {
+    "slug": "who-schedules-pediatric-follow-up-after-discharge",
+    "title": "Who Schedules Pediatric Follow-Up Appointments After Discharge (and How to Confirm Them)",
+    "excerpt": "After your child leaves the hospital, follow-up visits can fall through the cracks fast. Here's who's responsible for scheduling them and exactly how to confirm each one.",
+    "metaDescription": "Confused about who books your child's pediatric follow-up appointments after hospital discharge? Learn who schedules them and how to confirm every one.",
+    "tags": [
+      "pediatric discharge",
+      "follow-up appointments",
+      "hospital discharge planning",
+      "pediatric care navigation",
+      "coming home from hospital"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-09-27",
+    "prettyDate": "September 27, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "set-up-home-nursing-pediatric-discharge",
+    "title": "How to Set Up Home Nursing After a Pediatric Discharge: A Parent's Step-by-Step Guide",
+    "excerpt": "Bringing your child home with nursing support can feel overwhelming. Here's a clear, practical walkthrough of how home nursing gets set up after a pediatric hospital discharge.",
+    "metaDescription": "Learn how to set up home nursing after a pediatric discharge, from orders and agencies to insurance and scheduling, so your child comes home to a smooth start.",
+    "tags": [
+      "pediatric home nursing",
+      "pediatric discharge planning",
+      "home health for children",
+      "private duty nursing",
+      "coming home from hospital"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-09-27",
+    "prettyDate": "September 27, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-discharge-summary-contents",
+    "title": "What a Pediatric Discharge Summary Should Contain: A Parent's Guide to the Paperwork That Comes Home",
+    "excerpt": "When your child comes home from the hospital, the discharge summary is your roadmap. Here's what that document should include and how to make sense of every section.",
+    "metaDescription": "Learn what a pediatric discharge summary should contain, section by section, so you can organize your child's hospital paperwork and feel confident at home.",
+    "tags": [
+      "pediatric discharge summary",
+      "hospital discharge",
+      "coming home",
+      "pediatric care navigation",
+      "parent hospital guide"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-09-27",
+    "prettyDate": "September 27, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "pediatric-hospital-discharge-questions-to-ask",
     "title": "What to Ask Before Your Child Is Discharged From the Hospital: A Pediatric Discharge Checklist for Parents",
     "excerpt": "Discharge day moves fast. Here are the clear, practical questions to ask before your child leaves the hospital so you go home organized and ready.",
