@@ -1,5 +1,59 @@
 [
   {
+    "slug": "release-pediatric-medical-records-second-opinion",
+    "title": "How to Get Your Child's Pediatric Medical Records Released for a Second Opinion",
+    "excerpt": "A clear, practical walkthrough for parents on how to request and release your child's medical records so a second-opinion specialist has everything they need.",
+    "metaDescription": "Learn how to get pediatric medical records released for a second opinion, step by step, so you can gather the right documents and move forward with confidence.",
+    "tags": [
+      "pediatric medical records",
+      "second opinion",
+      "release of information",
+      "specialist referral",
+      "parent guide"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-10-01",
+    "prettyDate": "October 1, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-home-nursing-unfilled-shifts",
+    "title": "What to Do When Pediatric Home Nursing Shifts Go Unfilled: A Parent's Action Plan",
+    "excerpt": "When a home nursing shift goes unfilled, the gap can feel overwhelming. Here's a calm, step-by-step plan for who to call, what to track, and how to prepare for next time.",
+    "metaDescription": "Unfilled pediatric home nursing shifts? Learn exactly who to call, what to document, and how to organize backup coverage to keep your child safe and supported.",
+    "tags": [
+      "pediatric home nursing",
+      "unfilled nursing shifts",
+      "private duty nursing",
+      "home nursing coverage",
+      "pediatric care navigation"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-10-01",
+    "prettyDate": "October 1, 2026",
+    "readMinutes": 6
+  },
+  {
+    "slug": "pediatric-private-duty-nursing-hours-approved",
+    "title": "How Private Duty Nursing Hours Are Approved for a Pediatric Patient: A Parent's Guide",
+    "excerpt": "Wondering how your child's private duty nursing hours get approved? Here's how the process works, who's involved, and what to keep organized along the way.",
+    "metaDescription": "Learn how pediatric private duty nursing hours get approved, who decides, and what paperwork matters so you can organize your child's home nursing with confidence.",
+    "tags": [
+      "pediatric private duty nursing",
+      "home nursing approval",
+      "pediatric home health hours",
+      "pediatric DME and supplies",
+      "nursing hours authorization"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-10-01",
+    "prettyDate": "October 1, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "pediatric-nurse-navigator-vs-case-manager-vs-social-worker-2",
     "title": "Nurse Navigator vs. Case Manager vs. Social Worker in Pediatric Care: Who Does What",
     "excerpt": "When your child's care involves multiple specialists, three different roles may appear on the scene — a nurse navigator, a case manager, and a social worker. Here's a clear, practical guide to who does what.",
