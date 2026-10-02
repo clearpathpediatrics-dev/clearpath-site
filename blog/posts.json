@@ -1,5 +1,59 @@
 [
   {
+    "slug": "request-virtual-pediatric-second-opinion-2",
+    "title": "How to Request a Virtual Pediatric Second Opinion: A Parent's Step-by-Step Guide",
+    "excerpt": "A calm, practical walkthrough of how to set up a virtual pediatric second opinion, including who to contact, what records to send, and what to expect.",
+    "metaDescription": "Learn how to request a virtual pediatric second opinion step by step, from gathering records to picking a program, so you can get clarity without the travel.",
+    "tags": [
+      "virtual pediatric second opinion",
+      "pediatric telehealth",
+      "second opinion",
+      "specialist referrals",
+      "pediatric care navigation"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-10-02",
+    "prettyDate": "October 2, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-second-opinion-worth-the-wait-2",
+    "title": "When a Pediatric Second Opinion Is Worth the Wait (and When It Isn't): A Parent's Guide",
+    "excerpt": "A second opinion can bring clarity — but sometimes waiting for one costs precious time. Here's how to weigh the wait against the benefit for your child.",
+    "metaDescription": "Wondering if a pediatric second opinion is worth the wait? Learn when waiting makes sense, when to act fast, and how to decide with confidence.",
+    "tags": [
+      "pediatric second opinion",
+      "specialist referral",
+      "pediatric care navigation",
+      "parent decision guide",
+      "pediatric specialists"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-10-02",
+    "prettyDate": "October 2, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "compare-conflicting-pediatric-specialist-opinions-2",
+    "title": "How to Compare Two Conflicting Pediatric Specialist Opinions: A Parent's Organizing Guide",
+    "excerpt": "When two pediatric specialists disagree, it's easy to feel stuck. Here's a calm, practical way to lay both opinions side by side and bring the right questions back to your child's providers.",
+    "metaDescription": "Got two conflicting pediatric specialist opinions for your child? Learn how to organize, compare, and discuss them with your providers so you can decide with confide",
+    "tags": [
+      "pediatric second opinion",
+      "conflicting specialist opinions",
+      "pediatric specialist referral",
+      "parent health navigation",
+      "pediatric care decisions"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-10-02",
+    "prettyDate": "October 2, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "release-pediatric-medical-records-second-opinion",
     "title": "How to Get Your Child's Pediatric Medical Records Released for a Second Opinion",
     "excerpt": "A clear, practical walkthrough for parents on how to request and release your child's medical records so a second-opinion specialist has everything they need.",
