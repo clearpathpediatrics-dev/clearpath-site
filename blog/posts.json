@@ -1,5 +1,59 @@
 [
   {
+    "slug": "request-itemized-pediatric-hospital-bill-2",
+    "title": "How to Ask a Children's Hospital for an Itemized Pediatric Bill: A Parent's Step-by-Step Guide",
+    "excerpt": "An itemized bill breaks every hospital charge into line-by-line detail. Here's exactly how to ask for one, who to contact, and how to read it once it arrives.",
+    "metaDescription": "Learn how to request an itemized pediatric bill from a children's hospital, who to call, and what to check line by line so you understand every charge.",
+    "tags": [
+      "itemized pediatric bill",
+      "children's hospital billing",
+      "pediatric medical bills",
+      "hospital billing department",
+      "parent billing guide"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-04",
+    "prettyDate": "October 4, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "appeal-denied-pediatric-feeding-therapy-2",
+    "title": "How to Appeal a Denied Pediatric Feeding Therapy Request: A Parent's Step-by-Step Guide",
+    "excerpt": "A denial for your child's feeding therapy isn't the end of the road. Here's how to read the letter, gather the right paperwork, and submit an organized appeal.",
+    "metaDescription": "Learn how to appeal a denied pediatric feeding therapy request with a clear, step-by-step parent's guide to organizing paperwork and submitting a strong appeal.",
+    "tags": [
+      "pediatric feeding therapy appeal",
+      "denied prior authorization",
+      "pediatric insurance denial",
+      "feeding therapy coverage",
+      "appeal letter for therapy"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-10-04",
+    "prettyDate": "October 4, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-therapy-authorization-runs-out-mid-treatment-2",
+    "title": "What to Do When a Pediatric Therapy Authorization Runs Out Mid-Treatment: A Parent's Action Plan",
+    "excerpt": "When your child's therapy authorization runs out partway through treatment, the gap can feel scary. Here's a calm, practical plan to keep things organized and moving.",
+    "metaDescription": "A pediatric therapy authorization expired mid-treatment? Learn the exact steps to keep your child's care organized and coverage moving without losing momentum.",
+    "tags": [
+      "pediatric prior authorization",
+      "therapy authorization renewal",
+      "pediatric therapy coverage",
+      "insurance appeals",
+      "pediatric care navigation"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-10-04",
+    "prettyDate": "October 4, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "track-pediatric-prior-authorization-expiry-dates-2",
     "title": "How to Track Pediatric Prior Authorization Expiry Dates So Coverage Never Lapses",
     "excerpt": "A practical, parent-friendly system for tracking when your child's prior authorizations expire — so refills, therapies, and services never hit a sudden coverage gap.",
