@@ -1,5 +1,59 @@
 [
   {
+    "slug": "pediatric-balance-billing-when-not-allowed-2",
+    "title": "What Is Balance Billing in Pediatric Care — and When Is It Not Allowed?",
+    "excerpt": "Balance billing can turn a confusing pediatric bill into a stressful surprise. Here's what it is, when federal protections apply, and how to spot it on your statements.",
+    "metaDescription": "Learn what balance billing means on your pediatric medical bills, when it's legally protected against, and how to spot it so you can organize charges with confidence",
+    "tags": [
+      "balance billing",
+      "pediatric medical bills",
+      "surprise billing",
+      "No Surprises Act",
+      "out-of-network charges"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-05",
+    "prettyDate": "October 5, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "request-financial-assistance-childrens-hospital-2",
+    "title": "How to Request Financial Assistance from a Children's Hospital: A Parent's Step-by-Step Guide",
+    "excerpt": "A calm, practical walkthrough for parents on how to find, request, and submit a children's hospital financial assistance application — including what to gather and who to call.",
+    "metaDescription": "Learn how to request financial assistance from a children's hospital, which forms and documents you'll need, and who to call to keep your pediatric bills manageable.",
+    "tags": [
+      "pediatric financial assistance",
+      "children's hospital bills",
+      "charity care",
+      "pediatric medical bills",
+      "hospital financial aid"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-05",
+    "prettyDate": "October 5, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "request-itemized-pediatric-bill-childrens-hospital",
+    "title": "Requesting an Itemized Pediatric Bill from a Children's Hospital: What to Say and Who to Call",
+    "excerpt": "A summary bill rarely shows you the whole picture. Here's a warm, practical walk-through of how to ask a children's hospital for a fully itemized pediatric bill.",
+    "metaDescription": "Learn exactly how to request an itemized pediatric bill from a children's hospital, including who to call and what to say so you can review every charge.",
+    "tags": [
+      "itemized pediatric bill",
+      "children's hospital billing",
+      "pediatric medical bills",
+      "hospital bill review",
+      "pediatric healthcare costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-05",
+    "prettyDate": "October 5, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "request-itemized-pediatric-hospital-bill-2",
     "title": "How to Ask a Children's Hospital for an Itemized Pediatric Bill: A Parent's Step-by-Step Guide",
     "excerpt": "An itemized bill breaks every hospital charge into line-by-line detail. Here's exactly how to ask for one, who to contact, and how to read it once it arrives.",
