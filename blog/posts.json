@@ -1,5 +1,59 @@
 [
   {
+    "slug": "what-to-write-down-before-pediatric-well-child-visit",
+    "title": "What to Write Down Before a Pediatric Well-Child Visit: A Parent's Prep Checklist",
+    "excerpt": "A simple, practical list of what to jot down before your child's well-child visit — so nothing gets forgotten in the rush of the appointment.",
+    "metaDescription": "Learn exactly what to write down before a pediatric well-child visit so you walk in organized, remember every question, and make the most of your time.",
+    "tags": [
+      "pediatric well-child visit",
+      "well-child checkup prep",
+      "pediatric appointment checklist",
+      "parent visit notes",
+      "developmental check preparation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-10-06",
+    "prettyDate": "October 6, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "ask-pediatric-developmental-referral-well-child-visit-2",
+    "title": "How to Ask for a Pediatric Developmental Referral at a Well-Child Visit: A Parent's Guide",
+    "excerpt": "Wondering how to bring up developmental concerns at your child's checkup? Here's exactly what to say, what to bring, and how to follow up on a referral request.",
+    "metaDescription": "Learn how to ask for a pediatric developmental referral at a well-child visit with clear words to say, notes to bring, and steps to follow up with confidence.",
+    "tags": [
+      "pediatric developmental referral",
+      "well-child visit",
+      "developmental screening",
+      "pediatric care navigation",
+      "parent checkup prep"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-10-06",
+    "prettyDate": "October 6, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "check-pediatric-provider-in-network-before-visit-2",
+    "title": "How to Check If a Pediatric Provider Is In Network Before the Visit: A Parent's Step-by-Step Guide",
+    "excerpt": "A calm, practical walkthrough for confirming your child's pediatric provider is in network before the appointment — so you can avoid surprise bills and plan ahead.",
+    "metaDescription": "Learn how to check whether a pediatric provider is in network before the visit, step by step, so you can avoid surprise bills and plan your child's care with confide",
+    "tags": [
+      "pediatric in-network provider",
+      "check insurance network",
+      "pediatric care costs",
+      "avoid surprise bills",
+      "parent insurance guide"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-06",
+    "prettyDate": "October 6, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "pediatric-balance-billing-when-not-allowed-2",
     "title": "What Is Balance Billing in Pediatric Care — and When Is It Not Allowed?",
     "excerpt": "Balance billing can turn a confusing pediatric bill into a stressful surprise. Here's what it is, when federal protections apply, and how to spot it on your statements.",
