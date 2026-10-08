@@ -1,5 +1,59 @@
 [
   {
+    "slug": "pediatric-equipment-delivered-before-discharge-2",
+    "title": "How to Get Pediatric Home Equipment and Supplies Delivered Before Discharge Day",
+    "excerpt": "A practical, parent-friendly guide to organizing durable medical equipment and supply deliveries so everything is waiting at home before your child leaves the hospital.",
+    "metaDescription": "Learn how to coordinate pediatric home equipment delivery before your child's hospital discharge day so supplies arrive on time and your homecoming stays calm.",
+    "tags": [
+      "pediatric home equipment",
+      "hospital discharge planning",
+      "durable medical equipment",
+      "pediatric discharge supplies",
+      "DME delivery"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-10-08",
+    "prettyDate": "October 8, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "first-week-home-from-nicu-2",
+    "title": "What to Expect the First Week Home From the NICU: A Pediatric Parent's Guide",
+    "excerpt": "The first week home from the NICU is exciting and overwhelming at once. Here's a practical, calming guide to what to expect — and how to stay organized along the way.",
+    "metaDescription": "Bringing your baby home from the NICU? Learn what to expect the first week home from the NICU, how to stay organized, and when to call for guidance you can trust.",
+    "tags": [
+      "NICU discharge",
+      "first week home from NICU",
+      "pediatric homecoming",
+      "preemie parent guide",
+      "NICU to home transition"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-10-08",
+    "prettyDate": "October 8, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-warning-signs-page-after-hospital-stay",
+    "title": "How to Build a Pediatric Warning-Signs Page After a Hospital Stay",
+    "excerpt": "A simple, one-page guide can turn confusing discharge instructions into something your whole family can actually use. Here's how to organize your child's warning signs after a hospital stay.",
+    "metaDescription": "Learn how to build a clear pediatric warning-signs page after a hospital discharge so your whole family knows exactly what to watch for and who to call.",
+    "tags": [
+      "pediatric discharge",
+      "warning signs page",
+      "hospital discharge instructions",
+      "pediatric care navigation",
+      "coming home from hospital"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-10-08",
+    "prettyDate": "October 8, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "pediatric-discharge-medications-not-ready-pharmacy-2",
     "title": "Pediatric Discharge Medications Not Ready at the Pharmacy: A Parent's Step-by-Step Plan",
     "excerpt": "You're finally home from the hospital, but the pharmacy says your child's discharge medications aren't ready. Here's a calm, step-by-step plan for what to do next.",
