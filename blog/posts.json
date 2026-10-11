@@ -1,5 +1,59 @@
 [
   {
+    "slug": "reorder-pediatric-medical-supplies-without-gaps-2",
+    "title": "How to Order and Reorder Pediatric Medical Supplies Without Gaps: A Parent's System",
+    "excerpt": "Running low on feeding bags, catheters, or tube supplies is stressful. Here's a calm, step-by-step system to order and reorder pediatric medical supplies without gaps.",
+    "metaDescription": "Learn how to order and reorder pediatric medical supplies without gaps using a simple parent-friendly tracking system that keeps your home supply steady.",
+    "tags": [
+      "pediatric medical supplies",
+      "DME reorder",
+      "home nursing supplies",
+      "pediatric care navigation",
+      "medical supply tracking"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-10-11",
+    "prettyDate": "October 11, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "pediatric-specialists-conflicting-advice-2",
+    "title": "What to Do When Pediatric Specialists Give Conflicting Advice About Your Child",
+    "excerpt": "Two specialists, two different recommendations, one worried parent. Here's how to organize the conflict and bring it back to your child's care team for clarity.",
+    "metaDescription": "When pediatric specialists give conflicting advice, use these calm, practical steps to organize the differences and get clarity from your child's care team.",
+    "tags": [
+      "pediatric specialists conflicting advice",
+      "pediatric care coordination",
+      "pediatric care team",
+      "parent navigation guide",
+      "pediatric second opinion"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-10-11",
+    "prettyDate": "October 11, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "share-pediatric-records-between-two-specialists",
+    "title": "How to Share Pediatric Records Between Two Specialists So They Can Communicate",
+    "excerpt": "When your child sees two specialists who never seem to talk, you can be the bridge. Here are practical, non-clinical steps to help their offices actually connect.",
+    "metaDescription": "Learn practical steps to share pediatric records between two specialists so they can communicate, coordinate care, and keep your child's providers on the same page.",
+    "tags": [
+      "pediatric care coordination",
+      "specialist communication",
+      "sharing medical records",
+      "pediatric navigation",
+      "care team coordination"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-10-11",
+    "prettyDate": "October 11, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "get-two-pediatric-specialists-to-talk",
     "title": "How to Get Two Pediatric Specialists to Talk to Each Other: A Parent's Coordination Guide",
     "excerpt": "When your child sees more than one specialist, their care works best when those doctors actually talk to each other. Here's how to make that happen — calmly and effectively.",
