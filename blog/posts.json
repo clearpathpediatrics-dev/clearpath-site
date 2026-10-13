@@ -1,5 +1,59 @@
 [
   {
+    "slug": "who-to-call-pediatric-referral-gone-quiet-2",
+    "title": "Who to Call When a Pediatric Referral Has Gone Quiet for Weeks",
+    "excerpt": "When weeks pass with no word on your child's specialist referral, it's hard to know who to contact first. Here's a clear, practical call order so nothing falls through the cracks.",
+    "metaDescription": "A pediatric referral gone silent for weeks? Learn exactly who to call, in what order, and what to say to get your child's referral moving again.",
+    "tags": [
+      "pediatric referral",
+      "specialist referral follow-up",
+      "pediatric care navigation",
+      "referral stuck",
+      "pediatric scheduling"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-10-13",
+    "prettyDate": "October 13, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "prepare-first-pediatric-specialist-appointment-2",
+    "title": "How to Prepare for Your Child's First Pediatric Specialist Appointment: A Parent's Checklist",
+    "excerpt": "A warm, practical checklist for walking into your child's first pediatric specialist visit organized and confident — with the records, questions, and details that make the appointment count.",
+    "metaDescription": "Learn how to prepare for your child's first pediatric specialist appointment with a parent-friendly checklist that helps you feel organized, calm, and ready.",
+    "tags": [
+      "pediatric specialist appointment",
+      "pediatric specialist referral",
+      "preparing for pediatric visit",
+      "pediatric care navigation",
+      "parent appointment checklist"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-10-13",
+    "prettyDate": "October 13, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "check-pediatric-referral-actually-sent",
+    "title": "How to Check Whether a Pediatric Referral Was Actually Sent: A Parent's Step-by-Step Guide",
+    "excerpt": "Not sure if your child's referral ever left the pediatrician's office? Here's a calm, practical way to confirm it was sent — and what to do if it wasn't.",
+    "metaDescription": "Learn how to confirm a pediatric referral was actually sent, who to call, and what to ask so your child's specialist appointment doesn't stall before it starts.",
+    "tags": [
+      "pediatric referral",
+      "specialist referral",
+      "referral tracking",
+      "pediatric care navigation",
+      "insurance authorization"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-10-13",
+    "prettyDate": "October 13, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "why-pediatric-specialist-referral-stalls",
     "title": "Why a Pediatric Specialist Referral Stalls — and How to Find Out Where It's Stuck",
     "excerpt": "Waiting weeks for a specialist appointment that never comes? Here's where pediatric referrals commonly get stuck — and how to find out where yours is.",
