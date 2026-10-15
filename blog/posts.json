@@ -1,5 +1,59 @@
 [
   {
+    "slug": "two-providers-billed-same-pediatric-visit",
+    "title": "Two Providers Billed for One Pediatric Visit? A Parent's Step-by-Step Guide to Double Billing",
+    "excerpt": "If you've received two bills for what felt like one pediatric appointment, you're not alone. Here's how to tell what's really happening and get it sorted out.",
+    "metaDescription": "Learn what to do when two providers bill for the same pediatric visit. A clear, calm guide to spotting double billing and sorting out your child's bills.",
+    "tags": [
+      "pediatric double billing",
+      "pediatric medical bills",
+      "pediatric EOB",
+      "pediatric visit billing",
+      "insurance billing errors"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-15",
+    "prettyDate": "October 15, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "waiting-pediatric-gene-therapy-insurance-approval-2",
+    "title": "What to Do While Waiting for Pediatric Gene Therapy Insurance Approval: A Parent's Guide",
+    "excerpt": "The approval wait for pediatric gene therapy can feel endless. Here are practical, non-clinical steps to stay organized and ready while your prior authorization is in process.",
+    "metaDescription": "Waiting on pediatric gene therapy insurance approval? Learn practical steps to stay organized, track your prior authorization, and prepare while you wait.",
+    "tags": [
+      "pediatric gene therapy approval",
+      "prior authorization",
+      "insurance appeals",
+      "pediatric care navigation",
+      "parent advocacy"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-10-15",
+    "prettyDate": "October 15, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "documenting-pediatric-medical-necessity-complex-needs-2",
+    "title": "Documenting Medical Necessity for a Pediatric Patient With Complex Needs: A Parent's Organizing Guide",
+    "excerpt": "When your child's care depends on insurance approvals, how you gather and organize the record matters. Here's a practical way to document medical necessity.",
+    "metaDescription": "Learn how to organize and document medical necessity for a child with complex needs so prior authorizations and pediatric appeals go more smoothly.",
+    "tags": [
+      "pediatric medical necessity",
+      "prior authorization",
+      "pediatric appeals",
+      "complex care documentation",
+      "insurance denials"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-10-15",
+    "prettyDate": "October 15, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "escalate-pediatric-claim-state-insurance-commissioner-2",
     "title": "How to Escalate a Pediatric Claim to Your State Insurance Commissioner: A Parent's Step-by-Step Guide",
     "excerpt": "When a pediatric claim stays denied after appeals, your state insurance commissioner may be your next step. Here's how to organize and file a clear complaint.",
