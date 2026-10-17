@@ -1,5 +1,59 @@
 [
   {
+    "slug": "keep-pediatric-well-child-visits-on-schedule-complex-year",
+    "title": "How to Keep Pediatric Well-Child Visits on Schedule During a Complex Year",
+    "excerpt": "When life gets complicated, well-child visits are easy to lose track of. Here's a practical, parent-friendly system for keeping them on schedule all year.",
+    "metaDescription": "Learn how to keep pediatric well-child visits on schedule during a busy, complex year with a simple parent system for tracking, booking, and staying organized.",
+    "tags": [
+      "pediatric well-child visits",
+      "well-child visit schedule",
+      "pediatric appointment organization",
+      "developmental checks",
+      "parent health navigation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-10-17",
+    "prettyDate": "October 17, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "get-most-out-15-minute-pediatric-appointment",
+    "title": "How to Get the Most Out of a 15-Minute Pediatric Appointment: A Parent's Prep Guide",
+    "excerpt": "Short appointments can feel rushed, but a little preparation goes a long way. Here's how to organize your questions and notes so your 15 minutes count.",
+    "metaDescription": "Learn how to prepare for a short pediatric appointment so you cover every question. A parent's practical prep guide to make 15 minutes work for your family.",
+    "tags": [
+      "pediatric appointment prep",
+      "well-child visit tips",
+      "pediatric visit questions",
+      "parent appointment checklist",
+      "pediatric care navigation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-10-17",
+    "prettyDate": "October 17, 2026",
+    "readMinutes": 5
+  },
+  {
+    "slug": "no-surprises-act-pediatric-care-protections",
+    "title": "The No Surprises Act and Your Child's Care: A Parent's Plain-Language Guide to Protections",
+    "excerpt": "The No Surprises Act gives families real protections against unexpected medical bills. Here's what it covers for your child's care and how to put those rights to work.",
+    "metaDescription": "Learn what the No Surprises Act means for your child's pediatric care, which bills it protects against, and how to use these rights to avoid surprise charges.",
+    "tags": [
+      "No Surprises Act",
+      "pediatric medical bills",
+      "surprise billing protections",
+      "out-of-network pediatric care",
+      "good faith estimate"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-17",
+    "prettyDate": "October 17, 2026",
+    "readMinutes": 5
+  },
+  {
     "slug": "no-surprises-act-pediatric-care-3",
     "title": "What the No Surprises Act Means for Your Child's Pediatric Care and Bills",
     "excerpt": "The No Surprises Act was built to protect families from unexpected out-of-network bills. Here's what it means for your child's care — in plain, parent-friendly terms.",
