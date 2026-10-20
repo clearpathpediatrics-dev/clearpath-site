@@ -6,12 +6,13 @@
 <title>Terms of Use | ClearPath Pediatrics</title>
 <meta name="description" content="The complete terms and conditions governing ClearPath Pediatrics memberships, the ClearPath app, and this website — including scope limitations, billing, cancellation, and dispute resolution." />
 <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://clearpathpediatrics.com/terms-of-use" />
-<link rel="icon" type="image/png" href="/assets/clearpath-logo.png" />
+<link rel="canonical" href="https://clearpathpediatrics.com/terms-of-use/" />
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
 <meta property="og:title" content="Terms of Use | ClearPath Pediatrics" />
 <meta property="og:description" content="The complete terms and conditions governing ClearPath Pediatrics memberships, the ClearPath app, and this website." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://clearpathpediatrics.com/terms-of-use" />
+<meta property="og:url" content="https://clearpathpediatrics.com/terms-of-use/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -47,15 +48,51 @@ ul{margin:0 0 12px 22px;color:var(--soft);font-size:.97rem}li{margin-bottom:6px}
 .lp-footer a{color:rgba(255,255,255,.7)}.lp-footer a:hover{color:var(--gold)}
 .lp-footer nav{display:flex;gap:18px;flex-wrap:wrap}
 @media(max-width:640px){.lp-footer .wrap{flex-direction:column;text-align:center}.legal-table{font-size:.82rem}.legal-table th,.legal-table td{padding:8px}}
+
+.lp-header{background:var(--navy,#0b2240);padding:10px 0;position:sticky;top:0;z-index:50}
+.lp-header .wrap{max-width:1180px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.lp-brand{display:block;margin-right:auto}
+.lp-brand img{height:54px;width:auto;display:block}
+.lp-nav{display:flex;gap:22px;align-items:center}
+.lp-nav a{color:rgba(255,255,255,.84);font-size:.92rem;font-weight:500;white-space:nowrap;text-decoration:none}
+.lp-nav a:hover{color:#fff;text-decoration:none}
+.lp-cta{background:linear-gradient(135deg,#e3a458,#d6913e);color:#0b2240!important;font-weight:700;font-size:.9rem;
+  padding:10px 20px;border-radius:999px;white-space:nowrap;text-decoration:none!important}
+.lp-cta:hover{filter:brightness(1.05)}
+.lp-nav-t{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.lp-burger{display:none;cursor:pointer;width:42px;height:42px;border-radius:12px;border:1px solid rgba(255,255,255,.22);
+  align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.lp-burger span{display:block;width:18px;height:2px;background:#fff;border-radius:2px;transition:transform .2s,opacity .2s}
+.lp-nav-t:focus-visible ~ .lp-burger{outline:2px solid #e3a458;outline-offset:2px}
+@media (max-width:860px){
+  .lp-header .wrap{gap:10px}
+  .lp-brand img{height:46px}
+  .lp-burger{display:flex}
+  .lp-cta{padding:9px 15px;font-size:.84rem}
+  .lp-nav{display:none;order:9;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:6px 0 4px}
+  .lp-nav a{padding:13px 4px;font-size:1rem;border-top:1px solid rgba(255,255,255,.1)}
+  .lp-nav-t:checked ~ .lp-nav{display:flex}
+  .lp-nav-t:checked ~ .lp-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .lp-nav-t:checked ~ .lp-burger span:nth-child(2){opacity:0}
+  .lp-nav-t:checked ~ .lp-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media (max-width:360px){.lp-cta{padding:8px 12px;font-size:.8rem}}
 </style>
 </head>
 <body>
-<header class="lp-header">
-  <div class="wrap">
-    <a href="/" class="lp-brand" aria-label="ClearPath Pediatrics home"><img src="/assets/clearpath-logo-white.png" alt="ClearPath Pediatrics" /></a>
-    <a href="/" class="lp-back">← Back to Home</a>
-  </div>
-</header>
+<header class="lp-header"><div class="wrap">
+  <a href="/" class="lp-brand" aria-label="ClearPath Pediatrics home"><img src="/assets/logo-white-132.webp" width="107" height="132" alt="ClearPath Pediatrics" /></a>
+  <input type="checkbox" id="lp-nav-t" class="lp-nav-t" aria-label="Open menu" />
+  <nav class="lp-nav" aria-label="Main">
+    <a href="/blog/">Articles</a>
+    <a href="/pediatric-care-navigation-guide/">Guide</a>
+    <a href="/tools/">Free Tools</a>
+    <a href="/free-care-roadmap/">Free Care Plan</a>
+    <a href="/#services">Services</a>
+  </nav>
+  <a class="lp-cta" href="/book/" data-cta="header">Book a free call</a>
+  <label for="lp-nav-t" class="lp-burger" aria-hidden="true"><span></span><span></span><span></span></label>
+</div></header>
 
 <main class="lp-main">
   <div class="wrap">
@@ -152,7 +189,7 @@ ul{margin:0 0 12px 22px;color:var(--soft);font-size:.97rem}li{margin-bottom:6px}
     <p>To cancel a membership, contact us at <a href="tel:+19494165447">(949) 416-5447</a> or <a href="mailto:admin@clearpathpediatrics.com">admin@clearpathpediatrics.com</a>.</p>
 
     <h2>12. Confidentiality &amp; Communications</h2>
-    <p>We take the confidentiality of information you share with us seriously. ClearPath is not a covered entity under HIPAA (45 CFR § 160.103), but we voluntarily maintain commercially reasonable safeguards for your information and do not sell it or share it with unauthorized third parties. Please refer to our <a href="/privacy-policy">Privacy Policy</a> for full details.</p>
+    <p>We take the confidentiality of information you share with us seriously. ClearPath is not a covered entity under HIPAA (45 CFR § 160.103), but we voluntarily maintain commercially reasonable safeguards for your information and do not sell it or share it with unauthorized third parties. Please refer to our <a href="/privacy-policy/">Privacy Policy</a> for full details.</p>
     <p>You authorize ClearPath to communicate with you regarding the services by phone, email, text message, and in-app messaging, and you acknowledge that no method of electronic transmission is perfectly secure. You agree not to share access credentials, session links, or care plan documents with unauthorized third parties.</p>
 
     <h2>13. Acceptable Use</h2>
@@ -191,7 +228,7 @@ ul{margin:0 0 12px 22px;color:var(--soft);font-size:.97rem}li{margin-bottom:6px}
 
     <h2>21. General Provisions</h2>
     <ul>
-      <li><strong>Entire agreement:</strong> These Terms, together with our <a href="/privacy-policy">Privacy Policy</a> and any enrollment or invoice terms, constitute the entire agreement between you and ClearPath and supersede prior discussions</li>
+      <li><strong>Entire agreement:</strong> These Terms, together with our <a href="/privacy-policy/">Privacy Policy</a> and any enrollment or invoice terms, constitute the entire agreement between you and ClearPath and supersede prior discussions</li>
       <li><strong>Severability:</strong> If any provision is held unenforceable, the remainder continues in full force</li>
       <li><strong>No waiver:</strong> ClearPath's failure to enforce any provision is not a waiver of it</li>
       <li><strong>Assignment:</strong> You may not assign these Terms; ClearPath may assign them in connection with a business transfer</li>
@@ -217,13 +254,12 @@ ul{margin:0 0 12px 22px;color:var(--soft);font-size:.97rem}li{margin-bottom:6px}
     <span>Copyright © 2026 ClearPath Pediatrics, LLC. — All Rights Reserved.</span>
     <nav>
       <a href="/">Home</a>
-      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
 </footer>
 <script src="/assets/analytics.js" defer></script>
-<script src="/assets/email-popup.js" defer></script>
-<script src="/assets/roadmap-cta.js" defer></script>
+<script src="/assets/capture.js" defer></script>
 </body>
 </html>

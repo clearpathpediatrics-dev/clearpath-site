@@ -17,17 +17,17 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { LANDING_PAGES } from "./landing-pages.data.mjs";
-import { buildGuidePages, GUIDE_SLUG, COMPARE_SLUG } from "./build-guide.mjs";
+import { buildGuidePages } from "./build-guide.mjs";
+import { SITE, BOOK, HEADER, HEADER_CSS, HEAD_ICONS, SCRIPTS, ROADMAP_CSS, roadmapCard, writePage } from "./site-chrome.mjs";
+import { writeSitemap } from "./sitemap.mjs";
+import { HUBS, hubFor, hubUrl, relatedPosts } from "./hubs.pediatric.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const BLOG_DIR = path.join(ROOT, "blog");
 const POSTS_JSON = path.join(BLOG_DIR, "posts.json");
-const SITEMAP = path.join(ROOT, "sitemap.xml");
 import { pickAngles } from "./topics.pediatric.mjs";
 
-const SITE = "https://clearpathpediatrics.com";
 const MODEL = process.env.CLEARPATH_BLOG_MODEL || "claude-opus-4-8";
 // Cadence. Raised from 1/day: the ceiling on organic growth here is published
 // surface area on winnable administrative queries, not post quality.
@@ -84,13 +84,8 @@ const BRAND_CSS = `
 body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:820px;margin:0 auto;padding:0 24px}
-.lp-header{background:var(--navy);padding:12px 0;position:sticky;top:0;z-index:10}
-.lp-header .wrap{max-width:1180px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.lp-brand img{height:54px;width:auto;display:block}
-.lp-nav{display:flex;gap:20px;align-items:center}
-.lp-nav a{color:rgba(255,255,255,.82);font-size:.9rem;font-weight:500}
-.lp-nav a:hover{color:#fff;text-decoration:none}
-.lp-nav .cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;padding:9px 18px;border-radius:999px}
+${HEADER_CSS}
+${ROADMAP_CSS}
 .eyebrow{font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2)}
 .tool-callout{background:#faf7f2;border:1px solid #e8dfd2;border-left:4px solid var(--gold);
   border-radius:0 16px 16px 0;padding:22px 26px;margin:30px 0}
@@ -113,7 +108,7 @@ a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
 .lp-footer .wrap{max-width:1180px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
 .lp-footer a{color:rgba(255,255,255,.7)}.lp-footer a:hover{color:var(--gold)}
 .lp-footer nav{display:flex;gap:18px;flex-wrap:wrap}
-@media(max-width:640px){.lp-footer .wrap{flex-direction:column;text-align:center}.lp-nav{gap:14px}}
+@media(max-width:640px){.lp-footer .wrap{flex-direction:column;text-align:center}}
 `;
 
 
@@ -165,41 +160,62 @@ const toolCallout = (tool) => !tool ? "" : `
       <a class="tc-btn" href="${tool.href}">Open the free tool →</a>
     </aside>`;
 
-/** Insert the callout after roughly the third paragraph, not at the very top. */
-function injectTool(html, tool) {
-  if (!tool) return html;
+/**
+ * Two offers, placed apart. The free tool goes early, after about the third
+ * paragraph, for the reader who wants to act now. The Free Care Roadmap goes
+ * about 60% of the way down, once the reader has shown the topic matters to
+ * them. Placed together they would compete; placed apart each lands on the
+ * reader it suits.
+ */
+function injectOffers(html, tool, hub) {
   const parts = html.split("</p>");
-  if (parts.length < 5) return html + toolCallout(tool);
-  const at = Math.min(3, parts.length - 2);
-  return parts.slice(0, at).join("</p>") + "</p>" + toolCallout(tool) + parts.slice(at).join("</p>");
+  const n = parts.length - 1;                       // closed paragraphs
+  if (n < 4) return html + toolCallout(tool) + roadmapCard(hub, "article");
+  const toolAt = Math.min(3, n - 1);
+  const cardAt = Math.max(toolAt + 3, Math.round(n * 0.6));
+  const out = [];
+  parts.forEach((chunk, i) => {
+    out.push(chunk);
+    if (i === n) return;                            // trailing remainder, no </p>
+    out.push("</p>");
+    if (i + 1 === toolAt && tool) out.push(toolCallout(tool));
+    if (i + 1 === cardAt) out.push(roadmapCard(hub, "article"));
+  });
+  // Short bodies where cardAt runs past the end still get the card.
+  if (cardAt > n) out.push(roadmapCard(hub, "article"));
+  return out.join("");
 }
 
-const HEADER_HTML = `
-<header class="lp-header">
-  <div class="wrap">
-    <a href="/" class="lp-brand" aria-label="ClearPath Pediatrics home"><img src="/assets/clearpath-logo-white.png" alt="ClearPath Pediatrics" /></a>
-    <nav class="lp-nav">
-      <a href="/">Home</a>
-      <a href="/blog/">Blog</a>
-      <a href="/pediatric-care-navigation-guide">Guide</a>
-      <a href="/tools/">Free Tools</a>
-      <a href="/#services">Services</a>
-      <a href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener" class="cta">Book a Free Call</a>
-    </nav>
-  </div>
-</header>`;
+/** Strip anything a previous render injected, so re-renders cannot stack. */
+const stripInjected = (body) => body
+  .replace(/\s*<aside class="tool-callout">[\s\S]*?<\/aside>/g, "")
+  .replace(/\s*<aside class="cpp-inline"[^>]*>[\s\S]*?<\/aside>/g, "");
 
 const FOOTER_HTML = `
 <footer class="lp-footer">
   <div class="wrap">
     <span>Copyright © 2025 ClearPath Pediatrics, LLC. — All Rights Reserved.</span>
     <nav>
-      <a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a>
-      <a href="/tools/">Free Tools</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a>
-      <a href="/#contact">Contact</a>
+      <a href="/">Home</a><a href="/blog/">Articles</a><a href="/pediatric-care-navigation-guide/">Guide</a>
+      <a href="/tools/">Free Tools</a><a href="/free-care-roadmap/">Free Care Plan</a><a href="${BOOK}">Book a call</a>
+      <a href="/privacy-policy/">Privacy</a><a href="/terms-of-use/">Terms</a><a href="/#contact">Contact</a>
     </nav>
   </div>
 </footer>`;
+
+const relatedBlock = (post, posts) => {
+  const hub = hubFor(post);
+  const rel = relatedPosts(post, posts, 4);
+  if (!rel.length) return "";
+  return `
+    <section class="related" aria-labelledby="rel-h">
+      <h2 id="rel-h">Keep reading</h2>
+      <ul>${rel.map(p => `
+        <li><a href="/blog/${p.slug}/">${esc(p.title)}</a></li>`).join("")}
+      </ul>
+      <a class="hub-link" href="${hubUrl(hub)}">All guides on ${esc(hub.name.toLowerCase())} →</a>
+    </section>`;
+};
 
 const DISCLAIMER_HTML = `
 <div class="disclaimer">
@@ -207,8 +223,9 @@ const DISCLAIMER_HTML = `
 </div>`;
 
 // ---- Page renderers -----------------------------------------------------------
-function renderPost(post) {
-  const url = `${SITE}/blog/${post.slug}`;
+function renderPost(post, posts = readPosts()) {
+  const url = `${SITE}/blog/${post.slug}/`;
+  const hub = hubFor(post);
   const faqLd = post.faq && post.faq.length ? {
     "@context": "https://schema.org", "@type": "FAQPage",
     mainEntity: post.faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
@@ -220,7 +237,7 @@ function renderPost(post) {
     author: { "@type": "Organization", name: "ClearPath Pediatrics" },
     publisher: { "@type": "Organization", name: "ClearPath Pediatrics", logo: { "@type": "ImageObject", url: `${SITE}/assets/clearpath-logo.png` } },
     mainEntityOfPage: url, image: `${SITE}/assets/clearpath-logo.png`, keywords: (post.tags || []).join(", "),
-    articleSection: post.topic,
+    articleSection: hub.name,
   };
   return `<!DOCTYPE html>
 <html lang="en">
@@ -232,7 +249,7 @@ function renderPost(post) {
 <meta name="keywords" content="${esc((post.tags || []).join(", "))}" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <link rel="canonical" href="${url}" />
-<link rel="icon" type="image/png" href="/assets/clearpath-logo.png" />
+${HEAD_ICONS}
 <meta property="og:type" content="article" />
 <meta property="og:title" content="${esc(post.title)}" />
 <meta property="og:description" content="${esc(post.metaDescription)}" />
@@ -250,8 +267,17 @@ ${faqLd ? `<script type="application/ld+json">${JSON.stringify(faqLd)}</script>`
 .article .eyebrow{display:inline-block;margin-bottom:12px}
 .article h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,4.4vw,2.9rem);color:var(--navy2);line-height:1.12;margin-bottom:14px}
 .meta{color:var(--soft);font-size:.85rem;margin-bottom:8px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 30px}
-.tags span{font-size:.72rem;font-weight:600;color:var(--gold2);background:rgba(227,164,88,.12);border:1px solid rgba(227,164,88,.28);padding:5px 12px;border-radius:999px}
+.article .eyebrow a{color:inherit;text-decoration:none}
+.article .eyebrow a:hover{text-decoration:underline}
+.meta{margin-bottom:28px}
+.tags{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:26px 0 0;font-size:.8rem;color:var(--soft)}
+.tags span{font-size:.74rem;font-weight:600;color:var(--gold2);background:rgba(227,164,88,.1);border:1px solid rgba(227,164,88,.24);padding:4px 11px;border-radius:999px}
+.related{border-top:1px solid var(--line);margin-top:38px;padding-top:26px}
+.related h2{font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;color:var(--navy2);margin-bottom:12px}
+.related ul{list-style:none;display:grid;gap:2px}
+.related li a{display:block;padding:11px 0;border-bottom:1px solid var(--line);color:var(--navy2);font-weight:600;font-size:1rem;line-height:1.4}
+.related li a:hover{color:var(--gold2);text-decoration:none}
+.related .hub-link{display:inline-block;margin-top:14px;font-weight:600}
 .body h2{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;color:var(--navy2);margin:34px 0 10px}
 .body h3{font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;color:var(--navy2);margin:24px 0 8px}
 .body p{color:var(--soft);margin-bottom:16px;font-size:1.04rem}
@@ -267,37 +293,37 @@ ${faqLd ? `<script type="application/ld+json">${JSON.stringify(faqLd)}</script>`
 .backlink{display:inline-block;margin-top:8px;color:var(--gold2);font-weight:600}
 </style>
 </head>
-<body>
-${HEADER_HTML}
+<body data-need="${hub.need}">
+${HEADER}
 <main class="article">
   <div class="wrap">
-    <span class="eyebrow">${esc(post.topic)}</span>
+    <span class="eyebrow"><a href="${hubUrl(hub)}">${esc(hub.name)}</a></span>
     <h1>${esc(post.title)}</h1>
     <p class="meta">${esc(post.prettyDate)}${post.readMinutes ? ` · ${post.readMinutes} min read` : ""} · ClearPath Pediatrics</p>
-    <div class="tags">${(post.tags || []).map(t => `<span>${esc(t)}</span>`).join("")}</div>
     <div class="body">
-${injectTool(post.html, toolFor(post))}
+${injectOffers(post.html, toolFor(post), hub)}
     </div>
+    ${(post.tags || []).length ? `<div class="tags">Filed under ${post.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>` : ""}
+    ${relatedBlock(post, posts)}
     ${DISCLAIMER_HTML}
     <div class="cta-band">
-      <h3>Feeling overwhelmed between visits?</h3>
-      <p>ClearPath's RN care navigators help families of medically complex children stay organized and confident. Start with a free 30-minute call.</p>
-      <a href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener">Book a Free Consultation →</a>
+      <h3>Rather talk it through?</h3>
+      <p>ClearPath's RN care navigators help families of medically complex children stay organized and confident. Start with a free 30-minute call: no sales pitch, no commitment.</p>
+      <a href="${BOOK}" data-cta="article-band">Book a free call →</a>
     </div>
-    <p style="margin-top:22px;color:var(--soft);font-size:.95rem">This article is part of our <a href="/pediatric-care-navigation-guide"><strong>complete guide to pediatric care navigation</strong></a> — browse every how-to guide in one place.</p>
+    <p style="margin-top:22px;color:var(--soft);font-size:.95rem">This article is part of our <a href="/pediatric-care-navigation-guide/"><strong>complete guide to pediatric care navigation</strong></a> — browse every how-to guide in one place.</p>
     <a href="/blog/" class="backlink">← Back to all articles</a>
   </div>
 </main>
 ${FOOTER_HTML}
-<script src="/assets/analytics.js" defer></script>
-<script src="/assets/email-popup.js" defer></script>
+${SCRIPTS}
 </body>
 </html>`;
 }
 
 function renderIndex(posts) {
   const cards = posts.map(p => `
-      <a class="card" href="/blog/${p.slug}">
+      <a class="card" href="/blog/${p.slug}/">
         <span class="ctag">${esc(p.topic)}</span>
         <h2>${esc(p.title)}</h2>
         <p>${esc(p.excerpt || p.metaDescription || "")}</p>
@@ -306,9 +332,9 @@ function renderIndex(posts) {
 
   const blogLd = {
     "@context": "https://schema.org", "@type": "Blog",
-    name: "ClearPath Pediatrics Blog", url: `${SITE}/blog`,
+    name: "ClearPath Pediatrics Blog", url: `${SITE}/blog/`,
     publisher: { "@type": "Organization", name: "ClearPath Pediatrics" },
-    blogPost: posts.slice(0, 20).map(p => ({ "@type": "BlogPosting", headline: p.title, url: `${SITE}/blog/${p.slug}`, datePublished: p.iso })),
+    blogPost: posts.slice(0, 20).map(p => ({ "@type": "BlogPosting", headline: p.title, url: `${SITE}/blog/${p.slug}/`, datePublished: p.iso })),
   };
 
   return `<!DOCTYPE html>
@@ -319,11 +345,11 @@ function renderIndex(posts) {
 <title>Pediatric Care Navigation Blog | ClearPath Pediatrics</title>
 <meta name="description" content="RN-written guidance for families of medically complex children — care navigation tips, complex-care support, insurance help, and milestone guidance from ClearPath Pediatrics." />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<link rel="canonical" href="${SITE}/blog" />
-<link rel="icon" type="image/png" href="/assets/clearpath-logo.png" />
+<link rel="canonical" href="${SITE}/blog/" />
+${HEAD_ICONS}
 <meta property="og:title" content="Pediatric Care Navigation Blog | ClearPath Pediatrics" />
 <meta property="og:description" content="RN-written guidance for families of medically complex children." />
-<meta property="og:url" content="${SITE}/blog" />
+<meta property="og:url" content="${SITE}/blog/" />
 <meta property="og:image" content="${SITE}/assets/clearpath-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -334,7 +360,7 @@ function renderIndex(posts) {
 .hero .eyebrow{color:var(--gold);display:inline-block;margin-bottom:12px}
 .hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.1rem,5vw,3.1rem);margin-bottom:12px}
 .hero p{color:rgba(255,255,255,.82);max-width:600px;margin:0 auto;font-size:1.05rem}
-.list{padding:48px 0}
+.list{padding:22px 0 48px}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:1000px;margin:0 auto}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 26px;display:block;transition:transform .25s,box-shadow .25s,border-color .25s;box-shadow:0 4px 16px rgba(11,34,64,.06)}
 .card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(11,34,64,.13);border-color:var(--gold);text-decoration:none}
@@ -344,17 +370,21 @@ function renderIndex(posts) {
 .card .meta{color:var(--soft);font-size:.8rem;opacity:.8}
 .empty{text-align:center;color:var(--soft);max-width:520px;margin:0 auto;padding:20px}
 .wrap-wide{max-width:1000px;margin:0 auto;padding:0 24px}
+.topics{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:26px auto 28px}
+.topics .k{width:100%;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#8a6524;font-weight:700;margin-bottom:2px}
+.topics a{font-size:.86rem;font-weight:600;color:var(--navy2);background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:999px}
+.topics a:hover{border-color:var(--gold);text-decoration:none}
 @media(max-width:720px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-${HEADER_HTML}
+${HEADER}
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">The ClearPath Blog</span>
     <h1>Clarity for families, one article at a time.</h1>
     <p>RN-written guidance on navigating complex pediatric care — organizing appointments, understanding insurance, preparing for visits, and supporting your child's journey.</p>
-    <p style="margin-top:14px"><a href="/pediatric-care-navigation-guide" style="color:#fff;font-weight:600;border-bottom:1px solid var(--gold)">New here? Start with our complete Pediatric Care Navigation Guide →</a></p>
+    <p style="margin-top:14px"><a href="/pediatric-care-navigation-guide/" style="color:#fff;font-weight:600;border-bottom:1px solid var(--gold)">New here? Start with our complete Pediatric Care Navigation Guide →</a></p>
   </div>
 </section>
 <main class="list">
@@ -368,59 +398,20 @@ ${HEADER_HTML}
     <a href="/tools/">Open the free tools →</a>
   </div>
 </div>
+  <nav class="wrap-wide topics" aria-label="Browse by topic">
+    <span class="k">Browse by topic</span>
+    ${HUBS.map(h => `<a href="${hubUrl(h)}">${esc(h.short)}</a>`).join("")}
+  </nav>
   <div class="wrap-wide">
-    ${posts.length ? `<div class="grid">${cards}\n    </div>` : `<p class="empty">New articles are on the way — check back soon, or <a href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener">book a free call</a> in the meantime.</p>`}
+    ${posts.length ? `<div class="grid">${cards}\n    </div>` : `<p class="empty">New articles are on the way — check back soon, or <a href="${BOOK}">book a free call</a> in the meantime.</p>`}
   </div>
 </main>
 ${FOOTER_HTML}
-<script src="/assets/analytics.js" defer></script>
-<script src="/assets/email-popup.js" defer></script>
+${SCRIPTS}
 </body>
 </html>`;
 }
 
-
-/**
- * Real last-modified date for a static page, from the file on disk.
- * Previously every static URL claimed today's date on every bot run, which
- * teaches Google to ignore the field entirely.
- */
-function fileMod(urlPath, fallback) {
-  const rel = urlPath.replace(`${SITE}/`, "").replace(/\/$/, "");
-  for (const c of [path.join(ROOT, rel, "index.html"), path.join(ROOT, `${rel}.html`),
-                   path.join(ROOT, rel || "index.html")]) {
-    try { return fs.statSync(c).mtime.toISOString().slice(0, 10); } catch {}
-  }
-  return fallback;
-}
-
-function renderSitemap(posts) {
-  const today = phoenixParts().iso;
-  const staticUrls = [
-    { loc: `${SITE}/`, pri: "1.0", freq: "weekly", mod: today },
-    { loc: `${SITE}/blog`, pri: "0.8", freq: "daily", mod: today },
-    { loc: `${SITE}/${GUIDE_SLUG}`, pri: "0.9", freq: "weekly", mod: today },
-    { loc: `${SITE}/${COMPARE_SLUG}`, pri: "0.7", freq: "monthly", mod: today },
-    ...LANDING_PAGES.map(p => ({ loc: `${SITE}/${p.slug}`, pri: "0.8", freq: "monthly", mod: today })),
-    // The funnel and the tools live here too. This function rewrites sitemap.xml
-    // on every run, so anything omitted here is silently deleted from the
-    // sitemap the next time the bot publishes.
-    { loc: `${SITE}/free-care-roadmap`, pri: "0.95", freq: "monthly", mod: today },
-    { loc: `${SITE}/is-clearpath-right-for-us`, pri: "0.7", freq: "monthly", mod: today },
-    { loc: `${SITE}/food-allergy-starter-kit`, pri: "0.7", freq: "monthly", mod: today },
-    { loc: `${SITE}/tools`, pri: "0.9", freq: "monthly", mod: today },
-    { loc: `${SITE}/tools/insurance-appeal-letter`, pri: "0.9", freq: "monthly", mod: today },
-    { loc: `${SITE}/tools/iep-meeting-prep`, pri: "0.9", freq: "monthly", mod: today },
-    { loc: `${SITE}/tools/medication-schedule`, pri: "0.9", freq: "monthly", mod: today },
-    { loc: `${SITE}/privacy-policy`, pri: "0.3", freq: "yearly", mod: today },
-    { loc: `${SITE}/terms-of-use`, pri: "0.3", freq: "yearly", mod: today },
-  ];
-  const postUrls = posts.map(p => ({ loc: `${SITE}/blog/${p.slug}`, pri: "0.6", freq: "monthly", mod: p.iso }));
-  const rows = [...staticUrls.map(u => ({ ...u, mod: fileMod(u.loc, u.mod) })), ...postUrls].map(u =>
-    `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${u.mod}</lastmod>\n    <changefreq>${u.freq}</changefreq>\n    <priority>${u.pri}</priority>\n  </url>`
-  ).join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows}\n</urlset>\n`;
-}
 
 // ---- Prompt -------------------------------------------------------------------
 function buildSystemPrompt(topic, recentTitles, angle) {
@@ -494,31 +485,144 @@ const SAMPLE_POST = {
 };
 
 
+/* -------------------------------------------------------------- topic hubs
+ * One page per topic listing every article on it. Gives each post at least one
+ * inbound link from a topical page, and gives Google a clear map of what the
+ * site is about. Rebuilt on every run, so new posts appear the day they publish.
+ */
+function renderHub(hub, posts) {
+  const items = posts.filter(p => hubFor(p) === hub);
+  const url = `${SITE}${hubUrl(hub)}`;
+  const tool = hub.tool ? TOOLS[hub.tool] : null;
+  const title = `${hub.name}: Guides for Parents | ClearPath Pediatrics`;
+  const desc = `${items.length} practical guides on ${hub.name.toLowerCase()} for parents of medically complex children, written by ClearPath Pediatrics' care navigation team.`;
+  const ld = [
+    { "@context": "https://schema.org", "@type": "CollectionPage", name: hub.name, description: desc, url,
+      isPartOf: { "@type": "WebSite", name: "ClearPath Pediatrics", url: `${SITE}/` },
+      mainEntity: { "@type": "ItemList", numberOfItems: items.length,
+        itemListElement: items.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}/blog/${p.slug}/`, name: p.title })) } },
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Articles", item: `${SITE}/blog/` },
+      { "@type": "ListItem", position: 2, name: hub.name, item: url } ] },
+  ];
+  const others = HUBS.filter(h => h !== hub);
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(desc)}" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="${url}" />
+${HEAD_ICONS}
+<meta property="og:type" content="website" />
+<meta property="og:title" content="${esc(title)}" />
+<meta property="og:description" content="${esc(desc)}" />
+<meta property="og:url" content="${url}" />
+<meta property="og:image" content="${SITE}/assets/clearpath-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n")}
+<style>${BRAND_CSS}
+.hub-hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:54px 0 46px}
+.hub-hero .eyebrow{color:var(--gold);display:inline-block;margin-bottom:12px}
+.hub-hero .eyebrow a{color:inherit}
+.hub-hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,4.6vw,2.8rem);line-height:1.15;margin-bottom:14px}
+.hub-hero p{color:rgba(255,255,255,.84);font-size:1.03rem;max-width:68ch}
+.hub-list{padding:34px 0 10px}
+.hub-list ol{list-style:none;counter-reset:n}
+.hub-list li{border-bottom:1px solid var(--line);padding:16px 0}
+.hub-list li a{font-family:'Playfair Display',Georgia,serif;font-size:1.18rem;font-weight:700;color:var(--navy2);line-height:1.3}
+.hub-list li a:hover{color:var(--gold2);text-decoration:none}
+.hub-list li p{color:var(--soft);font-size:.95rem;margin-top:4px;line-height:1.55}
+.hub-count{color:var(--soft);font-size:.9rem;margin-bottom:6px}
+.other{padding:10px 0 0}
+.other h2{font-family:'Playfair Display',Georgia,serif;font-size:1.25rem;color:var(--navy2);margin:26px 0 12px}
+.other nav{display:flex;flex-wrap:wrap;gap:8px}
+.other nav a{font-size:.86rem;font-weight:600;color:var(--navy2);background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:999px}
+.other nav a:hover{border-color:var(--gold);text-decoration:none}
+</style>
+</head>
+<body data-need="${hub.need}">
+${HEADER}
+<section class="hub-hero">
+  <div class="wrap">
+    <span class="eyebrow"><a href="/blog/">Articles</a> · Topic</span>
+    <h1>${esc(hub.name)}</h1>
+    <p>${esc(hub.intro)}</p>
+  </div>
+</section>
+<main class="wrap">
+  ${roadmapCard(hub, "hub")}
+  ${toolCallout(tool)}
+  <section class="hub-list">
+    <p class="hub-count">${items.length} guide${items.length === 1 ? "" : "s"}, newest first</p>
+    <ol>${items.map(p => `
+      <li><a href="/blog/${p.slug}/">${esc(p.title)}</a><p>${esc(p.excerpt || p.metaDescription || "")}</p></li>`).join("")}
+    </ol>
+  </section>
+  <section class="other">
+    <h2>Other topics</h2>
+    <nav aria-label="Other topics">${others.map(h => `<a href="${hubUrl(h)}">${esc(h.short)}</a>`).join("")}</nav>
+  </section>
+  ${DISCLAIMER_HTML}
+</main>
+${FOOTER_HTML}
+${SCRIPTS}
+</body>
+</html>`;
+}
+
+/** Everything that lists posts: blog index, topic hubs, sitemap, pillar guide. */
+function rebuildListings(posts) {
+  writePage(path.join(BLOG_DIR, "index.html"), renderIndex(posts));
+  for (const hub of HUBS) writePage(path.join(BLOG_DIR, "topics", hub.slug, "index.html"), renderHub(hub, posts));
+  writeSitemap(posts);
+  buildGuidePages(posts);
+}
+
+/** FAQ entries from a rendered post's FAQPage JSON-LD. */
+function faqFromHtml(html) {
+  for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    try {
+      const o = JSON.parse(m[1]);
+      if (o["@type"] === "FAQPage") return (o.mainEntity || []).map(q => ({ q: q.name, a: q.acceptedAnswer && q.acceptedAnswer.text })).filter(f => f.q && f.a);
+    } catch {}
+  }
+  return [];
+}
+
 /**
- * Re-render every existing post from its stored body HTML so changes to the
- * shared chrome (nav, footer, tool callouts) reach posts published before the
- * change. Body is recovered from the rendered file, since posts.json predates
- * an `html` field. Any previously injected callout is stripped first so
- * repeated runs cannot stack them.
+ * Re-render every existing post so changes to the shared chrome reach posts
+ * published before the change. The body is recovered from the rendered file
+ * and anything previously injected is stripped first, so re-runs cannot stack.
+ *
+ * FAQs now live in posts.json. They did not before, so every rehydrate silently
+ * deleted the FAQ structured data from every post: 49 had already lost it. Any
+ * FAQ still in a rendered page is carried into posts.json before re-rendering.
  *   CLEARPATH_REHYDRATE=1 node scripts/generate-blog-post.mjs
  */
 function rehydrateAll() {
   const posts = readPosts();
-  let done = 0, skipped = 0;
+  let done = 0, skipped = 0, faqKept = 0;
   for (const post of posts) {
     const file = path.join(BLOG_DIR, post.slug, "index.html");
     let existing;
     try { existing = fs.readFileSync(file, "utf8"); } catch { skipped++; continue; }
     const m = existing.match(/<div class="body">\n([\s\S]*?)\n    <\/div>/);
     if (!m) { skipped++; continue; }
-    const body = m[1].replace(/\s*<aside class="tool-callout">[\s\S]*?<\/aside>/g, "");
-    fs.writeFileSync(file, renderPost({ ...post, html: body }));
+    if (!(post.faq && post.faq.length)) {
+      const faq = faqFromHtml(existing);
+      if (faq.length) { post.faq = faq; faqKept++; }
+    }
+    writePage(file, renderPost({ ...post, html: stripInjected(m[1]) }, posts));
     done++;
   }
-  fs.writeFileSync(path.join(BLOG_DIR, "index.html"), renderIndex(posts));
-  fs.writeFileSync(SITEMAP, renderSitemap(posts));
-  buildGuidePages(posts);
-  console.log(`[blog] rehydrated ${done} posts (${skipped} skipped) · index + sitemap + guide rebuilt`);
+  fs.writeFileSync(POSTS_JSON, JSON.stringify(posts, null, 2) + "\n");
+  rebuildListings(posts);
+  console.log(`[blog] rehydrated ${done} posts (${skipped} skipped, ${faqKept} FAQ sets moved into posts.json) · index, ${HUBS.length} hubs, sitemap, guide rebuilt`);
 }
 
 // ---- Main --------------------------------------------------------------------
@@ -538,8 +642,11 @@ async function main() {
     return;
   }
 
+  // A dry run always renders one post, even after today's quota is met. It is
+  // the CI smoke test, and on the fallback runs it would otherwise render no
+  // article at all and prove nothing about the template.
   const plan = pickAngles(iso, POSTS_PER_RUN, posts.slice(0, 24).map(p => p.title))
-    .slice(todayCount, todayCount + need);
+    .slice(DRYRUN ? 0 : todayCount, DRYRUN ? 1 : todayCount + need);
   console.log(`[blog] ${prettyDate} — ${todayCount}/${POSTS_PER_RUN} done, writing ${plan.length} more`);
 
   for (const { cluster, angle } of plan) {
@@ -596,27 +703,25 @@ async function main() {
   }
 
   // Write the post page
-  const postDir = path.join(BLOG_DIR, post.slug);
-  fs.mkdirSync(postDir, { recursive: true });
-  fs.writeFileSync(path.join(postDir, "index.html"), renderPost(post));
+  writePage(path.join(BLOG_DIR, post.slug, "index.html"), renderPost(post, posts));
 
-  // Update manifest (newest first) — store only index-card fields
+  // Update manifest (newest first). The FAQ is kept so a later re-render can
+  // rebuild the FAQ structured data instead of dropping it.
   const manifestEntry = {
     slug: post.slug, title: post.title, excerpt: post.excerpt || post.metaDescription,
     metaDescription: post.metaDescription, tags: post.tags, topic: post.topic,
     clusterKey: post.clusterKey,
     iso: post.iso, prettyDate: post.prettyDate, readMinutes: post.readMinutes,
+    faq: post.faq,
   };
   posts = [manifestEntry, ...posts];
   fs.writeFileSync(POSTS_JSON, JSON.stringify(posts, null, 2) + "\n");
   console.log(`[blog]   ✓ /blog/${post.slug}  ("${post.title}")`);
   }
 
-  // Rebuild index + sitemap + pillar guide once, after the batch.
-  fs.writeFileSync(path.join(BLOG_DIR, "index.html"), renderIndex(posts));
-  fs.writeFileSync(SITEMAP, renderSitemap(posts));
-  buildGuidePages(posts);
-  console.log(`[blog] ✓ ${posts.length} total posts · index + sitemap + guide rebuilt`);
+  // Rebuild every listing once, after the batch.
+  rebuildListings(posts);
+  console.log(`[blog] ✓ ${posts.length} total posts · index, ${HUBS.length} hubs, sitemap, guide rebuilt`);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });

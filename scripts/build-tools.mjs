@@ -21,10 +21,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { HEAD_ICONS, SCRIPTS, writePage } from "./site-chrome.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://clearpathpediatrics.com";
-const CAL = "https://calendly.com/clearpathpediatrics/30min";
 
 const head = ({ slug, title, desc, keywords, howto }) => `<!DOCTYPE html>
 <html lang="en">
@@ -44,6 +44,7 @@ const head = ({ slug, title, desc, keywords, howto }) => `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/tools.css">
+${HEAD_ICONS}
 <script type="application/ld+json">${JSON.stringify({
   "@context": "https://schema.org", "@type": "WebApplication",
   name: howto.name, url: `${SITE}/tools/${slug}`,
@@ -66,7 +67,7 @@ const head = ({ slug, title, desc, keywords, howto }) => `<!DOCTYPE html>
 </head>
 <body>
 <header class="top"><div class="top-in">
-  <a href="/" aria-label="ClearPath Pediatrics home"><img src="/assets/logo-420.png" alt="ClearPath Pediatrics" width="90" height="60"></a>
+  <a href="/" aria-label="ClearPath Pediatrics home"><img src="/assets/logo-180.webp" alt="ClearPath Pediatrics" width="90" height="60"></a>
   <a class="ph" href="tel:+19494165447">(949) 416-5447</a>
 </div></header>
 <main class="wrap">`;
@@ -91,7 +92,7 @@ const tail = (related) => `
 </p>
 </main>
 <footer><div class="wrap">ClearPath Pediatrics, LLC · Phoenix, AZ &amp; nationwide · <a href="tel:+19494165447">(949) 416-5447</a></div></footer>
-<script src="/assets/roadmap-cta.js" defer></script>
+${SCRIPTS}
 </body>
 </html>`;
 
@@ -544,10 +545,10 @@ let n = 0;
 for (const t of TOOLS) {
   const dir = path.join(ROOT, "tools", t.slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), t.build());
+  writePage(path.join(dir, "index.html"), t.build());
   console.log(`  ✓ /tools/${t.slug}`); n++;
 }
 fs.mkdirSync(path.join(ROOT, "tools"), { recursive: true });
-fs.writeFileSync(path.join(ROOT, "tools", "index.html"), index());
+writePage(path.join(ROOT, "tools", "index.html"), index());
 console.log("  ✓ /tools"); n++;
 console.log(`[tools] built ${n} pages.`);

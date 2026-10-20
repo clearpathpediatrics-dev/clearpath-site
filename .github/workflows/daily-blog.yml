@@ -34,6 +34,22 @@ jobs:
       - name: Install Anthropic SDK
         run: npm install --no-save @anthropic-ai/sdk@^0.70.0
 
+      # Runs the whole publish path with a canned article instead of an API
+      # call: angle selection, rendering, related posts, topic hubs, sitemap and
+      # guide. Free, and it fails loudly. On the sister site a reference that only
+      # the live path reached stopped publishing for three days while every local
+      # check stayed green; this is the step that catches that class of bug.
+      #
+      # The dry run writes real files, so put the tree back before the paid run.
+      # Safe here: the checkout is fresh, so anything untracked under blog/ is
+      # what the dry run just made.
+      - name: Smoke-test the publish path
+        run: |
+          CLEARPATH_BLOG_DRYRUN=1 node scripts/generate-blog-post.mjs
+          git checkout -- .
+          git clean -fdq blog/
+          git status --porcelain
+
       - name: Generate today's post
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -45,7 +61,9 @@ jobs:
           git config user.name  "ClearPath Blog Bot"
           git config user.email "actions@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
-            git add blog/ sitemap.xml
+            # The guide pages are rebuilt on every run too. They were never
+            # added here, so the live guide never received a single new post.
+            git add blog/ sitemap.xml pediatric-care-navigation-guide/ care-navigator-vs-case-manager/
             git commit -m "blog: new post ($(date -u +%Y-%m-%d))"
             git push
           else

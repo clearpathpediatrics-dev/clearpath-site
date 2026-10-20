@@ -6,11 +6,13 @@
 <title>Free Care Navigation Starter Plan | ClearPath Pediatrics</title>
 <meta name="description" content="Answer 6 quick questions and get a personalized care navigation plan for your child, written for your situation and emailed in minutes. Free, no call required.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://clearpathpediatrics.com/free-care-roadmap">
+<link rel="canonical" href="https://clearpathpediatrics.com/free-care-roadmap/">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Get your child's free Care Navigation Starter Plan">
 <meta property="og:description" content="Six questions. A personalized plan in your inbox in minutes. Built by pediatric RNs, free to keep.">
-<meta property="og:url" content="https://clearpathpediatrics.com/free-care-roadmap">
+<meta property="og:url" content="https://clearpathpediatrics.com/free-care-roadmap/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -110,7 +112,7 @@ footer a{color:var(--gold);text-decoration:none}
 <body>
 
 <header class="top"><div class="top-in">
-  <a class="brand" href="/" aria-label="ClearPath Pediatrics — home"><img src="/assets/logo-420.png" alt="ClearPath Pediatrics" width="210" height="140"></a>
+  <a class="brand" href="/" aria-label="ClearPath Pediatrics — home"><img src="/assets/logo-420.webp" alt="ClearPath Pediatrics" width="210" height="140"></a>
   <a class="ph" href="tel:+19494165447">(949) 416-5447</a>
 </div></header>
 
@@ -133,6 +135,7 @@ footer a{color:var(--gold);text-decoration:none}
             data-netlify-honeypot="bot-field" action="/roadmap-on-its-way/">
         <input type="hidden" name="form-name" value="care-roadmap">
         <p class="hp"><label>Do not fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <input type="hidden" name="source" id="rf-source" value="">
 
         <!-- 1 -->
         <fieldset class="s" data-step="0">
@@ -254,7 +257,7 @@ footer a{color:var(--gold);text-decoration:none}
 </main>
 
 <footer><div class="wrap">
-  <img src="/assets/logo-white-420.png" alt="ClearPath Pediatrics" width="61" height="76"><br>
+  <img src="/assets/logo-white-132.webp" alt="ClearPath Pediatrics" width="61" height="76"><br>
   ClearPath Pediatrics, LLC · Phoenix, AZ &amp; nationwide · <a href="tel:+19494165447">(949) 416-5447</a>
 </div></footer>
 
@@ -301,9 +304,36 @@ footer a{color:var(--gold);text-decoration:none}
   form.addEventListener("input",function(){ next.disabled=!valid(i); });
   next.addEventListener("click",function(){ if(valid(i)&&i<steps.length-1){i++;render();} });
   back.addEventListener("click",function(){ if(i>0){i--;render();} });
-  form.addEventListener("submit",function(){ send.disabled=true; send.textContent="Building your plan…"; });
+  form.addEventListener("submit",function(){
+    send.disabled=true; send.textContent="Building your plan…";
+    var chosen=form.querySelector('input[name="need"]:checked');
+    try{ if(window.cpTrack) window.cpTrack("roadmap_submit",{ need: chosen?chosen.value:"" }); }catch(e){}
+    // Stops the site offering the Roadmap again, and lets the booking page fill
+    // in name and email for them. Session storage on this site only: never put
+    // in a URL, so it cannot leak into logs, analytics or referrers.
+    try{ localStorage.setItem("cpp_roadmap_done", String(Date.now())); }catch(e){}
+    try{
+      var nm=form.querySelector('[name="parent_name"]'), em=form.querySelector('[name="email"]');
+      sessionStorage.setItem("cpp_prefill", JSON.stringify({ name: nm?nm.value.trim():"", email: em?em.value.trim():"" }));
+    }catch(e){}
+  });
+
+  // An article's "Get my free plan" link carries ?need=…, so question 4 arrives
+  // already answered with the topic the parent was reading about. They can
+  // still change it.
+  var q=new URLSearchParams(location.search), pre=q.get("need");
+  if(pre){ var r=form.querySelector('input[name="need"][value="'+pre.replace(/[^a-z-]/g,"")+'"]'); if(r) r.checked=true; }
+
+  // Which page sent them: a path on this site only, for the lead alert.
+  try{
+    var ref=document.referrer?new URL(document.referrer):null;
+    if(ref && ref.origin===location.origin && ref.pathname.indexOf("/free-care-roadmap")!==0)
+      document.getElementById("rf-source").value=ref.pathname;
+  }catch(e){}
+
   render();
 })();
 </script>
+<script src="/assets/analytics.js" defer></script>
 </body>
 </html>

@@ -6,12 +6,13 @@
 <title>Is ClearPath Right for Your Family? | Free 60-Second Assessment</title>
 <meta name="description" content="Answer 5 quick questions to see if ClearPath Pediatrics' RN-led care navigation is a good fit for your family. Takes about a minute — no pressure, no commitment." />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<link rel="canonical" href="https://clearpathpediatrics.com/is-clearpath-right-for-us" />
-<link rel="icon" type="image/png" href="/assets/clearpath-logo.png" />
+<link rel="canonical" href="https://clearpathpediatrics.com/is-clearpath-right-for-us/" />
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Is ClearPath Right for Your Family? | Free 60-Second Assessment" />
 <meta property="og:description" content="Answer 5 quick questions to see if ClearPath's RN-led care navigation is a fit for your family." />
-<meta property="og:url" content="https://clearpathpediatrics.com/is-clearpath-right-for-us" />
+<meta property="og:url" content="https://clearpathpediatrics.com/is-clearpath-right-for-us/" />
 <meta property="og:image" content="https://clearpathpediatrics.com/assets/clearpath-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,12 +55,50 @@ h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.7rem,4vw,2.3re
 .lp-footer{background:var(--navy);color:rgba(255,255,255,.55);padding:22px 0;text-align:center;font-size:.82rem}
 .lp-footer a{color:rgba(255,255,255,.7)}
 @media(max-width:560px){.quiz{padding:30px 22px}}
+
+.lp-header{background:var(--navy,#0b2240);padding:10px 0;position:sticky;top:0;z-index:50}
+.lp-header .wrap{max-width:1180px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.lp-brand{display:block;margin-right:auto}
+.lp-brand img{height:54px;width:auto;display:block}
+.lp-nav{display:flex;gap:22px;align-items:center}
+.lp-nav a{color:rgba(255,255,255,.84);font-size:.92rem;font-weight:500;white-space:nowrap;text-decoration:none}
+.lp-nav a:hover{color:#fff;text-decoration:none}
+.lp-cta{background:linear-gradient(135deg,#e3a458,#d6913e);color:#0b2240!important;font-weight:700;font-size:.9rem;
+  padding:10px 20px;border-radius:999px;white-space:nowrap;text-decoration:none!important}
+.lp-cta:hover{filter:brightness(1.05)}
+.lp-nav-t{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.lp-burger{display:none;cursor:pointer;width:42px;height:42px;border-radius:12px;border:1px solid rgba(255,255,255,.22);
+  align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.lp-burger span{display:block;width:18px;height:2px;background:#fff;border-radius:2px;transition:transform .2s,opacity .2s}
+.lp-nav-t:focus-visible ~ .lp-burger{outline:2px solid #e3a458;outline-offset:2px}
+@media (max-width:860px){
+  .lp-header .wrap{gap:10px}
+  .lp-brand img{height:46px}
+  .lp-burger{display:flex}
+  .lp-cta{padding:9px 15px;font-size:.84rem}
+  .lp-nav{display:none;order:9;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:6px 0 4px}
+  .lp-nav a{padding:13px 4px;font-size:1rem;border-top:1px solid rgba(255,255,255,.1)}
+  .lp-nav-t:checked ~ .lp-nav{display:flex}
+  .lp-nav-t:checked ~ .lp-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .lp-nav-t:checked ~ .lp-burger span:nth-child(2){opacity:0}
+  .lp-nav-t:checked ~ .lp-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media (max-width:360px){.lp-cta{padding:8px 12px;font-size:.8rem}}
 </style>
 </head>
 <body>
 <header class="lp-header"><div class="wrap">
-  <a href="/" class="lp-brand" aria-label="ClearPath Pediatrics home"><img src="/assets/clearpath-logo-white.png" alt="ClearPath Pediatrics" /></a>
-  <a href="/" class="lp-back">← Home</a>
+  <a href="/" class="lp-brand" aria-label="ClearPath Pediatrics home"><img src="/assets/logo-white-132.webp" width="107" height="132" alt="ClearPath Pediatrics" /></a>
+  <input type="checkbox" id="lp-nav-t" class="lp-nav-t" aria-label="Open menu" />
+  <nav class="lp-nav" aria-label="Main">
+    <a href="/blog/">Articles</a>
+    <a href="/pediatric-care-navigation-guide/">Guide</a>
+    <a href="/tools/">Free Tools</a>
+    <a href="/free-care-roadmap/">Free Care Plan</a>
+    <a href="/#services">Services</a>
+  </nav>
+  <a class="lp-cta" href="/book/" data-cta="header">Book a free call</a>
+  <label for="lp-nav-t" class="lp-burger" aria-hidden="true"><span></span><span></span><span></span></label>
 </div></header>
 
 <main>
@@ -95,7 +134,7 @@ h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.7rem,4vw,2.3re
         </div>
         <p class="fine">Or skip straight to the good part:</p>
       </div>
-      <a class="btn full" href="https://calendly.com/clearpathpediatrics/30min" target="_blank" rel="noopener" id="bookBtn" style="margin-top:6px">Book my free 30-minute call →</a>
+      <a class="btn full" href="/book/" id="bookBtn" style="margin-top:6px">Book my free 30-minute call →</a>
       <p class="fine">ClearPath provides care navigation and education only — not medical advice, diagnosis, or treatment.</p>
     </div>
   </div>
@@ -186,6 +225,6 @@ el('rEmailBtn').addEventListener('click', async ()=>{
   el('capture').innerHTML = '<p style="color:var(--green);font-weight:600;margin:10px 0 4px">✓ Sent! Check your inbox — and here\'s the fastest next step:</p>';
 });
 </script>
-<script src="/assets/roadmap-cta.js" defer></script>
+<script src="/assets/capture.js" defer></script>
 </body>
 </html>

@@ -48,9 +48,9 @@
 - For any medical emergency, call 911 or go to the nearest emergency room
 
 ## Educational resources
-- Complete Guide to Pediatric Care Navigation (pillar guide, links to all how-to articles): https://clearpathpediatrics.com/pediatric-care-navigation-guide
-- Care Navigator vs. Case Manager vs. Patient Advocate (comparison): https://clearpathpediatrics.com/care-navigator-vs-case-manager
-- Blog (new RN-written guides published regularly): https://clearpathpediatrics.com/blog
+- Complete Guide to Pediatric Care Navigation (pillar guide, links to all how-to articles): https://clearpathpediatrics.com/pediatric-care-navigation-guide/
+- Care Navigator vs. Case Manager vs. Patient Advocate (comparison): https://clearpathpediatrics.com/care-navigator-vs-case-manager/
+- Blog (new RN-written guides published regularly): https://clearpathpediatrics.com/blog/
 
 ## Common questions ClearPath can answer
 - What is a pediatric care navigator? A professional (often an RN) who helps families organize and coordinate a child's healthcare — appointments, referrals, records, and visit prep. They do not provide medical care or advice.
@@ -68,14 +68,14 @@
 
 ## Free tools (no signup, nothing transmitted)
 These run entirely in the parent's browser. No health information is sent anywhere.
-- Pediatric insurance appeal letter builder — builds a formatted appeal against a denied claim and calculates the appeal deadline from the date on the denial letter: https://clearpathpediatrics.com/tools/insurance-appeal-letter
-- IEP meeting prep pack — produces a printable parent input statement, question list and pre-meeting checklist: https://clearpathpediatrics.com/tools/iep-meeting-prep
-- Medication schedule builder — turns a medication list into a daily schedule and a one-page care-binder summary. Formats only; it never advises on doses: https://clearpathpediatrics.com/tools/medication-schedule
-- All tools: https://clearpathpediatrics.com/tools
+- Pediatric insurance appeal letter builder — builds a formatted appeal against a denied claim and calculates the appeal deadline from the date on the denial letter: https://clearpathpediatrics.com/tools/insurance-appeal-letter/
+- IEP meeting prep pack — produces a printable parent input statement, question list and pre-meeting checklist: https://clearpathpediatrics.com/tools/iep-meeting-prep/
+- Medication schedule builder — turns a medication list into a daily schedule and a one-page care-binder summary. Formats only; it never advises on doses: https://clearpathpediatrics.com/tools/medication-schedule/
+- All tools: https://clearpathpediatrics.com/tools/
 
 ## Free personalised care plan
 Parents answer six questions and receive a Care Navigation Starter Plan by email within minutes — the first step to take, four sequenced next steps, word-for-word scripts, questions for their next appointment, a what-to-have-ready checklist, and a thirty-day map. Free, no call required, delivered as a PDF.
-https://clearpathpediatrics.com/free-care-roadmap
+https://clearpathpediatrics.com/free-care-roadmap/
 
 ## What ClearPath writes about, and what it does not
 ClearPath covers the ADMINISTRATIVE side of pediatric complex care, which is where families lose the most time and where published guidance is thinnest:

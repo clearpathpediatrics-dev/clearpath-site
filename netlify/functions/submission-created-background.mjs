@@ -44,6 +44,9 @@ export default async function handler(req) {
     providers:  d.providers, coping: d.coping, trigger: d.trigger,
     need:       d.need, timing: d.timing,
     notes:      (d.notes || "").trim(),
+    // The page path the family arrived from, set by the funnel page. A path,
+    // never a full URL, so no query strings or third-party referrers end up here.
+    source:     /^\/[a-z0-9\/-]*$/i.test(d.source || "") ? d.source.slice(0, 160) : "",
     submittedAt: new Date().toISOString(),
   };
   if (!lead.email) return new Response("no email", { status: 200 });
@@ -118,7 +121,7 @@ export default async function handler(req) {
 <p><strong>Child:</strong> ${esc(child)}<br>
 <strong>Where:</strong> ${esc([lead.city, lead.state].filter(Boolean).join(", ") || "not given")}<br>
 <strong>Email:</strong> ${esc(lead.email)}${lead.phone ? `<br><strong>Phone:</strong> ${esc(lead.phone)}` : ""}<br>
-<strong>Wants help with:</strong> ${esc((NEEDS[lead.need] || {}).label || "—")}</p>
+<strong>Wants help with:</strong> ${esc((NEEDS[lead.need] || {}).label || "—")}${lead.source ? `<br><strong>Came from:</strong> ${esc(SITE + lead.source)}` : ""}</p>
 ${lead.notes ? `<h2>In their words</h2><p style="font-style:italic">${esc(lead.notes)}</p>` : ""}
 ${list("Why they rank here", t.drivers)}
 ${list("Before you call", t.flags)}

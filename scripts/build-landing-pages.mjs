@@ -12,11 +12,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { LANDING_PAGES } from "./landing-pages.data.mjs";
+import { writeSitemap } from "./sitemap.mjs";
+import { BOOK, HEADER, HEADER_CSS, HEAD_ICONS, SCRIPTS, ROADMAP_CSS, roadmapCard, writePage } from "./site-chrome.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://clearpathpediatrics.com";
-const CAL = "https://calendly.com/clearpathpediatrics/30min";
 
 const esc = (s = "") => String(s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -28,13 +29,8 @@ const CSS = `
 body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
-.lp-header{background:var(--navy);padding:12px 0;position:sticky;top:0;z-index:10}
-.lp-header .wrap{max-width:1180px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.lp-brand img{height:54px;width:auto;display:block}
-.lp-nav{display:flex;gap:20px;align-items:center}
-.lp-nav a{color:rgba(255,255,255,.82);font-size:.9rem;font-weight:500}
-.lp-nav a:hover{color:#fff;text-decoration:none}
-.lp-nav .cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;padding:9px 18px;border-radius:999px}
+${HEADER_CSS}
+${ROADMAP_CSS}
 .eyebrow{font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .hero{background:radial-gradient(900px 420px at 82% -10%,rgba(227,164,88,.15),transparent 60%),linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:66px 0 58px}
 .hero .eyebrow{display:inline-block;margin-bottom:12px}
@@ -66,21 +62,14 @@ a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
 .lp-footer .wrap{max-width:1180px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
 .lp-footer a{color:rgba(255,255,255,.7)}.lp-footer a:hover{color:var(--gold)}
 .lp-footer nav{display:flex;gap:18px;flex-wrap:wrap}
-@media(max-width:720px){.grid{grid-template-columns:1fr}.lp-footer .wrap{flex-direction:column;text-align:center}.lp-nav{gap:14px}}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.lp-footer .wrap{flex-direction:column;text-align:center}}
 `;
 
-const HEADER = `
-<header class="lp-header"><div class="wrap">
-  <a href="/" class="lp-brand" aria-label="ClearPath Pediatrics home"><img src="/assets/clearpath-logo-white.png" alt="ClearPath Pediatrics" /></a>
-  <nav class="lp-nav"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a>
-      <a href="/tools/">Free Tools</a><a href="/#services">Services</a>
-    <a href="${CAL}" target="_blank" rel="noopener" class="cta">Book a Free Call</a></nav>
-</div></header>`;
 
 const FOOTER = `
 <footer class="lp-footer"><div class="wrap">
   <span>Copyright © 2025 ClearPath Pediatrics, LLC. — All Rights Reserved.</span>
-  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/pediatric-care-navigation-guide">Guide</a><a href="/tools/">Free Tools</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/#contact">Contact</a></nav>
+  <nav><a href="/">Home</a><a href="/blog/">Articles</a><a href="/pediatric-care-navigation-guide">Guide</a><a href="/tools/">Free Tools</a><a href="/free-care-roadmap/">Free Care Plan</a><a href="${BOOK}">Book a call</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/#contact">Contact</a></nav>
 </div></footer>`;
 
 function renderPage(p) {
@@ -105,7 +94,7 @@ function renderPage(p) {
 <meta name="keywords" content="${esc((p.keywords || []).join(", "))}" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <link rel="canonical" href="${url}" />
-<link rel="icon" type="image/png" href="/assets/clearpath-logo.png" />
+${HEAD_ICONS}
 <meta property="og:type" content="website" />
 <meta property="og:title" content="${esc(p.title)}" />
 <meta property="og:description" content="${esc(p.metaDescription)}" />
@@ -125,7 +114,7 @@ ${HEADER}
   <span class="eyebrow">${esc(p.eyebrow)}</span>
   <h1>${esc(p.h1)}</h1>
   ${p.intro.map(t => `<p>${esc(t)}</p>`).join("\n  ")}
-  <a href="${CAL}" target="_blank" rel="noopener" class="btn">Book a Free 30-Minute Call →</a>
+  <a href="${BOOK}" class="btn" data-cta="page">Book a Free 30-Minute Call →</a>
 </div></section>
 
 <section class="sec bg-cream"><div class="wrap">
@@ -151,12 +140,11 @@ ${HEADER}
     <span class="eyebrow" style="color:var(--gold)">Take the first step</span>
     <h2>You don't have to navigate this alone.</h2>
     <p>Book a free 30-minute call with a ClearPath RN and see if we're the right fit for your family. No sales pitch, no commitment.</p>
-    <a href="${CAL}" target="_blank" rel="noopener" class="btn">Book My Free Call →</a>
+    <a href="${BOOK}" class="btn" data-cta="page">Book My Free Call →</a>
   </div>
 </div></section>
 ${FOOTER}
-<script src="/assets/analytics.js" defer></script>
-<script src="/assets/email-popup.js" defer></script>
+${SCRIPTS}
 </body>
 </html>`;
 }
@@ -166,34 +154,17 @@ function readPosts() {
   catch { return []; }
 }
 
-function todayISO() {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Phoenix", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
-}
-
-function buildSitemap(posts) {
-  const today = todayISO();
-  const urls = [
-    { loc: `${SITE}/`, pri: "1.0", freq: "weekly", mod: today },
-    { loc: `${SITE}/blog`, pri: "0.8", freq: "daily", mod: today },
-    { loc: `${SITE}/pediatric-care-navigation-guide`, pri: "0.9", freq: "weekly", mod: today },
-    { loc: `${SITE}/care-navigator-vs-case-manager`, pri: "0.7", freq: "monthly", mod: today },
-    ...LANDING_PAGES.map(p => ({ loc: `${SITE}/${p.slug}`, pri: "0.8", freq: "monthly", mod: today })),
-    { loc: `${SITE}/privacy-policy`, pri: "0.3", freq: "yearly", mod: today },
-    { loc: `${SITE}/terms-of-use`, pri: "0.3", freq: "yearly", mod: today },
-    ...posts.map(p => ({ loc: `${SITE}/blog/${p.slug}`, pri: "0.6", freq: "monthly", mod: p.iso })),
-  ];
-  const rows = urls.map(u => `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${u.mod}</lastmod>\n    <changefreq>${u.freq}</changefreq>\n    <priority>${u.pri}</priority>\n  </url>`).join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows}\n</urlset>\n`;
-}
 
 // ---- run ----
 let count = 0;
 for (const p of LANDING_PAGES) {
   const dir = path.join(ROOT, p.slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), renderPage(p));
+  writePage(path.join(dir, "index.html"), renderPage(p));
   count++;
   console.log(`  ✓ /${p.slug}`);
 }
-fs.writeFileSync(path.join(ROOT, "sitemap.xml"), buildSitemap(readPosts()));
+// The shared writer, so this script can no longer drop the funnel, tools and
+// hubs from the sitemap the way its own private copy would have.
+writeSitemap(readPosts());
 console.log(`[landing] built ${count} pages + sitemap.`);

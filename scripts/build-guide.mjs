@@ -19,11 +19,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { LANDING_PAGES } from "./landing-pages.data.mjs";
+import { HUBS, hubFor, hubUrl } from "./hubs.pediatric.mjs";
+import { BOOK, HEADER, HEADER_CSS, HEAD_ICONS, SCRIPTS, ROADMAP_CSS, roadmapCard, writePage } from "./site-chrome.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://clearpathpediatrics.com";
-const CAL = "https://calendly.com/clearpathpediatrics/30min";
 
 export const GUIDE_SLUG = "pediatric-care-navigation-guide";
 export const COMPARE_SLUG = "care-navigator-vs-case-manager";
@@ -33,18 +34,6 @@ const esc = (s = "") => String(s)
   .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 
 // Friendly labels + display order for the topic groups used in posts.json.
-const TOPIC_ORDER = [
-  "Care Navigation Tips",
-  "Special Needs & Complex Care",
-  "Insurance & Billing Guidance",
-  "Milestone & Wellness Topics",
-];
-const TOPIC_BLURB = {
-  "Care Navigation Tips": "Practical systems for organizing appointments, records, referrals, and questions across your child's whole care team.",
-  "Special Needs & Complex Care": "Preparation and organization guides for IEPs, home nursing, DME, and coordinating care for medically complex children.",
-  "Insurance & Billing Guidance": "Plain-language help with EOBs, deductibles, prior authorizations, denied claims, and coverage before a specialist visit.",
-  "Milestone & Wellness Topics": "Family-friendly ways to track developmental milestones and prepare for well-child visits with confidence.",
-};
 
 const CSS = `
 :root{--navy:#0b2240;--navy2:#16335f;--gold:#e3a458;--gold2:#d6913e;--cream:#faf7f2;--paper:#fff;--ink:#1d2b3a;--soft:#4a5a6b;--line:#e7ded2;--green:#3f9d6d;}
@@ -52,13 +41,8 @@ const CSS = `
 body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
-.lp-header{background:var(--navy);padding:12px 0;position:sticky;top:0;z-index:10}
-.lp-header .wrap{max-width:1180px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.lp-brand img{height:54px;width:auto;display:block}
-.lp-nav{display:flex;gap:20px;align-items:center}
-.lp-nav a{color:rgba(255,255,255,.82);font-size:.9rem;font-weight:500}
-.lp-nav a:hover{color:#fff;text-decoration:none}
-.lp-nav .cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;padding:9px 18px;border-radius:999px}
+${HEADER_CSS}
+${ROADMAP_CSS}
 .eyebrow{font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .hero{background:radial-gradient(900px 420px at 82% -10%,rgba(227,164,88,.15),transparent 60%),linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:60px 0 54px}
 .hero .eyebrow{display:inline-block;margin-bottom:12px}
@@ -118,15 +102,9 @@ table.cmp tr:last-child td,table.cmp tr:last-child th{border-bottom:none}
 .lp-footer .wrap{max-width:1180px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
 .lp-footer a{color:rgba(255,255,255,.7)}.lp-footer a:hover{color:var(--gold)}
 .lp-footer nav{display:flex;gap:18px;flex-wrap:wrap}
-@media(max-width:720px){.cards2,.toc ul{grid-template-columns:1fr}.lp-footer .wrap{flex-direction:column;text-align:center}.lp-nav{gap:14px}}
+@media(max-width:720px){.cards2,.toc ul{grid-template-columns:1fr}.lp-footer .wrap{flex-direction:column;text-align:center}}
 `;
 
-const HEADER = `
-<header class="lp-header"><div class="wrap">
-  <a href="/" class="lp-brand" aria-label="ClearPath Pediatrics home"><img src="/assets/clearpath-logo-white.png" alt="ClearPath Pediatrics" /></a>
-  <nav class="lp-nav"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/${GUIDE_SLUG}">Guide</a><a href="/tools/">Free Tools</a><a href="/#services">Services</a>
-    <a href="${CAL}" target="_blank" rel="noopener" class="cta">Book a Free Call</a></nav>
-</div></header>`;
 
 const FOOTER = `
 
@@ -141,7 +119,7 @@ const FOOTER = `
 </div></section>
 <footer class="lp-footer"><div class="wrap">
   <span>Copyright © 2025 ClearPath Pediatrics, LLC. — All Rights Reserved.</span>
-  <nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/${GUIDE_SLUG}">Guide</a><a href="/tools/">Free Tools</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/#contact">Contact</a></nav>
+  <nav><a href="/">Home</a><a href="/blog/">Articles</a><a href="/${GUIDE_SLUG}">Guide</a><a href="/tools/">Free Tools</a><a href="/free-care-roadmap/">Free Care Plan</a><a href="${BOOK}">Book a call</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/#contact">Contact</a></nav>
 </div></footer>`;
 
 function head(title, desc, url, keywords, jsonld) {
@@ -155,7 +133,7 @@ function head(title, desc, url, keywords, jsonld) {
 <meta name="keywords" content="${esc(keywords)}" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <link rel="canonical" href="${url}" />
-<link rel="icon" type="image/png" href="/assets/clearpath-logo.png" />
+${HEAD_ICONS}
 <meta property="og:type" content="article" />
 <meta property="og:title" content="${esc(title)}" />
 <meta property="og:description" content="${esc(desc)}" />
@@ -174,8 +152,7 @@ ${HEADER}`;
 }
 
 const foot = `${FOOTER}
-<script src="/assets/analytics.js" defer></script>
-<script src="/assets/email-popup.js" defer></script>
+${SCRIPTS}
 </body>
 </html>`;
 
@@ -187,12 +164,11 @@ function renderGuide(posts) {
   const desc = "A parent's complete guide to pediatric care navigation — what a care navigator does, how it helps medically complex kids, and dozens of RN-written how-to guides.";
   const keywords = "pediatric care navigation, care navigator, medically complex child, pediatric care coordination, RN care navigator, Phoenix pediatric care navigation";
 
-  // Group posts by topic, preserving newest-first order within each group.
-  const groups = TOPIC_ORDER
-    .map(topic => ({ topic, items: posts.filter(p => p.topic === topic) }))
+  // Group by topic hub, newest first within each. Grouping by the four old
+  // day-of-week topics left 177 newer posts in one undifferentiated list.
+  const groups = HUBS
+    .map(hub => ({ hub, topic: hub.name, items: posts.filter(p => hubFor(p) === hub) }))
     .filter(g => g.items.length);
-  const ungrouped = posts.filter(p => !TOPIC_ORDER.includes(p.topic));
-  if (ungrouped.length) groups.push({ topic: "More Care Navigation Articles", items: ungrouped });
 
   const faq = [
     { q: "What is a pediatric care navigator?", a: "A pediatric care navigator is a professional — often a registered nurse (RN) — who helps families organize and coordinate a child's healthcare. They help you understand referrals, prepare for specialist visits, keep records in one place, and communicate with your child's care team. A care navigator does not provide medical care, diagnosis, or treatment; those decisions stay with your child's licensed providers." },
@@ -213,7 +189,7 @@ function renderGuide(posts) {
     {
       "@context": "https://schema.org", "@type": "ItemList",
       name: "Pediatric care navigation articles",
-      itemListElement: posts.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}/blog/${p.slug}`, name: p.title })),
+      itemListElement: posts.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}/blog/${p.slug}/`, name: p.title })),
     },
   ];
 
@@ -223,11 +199,12 @@ function renderGuide(posts) {
 
   const groupsHtml = groups.map(g => `
     <div class="topic" id="${slugAnchor(g.topic)}">
-      <h2>${esc(g.topic)}</h2>
-      ${TOPIC_BLURB[g.topic] ? `<p class="tblurb">${esc(TOPIC_BLURB[g.topic])}</p>` : ""}
-      <ul class="plist">${g.items.map(p => `
-        <li><a href="/blog/${p.slug}">${esc(p.title)}</a><span class="pex">${esc(p.excerpt || p.metaDescription || "")}</span></li>`).join("")}
+      <h2><a href="${hubUrl(g.hub)}" style="color:inherit">${esc(g.topic)}</a></h2>
+      <p class="tblurb">${esc(g.hub.intro.split(". ").slice(0, 2).join(". ").replace(/\.?$/, "."))}</p>
+      <ul class="plist">${g.items.slice(0, 8).map(p => `
+        <li><a href="/blog/${p.slug}/">${esc(p.title)}</a><span class="pex">${esc(p.excerpt || p.metaDescription || "")}</span></li>`).join("")}
       </ul>
+      <a href="${hubUrl(g.hub)}" style="font-weight:600">All ${g.items.length} guides on ${esc(g.hub.short.toLowerCase())} →</a>
     </div>`).join("");
 
   return head(title, desc, url, keywords, jsonld) + `
@@ -235,7 +212,7 @@ function renderGuide(posts) {
   <span class="eyebrow">The complete parent's guide</span>
   <h1>Pediatric Care Navigation: A Complete Guide for Parents</h1>
   <p>If your child sees multiple specialists, has complex medical needs, or you're simply drowning in referrals and insurance paperwork, you're in the right place. This guide explains what pediatric care navigation is, how it helps, and links to every how-to article our RN care navigators have written.</p>
-  <a href="${CAL}" target="_blank" rel="noopener" class="btn">Book a Free 30-Minute Call →</a>
+  <a href="${BOOK}" class="btn" data-cta="page">Book a Free 30-Minute Call →</a>
 </div></section>
 
 <section class="sec bg-paper"><div class="wrap">
@@ -286,7 +263,7 @@ function renderGuide(posts) {
     <span class="eyebrow" style="color:var(--gold)">Take the first step</span>
     <h2>You don't have to navigate this alone.</h2>
     <p>Book a free 30-minute call with a ClearPath RN and see if we're the right fit for your family. No sales pitch, no commitment.</p>
-    <a href="${CAL}" target="_blank" rel="noopener" class="btn">Book My Free Call →</a>
+    <a href="${BOOK}" class="btn" data-cta="page">Book My Free Call →</a>
   </div>
 </div></section>
 ${foot}`;
@@ -324,7 +301,7 @@ function renderCompare() {
   <span class="eyebrow">Understanding your options</span>
   <h1>Care Navigator vs. Case Manager vs. Patient Advocate</h1>
   <p>These three roles all help families through the healthcare system — but they're not the same. Here's a clear, side-by-side look at what each one does, so you can find the right kind of support for your child.</p>
-  <a href="${CAL}" target="_blank" rel="noopener" class="btn">Talk to an RN — Free Call →</a>
+  <a href="${BOOK}" class="btn" data-cta="page">Talk to an RN — Free Call →</a>
 </div></section>
 
 <section class="sec bg-paper"><div class="wrap">
@@ -361,7 +338,7 @@ function renderCompare() {
     <span class="eyebrow" style="color:var(--gold)">Not sure which you need?</span>
     <h2>Let's figure it out together.</h2>
     <p>Book a free 30-minute call with a ClearPath RN. We'll help you find the right kind of support — even if it isn't us.</p>
-    <a href="${CAL}" target="_blank" rel="noopener" class="btn">Book My Free Call →</a>
+    <a href="${BOOK}" class="btn" data-cta="page">Book My Free Call →</a>
   </div>
 </div></section>
 ${foot}`;
@@ -382,8 +359,8 @@ export function buildGuidePages(posts = readPosts()) {
   const cdir = path.join(ROOT, COMPARE_SLUG);
   fs.mkdirSync(gdir, { recursive: true });
   fs.mkdirSync(cdir, { recursive: true });
-  fs.writeFileSync(path.join(gdir, "index.html"), renderGuide(posts));
-  fs.writeFileSync(path.join(cdir, "index.html"), renderCompare());
+  writePage(path.join(gdir, "index.html"), renderGuide(posts));
+  writePage(path.join(cdir, "index.html"), renderCompare());
   return [GUIDE_SLUG, COMPARE_SLUG];
 }
 
