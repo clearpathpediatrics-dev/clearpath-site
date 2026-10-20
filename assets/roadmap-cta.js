@@ -5,7 +5,7 @@
 (function () {
   if (window.__cppCapture) return;
   var s = document.createElement("script");
-  s.src = "/assets/capture.js";
+  s.src = "/assets/capture.js?v=20261020b";
   s.defer = true;
   document.head.appendChild(s);
 })();

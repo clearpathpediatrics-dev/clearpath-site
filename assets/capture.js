@@ -183,6 +183,12 @@
     function esc(e) { if (e.key === "Escape") close(); }
     document.addEventListener("keydown", esc);
     w.querySelector(".cpp-si-x").addEventListener("click", close);
+    // Signed up through another box on the page? Then this one has done its job.
+    document.addEventListener("cpp:subscribed", function () {
+      document.removeEventListener("keydown", esc);
+      w.classList.remove("on");
+      setTimeout(function () { w.remove(); slideOpen = false; }, 320);
+    });
 
     var form = w.querySelector(".cpp-si-f");
     w.querySelector(".cpp-si-alt").addEventListener("click", function () {
@@ -205,10 +211,11 @@
     });
   }
 
-  // The same offer already sitting on screen in the article does not need a
-  // second copy sliding up beneath it. Wait until it has scrolled away.
+  // An offer already on screen (the article's Roadmap card, or a sign-up box
+  // marked data-capture-inline, like the homepage's) does not need a second
+  // copy sliding up beneath it. Wait until it has scrolled away.
   function inlineInView() {
-    var cards = document.querySelectorAll(".cpp-inline");
+    var cards = document.querySelectorAll(".cpp-inline, [data-capture-inline]");
     for (var i = 0; i < cards.length; i++) {
       var r = cards[i].getBoundingClientRect();
       if (r.bottom > 0 && r.top < window.innerHeight) return true;

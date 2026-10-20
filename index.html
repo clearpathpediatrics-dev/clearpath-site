@@ -1406,6 +1406,87 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:64px 0 30px
     <style>@media(min-width:760px){.cpp-toolgrid{grid-template-columns:1fr 1fr 1fr}}</style>
   </div>
 </section>
+<!-- RN tips by email. A visible, optional sign-up that replaces the old
+     blocking popup and the email-first hero form. Same destination they used:
+     Klaviyo account Vzcuue, "Welcome List (Website)" Wa437x. -->
+<section id="email-tips" aria-labelledby="tips-h" data-capture-inline>
+  <div class="tips-in">
+    <div class="tips-copy">
+      <span class="tips-k">Free · from our RNs</span>
+      <h2 id="tips-h">Prefer to read first?</h2>
+      <p>Get short, practical tips by email on referrals, insurance and school, written for parents managing a lot at once.</p>
+    </div>
+    <form class="tips-form" id="tipsForm" novalidate>
+      <label for="tipsEmail" class="tips-sr">Email address</label>
+      <div class="tips-row">
+        <input type="email" id="tipsEmail" name="email" autocomplete="email" placeholder="your@email.com" required />
+        <button type="submit" id="tipsBtn">Send me tips</button>
+      </div>
+      <input type="text" name="company" tabindex="-1" autocomplete="off" class="tips-hp" aria-hidden="true" />
+      <p class="tips-fine">Occasional emails from ClearPath Pediatrics. Unsubscribe anytime.</p>
+      <p class="tips-err" id="tipsErr" role="alert"></p>
+    </form>
+    <p class="tips-ok" id="tipsOk" role="status" hidden>You're in. Look for a welcome email from us shortly.</p>
+  </div>
+</section>
+<style>
+#email-tips{padding:56px 0;background:var(--paper);border-top:1px solid var(--line)}
+#email-tips .tips-in{max-width:980px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:center}
+#email-tips .tips-k{display:inline-block;background:#f3e9dc;color:#8a6524;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:14px}
+#email-tips h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,3.6vw,34px);color:var(--navy-900);line-height:1.15;margin-bottom:10px}
+#email-tips .tips-copy p{color:var(--ink-soft);font-size:16.5px;line-height:1.6}
+#email-tips .tips-row{display:flex;gap:10px}
+#email-tips input[type=email]{flex:1;min-width:0;font:inherit;font-size:16px;padding:15px 18px;border:1.5px solid var(--line);border-radius:14px;background:var(--cream);color:var(--ink)}
+#email-tips input[type=email]:focus{outline:none;border-color:var(--gold-2);box-shadow:0 0 0 4px rgba(227,164,88,.22);background:#fff}
+#email-tips button{font:inherit;font-weight:700;font-size:16px;padding:15px 24px;border:0;border-radius:14px;cursor:pointer;white-space:nowrap;
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));color:var(--navy-900);box-shadow:0 10px 24px rgba(214,145,62,.28)}
+#email-tips button:hover{filter:brightness(1.04)}
+#email-tips button[disabled]{opacity:.7;cursor:default}
+#email-tips .tips-fine{margin-top:10px;font-size:13px;color:#7a8898}
+#email-tips .tips-err{margin-top:6px;font-size:14px;color:#b3261e;min-height:1em}
+#email-tips .tips-ok{grid-column:2;font-size:17px;font-weight:600;color:var(--green);background:#eef7f1;border:1px solid #cfe7d8;border-radius:14px;padding:18px 20px}
+#email-tips .tips-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+#email-tips .tips-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+@media(max-width:760px){
+  #email-tips{padding:44px 0}
+  #email-tips .tips-in{grid-template-columns:minmax(0,1fr);gap:18px}
+  #email-tips .tips-row{flex-direction:column}
+  #email-tips button{width:100%}
+  #email-tips .tips-ok{grid-column:1}
+}
+</style>
+<script>
+(function () {
+  var form = document.getElementById("tipsForm");
+  if (!form) return;
+  var input = document.getElementById("tipsEmail"), btn = document.getElementById("tipsBtn"),
+      err = document.getElementById("tipsErr"), ok = document.getElementById("tipsOk");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    err.textContent = "";
+    var email = input.value.trim();
+    if (form.company.value) { form.hidden = true; ok.hidden = false; return; }   // bot filled the hidden field
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = "Please enter a valid email address."; input.focus(); return; }
+    btn.disabled = true; btn.textContent = "Sending…";
+    fetch("https://a.klaviyo.com/client/subscriptions/?company_id=Vzcuue", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", revision: "2024-10-15" },
+      body: JSON.stringify({ data: { type: "subscription", attributes: {
+        custom_source: "Homepage Form",
+        profile: { data: { type: "profile", attributes: { email: email } } } },
+        relationships: { list: { data: { type: "list", id: "Wa437x" } } } } }),
+    }).then(function (r) { return r.ok || r.status === 202; }, function () { return false; }).then(function (good) {
+      if (!good) { btn.disabled = false; btn.textContent = "Send me tips"; err.textContent = "That didn't go through. Please try again."; return; }
+      // Same flag the old popup set: stops the slide-in asking again.
+      try { localStorage.setItem("cp_subscribed", JSON.stringify({ at: new Date().toISOString(), source: "homepage" })); } catch (x) {}
+      try { if (window.cpTrack) window.cpTrack("tips_signup", { surface: "homepage" }); } catch (x) {}
+      try { document.dispatchEvent(new Event("cpp:subscribed")); } catch (x) {}
+      form.hidden = true; ok.hidden = false;
+    });
+  });
+})();
+</script>
+
 <section id="free-plan" style="padding:64px 0;background:#0b2240">
   <div class="container" style="max-width:760px;margin:0 auto;padding:0 24px;text-align:center">
     <span style="display:inline-block;background:rgba(227,164,88,.16);color:#e3a458;font-size:12.5px;font-weight:700;
@@ -1574,7 +1655,7 @@ document.querySelectorAll('.faq button').forEach(btn=>{
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&modal.classList.contains('open')) closeLegal(); });
 })();
 </script>
-<script src="/assets/analytics.js" defer></script>
-<script src="/assets/capture.js" defer></script>
+<script src="/assets/analytics.js?v=20261020b" defer></script>
+<script src="/assets/capture.js?v=20261020b" defer></script>
 </body>
 </html>

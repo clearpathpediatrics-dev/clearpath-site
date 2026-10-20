@@ -77,8 +77,13 @@ export const HEADER = `
 /* --------------------------------------------------------- scripts + card */
 // capture.js replaced email-popup.js (a 2-second email wall with no close
 // button) and roadmap-cta.js. Both old files now just load it.
-export const SCRIPTS = `<script src="/assets/analytics.js" defer></script>
-<script src="/assets/capture.js" defer></script>`;
+// The version query matters: /assets/* used to be cached for a year, so a
+// browser holding an old copy would never ask for the new one. Bump ASSET_V
+// whenever analytics.js or capture.js changes. (Scripts now revalidate on every
+// visit too, so this is belt and braces for those year-long copies.)
+export const ASSET_V = "20261020b";
+export const SCRIPTS = `<script src="/assets/analytics.js?v=${ASSET_V}" defer></script>
+<script src="/assets/capture.js?v=${ASSET_V}" defer></script>`;
 
 export const ROADMAP_CSS = `
 .cpp-inline{background:#0b2240;border-radius:20px;padding:28px 26px;margin:34px 0;color:#fff}
