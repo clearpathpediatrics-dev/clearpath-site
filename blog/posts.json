@@ -1,5 +1,89 @@
 [
   {
+    "slug": "pediatric-medical-summary-babysitter-respite-carer-2",
+    "title": "How to Prepare a Pediatric Medical Summary for a Babysitter or Respite Carer",
+    "excerpt": "A simple, practical guide to building a one-page pediatric medical summary that gives your babysitter or respite carer everything they need to keep your child safe and comfortable.",
+    "metaDescription": "Learn how to prepare a clear pediatric medical summary for a babysitter or respite carer so your child's care continues smoothly while you're away.",
+    "tags": [
+      "pediatric medical summary",
+      "respite care",
+      "babysitter care plan",
+      "pediatric paperwork",
+      "medical organisation"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-10-21",
+    "prettyDate": "October 21, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should a babysitter medical summary include?",
+        "a": "Include your child's identifying details, your contact information, pediatrician and specialist numbers, documented allergies, a plain-language medication and feeding schedule exactly as prescribed, the daily routine, and a clear 'who to call and when' section. Note where your providers' emergency instructions are kept and any consent-to-treat forms. Keep it to one page when possible and store a backup where the carer can find it."
+      },
+      {
+        "q": "How do I share the summary safely and keep it current?",
+        "a": "Print a copy and post it somewhere visible, keep a second copy with your child's bag, and send a photo to the carer's phone. Review it before each new carer and update it whenever a provider changes a medication, routine, or instruction. Date the page so everyone knows it's current, and share it only with people caring for your child."
+      }
+    ]
+  },
+  {
+    "slug": "what-to-keep-throw-away-pediatric-paperwork",
+    "title": "What to Keep and What to Throw Away in Your Child's Pediatric Paperwork",
+    "excerpt": "Drowning in after-visit summaries, lab printouts, and billing statements? Here's a clear, parent-friendly guide to what pediatric paperwork is worth keeping and what you can safely toss.",
+    "metaDescription": "A parent's practical guide to what pediatric paperwork to keep, what to shred, and how long to hold onto records so your child's file stays organized.",
+    "tags": [
+      "pediatric paperwork",
+      "pediatric medical records",
+      "organizing pediatric records",
+      "pediatric document retention",
+      "parent medical organization"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-10-21",
+    "prettyDate": "October 21, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How long should I keep my child's pediatric records?",
+        "a": "A common parent approach is to keep core records — immunization history, growth and developmental milestones, diagnosis and specialist summaries, and surgical or hospital records — through at least age 18, and often indefinitely in digital form. Keep billing and insurance documents for the duration of any active claim or appeal, plus a buffer afterward. Because retention rules vary by state and situation, confirm anything specific with your providers or a records professional."
+      },
+      {
+        "q": "Can I throw away paper records once I scan them?",
+        "a": "In most cases, a clear digital copy works well for everyday organization, and many parents shred the paper after scanning. Hold onto original paper for documents that may need to be presented in original form — like certain immunization certificates for school or camp, or signed legal and consent forms — unless your provider or the requesting organization confirms a copy is acceptable."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-patient-portal-access-every-system",
+    "title": "How to Get Patient Portal Access to Every Pediatric System Your Child Is Seen In",
+    "excerpt": "When your child sees multiple providers, each one often uses a different patient portal. Here's how to track them all down and get access to every single one.",
+    "metaDescription": "A parent's step-by-step guide to getting pediatric patient portal access across every clinic, hospital, and specialist so records stay organized in one place.",
+    "tags": [
+      "pediatric patient portal",
+      "medical records organization",
+      "child healthcare navigation",
+      "portal access",
+      "parent proxy access"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-10-21",
+    "prettyDate": "October 21, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Is one patient portal login enough to see all of my child's records?",
+        "a": "Usually not. One login typically covers only the clinics and hospitals within a single health network. If your child is seen across different systems, you'll likely need a separate account for each. Some networks share records behind the scenes, but you can't count on it — plan to set up access everywhere."
+      },
+      {
+        "q": "How do I keep track of all my child's portal logins?",
+        "a": "Build one master reference document listing each portal's name, website, your username, the practice's portal help line, and what each stores. Keep passwords in a reputable password manager rather than in the document. This makes it easy to find a result quickly instead of searching multiple sites."
+      }
+    ]
+  },
+  {
     "slug": "school-disputes-pediatric-medical-recommendation-2",
     "title": "What to Do When the School Disputes Your Child's Pediatric Medical Recommendation",
     "excerpt": "When a school questions or rejects a recommendation from your child's doctor, it can feel overwhelming. Here's a calm, organized way to respond and keep the conversation moving forward.",
