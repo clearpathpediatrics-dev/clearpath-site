@@ -274,14 +274,26 @@ header.scrolled .brand img{height:56px}
 .hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 
 /* mobile menu */
-.mobile-menu{position:fixed;inset:0 0 0 auto;width:min(86%,360px);background:var(--navy-900);
+/* Sized to the VISIBLE viewport (100dvh), with the links scrolling between a
+   fixed header and a fixed footer. It used inset:0 with no scrolling, so on an
+   iPhone ten links plus the button ran taller than the space between Safari's
+   bars and "Book a Free Call" ended up underneath the bottom toolbar. */
+.mobile-menu{position:fixed;top:0;right:0;width:min(86%,360px);height:100vh;height:100dvh;background:var(--navy-900);
   z-index:1002;transform:translateX(100%);transition:transform .4s var(--ease);
-  padding:96px 32px 40px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow-lg)}
+  display:flex;flex-direction:column;box-shadow:var(--shadow-lg)}
 .mobile-menu.open{transform:translateX(0)}
-.mobile-menu a{color:rgba(255,255,255,.85);font-size:1.05rem;padding:13px 0;
+.mm-head{flex:none;display:flex;align-items:center;justify-content:space-between;padding:12px 16px 4px 28px;min-height:64px}
+.mm-title{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.mm-close{width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);
+  color:#fff;display:grid;place-items:center;cursor:pointer}
+.mm-close:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.mm-links{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
+  display:flex;flex-direction:column;padding:2px 28px 10px}
+.mobile-menu .mm-links a{color:rgba(255,255,255,.86);font-size:1.02rem;padding:12px 0;
   border-bottom:1px solid rgba(255,255,255,.08);transition:color .2s,padding-left .2s}
-.mobile-menu a:hover{color:var(--gold);padding-left:6px}
-.mobile-menu .btn{margin-top:22px;justify-content:center}
+.mobile-menu .mm-links a:hover{color:var(--gold);padding-left:6px}
+.mm-foot{flex:none;padding:14px 28px calc(18px + env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,.08)}
+.mobile-menu .mm-foot .btn{width:100%;justify-content:center;margin:0}
 .overlay{position:fixed;inset:0;background:rgba(8,26,48,.5);z-index:1001;opacity:0;visibility:hidden;
   transition:opacity .35s,visibility .35s;backdrop-filter:blur(2px)}
 .overlay.open{opacity:1;visibility:visible}
@@ -1028,18 +1040,24 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:64px 0 30px
 
 <!-- mobile menu -->
 <div class="overlay" id="overlay"></div>
-<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#what-we-do">What We Do</a>
-  <a href="#who-we-support">Who We Support</a>
-  <a href="#how-it-works">How It Works</a>
-  <a href="#services">Services &amp; Memberships</a>
-  <a href="#faqs">FAQs</a>
-  <a href="/blog/">Blog</a>
-  <a href="/tools/">Free Tools</a>
-  <a href="#contact">Contact</a>
-  <a href="/book/" class="btn btn-primary">Book a Free Call →</a>
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true" aria-label="Menu" inert>
+  <div class="mm-head">
+    <span class="mm-title">Menu</span>
+    <button type="button" class="mm-close" id="mmClose" aria-label="Close menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav class="mm-links" aria-label="Main">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#what-we-do">What We Do</a>
+    <a href="#who-we-support">Who We Support</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#services">Services &amp; Memberships</a>
+    <a href="#faqs">FAQs</a>
+    <a href="/blog/">Blog</a>
+    <a href="/tools/">Free Tools</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="mm-foot"><a href="/book/" class="btn btn-primary" data-cta="mobile-menu">Book a Free Call →</a></div>
 </aside>
 
 <!-- ============================ HERO ============================ -->
@@ -1830,10 +1848,16 @@ function toggleMenu(open){
   overlay.classList.toggle('open',open);
   ham.setAttribute('aria-expanded',open);
   menu.setAttribute('aria-hidden',!open);
+  // inert keeps the off-screen links out of the Tab order while it is closed.
+  menu.inert=!open;
   document.body.style.overflow=open?'hidden':'';
+  if(open){ setTimeout(()=>document.getElementById('mmClose').focus(),60); }
 }
 ham.addEventListener('click',()=>toggleMenu(!menu.classList.contains('open')));
 overlay.addEventListener('click',()=>toggleMenu(false));
+// The open drawer covers the header's hamburger, so it needs its own close.
+document.getElementById('mmClose').addEventListener('click',()=>{ toggleMenu(false); ham.focus(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&menu.classList.contains('open')){ toggleMenu(false); ham.focus(); } });
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
 
 /* ---------- scroll reveal ---------- */
