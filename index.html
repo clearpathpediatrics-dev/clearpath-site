@@ -399,65 +399,138 @@ header.scrolled .brand img{height:56px}
   display:grid;place-items:center;margin-top:2px}
 
 /* ============================================================
-   APP SHOWCASE
+   APP SHOWCASE: features on the left drive the phone on the right.
+   Rotates every 3s while on screen; a click holds a screen for 12s;
+   hovering the list pauses (mouse only). Classes are sx- prefixed so
+   nothing here can collide with the rest of the page.
    ============================================================ */
-.app-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.app-features{display:grid;gap:14px}
-.feature{
-  border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px 22px;cursor:default;
-  background:rgba(255,255,255,.04);transition:transform .3s var(--ease),background .3s,border-color .3s;
-}
-.feature:hover{transform:translateX(6px);background:rgba(255,255,255,.08);border-color:rgba(227,164,88,.45)}
-.feature .ftop{display:flex;align-items:center;gap:12px;margin-bottom:6px}
-.feature .ftop .fi{font-size:1.3rem}
-.feature h3{color:#fff;font-size:1.18rem}
-.feature p{color:rgba(255,255,255,.72);font-size:.93rem;margin-bottom:12px}
-.tags{display:flex;gap:8px;flex-wrap:wrap}
-.tag{font-size:.72rem;font-weight:600;letter-spacing:.04em;color:var(--gold);
-  background:rgba(227,164,88,.13);border:1px solid rgba(227,164,88,.3);padding:5px 11px;border-radius:999px}
+.sx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:64px;align-items:center}
+.sx *{box-sizing:border-box}
+.sx-feats{display:flex;flex-direction:column;justify-content:center;gap:10px}
+.sx-feat{position:relative;overflow:hidden;width:100%;text-align:left;font:inherit;color:#fff;cursor:pointer;
+  background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:15px 20px;
+  transition:background .25s,border-color .25s}
+.sx-feat:hover{background:rgba(255,255,255,.06)}
+.sx-feat:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.sx-feat.on{background:rgba(255,255,255,.075);border-color:rgba(227,164,88,.42)}
+.sx-ftop{display:flex;align-items:center;gap:14px}
+.sx-ic{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(227,164,88,.12);color:var(--gold);transition:background .25s,color .25s}
+.sx-feat.on .sx-ic{background:var(--gold);color:var(--navy-900)}
+.sx-ftitle{font-family:var(--serif);font-weight:700;font-size:1.18rem;line-height:1.25;color:#fff}
+.sx-fbody{display:none;padding-left:52px}
+.sx-feat.on .sx-fbody{display:block;animation:sxFadeUp .4s ease both}
+.sx-fbody .sx-p{display:block;margin:9px 0 12px;font-size:.95rem;line-height:1.6;color:rgba(255,255,255,.78)}
+.sx-tags{display:flex;flex-wrap:wrap;gap:8px}
+.sx-tag{font-size:.74rem;font-weight:600;color:var(--gold);border:1px solid rgba(227,164,88,.4);border-radius:999px;padding:4px 11px}
+.sx-prog{display:none;position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--gold);animation:sxProg var(--sx-secs,3s) linear forwards}
+.sx.sx-running .sx-feat.on .sx-prog{display:block}
+.sx-hint{margin:14px 2px 0;font-size:.85rem;color:rgba(255,255,255,.62)}
+.sx-badge{display:inline-block;margin-top:16px}
+.sx-badge img{height:50px;display:block}
 
-/* phone mockup */
-.phone-stage{display:flex;justify-content:center;perspective:1600px}
-.phone{
-  width:300px;border-radius:42px;background:#0a1422;padding:12px;position:sticky;top:120px;
-  box-shadow:0 50px 90px rgba(0,0,0,.5),0 0 0 2px rgba(255,255,255,.06) inset;
-  transform:rotateY(-8deg) rotateX(3deg);transition:transform .6s var(--ease);
+.sx-stage{position:relative;display:flex;justify-content:center;align-items:center;min-height:720px}
+.sx-halo{position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(227,164,88,.2),rgba(227,164,88,0) 66%);pointer-events:none}
+.sx-floor{position:absolute;bottom:22px;left:50%;width:230px;height:30px;margin-left:-115px;border-radius:50%;background:rgba(0,0,0,.5);filter:blur(16px);animation:sxFloor 7s ease-in-out infinite}
+.sx-float{position:relative;animation:sxFloat 7s ease-in-out infinite}
+.sx-phone{position:relative;width:304px;height:640px;border-radius:58px;padding:11px;
+  background:linear-gradient(150deg,#5a6069 0%,#262a30 22%,#3b4048 55%,#1a1d22 78%,#4b5058 100%);
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.18),inset 0 0 0 5px #0d0f12,0 50px 90px -30px rgba(0,0,0,.75),0 22px 40px -18px rgba(0,0,0,.55)}
+.sx-side{position:absolute;width:4px;border-radius:3px;background:linear-gradient(90deg,#2a2e34,#5a6069)}
+.sx-screen{position:relative;width:100%;height:100%;border-radius:47px;overflow:hidden;background:#f6f3ee;color:#1d2b3a;font-family:var(--sans)}
+.sx-island{position:absolute;top:11px;left:50%;width:98px;height:29px;margin-left:-49px;border-radius:20px;background:#050506;z-index:8}
+.sx-glare{position:absolute;inset:0;border-radius:47px;background:linear-gradient(118deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,.05) 24%,rgba(255,255,255,0) 34%);pointer-events:none;z-index:9}
+.sx-homebar{position:absolute;bottom:7px;left:50%;width:112px;height:4px;margin-left:-56px;border-radius:3px;background:#1d2b3a;opacity:.8;z-index:9}
+.sx-scr{display:none;position:absolute;inset:0;padding:52px 15px 84px}
+.sx-scr.on{display:block;animation:sxScrIn .55s cubic-bezier(.2,.75,.2,1) both}
+.sx-scr.sx-col.on{display:flex;flex-direction:column}
+.sx-tabbar{position:absolute;left:0;right:0;bottom:0;height:74px;padding:9px 6px 0;display:flex;justify-content:space-around;background:rgba(255,255,255,.94);border-top:1px solid #ebe3d6;z-index:7}
+.sx-tab{display:flex;flex-direction:column;align-items:center;gap:3px;width:44px;font-size:8.5px;font-weight:700;letter-spacing:.06em;color:#8a96a3;transition:color .25s}
+.sx-tab.on{color:#c9832f}
+
+.sx-ahead{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.sx-mark{flex:none;width:30px;height:30px;border-radius:9px;background:var(--gold);display:grid;place-items:center;color:#fff}
+.sx-ah1{font-family:var(--serif);font-weight:700;font-size:16px;line-height:1.15;color:var(--navy-900)}
+.sx-ah2{font-size:10.5px;color:#5c6977;font-weight:500}
+.sx-card{background:#fff;border-radius:16px;padding:12px 13px;box-shadow:0 1px 2px rgba(11,34,64,.06),0 6px 16px rgba(11,34,64,.05);margin-bottom:10px}
+.sx-lbl{font-size:9.5px;font-weight:700;letter-spacing:.12em;color:#6f7b88;margin:4px 2px 7px}
+.sx-row{display:flex;align-items:center;gap:10px;background:#fff;border-radius:13px;padding:9px 11px;margin-bottom:7px;box-shadow:0 1px 2px rgba(11,34,64,.05);animation:sxRowIn .5s ease both}
+.sx-ri{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center}
+.sx-rt{font-size:11.5px;font-weight:600;line-height:1.25;color:#1d2b3a}
+.sx-rs{font-size:10px;color:#5c6977;margin-top:1px}
+.sx-chev{margin-left:auto;color:#aab3bd}
+.sx-ring-track{stroke:#ece6dc}
+.sx-ring{stroke:var(--green);stroke-dasharray:201;stroke-dashoffset:201;animation:sxRing 1.4s .25s cubic-bezier(.3,.8,.3,1) forwards}
+.sx-num{font-family:var(--serif);font-weight:700;font-size:24px;color:#2f7d56}
+.sx-pill-g{display:inline-block;font-size:9.5px;font-weight:700;color:#2f7d56;background:#e3f2ea;border-radius:999px;padding:2px 8px}
+.sx-bar{height:6px;border-radius:4px;background:#ece6dc;overflow:hidden}
+.sx-bar i{display:block;height:100%;width:0;border-radius:4px;background:var(--gold);animation:sxBarTo .9s .3s ease forwards}
+.sx-med{display:flex;align-items:center;gap:10px;padding:8px 2px;border-bottom:1px solid #f1ece4}
+.sx-med:last-child{border-bottom:0}
+.sx-chk{flex:none;width:22px;height:22px;border-radius:50%;border:1.6px solid #cfd6dd;display:grid;place-items:center}
+.sx-chk.done{border-color:var(--green);background:var(--green);animation:sxPop .35s ease both}
+.sx-chk.done path{stroke-dasharray:14;stroke-dashoffset:14;animation:sxDraw .35s ease forwards;animation-delay:inherit}
+.sx-mt{font-size:11.5px;font-weight:600;color:#1d2b3a}
+.sx-ms{font-size:10px;color:#5c6977}
+.sx-due{margin-left:auto;font-size:9.5px;font-weight:700;color:#9a5b17;background:#fbf0e2;border-radius:999px;padding:2px 8px}
+.sx-me{margin:4px 0 10px auto;max-width:82%;background:var(--navy-700);color:#fff;font-size:11.5px;line-height:1.45;padding:9px 12px;border-radius:15px 15px 4px 15px;animation:sxRowIn .45s .2s ease both}
+.sx-typing{display:flex;gap:4px;width:52px;background:#fff;border-radius:14px;padding:11px 12px;box-shadow:0 1px 2px rgba(11,34,64,.06);animation:sxTypingOut 1.7s ease forwards}
+.sx-typing span{width:6px;height:6px;border-radius:50%;background:#9aa6b2;animation:sxDot 1s infinite}
+.sx-ai{max-width:92%;background:#fff;font-size:11.5px;line-height:1.5;padding:10px 12px;border-radius:15px 15px 15px 4px;box-shadow:0 1px 2px rgba(11,34,64,.06);animation:sxAiIn .5s 1.75s ease both}
+.sx-ai ul{margin:6px 0 0;padding-left:16px}
+.sx-ai li{margin:3px 0}
+.sx-fine{font-size:9px;color:#5f6b77;text-align:center;line-height:1.4;margin-top:10px;animation:sxAiIn .5s 2.1s ease both}
+.sx-tier{display:flex;align-items:center;gap:10px;border-radius:14px;padding:10px 11px;margin-bottom:8px;animation:sxRowIn .5s ease both}
+.sx-tt{font-size:9.5px;font-weight:800;letter-spacing:.1em}
+.sx-td{font-size:11px;font-weight:600;line-height:1.3;margin-top:1px}
+.sx-act{margin-left:auto;flex:none;font-size:10px;font-weight:700;border-radius:999px;padding:6px 10px}
+.sx-seg{display:flex;background:#ece6dc;border-radius:10px;padding:3px;margin-bottom:10px}
+.sx-seg span{flex:1;text-align:center;font-size:10.5px;font-weight:700;padding:5px 0;border-radius:8px;color:#5c6977}
+.sx-seg .on{background:#fff;color:var(--navy-900);box-shadow:0 1px 2px rgba(11,34,64,.08)}
+.sx-ap{display:flex;gap:11px}
+.sx-date{flex:none;width:42px;text-align:center;border-radius:11px;background:var(--navy-700);color:#fff;padding:6px 0}
+.sx-date b{display:block;font-size:15px;line-height:1.1}
+.sx-date small{font-size:8.5px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.sx-ctag{display:inline-block;font-size:9px;font-weight:700;color:var(--navy-700);background:#e8eef6;border-radius:999px;padding:2px 7px;margin:5px 4px 0 0}
+.sx-dir{display:inline-flex;align-items:center;gap:4px;margin-top:8px;font-size:10px;font-weight:700;color:#9a5b17}
+.sx-dots{display:none}
+
+@media (max-width:1024px){
+  .sx{grid-template-columns:minmax(0,1fr);gap:22px;max-width:620px;margin:0 auto}
+  .sx-stage{order:-2;min-height:0;padding:10px 0 20px}
+  .sx-phone{transform:scale(.86);transform-origin:top center;margin-bottom:-90px}
+  .sx-halo{width:340px;height:340px}
+  .sx-floor{bottom:4px}
+  .sx-dots{display:flex;justify-content:center;gap:4px;margin:0 0 6px;order:-1}
+  .sx-dot{width:30px;height:30px;border:0;padding:0;background:none;cursor:pointer;display:grid;place-items:center}
+  .sx-dot::before{content:"";display:block;width:8px;height:8px;border-radius:5px;background:rgba(255,255,255,.3);transition:width .25s,background .25s}
+  .sx-dot.on::before{width:22px;background:var(--gold)}
+  .sx-dot:focus-visible{outline:2px solid var(--gold);outline-offset:-4px;border-radius:8px}
+  .sx-badge{align-self:center}
 }
-.phone:hover{transform:rotateY(0) rotateX(0)}
-.phone .notch{position:absolute;top:18px;left:50%;transform:translateX(-50%);width:120px;height:24px;
-  background:#0a1422;border-radius:0 0 16px 16px;z-index:5}
-.screen{background:#f4f6fa;border-radius:32px;overflow:hidden;height:600px;position:relative;font-size:12px}
-.s-status{display:flex;justify-content:space-between;padding:14px 22px 6px;font-size:11px;font-weight:600;color:#1d2b3a}
-.s-head{display:flex;align-items:center;gap:8px;padding:4px 18px 12px}
-.s-head .logo{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--gold),var(--gold-2));
-  display:grid;place-items:center;color:#fff;font-size:13px}
-.s-head .t b{display:block;color:var(--navy-700);font-size:12px;font-family:var(--serif);font-weight:800}
-.s-head .t span{font-size:8px;letter-spacing:.15em;color:#9aa6b2}
-.s-body{padding:0 16px 70px}
-.s-card{background:#fff;border-radius:16px;padding:14px;margin-bottom:11px;box-shadow:0 6px 18px rgba(16,42,77,.07)}
-.s-banner{background:linear-gradient(150deg,var(--navy-700),var(--navy-900));color:#fff;text-align:center;padding:16px 12px}
-.s-banner b{font-family:var(--serif);font-size:13px}
-.s-banner span{display:block;color:var(--gold);font-weight:700;font-size:11px;margin-bottom:10px}
-.s-banner .pills{display:flex;gap:7px;justify-content:center}
-.s-banner .pill{font-size:9px;font-weight:600;padding:6px 9px;border-radius:8px}
-.s-banner .pill.a{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#fff}
-.s-banner .pill.b{background:rgba(255,255,255,.14);color:#fff}
-.score{display:flex;align-items:center;justify-content:space-between}
-.score .lab b{color:var(--navy-700);font-size:12px}
-.score .lab span{display:block;color:var(--green);font-size:9px;font-weight:600}
-.score .num{font-family:var(--serif);font-weight:800;font-size:22px;color:var(--green)}
-.score .num small{font-size:10px;color:#9aa6b2}
-.bar{height:6px;border-radius:6px;background:#e6ebf1;margin-top:9px;overflow:hidden}
-.bar i{display:block;height:100%;width:80%;background:linear-gradient(90deg,var(--green),#5bbf8b);border-radius:6px}
-.brief b{font-size:11px;color:var(--navy-700)}
-.brief .row{display:flex;align-items:center;justify-content:space-between;background:#f7f4ee;border-radius:10px;
-  padding:9px 11px;margin-top:8px;font-size:10px;color:#54606d}
-.brief .row .chev{color:var(--gold-2);font-weight:700}
-.s-nav{position:absolute;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eef1f5;
-  display:flex;justify-content:space-around;padding:9px 6px 12px;font-size:8px;color:#9aa6b2}
-.s-nav div{display:flex;flex-direction:column;align-items:center;gap:3px}
-.s-nav div.on{color:var(--gold-2);font-weight:700}
-.s-nav .gi{font-size:14px}
+@media (max-width:680px){
+  .sx-ftitle{font-size:1.06rem}
+  .sx-fbody{padding-left:0}
+  .sx-feat{padding:14px 16px}
+}
+
+@keyframes sxFadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes sxProg{from{width:0}to{width:100%}}
+@keyframes sxFloat{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(-10px) rotate(.4deg)}}
+@keyframes sxFloor{0%,100%{transform:scaleX(1);opacity:.9}50%{transform:scaleX(.88);opacity:.65}}
+@keyframes sxScrIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes sxRowIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes sxRing{to{stroke-dashoffset:40}}
+@keyframes sxBarTo{to{width:37.5%}}
+@keyframes sxPop{0%{transform:scale(.6)}70%{transform:scale(1.12)}100%{transform:scale(1)}}
+@keyframes sxDraw{to{stroke-dashoffset:0}}
+@keyframes sxDot{0%,100%{opacity:.35;transform:translateY(0)}50%{opacity:1;transform:translateY(-2px)}}
+@keyframes sxTypingOut{0%,85%{opacity:1;height:28px}100%{opacity:0;height:0;padding:0;margin:0}}
+@keyframes sxAiIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .sx *,.sx *::before{animation:none!important;transition:none!important}
+  .sx-ring{stroke-dashoffset:40}.sx-bar i{width:37.5%}.sx-typing{display:none!important}
+  .sx-chk.done path{stroke-dashoffset:0}
+}
 
 /* reviews */
 .reviews-head{text-align:center;margin-bottom:46px}
@@ -677,12 +750,10 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:64px 0 30px
   .nav-links{display:none}
   .hamburger{display:flex}
   .nav-cta .btn{display:none}
-  .about-grid,.app-wrap{grid-template-columns:1fr;gap:40px}
+  .about-grid{grid-template-columns:1fr;gap:40px}
   .g4,.contact-grid,.escalate{grid-template-columns:repeat(2,1fr)}
   .pricing{grid-template-columns:1fr;max-width:460px;margin:0 auto}
   .plan.featured{transform:none}.plan.featured:hover{transform:translateY(-6px)}
-  .phone{position:static}
-  .store-badge{justify-self:center}
 }
 @media(max-width:680px){
   .wrap{padding:0 18px}
@@ -1081,84 +1152,218 @@ footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:64px 0 30px
       <p class="lead">From a daily briefing to AI-powered guidance — see how ClearPath keeps every family one step ahead.</p>
     </div>
 
-    <div class="app-wrap">
-      <div class="app-features">
-        <div class="feature reveal">
-          <div class="ftop"><span class="fi">🧠</span><h3>Your whole day, briefed.</h3></div>
-          <p>Open the app to a Preparedness Score and a personalized briefing — what's coming up and what needs attention, the moment you wake up.</p>
-          <div class="tags"><span class="tag">Preparedness Score</span><span class="tag">Daily briefing</span></div>
+    <div class="sx" id="appShowcase">
+      <div class="sx-left">
+        <div class="sx-feats">
+          <button type="button" class="sx-feat on" data-i="0" aria-pressed="true" aria-controls="sxPhone">
+            <span class="sx-ftop"><span class="sx-ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><span class="sx-ftitle">Your whole day, briefed.</span></span>
+            <span class="sx-fbody"><span class="sx-p">Open the app to a Preparedness Score and a personalized briefing: what's coming up and what needs attention, the moment you wake up.</span><span class="sx-tags"><span class="sx-tag">Preparedness Score</span><span class="sx-tag">Daily briefing</span></span></span>
+            <i class="sx-prog" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="sx-feat" data-i="1" aria-pressed="false" aria-controls="sxPhone">
+            <span class="sx-ftop"><span class="sx-ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="8.5" width="17" height="7" rx="3.5" transform="rotate(-35 12 12)"/><path d="M9.6 8.6l4.8 6.8"/></svg></span><span class="sx-ftitle">Never miss a dose.</span></span>
+            <span class="sx-fbody"><span class="sx-p">Tap to mark medications done and see the whole routine at a glance: morning, noon and night.</span><span class="sx-tags"><span class="sx-tag">Dose tracking</span><span class="sx-tag">Refill reminders</span></span></span>
+            <i class="sx-prog" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="sx-feat" data-i="2" aria-pressed="false" aria-controls="sxPhone">
+            <span class="sx-ftop"><span class="sx-ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l1.9 4.6 4.6 1.9-4.6 1.9L12 16.5l-1.9-4.6L5.5 10l4.6-1.9z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span><span class="sx-ftitle">AI that knows your child.</span></span>
+            <span class="sx-fbody"><span class="sx-p">The Care Assistant tailors guidance to your child's real diagnosis and medications: organizational help, never a replacement for your providers.</span><span class="sx-tags"><span class="sx-tag">Care Assistant.AI</span><span class="sx-tag">Diagnosis-aware</span></span></span>
+            <i class="sx-prog" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="sx-feat" data-i="3" aria-pressed="false" aria-controls="sxPhone">
+            <span class="sx-ftop"><span class="sx-ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg></span><span class="sx-ftitle">Know what to watch for.</span></span>
+            <span class="sx-fbody"><span class="sx-p">Plain-language guidance built around your child: what to monitor this week, and when something deserves a closer look.</span><span class="sx-tags"><span class="sx-tag">What to watch</span><span class="sx-tag">Appointment prep</span></span></span>
+            <i class="sx-prog" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="sx-feat" data-i="4" aria-pressed="false" aria-controls="sxPhone">
+            <span class="sx-ftop"><span class="sx-ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><span class="sx-ftitle">Every visit, tracked.</span></span>
+            <span class="sx-fbody"><span class="sx-p">Upcoming and past appointments, with directions, condition tags and a place for post-visit notes so nothing is forgotten.</span><span class="sx-tags"><span class="sx-tag">Directions</span><span class="sx-tag">Visit notes</span></span></span>
+            <i class="sx-prog" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="sx-feat" data-i="5" aria-pressed="false" aria-controls="sxPhone">
+            <span class="sx-ftop"><span class="sx-ic" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l9 15.5H3z"/><path d="M12 10v4M12 16.8v.2"/></svg></span><span class="sx-ftitle">Know exactly when to act.</span></span>
+            <span class="sx-fbody"><span class="sx-p">A clear escalation guide, from a 911 emergency to a simple question, so you're never frozen wondering what to do next.</span><span class="sx-tags"><span class="sx-tag">Red flag guide</span><span class="sx-tag">Always calm, always clear</span></span></span>
+            <i class="sx-prog" aria-hidden="true"></i>
+          </button>
         </div>
-        <div class="feature reveal">
-          <div class="ftop"><span class="fi">💊</span><h3>Never miss a dose.</h3></div>
-          <p>Tap to mark medications done and see the whole routine at a glance — morning, noon, and night.</p>
-          <div class="tags"><span class="tag">Dose tracking</span><span class="tag">Refill reminders</span></div>
-        </div>
-        <div class="feature reveal">
-          <div class="ftop"><span class="fi">✨</span><h3>AI that knows your child.</h3></div>
-          <p>The Care Assistant tailors guidance to your child's real diagnosis and medications — organizational help, never a replacement for your providers.</p>
-          <div class="tags"><span class="tag">Care Assistant.AI</span><span class="tag">Diagnosis-aware</span></div>
-        </div>
-        <div class="feature reveal">
-          <div class="ftop"><span class="fi">👁️</span><h3>Know what to watch for.</h3></div>
-          <p>Plain-language guidance built around your child — what to monitor this week, and when something deserves a closer look.</p>
-          <div class="tags"><span class="tag">What to watch</span><span class="tag">Appointment prep</span></div>
-        </div>
-        <div class="feature reveal">
-          <div class="ftop"><span class="fi">📅</span><h3>Every visit, tracked.</h3></div>
-          <p>Upcoming and past appointments — with directions, condition tags, and a place for post-visit notes so nothing is forgotten.</p>
-          <div class="tags"><span class="tag">Directions</span><span class="tag">Visit notes</span></div>
-        </div>
-        <div class="feature reveal">
-          <div class="ftop"><span class="fi">🚨</span><h3>Know exactly when to act.</h3></div>
-          <p>A clear escalation guide — from a 911 emergency to a simple question — so you're never frozen wondering what to do next.</p>
-          <div class="tags"><span class="tag">Red flag guide</span><span class="tag">Always calm, always clear</span></div>
-        </div>
-        <a href="https://apps.apple.com/app/id6762391088" target="_blank" rel="noopener" class="store-badge" style="display:inline-block;margin-top:8px">
-          <img src="assets/app-store-badge.svg" alt="Download on the App Store" style="height:52px" />
+        <p class="sx-hint">Select any feature to see it in the app.</p>
+        <a href="https://apps.apple.com/app/id6762391088" target="_blank" rel="noopener" class="sx-badge">
+          <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="150" height="50" />
         </a>
       </div>
 
-      <!-- phone mockup -->
-      <div class="phone-stage reveal d1">
-        <div class="phone">
-          <div class="notch"></div>
-          <div class="screen">
-            <div class="s-status"><span>8:01</span><span>●●●● ◡ ▮</span></div>
-            <div class="s-head">
-              <div class="logo">♥</div>
-              <div class="t"><b>ClearPath Pediatrics</b><span>FAMILY RESOURCE HUB</span></div>
-            </div>
-            <div class="s-body">
-              <div class="s-card s-banner">
-                <b>Clarity for families.</b>
-                <span>Confidence between visits.</span>
-                <div class="pills"><span class="pill a">Open Medical Binder</span><span class="pill b">Care Assistant.AI</span></div>
-              </div>
-              <div class="s-card">
-                <div class="score">
-                  <div class="lab"><b>Preparedness Score</b><span>On Track</span></div>
-                  <div class="num">80<small>/100</small></div>
+      <div class="sx-dots" role="group" aria-label="App screens">
+        <button type="button" class="sx-dot on" data-i="0" aria-label="Daily briefing" aria-pressed="true"></button>
+        <button type="button" class="sx-dot" data-i="1" aria-label="Medications" aria-pressed="false"></button>
+        <button type="button" class="sx-dot" data-i="2" aria-label="Care Assistant" aria-pressed="false"></button>
+        <button type="button" class="sx-dot" data-i="3" aria-label="What to watch" aria-pressed="false"></button>
+        <button type="button" class="sx-dot" data-i="4" aria-label="Appointments" aria-pressed="false"></button>
+        <button type="button" class="sx-dot" data-i="5" aria-label="When to act" aria-pressed="false"></button>
+      </div>
+
+      <div class="sx-stage">
+        <div class="sx-halo" aria-hidden="true"></div>
+        <div class="sx-floor" aria-hidden="true"></div>
+        <div class="sx-float">
+          <div class="sx-phone" id="sxPhone" role="img" aria-label="ClearPath app: daily briefing screen">
+            <span class="sx-side" style="left:-3px;top:118px;height:30px" aria-hidden="true"></span>
+            <span class="sx-side" style="left:-3px;top:168px;height:54px" aria-hidden="true"></span>
+            <span class="sx-side" style="left:-3px;top:232px;height:54px" aria-hidden="true"></span>
+            <span class="sx-side" style="right:-3px;top:190px;height:86px" aria-hidden="true"></span>
+            <div class="sx-screen" aria-hidden="true">
+              <div class="sx-island"></div>
+
+              <div class="sx-scr on" data-i="0">
+                <div class="sx-ahead"><span class="sx-mark"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></svg></span><div><div class="sx-ah1">Good morning</div><div class="sx-ah2">Mia's day at a glance</div></div></div>
+                <div class="sx-card" style="display:flex;align-items:center;gap:14px">
+                  <svg width="74" height="74" viewBox="0 0 74 74"><circle class="sx-ring-track" cx="37" cy="37" r="32" fill="none" stroke-width="7"/><circle class="sx-ring" cx="37" cy="37" r="32" fill="none" stroke-width="7" stroke-linecap="round" transform="rotate(-90 37 37)"/></svg>
+                  <div><div style="font-size:10.5px;font-weight:700;color:#5c6977">Preparedness Score</div><div><span class="sx-num">80</span><span style="font-size:11px;color:#6f7b88"> / 100</span></div><span class="sx-pill-g">On track</span></div>
                 </div>
-                <div class="bar"><i></i></div>
+                <div class="sx-lbl">TODAY'S BRIEFING</div>
+                <div class="sx-row" style="animation-delay:.35s"><span class="sx-ri" style="background:#e8eef6;color:#16335f"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><div><div class="sx-rt">Gastroenterology tomorrow</div><div class="sx-rs">Dr. Sarah Nguyen · 10:30 AM</div></div><span class="sx-chev">›</span></div>
+                <div class="sx-row" style="animation-delay:.5s"><span class="sx-ri" style="background:#fbf0e2;color:#9a5b17"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="8.5" width="17" height="7" rx="3.5" transform="rotate(-35 12 12)"/></svg></span><div><div class="sx-rt">3 of 8 doses marked</div><div class="sx-rs">Next due at 12:00 PM</div></div><span class="sx-chev">›</span></div>
+                <div class="sx-row" style="animation-delay:.65s"><span class="sx-ri" style="background:#e3f2ea;color:#2f7d56"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"/></svg></span><div><div class="sx-rt">Refill due in 4 days</div><div class="sx-rs">Omeprazole · pharmacy notified</div></div><span class="sx-chev">›</span></div>
               </div>
-              <div class="s-card brief">
-                <b>🧠 Mia's Briefing</b>
-                <div class="row"><span>📅 Dr. Sarah Nguyen tomorrow · Gastroenterology</span><span class="chev">›</span></div>
-                <div class="row"><span>💊 8 doses still due today (0/8 marked)</span><span class="chev">›</span></div>
+
+              <div class="sx-scr" data-i="1">
+                <div class="sx-ahead"><div><div class="sx-ah1">Today's medications</div><div class="sx-ah2">Mia · 8 doses scheduled</div></div></div>
+                <div class="sx-card"><div style="display:flex;justify-content:space-between;font-size:10.5px;font-weight:700;color:#5c6977;margin-bottom:7px"><span>Progress</span><span style="color:#9a5b17">3 of 8</span></div><div class="sx-bar"><i></i></div></div>
+                <div class="sx-lbl">MORNING</div>
+                <div class="sx-card" style="padding:4px 12px">
+                  <div class="sx-med"><span class="sx-chk done" style="animation-delay:.45s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><div class="sx-mt">Omeprazole</div><div class="sx-ms">7:30 AM · with breakfast</div></div></div>
+                  <div class="sx-med"><span class="sx-chk done" style="animation-delay:.75s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><div class="sx-mt">Levetiracetam</div><div class="sx-ms">8:00 AM</div></div></div>
+                  <div class="sx-med"><span class="sx-chk done" style="animation-delay:1.05s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><div class="sx-mt">Vitamin D</div><div class="sx-ms">8:00 AM</div></div></div>
+                </div>
+                <div class="sx-lbl">NOON</div>
+                <div class="sx-card" style="padding:4px 12px">
+                  <div class="sx-med"><span class="sx-chk"></span><div><div class="sx-mt">Glycopyrrolate</div><div class="sx-ms">12:00 PM</div></div><span class="sx-due">Due soon</span></div>
+                  <div class="sx-med"><span class="sx-chk"></span><div><div class="sx-mt">Feeding supplement</div><div class="sx-ms">12:30 PM</div></div></div>
+                </div>
               </div>
-            </div>
-            <div class="s-nav">
-              <div class="on"><span class="gi">🏠</span>HOME</div>
-              <div><span class="gi">📁</span>BINDER</div>
-              <div><span class="gi">📅</span>APPTS</div>
-              <div><span class="gi">⏱️</span>TIME</div>
-              <div><span class="gi">📎</span>DOCS</div>
-              <div><span class="gi">🚨</span>ALERTS</div>
+
+              <div class="sx-scr sx-col" data-i="2">
+                <div class="sx-ahead"><span class="sx-mark" style="background:#16335f"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l1.9 4.6 4.6 1.9-4.6 1.9L12 16.5l-1.9-4.6L5.5 10l4.6-1.9z"/></svg></span><div><div class="sx-ah1">Care Assistant</div><div class="sx-ah2">Using Mia's binder</div></div></div>
+                <div class="sx-me">Neurology is Thursday. What should I bring?</div>
+                <div class="sx-typing"><span></span><span style="animation-delay:.15s"></span><span style="animation-delay:.3s"></span></div>
+                <div class="sx-ai"><b>Here's a prep list from Mia's binder:</b><ul><li>Seizure log since the last visit (4 entries)</li><li>Current medication list, updated Monday</li><li>Your 2 saved questions for Dr. Patel</li></ul></div>
+                <div class="sx-fine">Organizational help only. Medical decisions stay with Mia's care team.</div>
+              </div>
+
+              <div class="sx-scr" data-i="3">
+                <div class="sx-ahead"><div><div class="sx-ah1">This week</div><div class="sx-ah2">From Dr. Patel's visit notes</div></div></div>
+                <div class="sx-row" style="animation-delay:.2s"><span class="sx-ri" style="background:#e8eef6;color:#16335f"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><div class="sx-rt">Log sleep each night</div><div class="sx-rs">3 of 7 nights logged</div></div></div>
+                <div class="sx-row" style="animation-delay:.35s"><span class="sx-ri" style="background:#e8eef6;color:#16335f"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6v6l3.5 2"/><circle cx="12" cy="12" r="8.5"/></svg></span><div><div class="sx-rt">Note any missed doses</div><div class="sx-rs">None this week</div></div></div>
+                <div class="sx-row" style="animation-delay:.5s"><span class="sx-ri" style="background:#e8eef6;color:#16335f"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19h16M7 15l3-4 3 2 4-6"/></svg></span><div><div class="sx-rt">Weigh Friday morning</div><div class="sx-rs">Before breakfast</div></div></div>
+                <div class="sx-card" style="margin-top:6px;background:#fbf0e2;box-shadow:none;animation:sxRowIn .5s .65s ease both"><div style="font-size:10px;font-weight:800;letter-spacing:.1em;color:#9a5b17">CALL THE OFFICE IF</div><div style="font-size:11px;line-height:1.45;margin-top:4px;color:#4a3a26">Anything on Mia's care-plan call list happens. Tap to see the list her team wrote.</div></div>
+              </div>
+
+              <div class="sx-scr" data-i="4">
+                <div class="sx-ahead"><div><div class="sx-ah1">Appointments</div><div class="sx-ah2">2 upcoming</div></div></div>
+                <div class="sx-seg"><span class="on">Upcoming</span><span>Past</span></div>
+                <div class="sx-card" style="animation:sxRowIn .5s .2s ease both"><div class="sx-ap"><div class="sx-date"><small>WED</small><b>22</b></div><div><div class="sx-rt">Gastroenterology</div><div class="sx-rs">Dr. Sarah Nguyen · 10:30 AM</div><span class="sx-ctag">Feeding</span><span class="sx-ctag">Reflux</span></div></div><span class="sx-dir"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Directions · 18 min</span></div>
+                <div class="sx-card" style="animation:sxRowIn .5s .35s ease both"><div class="sx-ap"><div class="sx-date"><small>THU</small><b>23</b></div><div><div class="sx-rt">Neurology</div><div class="sx-rs">Dr. Ravi Patel · 2:15 PM</div><span class="sx-ctag">Seizures</span></div></div><span class="sx-dir"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Directions · 25 min</span></div>
+                <div class="sx-row" style="animation-delay:.5s"><span class="sx-ri" style="background:#e3f2ea;color:#2f7d56"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 19h14M7 15l9-9 3 3-9 9H7z"/></svg></span><div><div class="sx-rt">Pediatrician · last week</div><div class="sx-rs">Visit notes added</div></div><span class="sx-chev">›</span></div>
+              </div>
+
+              <div class="sx-scr" data-i="5">
+                <div class="sx-ahead"><div><div class="sx-ah1">When to act</div><div class="sx-ah2">From Mia's care plan</div></div></div>
+                <div class="sx-tier" style="background:#8f1d1d;color:#fff;animation-delay:.15s"><div><div class="sx-tt" style="color:#ffd4d0">EMERGENCY</div><div class="sx-td">Signs her care plan lists as emergencies</div></div><span class="sx-act" style="background:#fff;color:#8f1d1d">Call 911</span></div>
+                <div class="sx-tier" style="background:#fbf0e2;color:#4a3a26;animation-delay:.3s"><div><div class="sx-tt" style="color:#9a5b17">SAME DAY</div><div class="sx-td">Anything on her call-the-office list</div></div><span class="sx-act" style="background:#9a5b17;color:#fff">Call clinic</span></div>
+                <div class="sx-tier" style="background:#e8eef6;color:#1d2b3a;animation-delay:.45s"><div><div class="sx-tt" style="color:#16335f">CAN WAIT</div><div class="sx-td">Questions for the next visit</div></div><span class="sx-act" style="background:#16335f;color:#fff">Save it</span></div>
+                <div class="sx-fine" style="animation-delay:.7s">Your care team decides what goes in each tier. ClearPath keeps it one tap away.</div>
+              </div>
+
+              <div class="sx-tabbar">
+                <span class="sx-tab on"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-6.5 8 6.5V20h-5v-5H9v5H4z"/></svg>HOME</span>
+                <span class="sx-tab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10l2 2.5h6.5A1.5 1.5 0 0 1 20 8v10.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5z"/></svg>BINDER</span>
+                <span class="sx-tab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>APPTS</span>
+                <span class="sx-tab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="7.5"/><path d="M12 9.5V13l2.5 1.5M9.5 3h5"/></svg>TIME</span>
+                <span class="sx-tab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5"/></svg>DOCS</span>
+                <span class="sx-tab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>ALERTS</span>
+              </div>
+              <div class="sx-homebar"></div>
+              <div class="sx-glare"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script>
+    /* App showcase: features drive the phone. Rotates every SECS while the
+       section is on screen and the tab is visible. A click holds that screen
+       for HOLD seconds; hovering the list pauses (mouse only: a touch screen
+       reports a tap as hover that never ends, which would freeze it). The
+       list's height is pinned to its tallest state so the page below never
+       jumps as descriptions of different lengths open and close. */
+    (function () {
+      var root = document.getElementById("appShowcase");
+      if (!root) return;
+      var SECS = 3, HOLD = 12, TAB_FOR = [0, 3, 0, 1, 2, 5];
+      var LABELS = ["daily briefing", "medications", "Care Assistant", "what to watch", "appointments", "when to act"];
+      var feats = [].slice.call(root.querySelectorAll(".sx-feat"));
+      var dots = [].slice.call(root.querySelectorAll(".sx-dot"));
+      var scrs = [].slice.call(root.querySelectorAll(".sx-scr"));
+      var tabs = [].slice.call(root.querySelectorAll(".sx-tab"));
+      var list = root.querySelector(".sx-feats");
+      var phone = document.getElementById("sxPhone");
+      var mq = function (q) { try { return window.matchMedia(q).matches; } catch (e) { return false; } };
+      var reduce = mq("(prefers-reduced-motion: reduce)");
+      var canHover = mq("(hover: hover)");
+      var i = 0, timer = null, holdTimer = null, held = false, hovering = false, visible = false;
+      root.style.setProperty("--sx-secs", SECS + "s");
+
+      function running() { return !reduce && visible && !held && !hovering && !document.hidden; }
+
+      function paint() {
+        feats.forEach(function (f, k) { f.classList.toggle("on", k === i); f.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+        dots.forEach(function (d, k) { d.classList.toggle("on", k === i); d.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+        scrs.forEach(function (s, k) { s.classList.toggle("on", k === i); });
+        tabs.forEach(function (t, k) { t.classList.toggle("on", k === TAB_FOR[i]); });
+        phone.setAttribute("aria-label", "ClearPath app: " + LABELS[i] + " screen");
+        root.classList.toggle("sx-running", running());
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function refresh() {
+        stop();
+        // Re-adding sx-running restarts the active card's progress line, so it
+        // always starts in step with the timer.
+        root.classList.remove("sx-running");
+        void root.offsetWidth;
+        paint();
+        if (running()) timer = setInterval(function () { i = (i + 1) % feats.length; paint(); }, SECS * 1000);
+      }
+      function go(k) {
+        i = k; held = true;
+        if (holdTimer) clearTimeout(holdTimer);
+        holdTimer = setTimeout(function () { held = false; holdTimer = null; refresh(); }, HOLD * 1000);
+        refresh();
+      }
+      feats.concat(dots).forEach(function (b) {
+        b.addEventListener("click", function () { go(Number(b.getAttribute("data-i"))); });
+      });
+      list.addEventListener("mouseenter", function () { if (canHover) { hovering = true; refresh(); } });
+      list.addEventListener("mouseleave", function () { if (hovering) { hovering = false; refresh(); } });
+      document.addEventListener("visibilitychange", refresh);
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (es) { visible = es[0].isIntersecting; refresh(); }, { threshold: 0.35 }).observe(root);
+      } else { visible = true; refresh(); }
+
+      function pinHeight() {
+        list.style.minHeight = "";
+        var keep = i, tallest = 0;
+        for (var k = 0; k < feats.length; k++) {
+          feats.forEach(function (f, n) { f.classList.toggle("on", n === k); });
+          tallest = Math.max(tallest, list.offsetHeight);
+        }
+        list.style.minHeight = tallest + "px";
+        i = keep; paint();
+      }
+      var rz;
+      window.addEventListener("resize", function () { clearTimeout(rz); rz = setTimeout(pinHeight, 150); });
+      pinHeight();
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(pinHeight);
+    })();
+    </script>
 
     <!-- reviews -->
     <div class="reviews-head reveal" style="margin-top:90px">
