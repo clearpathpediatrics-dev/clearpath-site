@@ -1,5 +1,89 @@
 [
   {
+    "slug": "hand-over-pediatric-care-change-pediatricians",
+    "title": "How to Hand Over Pediatric Care When You Change Pediatricians: A Parent's Step-by-Step Guide",
+    "excerpt": "Switching pediatricians doesn't have to mean starting from scratch. Here's how to organize records, prevent care gaps, and give your new pediatric team everything they need.",
+    "metaDescription": "Changing pediatricians? Learn how to hand over your child's pediatric care smoothly, transfer records, and avoid gaps so nothing important gets lost.",
+    "tags": [
+      "pediatric care transfer",
+      "changing pediatricians",
+      "pediatric medical records",
+      "care team coordination",
+      "pediatric care navigation"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-10-22",
+    "prettyDate": "October 22, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What records should I request when changing pediatricians?",
+        "a": "Request your child's complete medical record, including the full immunization history, growth and development charts, past visit notes, allergy information, current and past medication lists, lab and imaging results, screening results, and copies of specialist reports and referrals. If your child has an ongoing condition, also ask for any care plans or letters. Having everything in hand helps your new pediatrician understand your child's history quickly and reduces repeated tests."
+      },
+      {
+        "q": "How do I avoid a gap in my child's care during the transition?",
+        "a": "Overlap the two practices instead of making a clean break. Keep your current pediatrician active until the first appointment at the new practice is scheduled and records are confirmed received. Handle prescription refill timing and pending referrals before switching, and bring your own copy of the records to the first visit. If your child sees specialists, tell each office who the new primary pediatrician is so communication reaches the right place."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-care-plan-complex-needs-contents",
+    "title": "What a Pediatric Care Plan Should Contain for a Child With Complex Needs",
+    "excerpt": "A clear, parent-friendly breakdown of every section a pediatric care plan should include for a child with complex needs — so nothing important gets lost.",
+    "metaDescription": "Learn what a pediatric care plan should contain for a child with complex needs, section by section, so you can organize every detail and feel more prepared.",
+    "tags": [
+      "pediatric care plan",
+      "complex needs",
+      "care team coordination",
+      "pediatric care navigation",
+      "special needs organization"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-10-22",
+    "prettyDate": "October 22, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should a pediatric care plan include for daily routines and emergencies?",
+        "a": "It should include a daily routine layer — feeding schedules, medication timing as your prescriber directed, therapy appointments, sleep patterns, and equipment care — and an emergency layer that translates your providers' guidance into clear steps: the warning signs your team told you to watch for, who to call first, what to bring to the hospital, and an in-case-of-emergency summary."
+      },
+      {
+        "q": "Does a pediatric care plan need to include school and home supports?",
+        "a": "Yes. For a child with complex needs, the plan should include school documents like an IEP or 504 plan and the health-related accommodations your providers recommended, plus home nursing hours, respite arrangements, equipment suppliers, and community services — all in one place so changes in one area are easy to track."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-medication-list-care-team",
+    "title": "How to Keep Every Pediatric Care Team Working From the Same Medication List",
+    "excerpt": "When your child sees multiple providers, outdated medication lists multiply fast. Here's a practical, parent-friendly way to keep every team working from the same accurate list.",
+    "metaDescription": "Learn how to keep every pediatric care team working from one accurate medication list, so specialists, pharmacy, and school stay in sync and errors are easier to cat",
+    "tags": [
+      "pediatric medication list",
+      "pediatric care coordination",
+      "medication reconciliation",
+      "complex care navigation",
+      "pediatric care team"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-10-22",
+    "prettyDate": "October 22, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I make sure the pharmacy, specialists, and school all have the same medication version?",
+        "a": "Keep one dated master list with a \"Last updated\" line at the top, and share that same version with every team. When something changes, update the date and redistribute, asking each team to replace the old copy. Portal messages help their records catch up, and the dated version ends confusion about which list is newest."
+      },
+      {
+        "q": "What should I do when two providers' medication lists disagree?",
+        "a": "Don't decide who's right yourself — that's a clinical question. Note exactly where the lists differ, then ask the prescribing team to confirm the current instruction. Once a licensed provider confirms, update your master list and redistribute it so everyone is working from the same information."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-medical-summary-babysitter-respite-carer-2",
     "title": "How to Prepare a Pediatric Medical Summary for a Babysitter or Respite Carer",
     "excerpt": "A simple, practical guide to building a one-page pediatric medical summary that gives your babysitter or respite carer everything they need to keep your child safe and comfortable.",
