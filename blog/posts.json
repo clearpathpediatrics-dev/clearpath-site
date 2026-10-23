@@ -1,5 +1,93 @@
 [
   {
+    "slug": "pediatric-secondary-insurance-primary-coordination",
+    "title": "How Secondary Insurance Works Alongside Primary for a Pediatric Patient: A Parent's Guide",
+    "excerpt": "If your child has two insurance plans, the way they work together isn't random. Here's a plain-language guide to coordination of benefits and how to keep your pediatric claims organized.",
+    "metaDescription": "Learn how secondary insurance works alongside primary for your child, how coordination of benefits works, and how to organize pediatric claims with confidence.",
+    "tags": [
+      "pediatric secondary insurance",
+      "coordination of benefits",
+      "child health insurance",
+      "pediatric medical bills",
+      "primary vs secondary insurance"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-23",
+    "prettyDate": "October 23, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How is it decided which plan is primary for my child?",
+        "a": "Insurers use coordination of benefits rules. For a child covered under both parents' plans, the common \"birthday rule\" makes the plan of the parent whose birthday falls earlier in the calendar year primary. Custody orders, retiree/COBRA status, and Medicaid (usually the payer of last resort) can change the order, so confirm the designation in writing with both insurers."
+      },
+      {
+        "q": "Why do both insurers keep asking me to update coordination of benefits?",
+        "a": "Insurers can't automatically see a second plan, so they ask you to confirm the other coverage and who pays first. If you don't respond, claims may be paused or denied until the information is on file. Give each plan the other plan's name, member ID, and policyholder details to keep claims moving."
+      }
+    ]
+  },
+  {
+    "slug": "document-pediatric-equipment-need-insurance-request-2",
+    "title": "How to Document Pediatric Equipment Need for an Insurance Request: A Parent's Organizing Guide",
+    "excerpt": "A clear, step-by-step guide to gathering and organizing the paperwork that shows your child's need for durable medical equipment — so your insurance request is complete the first time.",
+    "metaDescription": "Learn how to document pediatric equipment need for an insurance request so your paperwork is complete, organized, and ready to support your child's approval.",
+    "tags": [
+      "pediatric DME",
+      "equipment insurance request",
+      "medical necessity documentation",
+      "durable medical equipment",
+      "pediatric care navigation"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-10-23",
+    "prettyDate": "October 23, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What documents does an insurance equipment request usually need?",
+        "a": "Most requests include a provider's prescription or order, a letter of medical necessity, supporting clinical notes, the supplier's itemized quote with billing codes, and your insurance and prior authorization details. Your providers supply the clinical pieces; your role is making sure everything is gathered, consistent, and submitted together."
+      },
+      {
+        "q": "What makes a strong letter of medical necessity?",
+        "a": "A strong letter comes from your child's provider and typically describes your child's current function, how the equipment supports daily living or safety, what has been tried, and the expected benefit. You can help by sharing factual, observational details from home — not clinical conclusions — which your provider translates into medical terms."
+      },
+      {
+        "q": "What should I do if my equipment request is denied?",
+        "a": "Read the denial letter for the specific reason and note the appeal deadline. Ask your provider's office whether added documentation can address that concern. Many denials are overturned when a missing document or mismatched detail is corrected, and an organized packet makes appealing much easier."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-wheelchair-stander-replacement-as-child-grows",
+    "title": "How to Get a Pediatric Wheelchair or Stander Replaced as Your Child Grows",
+    "excerpt": "A practical, parent-friendly guide to organizing the paperwork, evaluations, and insurance steps involved when your child outgrows a wheelchair or stander.",
+    "metaDescription": "Learn how to get a pediatric wheelchair or stander replaced as your child grows, including paperwork, insurance timing, and who to call to keep things moving.",
+    "tags": [
+      "pediatric wheelchair replacement",
+      "pediatric stander",
+      "pediatric DME",
+      "durable medical equipment",
+      "pediatric mobility equipment"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-10-23",
+    "prettyDate": "October 23, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I prove my child has outgrown their wheelchair or stander?",
+        "a": "Documentation comes from a current therapist evaluation plus the prescribing provider's order, which note updated measurements and how the device no longer fits or supports your child safely. You can help by requesting the evaluation early and sharing your observations about fit and positioning so the clinical team has a complete picture to document."
+      },
+      {
+        "q": "What should I keep in a replacement file for pediatric mobility equipment?",
+        "a": "Keep the most recent equipment order, the therapist's evaluation, the supplier's quote, your insurance plan's DME coverage details, and a running log of every call with dates and names. Having it all in one place lets you forward documents quickly when an insurer or supplier requests them."
+      }
+    ]
+  },
+  {
     "slug": "hand-over-pediatric-care-change-pediatricians",
     "title": "How to Hand Over Pediatric Care When You Change Pediatricians: A Parent's Step-by-Step Guide",
     "excerpt": "Switching pediatricians doesn't have to mean starting from scratch. Here's how to organize records, prevent care gaps, and give your new pediatric team everything they need.",
