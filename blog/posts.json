@@ -1,5 +1,89 @@
 [
   {
+    "slug": "pediatric-iep-not-being-followed-2",
+    "title": "What to Do If Your Child's Pediatric IEP Is Not Being Followed: A Parent's Action Guide",
+    "excerpt": "When the IEP on paper isn't matching what's happening at school, here's how to document, raise it the right way, and escalate calmly so your child gets the services they're owed.",
+    "metaDescription": "If your child's pediatric IEP is not being followed, learn the practical steps to document, communicate, and escalate so your child gets the support they're owed.",
+    "tags": [
+      "pediatric IEP",
+      "IEP not being followed",
+      "IEP implementation",
+      "special education rights",
+      "school IEP support"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-10-24",
+    "prettyDate": "October 24, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I prove my child's IEP is not being followed?",
+        "a": "Keep a dated log of specific incidents — the date, the service or accommodation that was missed, who was involved, and the impact you observed. Compare what's happening against the exact wording of the IEP, including frequency and duration of services. Save emails, progress reports, and any notes your child brings home. This written record turns a general worry into specific, documented examples the school must address, and it gives you a timeline to point to if you need to escalate later."
+      },
+      {
+        "q": "Who do I contact first if the school isn't following the IEP?",
+        "a": "Start with your child's case manager or special education teacher, in writing, describing the specific gap and the IEP language it relates to. Keep the tone collaborative and ask for a plan to fix it. If that doesn't resolve things, move to the special education coordinator or school principal, then your district's special education director. Putting each step in email creates a clear paper trail and often moves things faster than verbal conversations alone."
+      }
+    ]
+  },
+  {
+    "slug": "who-is-responsible-for-school-health-care-plan",
+    "title": "Who at School Is Responsible for Your Child's Pediatric Health Care Plan Day to Day?",
+    "excerpt": "If your child has a health care plan at school, knowing exactly who does what each day brings real peace of mind. Here's a plain-language guide to the roles involved.",
+    "metaDescription": "Wondering who at school carries out your child's pediatric health care plan each day? Learn the roles, responsibilities, and how to keep everyone coordinated.",
+    "tags": [
+      "pediatric health care plan",
+      "school nurse responsibilities",
+      "504 plan",
+      "IHP school",
+      "pediatric care navigation"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-10-24",
+    "prettyDate": "October 24, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "If the school nurse is only on campus part-time, who is responsible for my child's health care plan the rest of the day?",
+        "a": "The plan should name specific trained individuals, often called delegates or designated staff, who are authorized to carry out routine steps when the nurse is off-site. This may include trained health aides, front-office staff, or classroom staff with documented training, typically supervised by the nurse. A strong plan names the primary person, a backup, and how they reach the nurse or emergency services."
+      },
+      {
+        "q": "Can I ask the school for a single point of contact for my child's health care plan?",
+        "a": "Yes. Many families request one named coordinator, often the school nurse or 504/IEP case manager, who owns communication with the family. A single point of contact reduces dropped messages and makes it easier to confirm who handled your child's needs on any given day."
+      }
+    ]
+  },
+  {
+    "slug": "bring-pediatric-medical-input-school-meeting-2",
+    "title": "How to Bring Your Pediatric Medical Team's Input Into a School Meeting",
+    "excerpt": "A practical, parent-friendly guide to gathering, organizing, and presenting your child's medical team's input so it lands clearly in an IEP or 504 meeting.",
+    "metaDescription": "Learn how to bring your pediatric medical team's input into a school IEP or 504 meeting so providers' recommendations are clearly heard and organized.",
+    "tags": [
+      "pediatric IEP meeting",
+      "504 plan",
+      "medical input for school",
+      "pediatric care navigation",
+      "parent advocacy"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-10-24",
+    "prettyDate": "October 24, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I organize medical input so the school can actually use it?",
+        "a": "Create a one-to-two page summary on top of your providers' letters. Include your child's name and date of birth, each provider's contact details, the plain-language points they made, and the date of each letter. Attach the full letters behind it, bring copies for everyone, and email the packet to the meeting coordinator a few days ahead."
+      },
+      {
+        "q": "Can I have my child's provider join the school meeting?",
+        "a": "Sometimes. Many providers can't attend in person but may join briefly by phone or video, or answer written questions afterward. Ask early, and note the provider's availability for follow-up questions in your packet. A release allowing the school and clinic to communicate directly can also help."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-secondary-insurance-primary-coordination",
     "title": "How Secondary Insurance Works Alongside Primary for a Pediatric Patient: A Parent's Guide",
     "excerpt": "If your child has two insurance plans, the way they work together isn't random. Here's a plain-language guide to coordination of benefits and how to keep your pediatric claims organized.",
