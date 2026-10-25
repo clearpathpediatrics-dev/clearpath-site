@@ -1,5 +1,93 @@
 [
   {
+    "slug": "pediatric-medication-reconciliation-how-to-ask-2",
+    "title": "What a Pediatric Medication Reconciliation Is and How to Ask for One",
+    "excerpt": "A medication reconciliation is one of the simplest ways to catch mistakes on your child's medication list. Here's what it is and how to request one.",
+    "metaDescription": "Learn what a pediatric medication reconciliation is, why it matters for your child's safety, and exactly how to ask your care team for one with confidence.",
+    "tags": [
+      "pediatric medication reconciliation",
+      "pediatric medication list",
+      "medical paperwork",
+      "pediatric care navigation",
+      "medication safety for kids"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-10-25",
+    "prettyDate": "October 25, 2026",
+    "readMinutes": 4,
+    "faq": [
+      {
+        "q": "How do I ask my child's provider for a medication reconciliation?",
+        "a": "You can use plain language, such as: \"Can we do a full medication reconciliation today? I want to make sure your list matches what I'm actually giving at home.\" Bring your current list or the medication bottles, confirm each one as the provider reads them back, and ask for a printed or portal copy of the final reconciled list before you leave."
+      },
+      {
+        "q": "What is a pediatric medication reconciliation?",
+        "a": "It's a careful, side-by-side review of every medication your child takes compared against what each provider's record shows, including name, strength, dose, frequency, and route. The goal is to produce one single, accurate list that every provider agrees on and to catch any differences, duplicates, or outdated entries."
+      },
+      {
+        "q": "What if two providers' medication lists don't agree?",
+        "a": "Mismatches are common and are exactly why reconciliation exists. Point out the specific difference and ask the prescribing provider to confirm which instruction is current. The clinical decision belongs to your provider; your role is to surface the mismatch and get the correct version in writing."
+      }
+    ]
+  },
+  {
+    "slug": "store-pediatric-medical-documents-both-parents-reach",
+    "title": "How to Store Pediatric Medical Documents So Both Parents Can Reach Them",
+    "excerpt": "A simple, practical system for keeping your child's pediatric medical paperwork organized and accessible to both parents — whether you share a home or not.",
+    "metaDescription": "Learn how to store your child's pediatric medical documents so both parents can access them anytime. A practical guide to shared, organized paperwork that works.",
+    "tags": [
+      "pediatric medical documents",
+      "medical paperwork organization",
+      "shared medical records",
+      "pediatric care navigation",
+      "parent document storage"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-10-25",
+    "prettyDate": "October 25, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How can co-parents in separate homes share medical documents?",
+        "a": "Use a shared cloud folder both parents can view and add to, and agree on who uploads what — for example, whichever parent attends an appointment uploads the summary within a day or two. Many patient portals also allow more than one parent or guardian to have a separate login, so both receive the same updates directly. Ask the provider's office about this option."
+      },
+      {
+        "q": "What should be in a quick-reach medical file both parents can grab fast?",
+        "a": "Include the current medication list exactly as written by your provider, copies of insurance cards, a list of your child's providers with phone numbers, any active care plan or instructions, and emergency contact and consent forms. Keep it as its own small set — both digital and printed — and update it whenever a provider changes something."
+      }
+    ]
+  },
+  {
+    "slug": "organise-pediatric-dme-supply-paperwork",
+    "title": "How to Organise Pediatric DME and Supply Paperwork: A Parent's Filing System That Works",
+    "excerpt": "DME and medical supply paperwork pile up fast. Here's a calm, practical way to organise it all so reorders, authorizations, and renewals never catch you off guard.",
+    "metaDescription": "Learn how to organise pediatric DME and supply paperwork with a simple filing system that keeps orders, authorizations, and reorders easy to find when you need them.",
+    "tags": [
+      "pediatric DME paperwork",
+      "medical supply organization",
+      "durable medical equipment",
+      "pediatric care navigation",
+      "parent medical filing system"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-10-25",
+    "prettyDate": "October 25, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How long should I keep pediatric DME and supply paperwork?",
+        "a": "Keep anything tied to active coverage, warranties, or current equipment for as long as your child uses that item, and hold authorization and billing records for several years in case of a coverage or billing question. Delivery slips for consumables can usually be cleared once the next matching order arrives. When unsure, keep insurance and authorization documents longer, since they're hardest to recreate."
+      },
+      {
+        "q": "How do I keep track of DME reorders and renewals so I don't run out?",
+        "a": "Use two clocks. Set a supply reminder a week or two before you typically run low based on reorder frequency, and set a paperwork reminder 30 to 60 days before any authorization or prescription expires. Link a calendar alert to each item on your master list, and keep a running note of who you spoke with and what was promised to make follow-ups easier."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-iep-not-being-followed-2",
     "title": "What to Do If Your Child's Pediatric IEP Is Not Being Followed: A Parent's Action Guide",
     "excerpt": "When the IEP on paper isn't matching what's happening at school, here's how to document, raise it the right way, and escalate calmly so your child gets the services they're owed.",
