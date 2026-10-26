@@ -1,5 +1,93 @@
 [
   {
+    "slug": "pediatric-handover-document-new-provider-2",
+    "title": "How to Prepare a Pediatric Handover Document for a New Provider",
+    "excerpt": "Meeting a new provider for your child? A clear handover document saves time and stress. Here's how to build one that tells your child's story at a glance.",
+    "metaDescription": "Learn how to prepare a pediatric handover document for a new provider so every appointment starts with your child's full story organized and ready.",
+    "tags": [
+      "pediatric handover document",
+      "new provider pediatric",
+      "pediatric care coordination",
+      "pediatric medical summary",
+      "parent health organization"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-10-26",
+    "prettyDate": "October 26, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I decide what to include in a pediatric handover document?",
+        "a": "Include anything a new provider would need to understand your child safely in the first ten minutes: current diagnoses as worded by your providers, medications and doses as prescribed, allergies, current care team contacts, and recent key events with dates. Check that each item is current, comes from your providers rather than a guess, and would cause confusion if left out. Point to the full records for everything else."
+      },
+      {
+        "q": "How do I keep a pediatric handover document accurate over time?",
+        "a": "Update it the moment something changes — after a medication adjustment, new referral, or discharge — rather than reconstructing it later. Date the document at the top, keep one master version both caregivers can reach, and read it through once before each new-provider visit to confirm nothing has shifted."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-test-result-never-comes-back",
+    "title": "What to Do When a Pediatric Test Result Never Comes Back: A Parent's Follow-Up Guide",
+    "excerpt": "Your child had a lab draw or scan weeks ago and you've heard nothing. Here's a calm, step-by-step way to track down a missing pediatric test result and make sure nothing falls through the cracks.",
+    "metaDescription": "A missing pediatric test result? Learn the practical steps to track down lab, imaging, or specialist results and keep your child's care moving forward.",
+    "tags": [
+      "pediatric test results",
+      "pediatric care coordination",
+      "missing lab results",
+      "parent health navigation",
+      "pediatric follow-up"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-10-26",
+    "prettyDate": "October 26, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How long should you wait before following up on a pediatric test result?",
+        "a": "Most routine labs return within a few days to about a week, while imaging and specialized tests can take longer. If you haven't heard anything within one to two weeks and no one gave you a specific timeline, it's reasonable to follow up. You never need to wait silently just because the office said they'd call."
+      },
+      {
+        "q": "What should I do if the office can't find my child's test result?",
+        "a": "Call the facility that performed the test directly, confirm it was completed, and ask them to resend the report to your ordering provider. Request a copy for yourself too. Then follow up with the ordering office to confirm they received it and that the right provider reviewed it."
+      },
+      {
+        "q": "How do I keep a pediatric test result from going missing again?",
+        "a": "Keep a simple tracking list of every ordered test: the test name, date, who ordered it, and the expected turnaround. Cross items off only once you've confirmed the result was both received and reviewed. This habit catches missing results early."
+      }
+    ]
+  },
+  {
+    "slug": "track-pediatric-specialist-responsibilities-2",
+    "title": "How to Keep Track of What Each Pediatric Specialist Is Responsible For",
+    "excerpt": "When your child sees several specialists, it's easy to lose track of who handles what. Here's a simple, practical system for mapping each role so nothing falls through the cracks.",
+    "metaDescription": "Learn how to keep track of what each pediatric specialist is responsible for with a simple parent-friendly system that keeps your child's care team organized.",
+    "tags": [
+      "pediatric specialist coordination",
+      "pediatric care team",
+      "parent organization",
+      "pediatric care navigation",
+      "managing multiple specialists"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-10-26",
+    "prettyDate": "October 26, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I know which specialist is responsible for a specific issue?",
+        "a": "Ask directly at the visit: \"Which part of my child's care are you managing, and which parts belong to someone else?\" Write the answer in their own words, and ask who to call between visits with questions. If you're unsure who owns a decision, your child's primary pediatrician can help you sort out the lanes."
+      },
+      {
+        "q": "What should I do when two specialists give overlapping instructions?",
+        "a": "Don't try to decide the clinical question yourself. Document both instructions, note which provider said what and when, and bring the overlap to your primary pediatrician or the most involved specialist, asking them to clarify who is taking the lead so you follow the right plan."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-medication-reconciliation-how-to-ask-2",
     "title": "What a Pediatric Medication Reconciliation Is and How to Ask for One",
     "excerpt": "A medication reconciliation is one of the simplest ways to catch mistakes on your child's medication list. Here's what it is and how to request one.",
