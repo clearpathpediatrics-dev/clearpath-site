@@ -1,5 +1,89 @@
 [
   {
+    "slug": "who-to-call-pediatric-feeding-pump-vent-alarm-home-2",
+    "title": "Who to Call When a Pediatric Feeding Pump or Vent Alarms at Home",
+    "excerpt": "When a feeding pump or ventilator alarms at home, every second of confusion feels longer. Here's how to organize your contacts so you always know who to call first.",
+    "metaDescription": "Know exactly who to call when your child's pediatric feeding pump or ventilator alarms at home, so you can respond calmly and reach the right help fast.",
+    "tags": [
+      "pediatric feeding pump alarm",
+      "pediatric ventilator alarm",
+      "home DME support",
+      "pediatric home nursing",
+      "medical equipment troubleshooting"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-10-27",
+    "prettyDate": "October 27, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "My child's feeding pump keeps alarming but she seems fine. Who do I call first?",
+        "a": "If your child appears well and your care team has already explained how to tell an emergency from a nuisance alarm, the first call for a persistent equipment alarm is usually your DME provider's 24/7 technical support line. They can explain what the alarm means on your specific model. If anything about your child's condition concerns you, follow the emergency plan your providers gave you instead."
+      },
+      {
+        "q": "Who do I call if the ventilator alarm won't stop in the middle of the night?",
+        "a": "Follow the emergency action plan your child's pulmonology or respiratory team created with you. That plan should spell out immediate steps, backup equipment, and when to call 911 versus your DME provider or respiratory therapist. If you don't have a written plan, ask your respiratory provider to create one with you."
+      }
+    ]
+  },
+  {
+    "slug": "prepare-home-before-pediatric-equipment-delivery-2",
+    "title": "How to Prepare Your Home Before Pediatric Medical Equipment Is Delivered",
+    "excerpt": "A room-by-room checklist to get your home ready before pediatric medical equipment arrives, so delivery day feels calm, organized, and manageable.",
+    "metaDescription": "A practical parent's checklist for preparing your home before pediatric medical equipment and DME is delivered, so delivery day goes smoothly and stress-free.",
+    "tags": [
+      "pediatric DME",
+      "home medical equipment",
+      "preparing home for equipment",
+      "pediatric home nursing",
+      "equipment delivery checklist"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-10-27",
+    "prettyDate": "October 27, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Do I need to change anything about my home's electricity or internet before pediatric equipment is delivered?",
+        "a": "Ask your supplier exactly what the equipment needs. Some items use a standard wall outlet, some need regular charging, and some connect to the internet. Count your outlets, avoid overloading a single power strip, confirm whether to plug directly into the wall, and make sure Wi-Fi reaches the room if the device connects online. Your supplier and licensed providers remain the people who guide how the equipment is used."
+      },
+      {
+        "q": "What should I have ready on delivery day itself?",
+        "a": "Keep your phone charged with the supplier's number handy, secure pets, and clear the delivery path. Have an adult available to answer questions and watch any setup demonstration, taking notes or a short video. Ask the team to show you how to turn it on and off and how to clean it, and confirm you have a user manual and service phone number in writing before they leave."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-equipment-arrives-broken-or-wrong",
+    "title": "What to Do When Pediatric Medical Equipment Arrives Broken or Wrong: A Parent's Action Guide",
+    "excerpt": "Opening a box to find your child's medical equipment damaged or incorrect is stressful. Here's a calm, step-by-step way to document the problem and get it fixed quickly.",
+    "metaDescription": "Pediatric DME arrived broken or wrong? Learn exactly who to call, what to document, and how to get a replacement fast so your child isn't left without equipment.",
+    "tags": [
+      "pediatric DME",
+      "broken medical equipment",
+      "durable medical equipment replacement",
+      "home nursing supplies",
+      "pediatric care navigation"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-10-27",
+    "prettyDate": "October 27, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Who do I call first when pediatric DME arrives broken or wrong?",
+        "a": "Call the durable medical equipment (DME) supplier that delivered it — their number is on the packing slip or box. They can authorize a return, repair, or replacement. Give them the order number, describe the issue, and ask about delivery timing, loaner availability, and a reference ticket number to track your follow-ups."
+      },
+      {
+        "q": "What if the supplier says the item is correct but it doesn't fit or work for my child?",
+        "a": "If the equipment matches the order but still isn't right, the issue may be the original order. Report specifics to your child's prescribing provider, who can review whether a different model, size, or specification is needed and submit an updated order, since the supplier generally can't change what was prescribed."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-handover-document-new-provider-2",
     "title": "How to Prepare a Pediatric Handover Document for a New Provider",
     "excerpt": "Meeting a new provider for your child? A clear handover document saves time and stress. Here's how to build one that tells your child's story at a glance.",
