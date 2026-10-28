@@ -1,5 +1,93 @@
 [
   {
+    "slug": "what-to-send-pediatric-second-opinion-appointment",
+    "title": "What to Send Ahead of a Pediatric Second Opinion Appointment: A Parent's Checklist",
+    "excerpt": "Sending the right records ahead of a pediatric second opinion means the specialist can actually dig in on visit day instead of starting from scratch. Here's your send-ahead checklist.",
+    "metaDescription": "Learn exactly what records to send ahead of a pediatric second opinion appointment so the new specialist is ready and your visit isn't wasted repeating steps.",
+    "tags": [
+      "pediatric second opinion",
+      "specialist referral",
+      "medical records",
+      "pediatric care navigation",
+      "appointment preparation"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-10-28",
+    "prettyDate": "October 28, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should I send ahead of a pediatric second opinion appointment?",
+        "a": "Send a focused, labeled packet: a one-page summary of your main concern, relevant specialist notes and visit summaries, test and lab results with dates, actual imaging (not just reports), a current medication list with doses and prescribers, and any required referral or insurance authorization paperwork. This lets the new specialist understand your child quickly instead of rebuilding the timeline during your visit."
+      },
+      {
+        "q": "How far in advance should I send records for a second opinion?",
+        "a": "Aim to have records delivered at least one to two weeks before the appointment. Specialists often review files the day before, and offices need time to scan, upload, and route documents. Call ahead to ask the best way to send records and who they should be addressed to, since practices vary between secure portals, fax, and records email."
+      },
+      {
+        "q": "How do I confirm the records actually arrived and get seen?",
+        "a": "Request confirmation that the file is in your child's chart by name, not just that a fax went through. Label every document with your child's full name and date of birth, keep a complete copy of what you sent, and bring a printed backup or imaging disc to the appointment in case anything is missing."
+      }
+    ]
+  },
+  {
+    "slug": "ask-pediatrician-second-opinion-without-offending-2",
+    "title": "How to Ask Your Pediatrician for a Second Opinion Without Offending Them",
+    "excerpt": "Wondering how to ask your pediatrician for a second opinion without hurting feelings or the relationship? Here are respectful, practical ways to raise it.",
+    "metaDescription": "Learn how to ask your pediatrician for a second opinion without damaging the relationship. Practical, respectful scripts and steps for stressed parents.",
+    "tags": [
+      "pediatric second opinion",
+      "specialist referral",
+      "pediatric care navigation",
+      "parent advocacy",
+      "pediatrician communication"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-10-28",
+    "prettyDate": "October 28, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I bring up a second opinion without sounding distrustful?",
+        "a": "Lead with appreciation and curiosity rather than doubt. Try: \"I really value your care, and because this feels like a big decision, I'd feel more settled getting another set of eyes on it. Could you help me arrange a second opinion?\" This frames your pediatrician as a helper, not a defendant, and anchors the request to your own need for confidence rather than any criticism of their judgment."
+      },
+      {
+        "q": "What if I'm worried about my pediatrician's reaction to a second opinion request?",
+        "a": "It's natural to feel nervous, but don't let that stop you. Choose a calm, unrushed moment, be honest about your nerves, and thank them for understanding. Saying something like \"I hope this doesn't come across the wrong way — I really respect you\" disarms awkwardness. A good pediatrician welcomes reasonable second opinions, and a defensive reaction is useful information too."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-supply-inventory-never-run-out-2",
+    "title": "How to Keep a Pediatric Supply Inventory So You Never Run Out",
+    "excerpt": "A simple, repeatable way to track your child's medical supplies, set reorder points, and reorder on time — so you're never scrambling at the last minute.",
+    "metaDescription": "Learn how to build a pediatric supply inventory system that tracks DME and medical supplies, flags reorder points, and helps you never run out of essentials.",
+    "tags": [
+      "pediatric supply inventory",
+      "pediatric DME supplies",
+      "home nursing supplies",
+      "pediatric supply tracking",
+      "medical supply reorder"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-10-28",
+    "prettyDate": "October 28, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How often should I count my child's medical supplies?",
+        "a": "A quick weekly count on a set day works well for most families — pick something easy to remember, like Sunday evening. Compare what's on hand to your reorder points and flag anything close to running low. Keep a running 'reorder now' note during the week, and glance at high-use items mid-week."
+      },
+      {
+        "q": "What's the best way to track reorders so nothing slips through?",
+        "a": "Keep a dated log of when you placed each order, what you ordered, and the expected delivery date. This lets you spot overdue shipments and follow up before you run out, and gives you order details to reference if you need to call the supplier. Confirm each delivery against your order so shortages are caught the same day."
+      }
+    ]
+  },
+  {
     "slug": "who-to-call-pediatric-feeding-pump-vent-alarm-home-2",
     "title": "Who to Call When a Pediatric Feeding Pump or Vent Alarms at Home",
     "excerpt": "When a feeding pump or ventilator alarms at home, every second of confusion feels longer. Here's how to organize your contacts so you always know who to call first.",
