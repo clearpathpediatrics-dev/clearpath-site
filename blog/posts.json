@@ -1,5 +1,89 @@
 [
   {
+    "slug": "read-pediatric-prior-authorization-denial-letter-2",
+    "title": "How to Read a Pediatric Prior Authorization Denial Letter: A Parent's Guide",
+    "excerpt": "A denial letter can feel like a wall of confusing language. Here's a calm, section-by-section guide to understanding what your child's prior authorization denial actually says.",
+    "metaDescription": "Learn how to read a pediatric prior authorization denial letter, find the key sections, and understand your next steps so you can organize an appeal with confidence.",
+    "tags": [
+      "pediatric prior authorization",
+      "insurance denial letter",
+      "pediatric appeals",
+      "parent insurance guide",
+      "prior authorization denial"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-10-29",
+    "prettyDate": "October 29, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What does \"medical necessity\" mean on a pediatric denial letter?",
+        "a": "It doesn't mean your child doesn't need the service. It means the insurer's reviewer decided the documentation they received didn't match their internal coverage criteria. The usual path forward is to ask your child's ordering provider what supporting information the insurer wants, so it can be added to an appeal. The clinical reasoning belongs to your licensed provider."
+      },
+      {
+        "q": "Who should I call first after a pediatric prior authorization denial?",
+        "a": "Start with the member services number on the letter or your child's insurance card, with the case number ready. Ask them to confirm the denial reason in plain language and what would address it. Then contact the provider's office that submitted the request, since appeals usually need updated information from them. Keep a log of every call."
+      }
+    ]
+  },
+  {
+    "slug": "waiting-for-insurance-to-approve-pediatric-therapy",
+    "title": "What to Do While Waiting for Insurance to Approve a Pediatric Therapy",
+    "excerpt": "The approval limbo for a pediatric therapy can feel endless. Here are calm, practical steps to stay organized and keep things moving while you wait.",
+    "metaDescription": "Waiting on insurance to approve a pediatric therapy? Learn practical steps to stay organized, track your prior authorization, and keep care moving forward.",
+    "tags": [
+      "pediatric prior authorization",
+      "pediatric therapy approval",
+      "insurance appeals",
+      "pediatric care navigation",
+      "prior authorisation waiting"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-10-29",
+    "prettyDate": "October 29, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Can my child start therapy before insurance approves it?",
+        "a": "That's a decision for your child's licensed provider and the therapy practice, not one to make alone. Some families ask about a self-pay or evaluation-only visit while authorization is pending and whether it might be reimbursed later; others are advised to wait. Ask the practice directly what can safely begin now and what it would cost, and get the answer in writing."
+      },
+      {
+        "q": "What should I do if the wait goes past the promised timeline?",
+        "a": "Call the insurer, ask why the decision is delayed, and request the new expected date in writing. Ask whether it's still in review. If it was denied, request the denial reason in writing and the appeal deadline right away, then loop in your child's provider, since their documentation usually anchors an appeal."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-second-opinion-vs-transferring-care-2",
+    "title": "Pediatric Second Opinion vs. Transferring Care: What the Difference Means Practically",
+    "excerpt": "A second opinion and transferring care sound similar but work very differently in practice. Here's what each one actually means for your child's records, appointments, and ongoing team.",
+    "metaDescription": "Confused about a pediatric second opinion vs. transferring care? Learn the practical difference, how records flow, and what each means for your family.",
+    "tags": [
+      "pediatric second opinion",
+      "transferring pediatric care",
+      "pediatric specialist referrals",
+      "pediatric care navigation",
+      "changing pediatric providers"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-10-29",
+    "prettyDate": "October 29, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Can a pediatric second opinion turn into transferring care?",
+        "a": "Yes, and it happens often. Families frequently start with a second opinion, like what they hear, and then decide to transfer ongoing care. But these are still two separate steps — getting a second opinion does not automatically move your child to the new provider. If you decide to transfer, you'd then establish care, move records fully, and notify the original team."
+      },
+      {
+        "q": "Which option keeps my child's current pediatric provider involved?",
+        "a": "A second opinion keeps your current provider involved, because they stay on the team while another provider shares a perspective. Transferring care generally does not keep them involved, because the new provider takes over the ongoing relationship. Knowing which outcome you want helps you ask for the right thing."
+      }
+    ]
+  },
+  {
     "slug": "what-to-send-pediatric-second-opinion-appointment",
     "title": "What to Send Ahead of a Pediatric Second Opinion Appointment: A Parent's Checklist",
     "excerpt": "Sending the right records ahead of a pediatric second opinion means the specialist can actually dig in on visit day instead of starting from scratch. Here's your send-ahead checklist.",
