@@ -1,5 +1,93 @@
 [
   {
+    "slug": "how-long-pediatric-insurance-appeal-takes-2",
+    "title": "How Long a Pediatric Insurance Appeal Takes: A Parent's Timeline Guide",
+    "excerpt": "A clear, parent-friendly breakdown of how long a pediatric insurance appeal usually takes, from standard reviews to expedited and external ones, so you know what to expect.",
+    "metaDescription": "Wondering how long a pediatric insurance appeal takes? Learn standard, expedited, and external review timelines so you can plan and track your child's appeal with le",
+    "tags": [
+      "pediatric insurance appeal",
+      "appeal timeline",
+      "prior authorization denial",
+      "expedited appeal",
+      "parent navigation guide"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-10-30",
+    "prettyDate": "October 30, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How long does a standard pediatric insurance appeal take?",
+        "a": "Standard internal appeals for services your child hasn't yet received are often decided within about 30 days, while appeals for care already received are commonly around 60 days. The clock usually starts when the insurer receives your complete appeal. Your plan's denial letter and handbook give the exact timelines for your situation."
+      },
+      {
+        "q": "How long does an expedited pediatric appeal take?",
+        "a": "Expedited or urgent appeals are generally decided within about 72 hours, and sometimes sooner. To qualify, your child's treating provider usually needs to document why waiting would jeopardize your child's health."
+      },
+      {
+        "q": "Does the appeal timeline start when I mail it or when they receive it?",
+        "a": "In most cases the clock starts when the insurer receives your complete appeal, not the day you sent it. A confirmed delivery date from a fax confirmation, certified mail receipt, or portal timestamp helps you know when to expect a decision."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-letter-of-medical-necessity-what-to-include-2",
+    "title": "What a Pediatric Letter of Medical Necessity Should Actually Say",
+    "excerpt": "A strong letter of medical necessity can make or break an insurance request. Here's what the letter should actually contain so you know what to look for before it's submitted.",
+    "metaDescription": "Learn what a pediatric letter of medical necessity should include, from diagnosis codes to failed alternatives, so you can organize a stronger insurance request.",
+    "tags": [
+      "letter of medical necessity",
+      "pediatric prior authorization",
+      "insurance appeals",
+      "medical necessity letter",
+      "pediatric insurance denial"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-10-30",
+    "prettyDate": "October 30, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should a letter of medical necessity actually say?",
+        "a": "It should clearly answer four questions: who the child is, exactly what is being requested, why that specific child needs it, and what has already been tried. It should state the diagnosis with matching codes, name the exact item or service, explain child-specific clinical reasoning, and be signed and dated by the ordering provider on letterhead."
+      },
+      {
+        "q": "Should I write the letter of medical necessity myself as a parent?",
+        "a": "No. The letter must come from your child's licensed provider because it reflects clinical judgment and carries their signature. You can support it by sharing a timeline of what's been tried, home observations, and the exact item or service name, so your provider has the details needed to write a complete letter."
+      }
+    ]
+  },
+  {
+    "slug": "request-written-pediatric-denial-reason-policy-language",
+    "title": "How to Request the Written Pediatric Denial Reason and Policy Language From Your Insurer",
+    "excerpt": "When your child's prior authorization is denied, the exact written reason and the policy language behind it are the two documents you need most. Here's how to ask for them.",
+    "metaDescription": "Learn how to request the written denial reason and policy language for a pediatric prior authorization denial, so you can organize a clear, well-documented appeal.",
+    "tags": [
+      "pediatric prior authorization",
+      "insurance denial appeal",
+      "written denial reason",
+      "policy language request",
+      "pediatric care navigation"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-10-30",
+    "prettyDate": "October 30, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I actually request the written denial reason?",
+        "a": "Call the member services number on your insurance card or use the plan portal, and request the written denial notice with the specific reason plus the medical or coverage policy used. Ask how and when it will be sent, and record the date, representative's name, and a reference number for your files."
+      },
+      {
+        "q": "How do I get the specific policy language the insurer used?",
+        "a": "Ask the insurer to identify the policy by exact name or number and to send the full criteria. If directed to a website, ask for the specific document that applied to your denial date, since policies change over time. Request it in writing so you have a dated record to share with your child's provider."
+      }
+    ]
+  },
+  {
     "slug": "read-pediatric-prior-authorization-denial-letter-2",
     "title": "How to Read a Pediatric Prior Authorization Denial Letter: A Parent's Guide",
     "excerpt": "A denial letter can feel like a wall of confusing language. Here's a calm, section-by-section guide to understanding what your child's prior authorization denial actually says.",
