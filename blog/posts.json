@@ -1,5 +1,89 @@
 [
   {
+    "slug": "pediatric-deductible-out-of-pocket-maximum-explained-2",
+    "title": "How a Pediatric Deductible and Out-of-Pocket Maximum Actually Work: A Parent's Guide",
+    "excerpt": "Confused by the deductible and out-of-pocket maximum on your child's insurance plan? Here's a plain-language walkthrough of how each one works and what actually counts toward them.",
+    "metaDescription": "Understand how a pediatric deductible and out-of-pocket maximum work, what counts toward each, and how to track your child's spending so no bill surprises you.",
+    "tags": [
+      "pediatric deductible",
+      "out-of-pocket maximum",
+      "pediatric insurance costs",
+      "understanding medical bills",
+      "family health plan"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-31",
+    "prettyDate": "October 31, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Does everything my child pays count toward the deductible and out-of-pocket maximum?",
+        "a": "Not always. Out-of-network care may not count the same way (or at all) toward your in-network totals, and services your plan doesn't cover usually don't count. Monthly premiums never count toward either. Check your specific plan's definitions or ask your insurer directly to be sure."
+      },
+      {
+        "q": "How can I track where my child stands during the year?",
+        "a": "Your insurer's member portal usually shows a running tally of how much of your deductible and out-of-pocket maximum you've met, often updated as claims process. You can also call member services on the back of the insurance card, and keep your own simple log of dates, services, and amounts paid."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-eob-bill-dont-match-which-to-trust-2",
+    "title": "Why Your Pediatric EOB and Bill Don't Match (And Which One to Trust)",
+    "excerpt": "If your child's Explanation of Benefits says one number and the doctor's bill says another, you're not alone. Here's why they differ and how to make sense of both.",
+    "metaDescription": "Confused why your pediatric EOB and the provider bill show different amounts? Learn why they differ, which to trust, and how to organize both with confidence.",
+    "tags": [
+      "pediatric EOB",
+      "medical bill vs EOB",
+      "pediatric billing",
+      "insurance explanation of benefits",
+      "parent billing guide"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-31",
+    "prettyDate": "October 31, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Which should I trust, the EOB or the medical bill?",
+        "a": "Trust the EOB to tell you what you actually owe — specifically the 'patient responsibility' line after discounts and plan payments. Only pay the provider's bill once it matches that amount and the EOB shows the claim as processed, not pending."
+      },
+      {
+        "q": "What should I do before paying a bill that doesn't match my EOB?",
+        "a": "Compare the date of service, provider, and claim number on both documents. Confirm the EOB shows the claim processed and that the bill equals the EOB's patient-responsibility amount. If they differ, wait for a corrected statement or call the billing office and insurer before paying."
+      }
+    ]
+  },
+  {
+    "slug": "read-pediatric-eob-statement-line-by-line-2",
+    "title": "How to Read a Pediatric EOB Statement Line by Line: A Parent's Guide",
+    "excerpt": "That 'This Is Not a Bill' statement from your insurer can feel like a foreign language. Here's how to read a pediatric EOB line by line so each number finally makes sense.",
+    "metaDescription": "Learn how to read a pediatric EOB statement line by line so you understand charges, allowed amounts, and what you may owe. A clear parent guide.",
+    "tags": [
+      "pediatric EOB",
+      "explanation of benefits",
+      "reading an EOB",
+      "pediatric medical bills",
+      "parent insurance guide"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-10-31",
+    "prettyDate": "October 31, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What do the codes and remark notes on my EOB mean?",
+        "a": "Those short codes and footnotes explain decisions the insurer made on each line — such as a charge going toward your deductible, a service needing prior authorization, or a claim being denied for a specific reason. Most EOBs include a key or legend, often on the back or last page, that defines each code. If one is unclear, call the member services number on your insurance card and ask them to explain that exact code for that specific claim number."
+      },
+      {
+        "q": "How do I check my EOB against the provider's bill?",
+        "a": "Place the EOB and the provider's bill side by side. The amount the provider bills you should match the 'patient responsibility' line on the EOB, not the full billed charge. If the bill is higher, it may be a billing error, a differently processed service, or a bill sent before the claim finished processing. Don't pay until both documents agree, and call the provider's billing office with your claim number if they don't."
+      }
+    ]
+  },
+  {
     "slug": "how-long-pediatric-insurance-appeal-takes-2",
     "title": "How Long a Pediatric Insurance Appeal Takes: A Parent's Timeline Guide",
     "excerpt": "A clear, parent-friendly breakdown of how long a pediatric insurance appeal usually takes, from standard reviews to expedited and external ones, so you know what to expect.",
