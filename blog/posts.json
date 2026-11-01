@@ -1,5 +1,89 @@
 [
   {
+    "slug": "pediatric-2-year-well-child-check-prepare-2",
+    "title": "What Happens at a Pediatric 2-Year Well-Child Check (And How to Prepare)",
+    "excerpt": "A warm, practical walkthrough of what typically happens at your child's 2-year well-child visit — plus a simple way to prepare so nothing gets missed.",
+    "metaDescription": "Wondering what happens at a pediatric 2-year well-child check? Learn the typical visit flow and how to prepare so you walk in calm and leave with answers.",
+    "tags": [
+      "pediatric well-child check",
+      "2-year checkup",
+      "developmental screening",
+      "well-child visit preparation",
+      "toddler health"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-01",
+    "prettyDate": "November 1, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How should I prepare for my child's 2-year well-child check?",
+        "a": "Before the visit, write down your top 3 questions or concerns, note your child's eating, sleep, and play routines, list the words and gestures your toddler uses, and bring your insurance card and vaccine record. Pack snacks and a comfort item to keep your toddler at ease. Prioritizing your questions ensures the most important ones get answered first."
+      },
+      {
+        "q": "What if I'm worried about my child's development at the 2-year visit?",
+        "a": "The well-child check is the right place to raise any concerns. Share specific examples — what you've noticed, when it started, and how often it happens. If your provider recommends a referral or further screening, write down who to contact and any timelines. A developmental screening is a snapshot, and your licensed provider will guide any next steps."
+      }
+    ]
+  },
+  {
+    "slug": "what-to-do-surprise-pediatric-bill-2",
+    "title": "What to Do When You Get a Surprise Pediatric Bill: A Parent's Step-by-Step Guide",
+    "excerpt": "An unexpected bill for your child's care can feel alarming. Here's a calm, practical order of steps to take before you pay a single dollar.",
+    "metaDescription": "Got a surprise pediatric bill? Learn exactly what to do first, who to call, and how to organize the paperwork so you can respond calmly and confidently.",
+    "tags": [
+      "surprise pediatric bill",
+      "pediatric medical bills",
+      "pediatric billing help",
+      "no surprises act",
+      "parent billing guide"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-11-01",
+    "prettyDate": "November 1, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Who should I call first about a surprise pediatric bill?",
+        "a": "Call your insurance company first, then the provider's billing office. Ask your insurer whether the claim was processed, what it covered and why, and whether the amount is truly your responsibility. Note the representative's name, date, and a reference number, then confirm the charges with the billing office."
+      },
+      {
+        "q": "What if the bill might be a surprise out-of-network charge?",
+        "a": "If your child was treated at an in-network facility but seen by an out-of-network provider, federal protections under the No Surprises Act may limit what you can be billed. Ask your insurer whether the charge is protected and ask the billing office to review it, keeping written notes of both answers."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-eob-vs-bill-mismatch-2",
+    "title": "Pediatric EOB vs. Bill Mismatch: Why the Numbers Differ and Which to Trust",
+    "excerpt": "Your child's EOB says one number and the provider's bill says another. Here's why they rarely match, what each document is actually for, and how to tell which figure to act on.",
+    "metaDescription": "Confused why your pediatric EOB and medical bill don't match? Learn what each document means, why the numbers differ, and which one to trust first.",
+    "tags": [
+      "pediatric EOB",
+      "medical bill mismatch",
+      "pediatric medical billing",
+      "explanation of benefits",
+      "pediatric healthcare costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-11-01",
+    "prettyDate": "November 1, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I compare my pediatric EOB and the bill line by line?",
+        "a": "Put both documents side by side and match them by date of service. On the EOB, find the 'patient responsibility' or 'amount you may owe' line; on the bill, find the 'amount due' or 'balance.' Once insurance has finished processing, those two numbers should agree. If they don't, note the date, service, and gap so you can reference it when you call."
+      },
+      {
+        "q": "What should I do if my pediatric EOB and bill still don't match?",
+        "a": "First confirm the claim has actually been processed, since an unprocessed claim is the most common reason for an unexpected balance. If the claim is processed but the bill exceeds the EOB's patient-responsibility amount, call the provider's billing office and ask them to reconcile the account with the processed EOB. Keep both documents, record who you speak with, and request any correction in writing."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-deductible-out-of-pocket-maximum-explained-2",
     "title": "How a Pediatric Deductible and Out-of-Pocket Maximum Actually Work: A Parent's Guide",
     "excerpt": "Confused by the deductible and out-of-pocket maximum on your child's insurance plan? Here's a plain-language walkthrough of how each one works and what actually counts toward them.",
