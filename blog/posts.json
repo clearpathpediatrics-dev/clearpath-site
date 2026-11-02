@@ -1,5 +1,89 @@
 [
   {
+    "slug": "disagree-pediatric-developmental-screening-result-2",
+    "title": "What to Do If You Disagree With Your Child's Pediatric Developmental Screening Result",
+    "excerpt": "If a developmental screening result doesn't match what you see at home, you have options. Here's how to ask the right questions, organize your observations, and move forward with confidence.",
+    "metaDescription": "Disagree with your child's pediatric developmental screening result? Learn practical, calm steps to ask questions, organize your notes, and get clear next steps.",
+    "tags": [
+      "pediatric developmental screening",
+      "well-child visit",
+      "developmental checks",
+      "parent advocacy",
+      "pediatric care navigation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-02",
+    "prettyDate": "November 2, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I tell my pediatrician I disagree with my child's developmental screening result?",
+        "a": "Approach it with curiosity rather than confrontation. Ask your provider to explain what the screening measures and how they interpret it, then share specific examples of what you observe at home — such as exact words your child uses or skills you've seen. Ask directly about next steps, like a re-screen, referral, or monitoring. Your daily observations are valuable information your provider can't gather in a short visit."
+      },
+      {
+        "q": "Can I ask for a re-screen or second opinion on a developmental screening?",
+        "a": "Yes. If you and your provider agree the result may not reflect your child's typical abilities, you can ask to repeat the screening at a later date or request a referral to a specialist like a developmental pediatrician. You can also ask about an early intervention evaluation, which in Arizona is often available at no cost. Seeking a closer look is a normal part of caring for your child."
+      }
+    ]
+  },
+  {
+    "slug": "track-pediatric-developmental-milestones-between-visits-3",
+    "title": "How to Track Pediatric Developmental Milestones Between Well-Child Visits",
+    "excerpt": "A warm, practical guide for parents on organizing and tracking your child's developmental milestones between well-child visits, so nothing gets lost between appointments.",
+    "metaDescription": "Learn simple, practical ways to track your child's pediatric developmental milestones between appointments so you walk into every well-child visit prepared.",
+    "tags": [
+      "pediatric developmental milestones",
+      "well-child visit prep",
+      "child development tracking",
+      "milestone checklist",
+      "pediatric care navigation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-02",
+    "prettyDate": "November 2, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I know which developmental milestones to watch for?",
+        "a": "Start with the age-based guidance your pediatrician gives you at each visit, and consider the free CDC \"Learn the Signs. Act Early.\" checklists as a framework for what to observe and note. Use them to track and record what you see — not to decide whether something is a concern. Bring any questions to your licensed provider, who interprets observations in the context of your child's full history."
+      },
+      {
+        "q": "How often should I update my milestone notes between appointments?",
+        "a": "There's no perfect schedule. Add a quick note whenever you notice something new, then do a short review a few days before each appointment. During that review, pull your observations into a short summary of your top three to five things to mention, so you're prepared even if the visit feels rushed."
+      }
+    ]
+  },
+  {
+    "slug": "what-to-bring-pediatric-well-child-visit-specialists",
+    "title": "What to Bring to a Pediatric Well-Child Visit When Your Child Sees Specialists",
+    "excerpt": "When your child sees multiple specialists, the well-child visit is the place where everything should come together. Here's exactly what to bring.",
+    "metaDescription": "A practical packing checklist for a pediatric well-child visit when your child sees specialists, so you arrive organized and nothing gets missed.",
+    "tags": [
+      "pediatric well-child visit",
+      "specialist care coordination",
+      "parent checklist",
+      "pediatric care navigation",
+      "developmental checks"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-02",
+    "prettyDate": "November 2, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I organize specialist information for a well-child visit without it becoming overwhelming?",
+        "a": "Use a single dated folder with one page per specialist, noting the provider, last visit date, what they manage, and the latest update. Put the newest documents on top and add a cover sheet with your top three questions, so your pediatrician can see the whole picture at a glance."
+      },
+      {
+        "q": "Should I bring records my pediatrician's office already has?",
+        "a": "When in doubt, yes. Records don't always transfer cleanly between systems, and documents can be stuck where they can't be seen during the visit. Bringing your own copy of recent specialist notes and test results prevents the common problem of a pediatrician who can't locate what a specialist sent."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-2-year-well-child-check-prepare-2",
     "title": "What Happens at a Pediatric 2-Year Well-Child Check (And How to Prepare)",
     "excerpt": "A warm, practical walkthrough of what typically happens at your child's 2-year well-child visit — plus a simple way to prepare so nothing gets missed.",
