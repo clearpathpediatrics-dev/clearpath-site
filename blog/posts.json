@@ -1,5 +1,89 @@
 [
   {
+    "slug": "set-up-pediatric-home-nursing-after-discharge",
+    "title": "How to Set Up Pediatric Home Nursing After a Hospital Discharge: A Parent's Guide",
+    "excerpt": "Bringing your child home with nursing support involves orders, insurance approval, and choosing an agency. Here's a calm, step-by-step way to get it organized.",
+    "metaDescription": "Learn how to set up pediatric home nursing after a hospital discharge, from orders and insurance to agency intake, so your child comes home organized and supported.",
+    "tags": [
+      "pediatric home nursing",
+      "hospital discharge",
+      "home health setup",
+      "pediatric care navigation",
+      "coming home from hospital"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-03",
+    "prettyDate": "November 3, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How does insurance approval for pediatric home nursing work?",
+        "a": "Home nursing usually requires authorization before it can start, based on the physician's order and documentation of medical need. The hospital case manager often submits the request. Confirm whether it's been submitted, which insurer or program is being billed, and how many hours were approved, and note the authorization number and renewal date."
+      },
+      {
+        "q": "What should I have ready before home nursing starts?",
+        "a": "Gather your child's discharge summary, the home nursing order, a current medication and equipment list, provider emergency contacts, and any written instructions. A short overview of your child's routine and comfort cues also helps each nurse provide consistent, familiar care."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-discharge-summary-contents-2",
+    "title": "What a Pediatric Discharge Summary Should Contain: A Parent's Guide",
+    "excerpt": "A clear breakdown of what a pediatric discharge summary should include, so you can organize your child's care at home and spot anything that's missing.",
+    "metaDescription": "Learn what a pediatric discharge summary should contain so you can organize your child's care at home with confidence and catch missing details early.",
+    "tags": [
+      "pediatric discharge summary",
+      "hospital discharge",
+      "pediatric care navigation",
+      "coming home from hospital",
+      "parent discharge guide"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-03",
+    "prettyDate": "November 3, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should a pediatric discharge summary include for follow-up care?",
+        "a": "It should include the providers your child needs to see, the recommended timing of each visit, whether appointments are already scheduled or left for you to book, phone numbers to call, any pending test results, and who will follow up on them. If a specialist was involved, it should note whether ongoing specialist care is expected."
+      },
+      {
+        "q": "How is a discharge summary different from discharge instructions?",
+        "a": "A discharge summary is the clinical record of the hospital stay — the narrative, diagnoses, and plan written largely for other providers and your records. Discharge instructions are the parent-facing, plain-language sheet telling you what to do day to day. You should receive both, and they should agree with each other."
+      }
+    ]
+  },
+  {
+    "slug": "what-to-ask-before-pediatric-hospital-discharge",
+    "title": "What to Ask Before Your Child Is Discharged From the Pediatric Hospital: A Parent's Checklist",
+    "excerpt": "Discharge day moves fast. Here are the practical questions to ask before your child leaves the hospital so you go home organized and clear on what comes next.",
+    "metaDescription": "Learn exactly what to ask before your child's pediatric hospital discharge so you leave organized, confident, and clear on next steps at home.",
+    "tags": [
+      "pediatric hospital discharge",
+      "discharge planning",
+      "coming home from hospital",
+      "pediatric care navigation",
+      "parent discharge checklist"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-03",
+    "prettyDate": "November 3, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should I ask about warning signs and who to call before discharge?",
+        "a": "Ask the team which signs mean you should call the clinic versus seek emergency care, and ask them to write it on your discharge papers. Request the daytime clinic line, the after-hours number, any direct line to the specialty team, and what to do on weekends, so you're not guessing when you're worried."
+      },
+      {
+        "q": "What paperwork and supplies should I leave the hospital with?",
+        "a": "Ask for a written discharge summary and instructions, a current medication list, any prescriptions, follow-up details, and contact numbers. Confirm what equipment or supplies you're leaving with today versus what's being delivered later, who delivers it, and who to call if it doesn't arrive. Also request any documentation needed for school or insurance."
+      }
+    ]
+  },
+  {
     "slug": "disagree-pediatric-developmental-screening-result-2",
     "title": "What to Do If You Disagree With Your Child's Pediatric Developmental Screening Result",
     "excerpt": "If a developmental screening result doesn't match what you see at home, you have options. Here's how to ask the right questions, organize your observations, and move forward with confidence.",
