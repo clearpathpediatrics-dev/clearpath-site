@@ -1,5 +1,93 @@
 [
   {
+    "slug": "parent-input-statement-pediatric-iep-2",
+    "title": "How to Write a Parent Input Statement for a Pediatric IEP: A Step-by-Step Guide",
+    "excerpt": "A parent input statement puts your observations, goals, and concerns in your child's IEP record. Here's how to write one that's organized, specific, and heard.",
+    "metaDescription": "Learn how to write a clear, confident parent input statement for your child's pediatric IEP so your voice is heard and your concerns are on the record.",
+    "tags": [
+      "pediatric IEP",
+      "parent input statement",
+      "IEP meeting preparation",
+      "special education",
+      "504 plans"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-11-04",
+    "prettyDate": "November 4, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should a parent input statement include?",
+        "a": "A parent input statement should include your child's strengths, your specific concerns, concrete examples from home, your goals for the year, and any questions you want the team to address. Focus on what helps the team understand your child as a whole person rather than trying to cover everything."
+      },
+      {
+        "q": "How do you keep a parent input statement focused and readable?",
+        "a": "Keep it to about one page, dated, and written in plain language using short paragraphs or bullet points. Stick to observations and goals rather than diagnoses, make one clear request per concern, and use headings so a busy reader can find each section quickly."
+      },
+      {
+        "q": "How do you make sure your parent input statement is on the record?",
+        "a": "Email it to your child's case manager a few days before the meeting and ask that it be attached to the IEP and reflected in the meeting notes. Bring printed copies, and at the meeting ask directly that your written input be noted in the record."
+      }
+    ]
+  },
+  {
+    "slug": "request-draft-pediatric-iep-before-meeting-2",
+    "title": "How to Request a Draft Pediatric IEP Before the Meeting: A Parent's Guide",
+    "excerpt": "Asking for a draft IEP before the meeting gives you time to read it closely and prepare. Here's how to request one, who to ask, and what to do with it.",
+    "metaDescription": "Learn how to request a draft IEP before your child's pediatric IEP meeting so you can review goals early, prepare questions, and walk in ready and confident.",
+    "tags": [
+      "pediatric IEP",
+      "draft IEP request",
+      "IEP meeting preparation",
+      "504 plan",
+      "special education parent guide"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-11-04",
+    "prettyDate": "November 4, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I ask the school for a draft IEP before the meeting?",
+        "a": "Send a short, friendly written request — usually email — to your child's case manager or special education coordinator at least a week or two before the meeting. Ask them to share a draft so you have time to review it and prepare questions. Email creates a helpful record, and a polite follow-up is fine if you don't hear back. Note that schools aren't always required to provide a full draft in advance, so frame it as a request."
+      },
+      {
+        "q": "What if the school says no or only sends part of the draft IEP?",
+        "a": "That's common and not a red flag. If a full draft isn't available, ask for whatever pieces are ready, such as proposed goals, evaluation summaries, or accommodations under discussion. You can also ask what the team expects to recommend. You always have the right to review the finished document, and you don't have to sign or agree to anything the day of the meeting if you need more time."
+      }
+    ]
+  },
+  {
+    "slug": "who-schedules-pediatric-follow-up-after-discharge-2",
+    "title": "Who Schedules Pediatric Follow-Up Appointments After Discharge (And How to Confirm Them)",
+    "excerpt": "After your child leaves the hospital, follow-up visits can slip through the cracks. Here's who's actually responsible for scheduling them and how to confirm every appointment is really on the books.",
+    "metaDescription": "Confused about who schedules pediatric follow-up appointments after hospital discharge? Learn who's responsible, how to confirm each one, and never miss a visit.",
+    "tags": [
+      "pediatric follow-up appointments",
+      "hospital discharge",
+      "pediatric care navigation",
+      "coming home after hospital",
+      "discharge instructions"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-04",
+    "prettyDate": "November 4, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Who schedules follow-up appointments after a pediatric hospital discharge?",
+        "a": "It varies. Some appointments are booked by the hospital or discharge planner before you leave, some require you to call and schedule yourself, and some are coordinated by your pediatrician. Because responsibility isn't always clearly stated, treat every follow-up as unscheduled until you have independently confirmed it with the receiving office."
+      },
+      {
+        "q": "What should I do if my child needs an urgent follow-up but I can't get an appointment in time?",
+        "a": "Call the discharging hospital unit or the discharge-questions number on your paperwork and explain the trouble booking within the recommended window. They may expedite the referral or offer alternatives. Keep notes of who you spoke with. Any question about whether a delay is safe should go to your child's licensed providers."
+      }
+    ]
+  },
+  {
     "slug": "set-up-pediatric-home-nursing-after-discharge",
     "title": "How to Set Up Pediatric Home Nursing After a Hospital Discharge: A Parent's Guide",
     "excerpt": "Bringing your child home with nursing support involves orders, insurance approval, and choosing an agency. Here's a calm, step-by-step way to get it organized.",
