@@ -1,5 +1,89 @@
 [
   {
+    "slug": "one-page-pediatric-medical-summary-checklist-2",
+    "title": "What Belongs on a One-Page Pediatric Medical Summary: A Parent's Checklist",
+    "excerpt": "A single, well-organized page can save you from repeating your child's whole story at every appointment. Here's exactly what to include on a one-page pediatric medical summary.",
+    "metaDescription": "Learn exactly what belongs on a one-page pediatric medical summary so any provider can understand your child fast. A clear parent's checklist to stay organized.",
+    "tags": [
+      "pediatric medical summary",
+      "pediatric paperwork",
+      "child health records",
+      "medically complex child",
+      "care navigation"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-11-05",
+    "prettyDate": "November 5, 2026",
+    "readMinutes": 4,
+    "faq": [
+      {
+        "q": "How much detail should I put on a one-page pediatric medical summary?",
+        "a": "Include only what a new provider needs right now: current medications, active diagnoses, allergies, devices, and care team contacts. Leave off resolved issues, long test results, and anything that would push past one page. Those details belong in your fuller records. The summary's value is speed and clarity, not completeness."
+      },
+      {
+        "q": "Who should I give my child's medical summary to?",
+        "a": "Keep copies in your bag, on your phone, and on the fridge. Share it with school nurses, babysitters, grandparents, urgent care staff, or a covering doctor — anyone who cares for your child when you aren't there to explain. Bring a fresh printout to specialist visits, and always let licensed providers make clinical decisions."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-care-binder-survives-er-visit-2",
+    "title": "How to Build a Pediatric Care Binder That Survives an ER Visit",
+    "excerpt": "An ER visit is stressful enough without digging for medication names and specialist numbers. Here's how to build a pediatric care binder that holds up when you need it most.",
+    "metaDescription": "Learn how to build a pediatric care binder that survives an ER visit, so your child's key medical info is organized, portable, and ready when minutes matter.",
+    "tags": [
+      "pediatric care binder",
+      "ER visit preparation",
+      "medical paperwork organization",
+      "pediatric medical records",
+      "emergency medical binder"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-11-05",
+    "prettyDate": "November 5, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should go in a pediatric ER binder?",
+        "a": "Include a one-page snapshot with your child's name, date of birth, diagnoses, current medications and doses, allergies, and devices. Add labeled sections for medications, diagnoses and history, baseline lab or imaging summaries, insurance and consent documents, and provider contacts. Keep copies rather than originals so nothing important is lost in a busy ER."
+      },
+      {
+        "q": "How do I keep a pediatric care binder from going out of date?",
+        "a": "Review it once a month and after every appointment, hospital stay, or medication change, updating the snapshot page right away when a dose changes. Date each version so the ER team knows how current it is, and keep a backup by photographing the snapshot page and insurance cards or saving a secure digital copy on your phone."
+      }
+    ]
+  },
+  {
+    "slug": "iep-vs-504-plan-medically-complex-pediatric-child-2",
+    "title": "IEP vs 504 Plan for a Medically Complex Pediatric Child: A Parent's Guide",
+    "excerpt": "If your child has complex medical needs, you may be weighing an IEP against a 504 plan. Here's a clear, practical look at how the two differ and how to prepare.",
+    "metaDescription": "Understand the difference between an IEP and a 504 plan for your medically complex pediatric child so you can prepare the right school support plan with confidence.",
+    "tags": [
+      "pediatric IEP vs 504",
+      "medically complex child school plan",
+      "504 plan pediatric",
+      "IEP eligibility",
+      "school health accommodations"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-11-05",
+    "prettyDate": "November 5, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "IEP vs 504 plan: what's the core difference for a medically complex child?",
+        "a": "An IEP changes what and how your child is taught and includes services with measurable goals and a formal evaluation process. A 504 plan changes the environment and conditions — like medication access, rest breaks, or health action plans — so your child can access a standard education. Your school team and your child's providers help determine which fits your child's needs."
+      },
+      {
+        "q": "Can a medically complex child have both an IEP and a 504 plan?",
+        "a": "Usually not at the same time, because an IEP already includes the accommodations a 504 plan would provide. If your child needs specialized instruction, medical accommodations are folded into the IEP. If your child only needs accommodations to access a standard education, a 504 plan can stand on its own."
+      }
+    ]
+  },
+  {
     "slug": "parent-input-statement-pediatric-iep-2",
     "title": "How to Write a Parent Input Statement for a Pediatric IEP: A Step-by-Step Guide",
     "excerpt": "A parent input statement puts your observations, goals, and concerns in your child's IEP record. Here's how to write one that's organized, specific, and heard.",
