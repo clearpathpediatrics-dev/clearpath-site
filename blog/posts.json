@@ -1,5 +1,93 @@
 [
   {
+    "slug": "how-to-ask-for-pediatric-care-conference-3",
+    "title": "How to Ask for a Pediatric Care Conference: A Parent's Step-by-Step Guide",
+    "excerpt": "When your child sees several providers, a care conference brings everyone to one table. Here's exactly how to request one, who to ask, and how to prepare.",
+    "metaDescription": "Learn how to ask for a pediatric care conference, who to contact, what to say, and how to prepare so your child's providers coordinate on one shared plan.",
+    "tags": [
+      "pediatric care conference",
+      "pediatric care coordination",
+      "care team meeting",
+      "medically complex child",
+      "parent advocacy"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-11-06",
+    "prettyDate": "November 6, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Who do I ask for a pediatric care conference?",
+        "a": "Start with your pediatrician's office, your child's case manager or care coordinator, or the specialist leading the most active part of care. Ask directly for help setting up a care conference, and if that person can't, ask who can."
+      },
+      {
+        "q": "How do I actually request a pediatric care conference?",
+        "a": "Put your request in writing by portal, email, or phone. Include your child's name and date of birth, a one-sentence reason, who you'd like included, your availability and preferred format, and your contact details. Follow up politely if you don't hear back within a few business days."
+      },
+      {
+        "q": "How do I prepare for a pediatric care conference?",
+        "a": "Write down your top three goals in priority order, note any conflicting instructions and who gave them, bring an updated medication and provider list, and ask who will write up and send you the agreed plan afterward."
+      }
+    ]
+  },
+  {
+    "slug": "who-owns-pediatric-follow-up-multiple-specialists-3",
+    "title": "Who Owns Pediatric Follow-Up When Several Specialists Are Involved?",
+    "excerpt": "When your child sees several specialists, follow-up can slip through the cracks. Here's how to figure out who's responsible for what — and how to keep it all connected.",
+    "metaDescription": "Confused about who owns pediatric follow-up when multiple specialists are involved? Learn how to identify the lead provider and keep your child's care on track.",
+    "tags": [
+      "pediatric care coordination",
+      "pediatric specialists",
+      "follow-up care",
+      "care team navigation",
+      "medically complex child"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-11-06",
+    "prettyDate": "November 6, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "For a child with multiple specialists, who is responsible for coordinating overall follow-up?",
+        "a": "In most cases, the primary care pediatrician serves as the coordinating or 'quarterback' provider, receiving specialist notes and watching for gaps or overlaps. For children with a dominant complex condition, a specific specialist or complex-care program may take the lead instead. The best step is to ask directly who serves as the overall coordinator and get that answer into the chart."
+      },
+      {
+        "q": "What should I do if it feels like nobody owns my child's follow-up?",
+        "a": "Name it plainly to your pediatrician and ask them to confirm who is tracking all follow-ups. Most primary care offices expect to coordinate and will step in once they know you need it. If your child has a complex-care clinic or case manager, they may hold this role. Until it's confirmed, keep a running list of open follow-up items with who owns each and its target date."
+      }
+    ]
+  },
+  {
+    "slug": "organise-pediatric-medication-list-several-prescribers-2",
+    "title": "How to Organise a Pediatric Medication List With Several Prescribers: A Parent's Guide",
+    "excerpt": "When your child sees multiple prescribers, keeping one clear, up-to-date medication list is one of the most powerful things you can do. Here's how to build and maintain it.",
+    "metaDescription": "Learn how to organise a pediatric medication list when several prescribers are involved, so every appointment runs smoother and nothing slips through the cracks.",
+    "tags": [
+      "pediatric medication list",
+      "medication organization",
+      "pediatric care navigation",
+      "multiple prescribers",
+      "medical paperwork"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-11-06",
+    "prettyDate": "November 6, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I keep a pediatric medication list accurate when different offices change things?",
+        "a": "Update your master list the same day a change happens, while instructions are fresh, and put a date at the top so everyone can see how current it is. Print or screenshot the latest version before each appointment, and do a quick monthly check against the actual bottles to catch anything out of date."
+      },
+      {
+        "q": "What should I do if two prescribers' instructions seem to conflict?",
+        "a": "Don't try to resolve a medication conflict yourself. Write down exactly what each office told you, including dates and the person who gave the instruction, and bring the discrepancy to the prescribing providers so they can sort it out. A clear written list makes that conversation faster and safer."
+      }
+    ]
+  },
+  {
     "slug": "one-page-pediatric-medical-summary-checklist-2",
     "title": "What Belongs on a One-Page Pediatric Medical Summary: A Parent's Checklist",
     "excerpt": "A single, well-organized page can save you from repeating your child's whole story at every appointment. Here's exactly what to include on a one-page pediatric medical summary.",
