@@ -1,5 +1,84 @@
 [
   {
+    "slug": "pediatric-private-duty-nursing-hours-approved-2",
+    "title": "How Pediatric Private Duty Nursing Hours Are Approved for a Child: A Parent's Guide",
+    "excerpt": "Wondering how private duty nursing hours get approved for your child? Here's how the process works, who makes the decision, and how to prepare the paperwork.",
+    "metaDescription": "Learn how pediatric private duty nursing hours are approved for a child, who decides, and what documentation helps you prepare and stay organized with confidence.",
+    "tags": [
+      "pediatric private duty nursing",
+      "home nursing approval",
+      "pediatric home health",
+      "nursing hours authorization",
+      "medically complex child"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-11-07",
+    "prettyDate": "November 7, 2026",
+    "readMinutes": 5,
+    "faq": []
+  },
+  {
+    "slug": "pediatric-nurse-navigator-vs-case-manager-vs-social-worker-3",
+    "title": "Pediatric Nurse Navigator vs. Case Manager vs. Social Worker: Who Does What",
+    "excerpt": "Nurse navigator, case manager, social worker — the titles blur together when you're overwhelmed. Here's a clear breakdown of who does what, so you can ask the right person for help.",
+    "metaDescription": "Confused by your pediatric care team roles? Learn how a nurse navigator, case manager, and social worker differ so you know exactly who to call for what.",
+    "tags": [
+      "pediatric care coordination",
+      "nurse navigator",
+      "pediatric case manager",
+      "pediatric social worker",
+      "care team roles"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-11-07",
+    "prettyDate": "November 7, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What is the difference between a pediatric nurse navigator and a case manager?",
+        "a": "A nurse navigator is typically an RN who helps you understand and sequence your child's care — explaining referrals, preparing questions, and keeping the big picture connected. A case manager focuses on logistics and approvals, such as discharge planning, arranging equipment or home nursing, and insurance authorizations. In short: navigators help you understand next steps, while case managers help get those steps arranged and covered."
+      },
+      {
+        "q": "When should I call a pediatric social worker instead of a navigator or case manager?",
+        "a": "Reach out to a social worker when the challenge is more about your family's practical and emotional support than the medical steps themselves — for example, transportation, lodging, financial-assistance programs, counseling referrals, or help coping with caregiving stress. If your question is about understanding care, start with a navigator; if it's about arranging or authorizing services, start with a case manager."
+      },
+      {
+        "q": "How do I know who to call on my child's care team?",
+        "a": "Match your question to each person's focus: a nurse navigator for understanding and sequencing care, a case manager for arranging or getting services authorized and covered, and a social worker for support, resources, and coping help. If you're unsure, ask whoever answers, 'Are you the right person for this, or can you point me to who is?' Good teams expect that question."
+      }
+    ]
+  },
+  {
+    "slug": "when-to-request-pediatric-care-conference",
+    "title": "When to Request a Pediatric Care Conference (And the Exact Words to Use)",
+    "excerpt": "Not sure when to ask for a pediatric care conference, or how to word the request? Here's a practical guide to timing, phrasing, and getting everyone on the same page.",
+    "metaDescription": "Learn when to request a pediatric care conference, who to call, and the exact phrasing that gets your child's care team in one room. Organize with confidence.",
+    "tags": [
+      "pediatric care conference",
+      "care team coordination",
+      "pediatric specialists",
+      "parent advocacy",
+      "pediatric navigation"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-11-07",
+    "prettyDate": "November 7, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "When is the right time to ask for a pediatric care conference?",
+        "a": "Good moments to request one include: after a hospital discharge when follow-up is spread across several providers, when two specialists seem to be giving you conflicting guidance, before a major decision or transition, or when you simply can't get a clear overall picture despite multiple appointments. You don't need a crisis to ask."
+      },
+      {
+        "q": "Who do I contact to request a pediatric care conference?",
+        "a": "Start with your child's primary care pediatrician's office or the care coordinator at the practice or hospital, since they often serve as the hub. If a hospital team is involved, ask the case manager or social worker. State clearly that you'd like to schedule a care conference and ask who can help organize the providers and a time."
+      }
+    ]
+  },
+  {
     "slug": "how-to-ask-for-pediatric-care-conference-3",
     "title": "How to Ask for a Pediatric Care Conference: A Parent's Step-by-Step Guide",
     "excerpt": "When your child sees several providers, a care conference brings everyone to one table. Here's exactly how to request one, who to ask, and how to prepare.",
