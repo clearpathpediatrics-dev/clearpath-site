@@ -1,5 +1,89 @@
 [
   {
+    "slug": "questions-to-ask-pediatric-second-opinion-2",
+    "title": "What Questions to Ask at a Pediatric Second Opinion: A Parent's Checklist",
+    "excerpt": "A warm, practical checklist of questions to bring to your child's pediatric second opinion so you leave feeling clearer and more organized.",
+    "metaDescription": "Wondering what questions to ask at a pediatric second opinion? Use this parent-friendly checklist to prepare, stay organized, and walk out feeling clearer.",
+    "tags": [
+      "pediatric second opinion",
+      "specialist referrals",
+      "questions to ask doctor",
+      "pediatric care navigation",
+      "parent preparation checklist"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-11-08",
+    "prettyDate": "November 8, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should I actually ask during a pediatric second opinion?",
+        "a": "Ask open-ended questions that reveal the specialist's reasoning: how they understand your child's situation, whether they agree with the original assessment and why, what the possible paths forward are and their trade-offs, how much experience they have with this specific situation, and what signs would show the plan is or isn't working. Also ask, 'What questions should I be asking that I haven't thought of?'"
+      },
+      {
+        "q": "How do I keep track of everything a specialist tells me at a second opinion?",
+        "a": "Write answers down in the moment, ask permission to record, and bring a second adult so one person can listen while the other takes notes. At the end, repeat back what you heard to confirm you understood, and ask for a written after-visit summary you can keep and compare later."
+      }
+    ]
+  },
+  {
+    "slug": "release-pediatric-medical-records-second-opinion-2",
+    "title": "How to Get Your Child's Pediatric Medical Records Released for a Second Opinion",
+    "excerpt": "Seeking a second opinion for your child? Here's a practical, parent-friendly guide to requesting and releasing your child's medical records so the new specialist has everything they need.",
+    "metaDescription": "Learn how to get pediatric medical records released for a second opinion, step by step, with sample request wording so the new specialist has what they need.",
+    "tags": [
+      "pediatric medical records",
+      "second opinion",
+      "records release request",
+      "specialist referral",
+      "pediatric care navigation"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-11-08",
+    "prettyDate": "November 8, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I actually request my child's medical records?",
+        "a": "Most clinics and hospitals require a signed authorization to release records (a HIPAA release). You can usually get the form through your patient portal, by calling the medical records or Health Information Management department, or at the front desk. As the parent or guardian of a minor, you generally have the right to request them. On the form, list your child's name and date of birth, the specific records and date range you want, where to send them, and your signature — and ask if records can be sent directly to the new specialist."
+      },
+      {
+        "q": "How long does it take to get medical records released for a second opinion?",
+        "a": "Timelines vary by facility and state, but many offices process requests within several business days to a couple of weeks. Imaging on CD and archived records can take longer. Submit your request as soon as your appointment is scheduled — ideally two to three weeks ahead — and confirm with the new specialist's office a few days before the visit that the records arrived and are readable."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-home-nursing-unfilled-shifts-2",
+    "title": "What to Do When Pediatric Home Nursing Shifts Go Unfilled: A Parent's Guide",
+    "excerpt": "Unfilled home nursing shifts are stressful and exhausting. Here's how to report the gap, document it, and ask the right people for coverage support.",
+    "metaDescription": "When pediatric home nursing shifts go unfilled, use this parent's guide to report gaps, track hours, and request coverage so your child's care stays organized.",
+    "tags": [
+      "pediatric home nursing",
+      "unfilled nursing shifts",
+      "private duty nursing",
+      "home health staffing",
+      "pediatric care navigation"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-11-08",
+    "prettyDate": "November 8, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I document unfilled pediatric nursing shifts?",
+        "a": "Keep a running log noting the date, scheduled start and end time, number of uncovered hours, who you notified at the agency, and how you covered the gap. A dated record carries more weight with agencies, case managers, and care conferences than memory alone."
+      },
+      {
+        "q": "Who else can help when home nursing shifts keep going unfilled?",
+        "a": "Ask your child's case manager or health plan whether you can use more than one nursing agency at once, whether a family caregiver pay program exists in your state, and whether approved hours can be shifted to times that are easier to staff. A care navigator can help you organize these questions."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-private-duty-nursing-hours-approved-2",
     "title": "How Pediatric Private Duty Nursing Hours Are Approved for a Child: A Parent's Guide",
     "excerpt": "Wondering how private duty nursing hours get approved for your child? Here's how the process works, who makes the decision, and how to prepare the paperwork.",
