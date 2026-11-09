@@ -1,5 +1,89 @@
 [
   {
+    "slug": "request-virtual-pediatric-second-opinion-3",
+    "title": "How to Request a Virtual Pediatric Second Opinion: A Parent's Step-by-Step Guide",
+    "excerpt": "A clear, practical walkthrough of how to request a virtual pediatric second opinion—who to contact, what to prepare, and how to make the request without delay.",
+    "metaDescription": "Learn how to request a virtual pediatric second opinion step by step, what to gather, and who to ask so you can get clarity for your child faster.",
+    "tags": [
+      "virtual pediatric second opinion",
+      "pediatric specialist referral",
+      "telehealth second opinion",
+      "pediatric care navigation",
+      "second opinion request"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-11-09",
+    "prettyDate": "November 9, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I actually submit the request for a virtual second opinion?",
+        "a": "Most programs have an intake step: complete their online form or call the coordinator with a short summary of your question, sign a medical records release so they can obtain your child's records, confirm whether the consult is a written report or a live video visit, and ask about cost and timing up front. Keep a log of who you spoke with and the next steps promised."
+      },
+      {
+        "q": "What should I ask during the virtual second opinion visit?",
+        "a": "Prepare written questions such as whether the information confirms the current plan or suggests other options to discuss, what the reviewer would want to know before deciding, and what you should bring back to your child's current team. Take notes, request a written summary, and share it with your regular providers so everyone stays aligned."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-second-opinion-worth-the-wait-3",
+    "title": "When a Pediatric Second Opinion Is Worth the Wait (And When It Isn't)",
+    "excerpt": "A second opinion can bring clarity—or just delay—depending on the situation. Here's how to tell the difference and organize your decision with confidence.",
+    "metaDescription": "Deciding on a pediatric second opinion? Learn when the wait is worth it, when to move forward, and how to organize the choice so your family feels confident.",
+    "tags": [
+      "pediatric second opinion",
+      "specialist referral",
+      "pediatric care navigation",
+      "parent decision-making",
+      "children's healthcare"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-11-09",
+    "prettyDate": "November 9, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I know if my child's situation can wait for a second opinion?",
+        "a": "Ask your current provider directly: \"If we took two to three weeks to get a second opinion before deciding, would that change anything for my child?\" Their answer tells you whether the timeline is stable or time-sensitive. Write down the answer and the date you asked so everyone stays aligned."
+      },
+      {
+        "q": "Should I delay treatment to get a second opinion?",
+        "a": "That depends on what your licensed healthcare team says about timing for your child. Separate two questions: can treatment safely wait, and do you still have unanswered questions? If it can wait and your questions are real, a pause is often reasonable. If your team flagged the timing as urgent, it's usually better to begin care and seek the additional opinion alongside it."
+      }
+    ]
+  },
+  {
+    "slug": "compare-conflicting-pediatric-specialist-opinions-3",
+    "title": "How to Compare Two Conflicting Pediatric Specialist Opinions for Your Child",
+    "excerpt": "When two pediatric specialists disagree, it's easy to feel stuck. Here's a calm, organized way to compare their opinions side by side and bring the differences back to your providers.",
+    "metaDescription": "A practical parent's guide to comparing two conflicting pediatric specialist opinions so you can organize the facts, ask better questions, and feel more confident.",
+    "tags": [
+      "pediatric second opinion",
+      "conflicting specialist opinions",
+      "pediatric specialist referral",
+      "pediatric care navigation",
+      "parent decision support"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-11-09",
+    "prettyDate": "November 9, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Can I just ask my child's two specialists to talk to each other?",
+        "a": "Yes, and it's often the most useful step. You can request that the specialists review each other's notes directly, or ask your pediatrician to help coordinate. Many disagreements rooted in missing information resolve quickly once both providers see the same records. If direct contact isn't possible, your pediatrician can act as the hub who reconciles the two perspectives for you."
+      },
+      {
+        "q": "How do I decide when two pediatric opinions still conflict?",
+        "a": "If the disagreement remains after both specialists have the same information, the decision belongs to you and your child's treating providers. Ask each specialist the same closing questions: what they're most worried about, what would change their recommendation, and what they'd want to understand first. Their answers reveal the trade-offs so you can make an informed decision with your provider's guidance."
+      }
+    ]
+  },
+  {
     "slug": "questions-to-ask-pediatric-second-opinion-2",
     "title": "What Questions to Ask at a Pediatric Second Opinion: A Parent's Checklist",
     "excerpt": "A warm, practical checklist of questions to bring to your child's pediatric second opinion so you leave feeling clearer and more organized.",
