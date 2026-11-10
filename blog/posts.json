@@ -1,5 +1,97 @@
 [
   {
+    "slug": "track-pediatric-prior-authorization-expiry-dates-3",
+    "title": "How to Track Pediatric Prior Authorization Expiry Dates So Coverage Never Lapses",
+    "excerpt": "A practical, parent-friendly system for tracking when your child's prior authorizations expire — so refills, therapies, and services don't suddenly stop.",
+    "metaDescription": "Learn how to track pediatric prior authorization expiry dates with a simple tracker and renewal timeline so your child's coverage never lapses unexpectedly.",
+    "tags": [
+      "pediatric prior authorization",
+      "prior auth expiry tracking",
+      "pediatric coverage renewal",
+      "insurance navigation for parents",
+      "avoid coverage lapse"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-11-10",
+    "prettyDate": "November 10, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I build a simple prior authorization tracker?",
+        "a": "Use a notebook page or basic spreadsheet with a row for each authorization. Include the service or medication, ordering provider and phone number, authorization number, start and expiry dates, a renewal reminder date, and current status. Keeping it all in one place makes every follow-up call faster and keeps it with your care binder."
+      },
+      {
+        "q": "What should I do if an authorization is about to expire and nothing has been renewed?",
+        "a": "Act early. Contact the ordering provider's office to request renewal paperwork, then confirm your insurer received it and ask for a reference number and timeline. Note everything in your tracker. If a gap still looks likely, ask the provider and plan what options exist. Decisions about your child's actual care remain with your licensed providers."
+      }
+    ]
+  },
+  {
+    "slug": "internal-vs-external-appeal-pediatric-claim-3",
+    "title": "Internal vs. External Appeal for a Pediatric Claim: A Parent's Guide",
+    "excerpt": "When your child's claim is denied, you usually have two layers of appeal: internal and external. Here's what each one means and how they fit together.",
+    "metaDescription": "Confused about internal vs. external appeal for a pediatric claim? Learn how each step works, the order to use them, and how to stay organized through a denial.",
+    "tags": [
+      "pediatric claim appeal",
+      "internal vs external appeal",
+      "insurance denial",
+      "pediatric prior authorization",
+      "parent appeal guide"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-11-10",
+    "prettyDate": "November 10, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Do I have to do an internal appeal before an external one for a pediatric claim?",
+        "a": "In most cases, yes. Plans generally require you to complete the internal appeal first, and the external reviewer usually wants to see it was done. The main exception is urgent situations involving your child's health, where some plans allow an external review at the same time. Your denial letter and plan member services line are the most reliable sources for your specific rules."
+      },
+      {
+        "q": "What is the difference between an internal and external appeal?",
+        "a": "An internal appeal is reviewed by your insurance plan itself, usually as the first step after a denial. An external appeal moves the decision to an independent third party with no connection to your plan, and that reviewer's decision is binding on the insurance company. External review typically follows an unsuccessful internal appeal."
+      },
+      {
+        "q": "What information should I gather for a pediatric claim appeal?",
+        "a": "Collect the exact denial letter and its reason code, your child's plan ID and claim or authorization number, a letter of medical necessity or supporting notes from your provider, any related records or prior approvals, and a simple timeline of dates and reference numbers. Use the same organized packet at each appeal level."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-peer-to-peer-review-how-to-ask-3",
+    "title": "What a Pediatric Peer-to-Peer Review Is and How to Ask for One",
+    "excerpt": "If your child's care was denied, a peer-to-peer review lets your doctor talk directly with the insurer's reviewer. Here's what it is and how to help set one up.",
+    "metaDescription": "Learn what a pediatric peer-to-peer review is and how to request one after a prior authorization denial, so you can organize the appeal and help your child's doctor.",
+    "tags": [
+      "pediatric peer-to-peer review",
+      "prior authorization denial",
+      "pediatric insurance appeal",
+      "pediatric care navigation",
+      "denied coverage"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-11-10",
+    "prettyDate": "November 10, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What is a pediatric peer-to-peer review?",
+        "a": "A peer-to-peer review is a phone conversation between your child's treating provider and a physician reviewer at the insurance company, usually after a prior authorization is denied. The treating doctor explains the medical reasoning and answers questions, which can sometimes lead to the denial being overturned."
+      },
+      {
+        "q": "How do I ask for a peer-to-peer review after a denial?",
+        "a": "Read the denial letter for the deadline and appeals phone number, then contact your child's ordering provider's office and ask whether they will request a peer-to-peer. Because the review is a conversation between physicians, the provider's office initiates it. Offer to help gather supporting details and keep a log of names, dates, and reference numbers."
+      },
+      {
+        "q": "What happens if the peer-to-peer review is denied?",
+        "a": "If the denial is upheld after the peer-to-peer, you typically still have the right to a formal written appeal and sometimes an external or independent review. The denial letter will outline these next steps and their deadlines."
+      }
+    ]
+  },
+  {
     "slug": "request-virtual-pediatric-second-opinion-3",
     "title": "How to Request a Virtual Pediatric Second Opinion: A Parent's Step-by-Step Guide",
     "excerpt": "A clear, practical walkthrough of how to request a virtual pediatric second opinion—who to contact, what to prepare, and how to make the request without delay.",
