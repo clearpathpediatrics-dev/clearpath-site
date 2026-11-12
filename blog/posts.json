@@ -1,5 +1,93 @@
 [
   {
+    "slug": "ask-childrens-hospital-itemized-pediatric-bill",
+    "title": "How to Ask a Children's Hospital for an Itemized Pediatric Bill: A Parent's Guide",
+    "excerpt": "A plain-English walkthrough for parents on how to request an itemized bill from a children's hospital, what to say, and how to read it once it arrives.",
+    "metaDescription": "Learn how to request an itemized pediatric bill from a children's hospital, who to call, and what to check line by line so you understand every charge.",
+    "tags": [
+      "pediatric itemized bill",
+      "children's hospital billing",
+      "pediatric medical bills",
+      "hospital bill request",
+      "pediatric care costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-11-11",
+    "prettyDate": "November 11, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I ask a children's hospital for an itemized bill?",
+        "a": "Call the Patient Financial Services or billing number on your statement and request a fully itemized, line-by-line bill with all charges, dates of service, and billing codes. Have your child's name, date of birth, account number, and dates of service ready, and ask how it will be delivered and how long it takes."
+      },
+      {
+        "q": "What should I check on an itemized pediatric bill?",
+        "a": "Compare it to your child's actual visit and look for matching dates, duplicate charges, services you don't recognize, unusually high quantities, and room or facility charges for dates your child wasn't there. Call the billing office to explain any line item you don't understand."
+      },
+      {
+        "q": "Why should I request an itemized bill before paying?",
+        "a": "Reviewing the detailed charges before paying helps you catch errors and understand what you owe. It also makes conversations with your insurer or the hospital more productive because you can reference specific line items instead of a single total."
+      }
+    ]
+  },
+  {
+    "slug": "appeal-denied-pediatric-feeding-therapy-3",
+    "title": "How to Appeal a Denied Pediatric Feeding Therapy Request: A Parent's Step-by-Step Guide",
+    "excerpt": "A denied feeding therapy request is stressful, but it isn't the end of the road. Here's a calm, practical walkthrough for organizing your appeal and meeting every deadline.",
+    "metaDescription": "Learn how to appeal a denied pediatric feeding therapy request step by step, from reading your denial letter to organizing documents and meeting deadlines.",
+    "tags": [
+      "pediatric feeding therapy appeal",
+      "denied prior authorization",
+      "pediatric insurance denial",
+      "feeding therapy coverage",
+      "pediatric appeals guide"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-11-11",
+    "prettyDate": "November 11, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How long do I have to appeal a denied pediatric feeding therapy request?",
+        "a": "Deadlines vary by plan but are often 30 to 180 days from the date on your denial letter. The exact window should be printed in the letter under 'appeal rights.' Note the date in writing immediately and aim to submit well before the deadline, since gathering records can take time."
+      },
+      {
+        "q": "What documents do I need to appeal a feeding therapy denial?",
+        "a": "Generally you'll want a copy of the denial letter, the original request or referral, relevant evaluation notes and progress notes from your child's providers, and a letter of medical necessity from the ordering clinician. Your child's licensed providers determine the clinical content; your job is to gather and submit it on time."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-therapy-authorization-runs-out-mid-treatment-3",
+    "title": "What to Do When a Pediatric Therapy Authorization Runs Out Mid-Treatment: A Parent's Guide",
+    "excerpt": "If your child's physical, occupational, or speech therapy authorization runs out before treatment is finished, here are the practical steps to help you reorganize quickly and keep sessions from slipping through the cracks.",
+    "metaDescription": "Learn exactly what to do when a pediatric therapy authorization expires mid-treatment, with clear steps to keep your child's care organized and on track.",
+    "tags": [
+      "pediatric therapy authorization",
+      "prior authorization expiry",
+      "pediatric insurance appeals",
+      "therapy coverage denial",
+      "pediatric care navigation"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-11-11",
+    "prettyDate": "November 11, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Who is responsible for requesting a new pediatric therapy authorization?",
+        "a": "In most cases, the provider delivering the therapy or the physician who ordered it submits the renewal (reauthorization), not the parent. Your role is usually to confirm the request has been started, ask the date it was sent, and check whether the clinic needs updated progress notes or a new order to complete it."
+      },
+      {
+        "q": "Can my child keep attending therapy while the authorization renewal is pending?",
+        "a": "It depends on your insurance plan and your clinic's policies, so ask both directly. Some clinics continue sessions and bill retroactively once approval comes through, while others pause until approval is confirmed. Ask whether you'd be financially responsible if sessions continue and the renewal isn't approved, and get the answer in writing if possible."
+      }
+    ]
+  },
+  {
     "slug": "track-pediatric-prior-authorization-expiry-dates-3",
     "title": "How to Track Pediatric Prior Authorization Expiry Dates So Coverage Never Lapses",
     "excerpt": "A practical, parent-friendly system for tracking when your child's prior authorizations expire — so refills, therapies, and services don't suddenly stop.",
