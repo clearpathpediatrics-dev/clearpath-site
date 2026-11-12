@@ -1,5 +1,93 @@
 [
   {
+    "slug": "check-pediatric-provider-in-network-before-visit-3",
+    "title": "How to Check Whether a Pediatric Provider Is In Network Before the Visit: A Parent's Guide",
+    "excerpt": "A calm, practical walkthrough for confirming your child's pediatric provider is in network before the appointment — so you can book with confidence and avoid surprise bills.",
+    "metaDescription": "Learn how to check if a pediatric provider is in network before the visit, with step-by-step tips to confirm coverage and avoid surprise bills for your child.",
+    "tags": [
+      "pediatric in-network provider",
+      "check insurance coverage",
+      "pediatric care costs",
+      "surprise medical bills",
+      "verify pediatric provider network"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-11-12",
+    "prettyDate": "November 12, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Is calling the provider's office enough to confirm they're in network?",
+        "a": "Not on its own. A provider's office can tell you which plans they generally accept, but that's not the same as being in network for your child's exact plan. Confirm the plan name on your card with the office, then cross-check with your insurer. If the two answers don't match, keep asking until they line up before you book."
+      },
+      {
+        "q": "What should I do if a pediatric provider is out of network?",
+        "a": "Ask your insurer whether an in-network pediatric provider offers the same service nearby. For hard-to-find specialists, ask about a network adequacy or gap exception process. You can also request a cost estimate from the out-of-network office so you can plan your budget. These are planning steps, not medical decisions — leave clinical questions to your child's licensed providers."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-balance-billing-when-not-allowed-3",
+    "title": "What Pediatric Balance Billing Is — And When It's Not Allowed",
+    "excerpt": "A clear, parent-friendly guide to what balance billing is, when the law protects your family from it, and how to spot a bill that may not be allowed.",
+    "metaDescription": "Learn what pediatric balance billing is, when balance billing is not allowed under the No Surprises Act, and how to organize your child's bills with confidence.",
+    "tags": [
+      "pediatric balance billing",
+      "No Surprises Act",
+      "surprise medical bills",
+      "pediatric medical bills",
+      "out-of-network billing"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-11-12",
+    "prettyDate": "November 12, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "When is balance billing not allowed?",
+        "a": "Under the federal No Surprises Act, you generally cannot be balance billed for emergency care, for out-of-network providers (like anesthesiology, radiology, or lab) at an in-network facility, or for out-of-network air ambulance services. In these cases you should only owe your normal in-network cost-sharing, and many states add further protections."
+      },
+      {
+        "q": "Can I be asked to waive my balance billing protections?",
+        "a": "In some non-emergency situations an out-of-network provider may ask you to sign a form waiving your No Surprises Act protections, but you are never required to sign it. These protections cannot be waived for emergency care or for many ancillary services at an in-network facility. If you don't understand a consent form, it's reasonable to pause and ask questions first."
+      },
+      {
+        "q": "How can I tell if a bill is a surprise balance bill?",
+        "a": "Compare the bill to your Explanation of Benefits (EOB). If the 'patient responsibility' amount is larger than your expected copay, deductible, or coinsurance — especially after emergency care or care at an in-network facility — it may be a surprise balance bill. Call your insurer and the billing office, and consider the federal No Surprises Help Desk at 1-800-985-3059."
+      }
+    ]
+  },
+  {
+    "slug": "request-financial-assistance-childrens-hospital-3",
+    "title": "How to Request Financial Assistance From a Children's Hospital: A Pediatric Parent's Guide",
+    "excerpt": "A clear, step-by-step guide to finding and applying for a children's hospital's financial assistance program—so you can organize your paperwork and ask with confidence.",
+    "metaDescription": "Learn how to request financial assistance from a children's hospital for your pediatric bills, step by step, so you can lower costs and feel less overwhelmed.",
+    "tags": [
+      "pediatric financial assistance",
+      "children's hospital billing",
+      "pediatric medical bills",
+      "charity care application",
+      "parent cost guide"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-11-12",
+    "prettyDate": "November 12, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Does requesting financial assistance affect my child's care?",
+        "a": "No. Financial assistance programs are handled by the billing or patient financial services department, completely separate from your child's clinical team. Applying does not change the care your child receives, and your medical providers are not involved in reviewing your finances. You can apply before, during, or after treatment."
+      },
+      {
+        "q": "What documents do I need to apply for children's hospital financial assistance?",
+        "a": "Most programs ask for proof of identity, proof of income (recent pay stubs, tax returns, or a benefits letter), household size, and sometimes bank statements or proof of expenses. Gather these before you start, keep copies of everything you submit, and note the date you sent each item."
+      }
+    ]
+  },
+  {
     "slug": "ask-childrens-hospital-itemized-pediatric-bill",
     "title": "How to Ask a Children's Hospital for an Itemized Pediatric Bill: A Parent's Guide",
     "excerpt": "A plain-English walkthrough for parents on how to request an itemized bill from a children's hospital, what to say, and how to read it once it arrives.",
