@@ -1,5 +1,93 @@
 [
   {
+    "slug": "pediatric-well-child-visits-medically-complex-child-3",
+    "title": "How Pediatric Well-Child Visits Change for a Medically Complex Child",
+    "excerpt": "If your child has complex medical needs, the standard well-child visit looks different. Here's what shifts, what to expect, and how to prepare so nothing gets missed.",
+    "metaDescription": "Learn how pediatric well-child visits change for a medically complex child, from longer appointments to coordination, so you can prepare and stay organized.",
+    "tags": [
+      "pediatric well-child visit",
+      "medically complex child",
+      "pediatric care coordination",
+      "well-child checkup",
+      "pediatric developmental checks"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-13",
+    "prettyDate": "November 13, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What makes a well-child visit different for a medically complex child?",
+        "a": "The usual foundation — growth, development, screenings, and immunizations — is still there, but it sits alongside reviewing how an existing condition is managed, coordinating multiple specialists, and checking equipment or therapies. These visits often run longer, happen more frequently, and involve more records from other providers."
+      },
+      {
+        "q": "Does a medically complex child still need standard screenings and vaccines?",
+        "a": "Generally yes, well-child basics like growth tracking, developmental screening, vision and hearing checks, and immunizations remain part of the visit. The timing or approach may be individualized based on your child's situation. Decisions about which screenings and vaccines are appropriate belong to your child's licensed healthcare team."
+      },
+      {
+        "q": "What should I prepare differently for a complex child's well-child visit?",
+        "a": "Bring an up-to-date medication list with prescribers, a short medical summary of diagnoses and history, recent notes from other specialists, a list of equipment and therapies in place, and your own questions and observations. Having it all in one place makes the visit far more efficient."
+      }
+    ]
+  },
+  {
+    "slug": "what-to-write-down-before-pediatric-well-child-visit-2",
+    "title": "What to Write Down Before a Pediatric Well-Child Visit: A Parent's Checklist",
+    "excerpt": "A simple, practical list of what to jot down before your child's well-child visit so you leave feeling heard, organized, and clear on next steps.",
+    "metaDescription": "Learn exactly what to write down before a pediatric well-child visit so you walk in organized, ask the right questions, and never forget what matters most.",
+    "tags": [
+      "pediatric well-child visit",
+      "well-child checkup prep",
+      "pediatric visit checklist",
+      "parent visit notes",
+      "child health navigation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-13",
+    "prettyDate": "November 13, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What's the single most important thing to write down before a well-child visit?",
+        "a": "Write down your top concern in one clear sentence and raise it first. Visits fill quickly with routine items, so leading with what worries you most ensures it gets real attention before time runs out."
+      },
+      {
+        "q": "How do I keep track of what the provider says during the well-child visit?",
+        "a": "Leave space under each question to note answers, and before leaving, jot down what was said about your concerns, any next steps like referrals or follow-ups, and who is responsible for scheduling them so nothing slips through the cracks."
+      }
+    ]
+  },
+  {
+    "slug": "ask-pediatric-developmental-referral-well-child-visit-3",
+    "title": "How to Ask for a Pediatric Developmental Referral at a Well-Child Visit: A Parent's Guide",
+    "excerpt": "Worried about your child's development and not sure how to bring it up? Here's how to prepare for the well-child visit and ask for a developmental referral clearly and confidently.",
+    "metaDescription": "Learn how to ask for a pediatric developmental referral at a well-child visit, with exact words, prep tips, and what to track so your concerns get heard.",
+    "tags": [
+      "pediatric developmental referral",
+      "well-child visit",
+      "developmental screening",
+      "parent advocacy",
+      "pediatric care navigation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-13",
+    "prettyDate": "November 13, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What is a developmental referral, exactly?",
+        "a": "A developmental referral is a provider's recommendation that your child be seen by someone who does more in-depth developmental evaluation — such as a developmental pediatrician, speech or occupational therapist, audiology, or an early intervention program. It isn't a diagnosis; it's a step toward more information, and it can help with coverage and waitlists."
+      },
+      {
+        "q": "What if my provider says 'let's wait and see'?",
+        "a": "Only your licensed provider can weigh in on your child's specific situation, but if you're still uneasy, you can keep the conversation going. Try saying you'd like to start the process now so you aren't waiting longer if it turns out to be needed, and ask what signs would change the plan. Write down whether a referral was placed, declined, or deferred so you have a clear record."
+      }
+    ]
+  },
+  {
     "slug": "check-pediatric-provider-in-network-before-visit-3",
     "title": "How to Check Whether a Pediatric Provider Is In Network Before the Visit: A Parent's Guide",
     "excerpt": "A calm, practical walkthrough for confirming your child's pediatric provider is in network before the appointment — so you can book with confidence and avoid surprise bills.",
