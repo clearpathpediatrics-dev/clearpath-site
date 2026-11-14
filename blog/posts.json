@@ -1,5 +1,89 @@
 [
   {
+    "slug": "pediatric-warning-signs-page-after-hospital-stay-2",
+    "title": "How to Build a Pediatric Warning-Signs Page After a Hospital Stay",
+    "excerpt": "Coming home from the hospital is a lot to hold in your head. Here's how to turn your discharge instructions into one clear, calm warning-signs page the whole family can use.",
+    "metaDescription": "Learn how to build a pediatric warning-signs page after a hospital discharge so your whole family knows what to watch for and who to call with confidence.",
+    "tags": [
+      "pediatric hospital discharge",
+      "warning signs page",
+      "coming home from hospital",
+      "pediatric care navigation",
+      "parent discharge checklist"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-14",
+    "prettyDate": "November 14, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should a pediatric warning-signs page actually include?",
+        "a": "A strong page includes your child's name and date of birth, the discharge date and condition in your team's own words, three action zones (watch at home, call the care team, get urgent help now) drawn directly from your instructions, all relevant phone numbers, current medications as written by your team, and any scheduled follow-up appointments. Keep it to one page so any caregiver can read it in seconds."
+      },
+      {
+        "q": "Where should you keep a warning-signs page so it actually gets used?",
+        "a": "Keep a printed copy somewhere visible, like inside a kitchen cabinet or on the fridge, and save a photo on your phone. Text it to every adult who cares for your child, and share copies with school nurses, day programs, or home nursing if relevant. The page only helps if it's where the worry happens, not buried in a folder."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-discharge-medications-not-ready-pharmacy-3",
+    "title": "What to Do When Your Child's Pediatric Discharge Medications Aren't Ready at the Pharmacy",
+    "excerpt": "You've just brought your child home from the hospital and the pharmacy says the prescriptions aren't ready. Here's how to stay organized and get things moving.",
+    "metaDescription": "Pediatric discharge medications not ready at the pharmacy? Learn practical, calm steps to organize, confirm, and follow up so your child's meds come through smoothly",
+    "tags": [
+      "pediatric discharge medications",
+      "hospital discharge pharmacy delay",
+      "pediatric care navigation",
+      "coming home from hospital",
+      "parent prescription checklist"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-14",
+    "prettyDate": "November 14, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should I do first if my child's discharge medication isn't at the pharmacy?",
+        "a": "Confirm the prescription was actually sent to the pharmacy you're at by having staff search your child's name and date of birth, and verify the pharmacy on your discharge paperwork. If nothing was sent, call the discharging hospital team or your pediatrician's office using the number on your discharge summary to confirm where each prescription was routed."
+      },
+      {
+        "q": "What if I can't reach anyone about my child's discharge medication after hours?",
+        "a": "Ask the pharmacy about any on-call or after-hours process, and check your discharge paperwork for a nurse line or on-call provider number. If you have any concern that a delay could affect your child, contact your provider or the hospital's after-hours line for guidance, and call 911 in an emergency. Whether a delay is urgent is a clinical decision for your providers."
+      }
+    ]
+  },
+  {
+    "slug": "questions-pediatric-4-year-well-child-check",
+    "title": "What Questions to Ask at Your Child's Pediatric 4-Year Well-Child Check",
+    "excerpt": "The 4-year well-child check moves fast. Here's a warm, practical list of questions to ask so you walk out feeling clear, confident, and organized.",
+    "metaDescription": "Wondering what questions to ask at a pediatric 4-year well-child check? Use this parent-friendly list to walk in prepared and leave with real answers.",
+    "tags": [
+      "pediatric well-child check",
+      "4 year check-up questions",
+      "pediatric developmental check",
+      "well-child visit preparation",
+      "pediatric parent guide"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-14",
+    "prettyDate": "November 14, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should I ask if I'm worried about my child's development at the 4-year check?",
+        "a": "Describe specific, concrete examples of what you've noticed — how your child communicates, plays, or handles transitions — then ask directly, \"Is this within the typical range, or would you recommend we look into it further?\" and \"If we wanted an evaluation, what would that process look like?\" These questions clarify your provider's thinking and your options. Any decision about evaluations or referrals is made with your licensed provider."
+      },
+      {
+        "q": "What questions help me prepare for preschool or kindergarten at the 4-year visit?",
+        "a": "Ask \"What forms or vaccine records will the school need, and can we complete them today?\", \"Are there any health or developmental things the school should know about?\", and \"Is my child's vision and hearing screening current for school entry?\" Confirming these during the visit keeps your child's paperwork in one place and saves a last-minute scramble."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-well-child-visits-medically-complex-child-3",
     "title": "How Pediatric Well-Child Visits Change for a Medically Complex Child",
     "excerpt": "If your child has complex medical needs, the standard well-child visit looks different. Here's what shifts, what to expect, and how to prepare so nothing gets missed.",
