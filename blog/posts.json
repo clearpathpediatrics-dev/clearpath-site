@@ -1,5 +1,89 @@
 [
   {
+    "slug": "child-misses-school-pediatric-medical-reasons-2",
+    "title": "What to Do When Your Child Misses School for Pediatric Medical Reasons: A Parent's Guide",
+    "excerpt": "When your child misses school for a medical reason, a little organization goes a long way. Here's how to document absences, communicate with the school, and keep learning on track.",
+    "metaDescription": "A practical guide for parents on what to do when a child misses school for pediatric medical reasons—from excused absences to 504 plans—to keep learning on track.",
+    "tags": [
+      "pediatric medical absence",
+      "excused school absences",
+      "504 plan",
+      "homebound instruction",
+      "school attendance"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-11-15",
+    "prettyDate": "November 15, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I get a medical absence excused from school?",
+        "a": "Most schools excuse a medical absence when you provide dated documentation from your child's licensed healthcare provider. Policies vary by district, so call the attendance office and ask what documentation they need, whether there's a form your provider should complete, and how many days a parent note can cover versus a provider note. Keep copies of everything you submit."
+      },
+      {
+        "q": "What if my child's medical absences keep adding up?",
+        "a": "Frequent legitimate absences can still trigger automated attendance warnings. Respond in writing, reference the notes you've already submitted, and ask to speak with the attendance officer or counselor. Ask whether a 504 plan could formally account for condition-related absences so they're handled consistently. Keeping a log of dates, reasons, and documentation makes these conversations much easier."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-equipment-delivered-before-discharge-3",
+    "title": "How to Get Pediatric Medical Equipment and Supplies Delivered Before Discharge Day",
+    "excerpt": "Bringing your child home should feel like relief, not scrambling for a feeding pump at 5 p.m. Here's how to get pediatric equipment and supplies delivered before discharge day.",
+    "metaDescription": "Learn how to coordinate pediatric medical equipment and supply delivery before your child's hospital discharge so home is ready when they arrive.",
+    "tags": [
+      "pediatric discharge planning",
+      "durable medical equipment",
+      "home medical supplies",
+      "DME delivery",
+      "pediatric home care"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-15",
+    "prettyDate": "November 15, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How early should equipment be delivered before a pediatric discharge?",
+        "a": "Many families aim to have equipment delivered and set up at least a day or two before discharge so there's time to confirm it works and get a demonstration while hospital and supplier support is available. For complex setups like oxygen or feeding equipment, earlier is better. Timing depends on your insurance and the supplier's schedule, so ask your care team what's realistic."
+      },
+      {
+        "q": "What should I ask the supply company before delivery day?",
+        "a": "Ask what exactly is being delivered and how much, when it will arrive, whether someone will demonstrate how to use it, what insurance covers and any out-of-pocket cost, how to reorder supplies, who to call if something breaks, and whether there's a 24-hour support line for nights and weekends."
+      }
+    ]
+  },
+  {
+    "slug": "first-week-home-from-pediatric-nicu",
+    "title": "What to Expect in the First Week Home From the Pediatric NICU: A Parent's Guide",
+    "excerpt": "Bringing your baby home after the NICU is exciting and overwhelming at once. Here's a practical look at what the first week often involves and how to stay organized.",
+    "metaDescription": "A warm, practical guide to what to expect in the first week home from the pediatric NICU, so you can organize, prepare, and feel steadier bringing your baby home.",
+    "tags": [
+      "pediatric NICU discharge",
+      "coming home from NICU",
+      "NICU parent guide",
+      "newborn care navigation",
+      "preemie first week home"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-15",
+    "prettyDate": "November 15, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How soon after NICU discharge is the first pediatrician visit?",
+        "a": "Many NICU graduates are seen within one to a few days of coming home, but the exact timing is set by your baby's care team. Check your discharge paperwork for the recommended appointment, and call your pediatrician's office right away if it isn't scheduled yet."
+      },
+      {
+        "q": "What should I keep track of during the first week home from the NICU?",
+        "a": "Focus on the specifics your care team asked you to watch — often feedings, wet and dirty diapers, sleep, and sometimes temperature or weight. Write down questions as they arise, and keep any list of signs-to-call-about visible along with key phone numbers."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-warning-signs-page-after-hospital-stay-2",
     "title": "How to Build a Pediatric Warning-Signs Page After a Hospital Stay",
     "excerpt": "Coming home from the hospital is a lot to hold in your head. Here's how to turn your discharge instructions into one clear, calm warning-signs page the whole family can use.",
