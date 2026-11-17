@@ -1,5 +1,93 @@
 [
   {
+    "slug": "pediatric-medical-timeline-long-history-3",
+    "title": "How to Keep a Pediatric Medical Timeline for a Child With a Long Health History",
+    "excerpt": "If your child has years of appointments, hospital stays, and specialists, a clear medical timeline keeps it all in one place. Here's how to build one that actually works.",
+    "metaDescription": "Learn how to build and maintain a pediatric medical timeline for a child with a long history, so every appointment, record, and provider stays organized.",
+    "tags": [
+      "pediatric medical timeline",
+      "medical records organization",
+      "complex pediatric care",
+      "parent health binder",
+      "medical history tracking"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-11-16",
+    "prettyDate": "November 16, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do you start a pediatric medical timeline when the history is already long?",
+        "a": "Start with what you already have — recent after-visit summaries, discharge papers, or your patient portal — and work backward in chunks. Request records from major milestones like hospitalizations or surgeries, fill gaps from memory or your calendar, and mark uncertain dates as 'approx.' to confirm later. A mostly-complete, usable picture matters more than perfection."
+      },
+      {
+        "q": "What's the difference between a medical timeline and a full medical record?",
+        "a": "A timeline is a summary you create and control — a map of your child's health journey with key dates, events, and providers. The full medical record is the official documentation held by each facility, including test results and clinical notes. The timeline points you to where those records live but does not replace them."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-medical-accommodations-school-plan-3",
+    "title": "How to Get Pediatric Medical Accommodations Written Into a School Plan: A Parent's Guide",
+    "excerpt": "A clear, step-by-step guide to turning your child's medical needs into written school accommodations — what to gather, who to ask, and how to word it so it actually sticks.",
+    "metaDescription": "Learn how to get pediatric medical accommodations written into your child's 504 or IEP, from documentation to specific wording, so support is clear and enforceable.",
+    "tags": [
+      "pediatric medical accommodations",
+      "504 plan",
+      "IEP",
+      "school accommodations",
+      "pediatric care navigation"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-11-16",
+    "prettyDate": "November 16, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What's the difference between a 504 Plan and an IEP?",
+        "a": "A 504 Plan generally provides accommodations that change how a child accesses the school environment, such as extra breaks or permission to carry water. An IEP is for students who qualify for special education and need specialized instruction, not just accommodations. The school's team determines eligibility based on evaluations and documentation, so ask the school which process fits your child's situation."
+      },
+      {
+        "q": "How do I make sure accommodations are worded so they actually get followed?",
+        "a": "Avoid vague phrases like 'as needed.' Push for wording that is specific, measurable, and assigns responsibility by answering what exactly happens, when, who is responsible, and where. For example, instead of 'student may take breaks,' use 'student may leave class for the nurse's office at any time without asking permission, using a prearranged pass.' Bring concrete examples to the meeting and let the team translate the need into formal language."
+      }
+    ]
+  },
+  {
+    "slug": "request-pediatric-homebound-instruction-medically-fragile-child-3",
+    "title": "How to Request Pediatric Homebound Instruction for a Medically Fragile Child: A Parent's Guide",
+    "excerpt": "If your child can't attend school because of a medical condition, homebound instruction may help them keep learning at home. Here's how to organize the request, step by step.",
+    "metaDescription": "Learn how to request pediatric homebound instruction for a medically fragile child, step by step, so your family can navigate school paperwork with confidence.",
+    "tags": [
+      "pediatric homebound instruction",
+      "medically fragile child school",
+      "504 plan",
+      "IEP",
+      "school accommodations"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-11-16",
+    "prettyDate": "November 16, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I request homebound instruction for my child?",
+        "a": "Contact your child's school counselor, nurse, or special education coordinator and ask for your district's homebound instruction request form and policy. Have the medical certification portion completed and signed by your child's licensed provider, submit the full packet in writing, keep a dated copy, and ask about review timelines and how instruction and grading will work."
+      },
+      {
+        "q": "What documents should I gather first?",
+        "a": "Gather your child's name, date of birth, grade, and school; the blank provider certification form your district supplies; contact information for your child's providers; any existing IEP or 504 Plan; and a factual summary of the dates your child has been or will be out of school. Keep a log of who you contacted and when."
+      },
+      {
+        "q": "How does homebound instruction connect to an IEP or 504 Plan?",
+        "a": "If your child already has an IEP or 504 Plan, homebound instruction should be coordinated with that team. Ask whether a meeting is needed to document the temporary change and how existing accommodations and therapies will continue. If your child has no plan yet, ask the school whether an evaluation might be appropriate."
+      }
+    ]
+  },
+  {
     "slug": "child-misses-school-pediatric-medical-reasons-2",
     "title": "What to Do When Your Child Misses School for Pediatric Medical Reasons: A Parent's Guide",
     "excerpt": "When your child misses school for a medical reason, a little organization goes a long way. Here's how to document absences, communicate with the school, and keep learning on track.",
