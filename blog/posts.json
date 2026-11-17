@@ -1,5 +1,89 @@
 [
   {
+    "slug": "pediatric-specialists-conflicting-advice-3",
+    "title": "What to Do When Pediatric Specialists Give Conflicting Advice About Your Child",
+    "excerpt": "When two specialists tell you different things about your child, it's stressful and confusing. Here's a calm, practical way to organize the conflict and bring it back to your care team.",
+    "metaDescription": "When pediatric specialists give conflicting advice, use this parent's guide to organize, compare, and bring clarity to your child's care team decisions.",
+    "tags": [
+      "pediatric specialists conflicting advice",
+      "pediatric care coordination",
+      "pediatric second opinion",
+      "parent care navigation",
+      "pediatric care team"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-11-17",
+    "prettyDate": "November 17, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How can I tell if two pediatric specialists actually disagree, or if they just don't have the same information?",
+        "a": "Check whether each specialist had access to the same recent records — labs, imaging, and notes. Often what looks like a conflict is really one provider working without the newest result. Compare the dates of their recommendations against when key results came back, and ask each office to share records so both are looking at the same complete picture. Only your licensed providers can resolve a true clinical disagreement."
+      },
+      {
+        "q": "What should I do if pediatric specialists still recommend different things after sharing records?",
+        "a": "When experts genuinely differ, ask questions that clarify the trade-offs, such as what would help decide between the two paths or whether a test or consultation would point in one direction. Some families seek a second opinion for another perspective. Keep every clinical decision with your child's licensed providers, and focus your energy on organizing records, asking clear questions, and making sure the right people are talking to each other."
+      }
+    ]
+  },
+  {
+    "slug": "get-pediatric-specialists-to-talk-to-each-other",
+    "title": "How to Get Two Pediatric Specialists to Talk to Each Other: A Parent's Coordination Guide",
+    "excerpt": "When your child sees two specialists who never seem to compare notes, you can help bridge the gap. Here's a practical, parent-friendly way to connect their care.",
+    "metaDescription": "Learn how to get two pediatric specialists to communicate about your child's care using records, shared notes, and the right requests for smoother coordination.",
+    "tags": [
+      "pediatric care coordination",
+      "pediatric specialists",
+      "pediatric care team",
+      "parent navigation",
+      "pediatric medical records"
+    ],
+    "topic": "Care Team Coordination",
+    "clusterKey": "coordination",
+    "iso": "2026-11-17",
+    "prettyDate": "November 17, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I actually get two pediatric specialists to communicate?",
+        "a": "Make sharing easy by asking each office to send notes and results directly to the other specialist, request notes in return, and tell you who handles records. If they use the same system or portal, information may already be shared; if not, sign a records-release authorization at each office so information can legally flow between them. A primary care provider can also act as the central hub."
+      },
+      {
+        "q": "What if one pediatric specialist won't coordinate with the other?",
+        "a": "Ask your child's pediatrician or primary care provider to be the coordinating point, and politely request a quick peer conversation between the two specialists about how their plans fit together. Document your requests with dates and names, and follow up within a week. A care navigation service can help keep the pressure on if coordination stalls."
+      }
+    ]
+  },
+  {
+    "slug": "organise-pediatric-referral-paperwork-2",
+    "title": "How to Organise Pediatric Referral Paperwork: A Parent's Simple System",
+    "excerpt": "A referral can trigger a flurry of paperwork, dates, and phone numbers. Here's a calm, repeatable way to organise it all so nothing gets lost.",
+    "metaDescription": "Learn how to organise pediatric referral paperwork with a simple, repeatable system so no appointment, authorization, or document ever slips through the cracks.",
+    "tags": [
+      "pediatric referral paperwork",
+      "pediatric care organization",
+      "pediatric specialist referral",
+      "medical paperwork tips",
+      "pediatric care navigation"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-11-17",
+    "prettyDate": "November 17, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I keep track of referral deadlines and authorizations?",
+        "a": "Write the expiration date on the front of each referral folder as soon as you receive it, then set two calendar reminders — one a few weeks before and one a few days before. If you're unsure of the exact dates, your insurance member services line and the referring office can confirm them, so keep those phone numbers in the folder."
+      },
+      {
+        "q": "What should I do if I'm missing part of a pediatric referral?",
+        "a": "Missing pieces are common and usually fixable. Identify what's missing — the referral form, an authorization number, or records the specialist needs — then contact the right office: your pediatrician for the referral order and your insurance plan for authorization questions. Ask them to send the item directly to the specialist, note the date on your call log, and follow up in a few business days if needed."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-medical-timeline-long-history-3",
     "title": "How to Keep a Pediatric Medical Timeline for a Child With a Long Health History",
     "excerpt": "If your child has years of appointments, hospital stays, and specialists, a clear medical timeline keeps it all in one place. Here's how to build one that actually works.",
