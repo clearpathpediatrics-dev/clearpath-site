@@ -1,5 +1,89 @@
 [
   {
+    "slug": "pediatric-specialty-referral-process-step-by-step-3",
+    "title": "The Pediatric Specialty Referral Process, Step by Step: A Parent's Guide",
+    "excerpt": "A referral to a pediatric specialist can feel like a black box. Here's what actually happens at each step — from the first conversation to your child's appointment.",
+    "metaDescription": "Wondering what a pediatric specialty referral process actually involves? Here's each step explained clearly so you can navigate it with less stress and more confiden",
+    "tags": [
+      "pediatric specialty referral",
+      "pediatric specialist appointment",
+      "referral process for kids",
+      "pediatric care navigation",
+      "pediatric referral steps"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-11-18",
+    "prettyDate": "November 18, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How long does a pediatric specialty referral usually take?",
+        "a": "It varies — a routine referral can take anywhere from a few days to several weeks, depending on how quickly the paperwork is submitted, whether insurance approval is required, and how booked the specialist is. Urgent referrals move faster. Confirming each handoff happened, rather than assuming it did, is the best way to avoid hidden delays."
+      },
+      {
+        "q": "What should I bring to the first pediatric specialist visit?",
+        "a": "Bring your insurance card, a photo ID, your child's medication list, any records the specialist requested, and a prioritized written list of your questions. It also helps to bring the original reason for the referral in your own words, plus a one-page summary of who your child sees and why if they have multiple providers."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-dme-supplier-stops-responding-3",
+    "title": "What to Do When a Pediatric DME Supplier Stops Responding: A Parent's Action Guide",
+    "excerpt": "If your child's durable medical equipment supplier has gone quiet, here's a calm, practical plan to reconnect, escalate, and keep supplies flowing without panic.",
+    "metaDescription": "When your pediatric DME supplier stops responding, follow this parent's step-by-step guide to escalate, document, and get your child's supplies back on track fast.",
+    "tags": [
+      "pediatric DME supplier",
+      "durable medical equipment",
+      "pediatric home nursing",
+      "medical supplies for kids",
+      "pediatric care navigation"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-11-18",
+    "prettyDate": "November 18, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I escalate when a DME supplier won't call back?",
+        "a": "After two or three documented attempts, ask for a supervisor or account manager by name, loop in your child's prescribing provider's office (they often have a direct supplier contact), and contact your health plan to confirm the supplier is still active and in-network. Request your order history and prescription in writing so you can transfer if needed. Keep a dated log of every attempt."
+      },
+      {
+        "q": "Can I switch to a different DME supplier if mine stops responding?",
+        "a": "In most cases, yes. Ask your health plan for a list of in-network pediatric DME suppliers, have your child's provider send a fresh order to the new supplier, and don't close the old account until the new one confirms your order and gives a delivery timeline. Overlapping briefly helps prevent a supply gap."
+      }
+    ]
+  },
+  {
+    "slug": "reorder-pediatric-medical-supplies-without-gaps-3",
+    "title": "How to Order and Reorder Pediatric Medical Supplies Without Gaps: A Parent's System",
+    "excerpt": "Running low on feeding bags, catheters, or wound supplies is stressful. Here's a practical, parent-friendly system to order and reorder pediatric medical supplies before you ever run out.",
+    "metaDescription": "Learn how to order and reorder pediatric medical supplies without gaps with a simple parent system for tracking, timing, and reorders so you never run short.",
+    "tags": [
+      "pediatric medical supplies",
+      "DME reorder",
+      "home nursing supplies",
+      "pediatric supply gaps",
+      "medical supply tracking"
+    ],
+    "topic": "Home Nursing, DME & Supplies",
+    "clusterKey": "home-dme",
+    "iso": "2026-11-18",
+    "prettyDate": "November 18, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How far ahead should I reorder pediatric supplies?",
+        "a": "A good general target is to reorder when you have about one to two weeks of supply left, plus a small emergency buffer when your storage and coverage allow. Delivery times vary by supplier, insurance approval, and backorders, so plan around your supplier's slowest realistic turnaround, not their fastest. Ask your supplier for their typical lead time and build in extra for items that are hard to source."
+      },
+      {
+        "q": "What do I do if a pediatric supply is backordered?",
+        "a": "Ask the supplier for the expected restock date and whether a comparable product is available that your child's provider can approve — never substitute a product on your own. Ask whether they can split-ship what's in stock now and send the rest later. For critical items, notify your child's care team early so they're aware and can help you find alternatives."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-specialists-conflicting-advice-3",
     "title": "What to Do When Pediatric Specialists Give Conflicting Advice About Your Child",
     "excerpt": "When two specialists tell you different things about your child, it's stressful and confusing. Here's a calm, practical way to organize the conflict and bring it back to your care team.",
