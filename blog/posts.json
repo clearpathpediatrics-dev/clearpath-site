@@ -1,5 +1,89 @@
 [
   {
+    "slug": "pediatric-treatment-experimental-insurance-denial-2",
+    "title": "What to Do When Insurance Calls a Pediatric Treatment Experimental: A Parent's Guide",
+    "excerpt": "If your insurer labeled your child's treatment \"experimental\" or \"investigational,\" here's how to understand the denial and organize a clear, calm appeal.",
+    "metaDescription": "Insurance denied your child's care as experimental? Learn how to organize records, request the policy, and prepare a pediatric appeal with confidence.",
+    "tags": [
+      "pediatric insurance appeal",
+      "experimental treatment denial",
+      "prior authorization",
+      "pediatric care navigation",
+      "insurance denial appeal"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-11-20",
+    "prettyDate": "November 20, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What does \"experimental\" actually mean on an insurance denial?",
+        "a": "It means that under your specific plan's rules, the insurer doesn't consider the treatment proven or established enough to cover for your child's situation. It's a coverage-policy decision, not a judgment on whether your doctor was right — and it's a decision you can appeal with the proper documentation."
+      },
+      {
+        "q": "How do I prepare an appeal for an experimental-treatment denial?",
+        "a": "Gather and organize documentation while your child's provider supplies the clinical reasoning. A typical packet includes a letter of medical necessity, relevant medical records and test results, any supporting studies your provider chooses, a copy of the insurer's medical policy, and a cover letter with claim and member ID numbers. Submit before the deadline and keep proof you sent it."
+      }
+    ]
+  },
+  {
+    "slug": "appeal-denied-pediatric-dme-request",
+    "title": "How to Appeal a Denied Pediatric DME or Equipment Request: A Parent's Step-by-Step Guide",
+    "excerpt": "If your child's wheelchair, feeding pump, or other equipment request was denied, here's a calm, practical walkthrough of how to appeal — organized and on time.",
+    "metaDescription": "Learn how to appeal a denied pediatric DME request step by step, from reading the denial letter to filing a strong appeal and meeting deadlines with confidence.",
+    "tags": [
+      "pediatric DME appeal",
+      "denied equipment request",
+      "insurance appeal",
+      "prior authorization denial",
+      "pediatric durable medical equipment"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-11-20",
+    "prettyDate": "November 20, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What documents do I need to appeal a pediatric DME denial?",
+        "a": "Gather the denial letter, the equipment prescription or order, a letter of medical necessity from your child's provider, relevant clinical notes or therapy reports, the DME supplier's device details, and your insurance plan documents. Organize them in the order your insurer requests so the reviewer can easily see why the equipment is needed."
+      },
+      {
+        "q": "How do I actually file a pediatric DME appeal?",
+        "a": "Call your insurer to confirm the appeal steps and deadline, ask your child's provider to supply or update a letter of medical necessity that addresses the denial reason, write a short cover letter with your child's details, submit everything using a trackable method before the deadline, and confirm receipt afterward. If denied again, ask about second-level or external review options."
+      }
+    ]
+  },
+  {
+    "slug": "who-to-call-pediatric-referral-gone-quiet-3",
+    "title": "Who to Call When a Pediatric Referral Has Gone Quiet for Weeks",
+    "excerpt": "If your child's specialist referral has gone silent for weeks, you don't have to keep waiting in the dark. Here's exactly who to call, and in what order.",
+    "metaDescription": "Waiting weeks on a pediatric specialist referral with no word? Here's exactly who to call, in what order, and what to say to get your child's referral moving.",
+    "tags": [
+      "pediatric referral",
+      "specialist referral follow-up",
+      "pediatric care navigation",
+      "insurance authorization",
+      "parent advocacy"
+    ],
+    "topic": "Second Opinions & Specialist Referrals",
+    "clusterKey": "second-opinion",
+    "iso": "2026-11-20",
+    "prettyDate": "November 20, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Who should I call first if my child's referral has gone quiet?",
+        "a": "Call the office that created the referral first — usually your pediatrician's referral coordinator. They can confirm whether it was actually sent, where it went, and whether it needs insurance authorization, which tells you where the holdup is and who to call next."
+      },
+      {
+        "q": "How long should I wait before following up on a pediatric referral?",
+        "a": "A reasonable rule of thumb is to follow up if you haven't heard anything within one to two weeks, and sooner if the referral was described as time-sensitive. Following up is appropriate; referrals often get stuck and a polite call frequently gets yours moving again."
+      }
+    ]
+  },
+  {
     "slug": "prepare-first-pediatric-specialist-appointment-3",
     "title": "How to Prepare for Your Child's First Pediatric Specialist Appointment: A Parent's Checklist",
     "excerpt": "A warm, practical checklist to help you walk into your child's first specialist visit organized, calm, and ready to make the most of your time.",
