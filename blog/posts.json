@@ -1,5 +1,93 @@
 [
   {
+    "slug": "waiting-pediatric-gene-therapy-insurance-approval-3",
+    "title": "What to Do While Waiting for Pediatric Gene Therapy Insurance Approval: A Parent's Guide",
+    "excerpt": "The wait for gene therapy insurance approval can feel endless. Here are concrete, practical things you can do to stay organized and keep the process moving while you wait.",
+    "metaDescription": "Waiting on pediatric gene therapy insurance approval? Learn practical steps to stay organized, track your prior authorization, and keep the process moving.",
+    "tags": [
+      "pediatric gene therapy",
+      "prior authorization",
+      "insurance approval",
+      "pediatric care navigation",
+      "parent guide"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-11-21",
+    "prettyDate": "November 21, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How long should a gene therapy prior authorization take?",
+        "a": "Timelines vary by plan and by whether the request is standard or expedited, but most plans publish specific windows in your benefits documents. Standard reviews often run a few weeks; urgent reviews can be faster. Ask your insurer which timeline applies and what date the decision is due, and follow up factually if that date passes."
+      },
+      {
+        "q": "Can I do anything to help a gene therapy approval along while I wait?",
+        "a": "Mostly by making sure reviewers have everything they need. Ask the submitting clinic whether the insurer requested additional records and whether they've been supplied, offer to gather documents from your own files, and ask whether a peer-to-peer review or an assigned case manager is available. Clinical arguments belong to your child's providers, but you can make sure they're connected with no missing pieces."
+      }
+    ]
+  },
+  {
+    "slug": "documenting-pediatric-medical-necessity-complex-needs-3",
+    "title": "How to Document Pediatric Medical Necessity for a Child With Complex Needs: A Parent's Guide",
+    "excerpt": "When your child has complex needs, strong documentation can make the difference in a prior authorization or appeal. Here's how to organize what your providers have already told you.",
+    "metaDescription": "Learn how to organize and document pediatric medical necessity for a child with complex needs so prior authorizations and appeals go more smoothly.",
+    "tags": [
+      "pediatric medical necessity",
+      "prior authorization",
+      "complex needs",
+      "insurance appeals",
+      "pediatric documentation"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-11-21",
+    "prettyDate": "November 21, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Do I write the medical necessity justification myself?",
+        "a": "No. The clinical justification should come from your child's licensed provider, since they make the medical judgment. Your role is to request that documentation, confirm it matches the insurer's requirements, and keep it organized. If a denial cites a specific reason, share that exact language with your provider's office."
+      },
+      {
+        "q": "What if the denial says there isn't enough documentation?",
+        "a": "Read the letter to find the exact gap — often a missing note, code, frequency detail, or proof something else was tried first. Then contact the ordering provider's office, share the precise wording, and ask whether they can supply the specific item requested. Many of these denials are resolved by routing the right existing record to the right place."
+      }
+    ]
+  },
+  {
+    "slug": "escalate-pediatric-claim-state-insurance-commissioner-3",
+    "title": "How to Escalate a Pediatric Claim to Your State Insurance Commissioner: A Parent's Guide",
+    "excerpt": "When internal appeals stall, your state insurance commissioner can be a powerful next step. Here's how to organize your paperwork and file a complaint that gets attention.",
+    "metaDescription": "Learn how to escalate a pediatric claim to your state insurance commissioner, what to gather, and how to file a complaint so your child's denial gets a fresh look.",
+    "tags": [
+      "pediatric insurance appeal",
+      "state insurance commissioner",
+      "pediatric claim denial",
+      "external review",
+      "insurance complaint"
+    ],
+    "topic": "Prior Authorisation, Denials & Appeals",
+    "clusterKey": "denials-auth",
+    "iso": "2026-11-21",
+    "prettyDate": "November 21, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What does a state insurance commissioner actually do?",
+        "a": "A state insurance commissioner's office regulates licensed insurers and investigates consumer complaints about denials, delays, and confusing explanations of benefits. They can prompt a re-review or direct you to an independent external review, but they generally cannot make medical judgments about your child's care — their role is to ensure the insurer follows its own rules and state law."
+      },
+      {
+        "q": "How do you file a complaint with the state insurance commissioner?",
+        "a": "Gather every denial letter, EOB, and appeal you've sent, then find your state's Department of Insurance and complete its complaint form online or on paper. Write a one-page summary of what was requested, denied, and appealed, attach copies (not originals), submit, and save your case number and expected response timeline."
+      },
+      {
+        "q": "When should you escalate a pediatric claim to the commissioner?",
+        "a": "Most families escalate after completing the insurer's internal appeals and still being denied, or when the insurer misses deadlines, won't explain a denial in writing, or bills for something they said was covered. First confirm whether your plan is fully insured (state-regulated) or self-funded (often federally regulated), since that determines which office handles your complaint."
+      }
+    ]
+  },
+  {
     "slug": "pediatric-treatment-experimental-insurance-denial-2",
     "title": "What to Do When Insurance Calls a Pediatric Treatment Experimental: A Parent's Guide",
     "excerpt": "If your insurer labeled your child's treatment \"experimental\" or \"investigational,\" here's how to understand the denial and organize a clear, calm appeal.",
