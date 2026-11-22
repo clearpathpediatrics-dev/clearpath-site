@@ -1,5 +1,89 @@
 [
   {
+    "slug": "spot-pediatric-billing-error-before-you-pay-3",
+    "title": "How to Spot a Pediatric Billing Error Before You Pay: A Parent's Guide",
+    "excerpt": "Before you pay a pediatric medical bill, take a few minutes to check it against your EOB. Here's a simple, parent-friendly way to catch common billing errors.",
+    "metaDescription": "Learn how to spot a pediatric billing error before you pay by comparing your EOB and bill, checking codes, and catching common mistakes that cost you money.",
+    "tags": [
+      "pediatric billing error",
+      "pediatric medical bills",
+      "EOB",
+      "medical billing mistakes",
+      "pediatric healthcare costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-11-22",
+    "prettyDate": "November 22, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How can I tell the difference between a legitimate charge I don't understand and an actual billing mistake?",
+        "a": "Start with the paperwork. If a charge is on the bill but not your EOB, insurance may not have processed it yet. If the bill is higher than the EOB's patient-responsibility amount, ask for a written explanation. Request an itemized bill and match each line to your visit — a true error becomes clear once you see the detail. Don't pay the disputed portion until it's resolved."
+      },
+      {
+        "q": "What are the most common pediatric billing errors?",
+        "a": "The most frequent errors include duplicate charges, wrong dates of service, a well-visit miscoded as a sick-visit, services your child didn't receive, being balance-billed before insurance processed the claim, and quantity errors where you're charged multiple times for something done once."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-medical-bills-payment-plan",
+    "title": "How to Set Up a Payment Plan for Pediatric Medical Bills: A Parent's Guide",
+    "excerpt": "A calm, practical walkthrough for parents on how to request, negotiate, and organize a payment plan for your child's medical bills — without guesswork.",
+    "metaDescription": "Learn how to set up a payment plan for pediatric medical bills step by step, from reviewing your EOB to negotiating terms, so you can pay with less stress.",
+    "tags": [
+      "pediatric medical bills",
+      "medical bill payment plan",
+      "pediatric billing help",
+      "EOB",
+      "healthcare costs for families"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-11-22",
+    "prettyDate": "November 22, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I ask a hospital or clinic for a payment plan for my child's bills?",
+        "a": "Call the billing or patient financial services number on the statement and say you'd like to set up a payment plan for your child's balance. Have the account number, total balance, and a realistic monthly amount ready. Ask whether the plan is interest-free, the minimum monthly payment, how long it can last, any enrollment fees, and whether an active plan prevents the account from going to collections. Request the agreement in writing before committing."
+      },
+      {
+        "q": "Can I negotiate the total before setting up a payment plan?",
+        "a": "Often yes. Ask about prompt-pay discounts for paying a lump sum, financial assistance or charity care (nonprofit hospitals are typically required to offer this), and income-based reductions. If you apply for financial assistance, ask them to pause the account during review. Lowering the total first, then arranging a plan on the smaller balance, is usually the best approach."
+      }
+    ]
+  },
+  {
+    "slug": "two-providers-bill-same-pediatric-visit",
+    "title": "What to Do When Two Providers Bill for the Same Pediatric Visit: A Parent's Guide",
+    "excerpt": "Seeing two bills for a single pediatric appointment can be confusing and stressful. Here's how to tell the difference between legitimate separate charges and a true duplicate — and how to get it sorted out calmly.",
+    "metaDescription": "Got two pediatric bills for the same visit? Learn how to compare EOBs, spot duplicate charges, and sort out double billing so you only pay what you truly owe.",
+    "tags": [
+      "pediatric medical billing",
+      "duplicate medical bills",
+      "EOB explained",
+      "double billing",
+      "pediatric visit costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-11-22",
+    "prettyDate": "November 22, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How can I tell the difference between double billing and a legitimate second charge?",
+        "a": "Compare both bills against your Explanation of Benefits (EOB), not just the bills. The EOB shows what each provider submitted and what you owe. If both bills list the same provider, same service date, and same procedure code, and the EOB processed it only once, it's likely a true duplicate. If the EOB shows two different services (like an office visit and a separate lab or facility charge), both bills are probably valid."
+      },
+      {
+        "q": "Who should I call first — the provider or the insurance company?",
+        "a": "Start with whichever party your EOB points to. If the EOB shows the service was processed once but you got two bills, call the billing office that sent the duplicate first. If the EOB shows the same service processed twice, call your insurer to ask for reprocessing. Ask each party to explain in writing, don't pay a disputed charge until it's resolved, and request that the account be marked 'in dispute' so it isn't sent to collections."
+      }
+    ]
+  },
+  {
     "slug": "waiting-pediatric-gene-therapy-insurance-approval-3",
     "title": "What to Do While Waiting for Pediatric Gene Therapy Insurance Approval: A Parent's Guide",
     "excerpt": "The wait for gene therapy insurance approval can feel endless. Here are concrete, practical things you can do to stay organized and keep the process moving while you wait.",
