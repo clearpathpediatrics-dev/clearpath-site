@@ -1,5 +1,93 @@
 [
   {
+    "slug": "document-pediatric-concern-taken-seriously-3",
+    "title": "How to Document a Pediatric Concern So It's Taken Seriously: A Parent's Guide",
+    "excerpt": "You noticed something and want your child's care team to really hear you. Here's how to organize a concern so it's clear, specific, and hard to overlook.",
+    "metaDescription": "Learn how to document a pediatric concern clearly so your child's providers take it seriously. Practical steps to organize notes, dates, and examples that get heard.",
+    "tags": [
+      "pediatric concern documentation",
+      "well-child visit prep",
+      "developmental concerns",
+      "parent advocacy",
+      "pediatric notes"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-24",
+    "prettyDate": "November 24, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I make sure my pediatric concern isn't brushed off?",
+        "a": "Be specific and brief, and lead with your main concern first. Share dated examples of what you observed, then ask a direct closing question like, 'What would you like to do about this, and what should prompt me to call before the next visit?' Write down the answer and any follow-up timeframe. If a plan isn't clear, ask your provider to help you understand it."
+      },
+      {
+        "q": "What should I write down during a well-child visit?",
+        "a": "Capture the plan, not a diagnosis. Note what your provider recommended, any screening or referral discussed, the follow-up timeframe, and what signs should prompt you to reach out sooner. Also record anything they said they'd send or order so you can confirm it later."
+      }
+    ]
+  },
+  {
+    "slug": "what-pediatric-developmental-screening-tests-3",
+    "title": "What a Pediatric Developmental Screening Actually Tests: A Parent's Guide",
+    "excerpt": "A plain-language look at what a pediatric developmental screening really measures at a well-child visit — so you know what to expect and how to prepare.",
+    "metaDescription": "Wondering what a pediatric developmental screening actually tests? Learn the real areas it checks so you can walk into your child's well-visit prepared.",
+    "tags": [
+      "pediatric developmental screening",
+      "well-child visit",
+      "developmental milestones",
+      "pediatric well visit prep",
+      "child development check"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-24",
+    "prettyDate": "November 24, 2026",
+    "readMinutes": 4,
+    "faq": [
+      {
+        "q": "How is a pediatric developmental screening actually done?",
+        "a": "Many practices use a standardized questionnaire you fill out as a parent, since you see your child every day. Your provider may also observe your child and invite them to do simple, play-based tasks. There's nothing to study for — honest, everyday observations about how your child moves, communicates, and plays are the most helpful thing to bring."
+      },
+      {
+        "q": "What does a developmental screening test?",
+        "a": "A developmental screening looks at several broad areas: gross motor skills, fine motor skills, language and communication, problem-solving and thinking, and social and emotional development. It gathers a snapshot across all of these areas rather than testing one skill in isolation. It is not a diagnosis and does not label a child with a condition."
+      },
+      {
+        "q": "How can parents prepare for a developmental screening?",
+        "a": "Observe your child gently in the weeks before the visit — notice how they move, communicate, play, and interact. Write down specific examples and any questions you have, and bring that list to the appointment. There's no need to coach or quiz your child; your everyday knowledge is one of the most valuable parts of the screening."
+      }
+    ]
+  },
+  {
+    "slug": "most-of-15-minute-pediatric-appointment",
+    "title": "Making the Most of a 15-Minute Pediatric Appointment: A Parent's Prep Playbook",
+    "excerpt": "A short pediatric visit can feel rushed, but a little prep goes a long way. Here's a practical playbook to walk in organized and walk out with answers.",
+    "metaDescription": "Learn how to get the most out of a short 15-minute pediatric appointment with a simple prep playbook that helps you organize questions and stay on track.",
+    "tags": [
+      "pediatric appointment prep",
+      "well-child visit tips",
+      "pediatric visit questions",
+      "parent appointment checklist",
+      "pediatric care navigation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-24",
+    "prettyDate": "November 24, 2026",
+    "readMinutes": 4,
+    "faq": [
+      {
+        "q": "How do I keep a short pediatric visit from feeling rushed?",
+        "a": "Structure beats speed. Lead with a prioritized list of your top three topics so the most important one gets real attention, take brief notes or ask to record the care instructions, and ask for clarification in the room whenever something isn't clear. A rushed feeling usually comes from scrambling, not the clock itself."
+      },
+      {
+        "q": "What should I do with the instructions after a pediatric appointment?",
+        "a": "Before you leave, make sure you know what was decided, what happens next, and who to call if something changes. Write down any referrals, tests, or follow-ups along with how and when you'll hear about them, and keep a simple running note after each visit so your next appointment is easier to prepare for."
+      }
+    ]
+  },
+  {
     "slug": "keep-pediatric-well-child-visits-on-schedule-2",
     "title": "How to Keep Pediatric Well-Child Visits on Schedule During a Complex Year",
     "excerpt": "When life gets complicated, well-child visits are easy to lose track of. Here's a practical, parent-friendly system to keep your child's checkups on schedule all year.",
