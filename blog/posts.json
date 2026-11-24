@@ -1,5 +1,93 @@
 [
   {
+    "slug": "keep-pediatric-well-child-visits-on-schedule-2",
+    "title": "How to Keep Pediatric Well-Child Visits on Schedule During a Complex Year",
+    "excerpt": "When life gets complicated, well-child visits are easy to lose track of. Here's a practical, parent-friendly system to keep your child's checkups on schedule all year.",
+    "metaDescription": "Learn how to keep pediatric well-child visits on schedule during a chaotic year with a simple parent system for tracking, booking, and organizing checkups.",
+    "tags": [
+      "pediatric well-child visits",
+      "well-child visit schedule",
+      "pediatric checkup tracking",
+      "developmental checks",
+      "pediatric care navigation"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-23",
+    "prettyDate": "November 23, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I keep track of which well-child visits my child still needs?",
+        "a": "Keep one running document — paper or digital — listing each visit by the age it's tied to, the date it happened, and the next due date. Update it after every appointment so you can glance at it anytime, share it with a new provider, and confirm nothing was skipped."
+      },
+      {
+        "q": "What if we've already fallen behind on well-child visits?",
+        "a": "Call your pediatrician's office, explain you've had a complicated stretch, and ask them to help map a catch-up plan. Clinics do this routinely. Bring your record of past visits so your licensed provider can decide what's appropriate and in what order."
+      }
+    ]
+  },
+  {
+    "slug": "most-out-of-15-minute-pediatric-appointment",
+    "title": "How to Get the Most Out of a 15-Minute Pediatric Appointment: A Parent's Guide",
+    "excerpt": "A short pediatric visit can still be a good one. Here's how to prepare, prioritize, and follow up so you leave with answers instead of lingering questions.",
+    "metaDescription": "Learn how to get the most out of a short pediatric appointment with simple prep steps, smart questions, and follow-up habits that help you make every minute count.",
+    "tags": [
+      "pediatric appointment tips",
+      "well-child visit prep",
+      "pediatric care navigation",
+      "making the most of doctor visits",
+      "parent appointment checklist"
+    ],
+    "topic": "Well-Child Visits & Developmental Checks",
+    "clusterKey": "well-child",
+    "iso": "2026-11-23",
+    "prettyDate": "November 23, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should I say first in a short pediatric visit?",
+        "a": "Lead with your main concern instead of saving it for the end. Try opening with something like, \"I have three things to cover, and the most important is ___.\" This gives your provider a roadmap and ensures your biggest question gets answered before time runs out."
+      },
+      {
+        "q": "What if I run out of time before I'm done at the appointment?",
+        "a": "Say so directly: \"I have two more things I didn't get to — what's the best way to handle those?\" Your provider may address them quickly, schedule a follow-up, or direct you to a nurse line or patient portal. Naming leftover questions out loud is better than leaving with them unanswered."
+      }
+    ]
+  },
+  {
+    "slug": "no-surprises-act-pediatric-care-4",
+    "title": "What the No Surprises Act Means for Your Child's Pediatric Care and Bills",
+    "excerpt": "The No Surprises Act was created to protect families from unexpected out-of-network bills. Here's what it means for your child's care, in plain language.",
+    "metaDescription": "Understand what the No Surprises Act means for pediatric care, how it protects your child from surprise bills, and the steps parents can take with confidence.",
+    "tags": [
+      "No Surprises Act",
+      "pediatric billing",
+      "surprise medical bills",
+      "good faith estimate",
+      "pediatric care costs"
+    ],
+    "topic": "Bills, EOBs & What Care Costs",
+    "clusterKey": "billing-eob",
+    "iso": "2026-11-23",
+    "prettyDate": "November 23, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How does the No Surprises Act protect my child's care?",
+        "a": "It limits certain surprise out-of-network bills. For emergency care and for out-of-network providers who treat your child at an in-network facility, you generally can't be billed more than your in-network cost-sharing. You also have the right to a Good Faith Estimate if you're self-paying."
+      },
+      {
+        "q": "What is a Good Faith Estimate, and should I ask for one?",
+        "a": "A Good Faith Estimate is a written breakdown of expected charges for scheduled care when you're not billing insurance. If you're self-paying, you can request one in advance. Keep it in your records — if the final bill is much higher, the law gives you a path to dispute the difference."
+      },
+      {
+        "q": "What does the No Surprises Act not cover?",
+        "a": "It typically doesn't cover ground ambulance services, and it doesn't lower costs for care you knowingly choose to receive out of network after being properly informed. It also doesn't replace your normal in-network deductibles, copays, or coinsurance. Details vary by plan and state."
+      }
+    ]
+  },
+  {
     "slug": "spot-pediatric-billing-error-before-you-pay-3",
     "title": "How to Spot a Pediatric Billing Error Before You Pay: A Parent's Guide",
     "excerpt": "Before you pay a pediatric medical bill, take a few minutes to check it against your EOB. Here's a simple, parent-friendly way to catch common billing errors.",
