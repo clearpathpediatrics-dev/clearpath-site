@@ -1,5 +1,93 @@
 [
   {
+    "slug": "organize-pediatric-home-nursing-schedules-4",
+    "title": "How to Organize Pediatric Home Nursing Schedules Without Losing Your Mind",
+    "excerpt": "Coming home with scheduled nursing hours can feel like running a small logistics company overnight. Here's a calm, practical system to keep shifts covered and your head clear.",
+    "metaDescription": "Learn how to organize pediatric home nursing schedules with a simple, repeatable system that keeps shifts covered and your family calm after discharge.",
+    "tags": [
+      "pediatric home nursing",
+      "home health schedule",
+      "hospital discharge",
+      "pediatric care navigation",
+      "caregiver organization"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-25",
+    "prettyDate": "November 25, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I handle a pediatric home nursing shift that gets cancelled at the last minute?",
+        "a": "Call your home health agency's scheduling or on-call line rather than the individual nurse, since the agency is responsible for coverage. Have your master schedule ready so you can name the exact uncovered hours, ask about their replacement process and timeline, and request written confirmation once a substitute is arranged. Keep a simple log of recurring gaps so you have a factual record for future conversations."
+      },
+      {
+        "q": "What's the easiest way to keep multiple home nurses on the same page?",
+        "a": "Keep a simple home communication log in a binder that stays with your child's supplies, where each nurse records their shift date, name, and handoff notes per your agency and providers' instructions. Paired with one shared master schedule, this gives every caregiver continuity without you having to repeat everything at each shift change."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-readmission-prepare-for-conversation",
+    "title": "Pediatric Hospital Readmission: What It Means and How to Prepare for the Conversation",
+    "excerpt": "If your child has been readmitted to the hospital, the word alone can feel heavy. Here's what a readmission actually means and how to walk into that conversation prepared.",
+    "metaDescription": "Learn what a pediatric hospital readmission means and how to prepare for the conversation with your child's care team so you walk in organized and clear-headed.",
+    "tags": [
+      "pediatric readmission",
+      "hospital discharge",
+      "coming home",
+      "parent preparation",
+      "pediatric care navigation"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-25",
+    "prettyDate": "November 25, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What does a pediatric readmission actually mean?",
+        "a": "A readmission means your child is admitted back into the hospital after a recent discharge, often within a set window like 30 days. It can happen for many reasons — a returning symptom, a planned next step, a new concern, or a need for closer monitoring. It's information that your licensed care team uses to shape the next plan."
+      },
+      {
+        "q": "Is a hospital readmission my fault as a parent?",
+        "a": "No. A readmission is not a judgment on your caregiving. Many readmissions reflect how a child's condition unfolds rather than anything a parent did wrong. Your child's licensed care team is the right source for the specific reason, and your home observations help them see the full picture."
+      }
+    ]
+  },
+  {
+    "slug": "confirm-pediatrician-received-discharge-summary-2",
+    "title": "How to Confirm Your Pediatrician Received the Hospital Discharge Summary",
+    "excerpt": "Coming home from the hospital is a relief — but your pediatrician needs the discharge summary to pick up where the hospital left off. Here's how to confirm it arrived.",
+    "metaDescription": "Learn how to make sure your child's pediatrician actually received the hospital discharge summary, with a simple parent checklist for a smooth transition home.",
+    "tags": [
+      "pediatric discharge summary",
+      "hospital discharge",
+      "pediatric care coordination",
+      "parent navigation",
+      "coming home after hospital"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-25",
+    "prettyDate": "November 25, 2026",
+    "readMinutes": 4,
+    "faq": [
+      {
+        "q": "How do I know if my pediatrician actually received the discharge summary?",
+        "a": "Call your pediatrician's office within two to three business days of coming home and ask them to confirm the discharge summary is in your child's chart. Have your child's full name, date of birth, and the discharge date ready. If it's there, ask them to note that you called; if it's missing, you can send your own copy or ask the hospital to re-send it."
+      },
+      {
+        "q": "What should I do if the discharge summary didn't reach my pediatrician?",
+        "a": "If you received your own printed or digital copy at discharge, email or drop it off at the pediatrician's office — that's the fastest fix. You can also call the hospital's medical records department to re-send it, confirm the correct fax number or electronic destination, and ask both offices to confirm receipt on each end."
+      },
+      {
+        "q": "Why does it matter that my pediatrician gets the discharge summary?",
+        "a": "The discharge summary tells your pediatrician about new medications, follow-up appointments, test results, and care plan changes. Confirming they received it lets your child's first post-hospital visit focus on moving forward rather than reconstructing what happened. Any clinical interpretation of the summary should come from your licensed pediatrician."
+      }
+    ]
+  },
+  {
     "slug": "document-pediatric-concern-taken-seriously-3",
     "title": "How to Document a Pediatric Concern So It's Taken Seriously: A Parent's Guide",
     "excerpt": "You noticed something and want your child's care team to really hear you. Here's how to organize a concern so it's clear, specific, and hard to overlook.",
