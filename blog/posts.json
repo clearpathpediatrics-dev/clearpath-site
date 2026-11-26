@@ -1,5 +1,93 @@
 [
   {
+    "slug": "prepare-pediatric-iep-meeting-complex-needs-3",
+    "title": "How to Prepare for a Pediatric IEP Meeting When Your Child Has Complex Needs",
+    "excerpt": "An IEP meeting can feel overwhelming when your child has complex medical and developmental needs. Here's a calm, practical way to organize and prepare.",
+    "metaDescription": "Learn how to prepare for a pediatric IEP meeting when your child has complex needs, with a practical checklist to help you feel organized and confident.",
+    "tags": [
+      "pediatric IEP meeting",
+      "IEP preparation",
+      "complex needs",
+      "special education",
+      "parent IEP checklist"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-11-26",
+    "prettyDate": "November 26, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Who should be in the room for a complex-needs IEP meeting?",
+        "a": "The IEP team usually includes you, a general education teacher, a special education teacher, a district representative, and someone who can interpret evaluation results. For complex needs, you can request that relevant specialists like the school nurse, therapists, or an assistive technology specialist attend or send written input. You may also bring a support person, advocate, or note-taker. Request any additions in writing about a week before the meeting."
+      },
+      {
+        "q": "What should I do the week before an IEP meeting?",
+        "a": "Confirm the date, time, and format. Ask the school to send draft documents or evaluation results in advance so nothing is a surprise. Decide who's attending with you and share your question list. Prepare a one-page overview of your child's needs and make copies. Also jot down your child's strengths and what a good day looks like to start the meeting on a collaborative note."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-iep-progress-report-what-it-tells-you",
+    "title": "What a Pediatric IEP Progress Report Should Actually Tell You",
+    "excerpt": "IEP progress reports can feel like a wall of checkboxes and jargon. Here's what a good one should actually tell you about your child's goals and growth.",
+    "metaDescription": "Learn what a pediatric IEP progress report should actually tell you about your child's goals, data, and next steps so you can track progress with confidence.",
+    "tags": [
+      "pediatric IEP progress report",
+      "IEP goals",
+      "504 plan",
+      "special education parent guide",
+      "school support navigation"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-11-26",
+    "prettyDate": "November 26, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should a good IEP progress report include?",
+        "a": "A strong report should list each IEP goal in full, your child's current measurable performance, the baseline they started from, the target for mastery, a progress rating (such as 'sufficient progress' or 'not yet on track'), and a short teacher or provider narrative explaining the numbers."
+      },
+      {
+        "q": "How often should you receive an IEP progress report?",
+        "a": "You should receive progress reports as often as the school issues general report cards — commonly each quarter or trimester — with the exact schedule stated in your child's IEP. You don't have to wait until the annual review to learn whether goals are being met."
+      },
+      {
+        "q": "What if the IEP progress report just says 'making progress'?",
+        "a": "A vague rating isn't enough. You can request the underlying data: the baseline, the current measurement, and how it was collected. Specific numbers help you see whether your child is on pace to meet the goal by the annual review."
+      }
+    ]
+  },
+  {
+    "slug": "questions-pediatric-discharge-planner-2",
+    "title": "Questions to Ask the Pediatric Discharge Planner Before You Take Your Child Home",
+    "excerpt": "Discharge day moves fast. Here's a practical list of questions to ask your pediatric discharge planner so nothing important slips through the cracks before you head home.",
+    "metaDescription": "A parent's checklist of questions to ask the pediatric discharge planner so you leave the hospital organized, confident, and ready for a smooth homecoming.",
+    "tags": [
+      "pediatric discharge planning",
+      "hospital discharge questions",
+      "coming home from hospital",
+      "pediatric care navigation",
+      "parent discharge checklist"
+    ],
+    "topic": "Hospital Discharge & Coming Home",
+    "clusterKey": "discharge",
+    "iso": "2026-11-26",
+    "prettyDate": "November 26, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "What should I ask the discharge planner about follow-up care?",
+        "a": "Ask which follow-up appointments are needed, who schedules them, and the timeframe for each. Confirm whether they're already booked or if you need to call, which provider receives the discharge summary, and what to do if you can't get an appointment within the recommended window."
+      },
+      {
+        "q": "Who can help me if I feel overwhelmed after a pediatric discharge?",
+        "a": "Ask whether the hospital has a nurse line, case manager, or social worker you can reach after leaving. Many families also use a private care navigator to help organize instructions and prepare questions. ClearPath Pediatrics offers RN care navigation to help parents understand and act on their providers' instructions — without giving medical advice."
+      }
+    ]
+  },
+  {
     "slug": "organize-pediatric-home-nursing-schedules-4",
     "title": "How to Organize Pediatric Home Nursing Schedules Without Losing Your Mind",
     "excerpt": "Coming home with scheduled nursing hours can feel like running a small logistics company overnight. Here's a calm, practical system to keep shifts covered and your head clear.",
