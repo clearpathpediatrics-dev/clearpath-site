@@ -1,5 +1,93 @@
 [
   {
+    "slug": "keep-or-throw-pediatric-paperwork-2",
+    "title": "What to Keep and What to Throw Away in Pediatric Paperwork: A Parent's Guide",
+    "excerpt": "Drowning in pediatric paperwork? Here's a clear, practical guide to what you should keep forever, what to hold temporarily, and what you can safely recycle.",
+    "metaDescription": "Learn what pediatric paperwork to keep, what to safely throw away, and how long to hold records so your child's medical files stay organized and stress-free.",
+    "tags": [
+      "pediatric paperwork",
+      "medical records organization",
+      "child health records",
+      "pediatric document management",
+      "parent record keeping"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-11-27",
+    "prettyDate": "November 27, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How long should I keep my child's medical records?",
+        "a": "Many families keep core medical records throughout childhood and for several years into adulthood, since they can matter for future care or benefits. Billing and insurance paperwork is often kept for a handful of years to cover tax and dispute windows. Because rules vary by state, insurance, and tax situation, confirm the right timeframe with the appropriate professional."
+      },
+      {
+        "q": "What pediatric paperwork can I safely throw away?",
+        "a": "You can recycle duplicate copies, marketing inserts and flyers, blank intake forms, expired coupons, and appointment reminder slips once the visit has happened. Anything containing your child's name, date of birth, insurance ID, or medical details should be shredded rather than tossed to protect their private health information."
+      },
+      {
+        "q": "What pediatric documents should I keep permanently?",
+        "a": "Keep immunization records, birth and newborn screening results, diagnosis and specialist summaries for ongoing conditions, surgical and hospitalization summaries, allergy documentation, growth and developmental reports, and legal or benefit documents like IEPs and 504 plans in a permanent file."
+      }
+    ]
+  },
+  {
+    "slug": "pediatric-portal-access-every-system",
+    "title": "How to Get Pediatric Portal Access to Every System Your Child Is Seen In",
+    "excerpt": "When your child is seen across multiple clinics and hospitals, each one often has its own portal. Here's a practical, step-by-step way to track down and activate access to all of them.",
+    "metaDescription": "Learn how to get pediatric patient portal access across every clinic, hospital, and specialist your child sees so all their records stay organized in one place.",
+    "tags": [
+      "pediatric portal access",
+      "patient portal",
+      "medical records organization",
+      "pediatric care navigation",
+      "parent proxy access"
+    ],
+    "topic": "Medical Paperwork & Organisation",
+    "clusterKey": "organising",
+    "iso": "2026-11-27",
+    "prettyDate": "November 27, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "How do I actually get access to a patient portal?",
+        "a": "For each clinic or hospital, check your visit summaries and emails for an activation link or code, look for a 'Patient Portal' button on the practice's website to self-register, or call the front desk or medical records department and ask how to set up parent portal access for your child. Keep notes on which portals are active and pending."
+      },
+      {
+        "q": "What is proxy access and why does it matter for kids?",
+        "a": "Proxy (or caregiver/guardian) access lets a parent log in on behalf of a minor child so you can see their records, messages, and appointments under your own login. When contacting each office, ask to be set up as your child's proxy. Rules can change as your child ages, and some systems restrict certain teen information for privacy reasons."
+      }
+    ]
+  },
+  {
+    "slug": "school-disputes-pediatric-medical-recommendation-3",
+    "title": "What to Do When a School Disputes Your Child's Pediatric Medical Recommendation",
+    "excerpt": "When the school pushes back on a doctor's recommendation, it's easy to feel outnumbered. Here's a calm, practical way to organize your documents and respond.",
+    "metaDescription": "When a school disputes a pediatric medical recommendation for your child's IEP or 504, here's how to organize, document, and respond calmly and effectively.",
+    "tags": [
+      "pediatric IEP",
+      "504 plan disputes",
+      "school medical recommendation",
+      "special education advocacy",
+      "pediatric care navigation"
+    ],
+    "topic": "School, IEP & 504 Plans",
+    "clusterKey": "school-iep",
+    "iso": "2026-11-27",
+    "prettyDate": "November 27, 2026",
+    "readMinutes": 5,
+    "faq": [
+      {
+        "q": "Can a school legally refuse a doctor's recommendation?",
+        "a": "A school is not required to follow every medical recommendation word-for-word, but it cannot ignore relevant medical information either. The team must consider your provider's documentation and explain its decisions in writing, often through Prior Written Notice. You can ask for the reasoning, request that the medical information be added to your child's record, and use the dispute-resolution options built into the IEP and 504 processes. Documentation that connects the need to your child's access to learning is key."
+      },
+      {
+        "q": "What should I do first if the school pushes back on a medical recommendation?",
+        "a": "Stay calm and gather facts first. Request the school's reasoning in writing, collect your current medical documentation in one place, and note the dates of every conversation. Then ask your child's provider whether the recommendation can be restated in functional, school-focused language. Finally, learn the specific IEP or 504 dispute-resolution steps available to you, such as requesting another meeting or mediation. A clear written record is your strongest tool."
+      }
+    ]
+  },
+  {
     "slug": "prepare-pediatric-iep-meeting-complex-needs-3",
     "title": "How to Prepare for a Pediatric IEP Meeting When Your Child Has Complex Needs",
     "excerpt": "An IEP meeting can feel overwhelming when your child has complex medical and developmental needs. Here's a calm, practical way to organize and prepare.",
